@@ -1,0 +1,62 @@
+{
+  "source": "https://data.pmel.noaa.gov/pmel/erddap/tabledap/pmelTaoDyT.csv?station,longitude,latitude,time,depth,T_20,QT_5020,ST_6020&latitude=0&longitude%3E=137&longitude%3C=265&depth=1&time%3E=2000-01-01T00%3A00%3A00Z&time%3C2025-01-01T00%3A00%3A00Z",
+  "downloaded": "2026-10-14",
+  "raw_sha256": "943abeb6c4146eecf56e758a261140893938a88543bbf32f7e1a6a1f4c1b3239",
+  "raw_rows": 87069,
+  "valid_daily_rows": 63277,
+  "settings": {
+    "quality": [
+      1,
+      2
+    ],
+    "source": [
+      1,
+      2,
+      5,
+      6
+    ],
+    "min_days": 20,
+    "min_station_coverage": 0.7,
+    "climatology": "available qualifying monthly means, 2000–2024, by calendar month",
+    "missing": "complete-case, no imputation",
+    "centering": "remove selected-sample residual mean after seasonal adjustment",
+    "weights": "equal station weights; no area-weighted basin inference",
+    "detrend": false,
+    "covariance_not_correlation": true,
+    "pc_scaling": "sample SD = 1; spatial loading = deg C per PC SD"
+  },
+  "n": 108,
+  "stations": [
+    "156°E",
+    "180°",
+    "170°W",
+    "155°W",
+    "140°W"
+  ],
+  "first": "2000-01",
+  "last": "2018-09",
+  "fraction": [
+    0.905775957,
+    0.055632215,
+    0.023083582,
+    0.009371042,
+    0.006137205
+  ],
+  "sensitivity": {
+    "days": 25,
+    "n": 105,
+    "fraction": [
+      0.903402712,
+      0.055770516,
+      0.024030917,
+      0.010095848,
+      0.006700007
+    ],
+    "loading_cosine": 0.9999621693190908
+  },
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "3.0.1",
+    "matplotlib": "3.11.2"
+  }
+}

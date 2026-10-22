@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#073c61">
+<title>Session 6 Homework | Dynamical Oceanography: One Diagram, One System</title>
+<meta name="description" content="Session 6 homework: explain the knowledge system of dynamical oceanography—geostrophy, Ekman, stratification, vorticity, potential vorticity, coastal waves, Sverdrup, western boundary currents, and ENSO—in clear, simple language.">
+<link rel="icon" href="./assets/favicon.svg">
+<link rel="stylesheet" href="./hub.css">
+<link rel="stylesheet" href="./dossier.css">
+<link rel="stylesheet" href="./homework.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="identity" href="./en.html">
+      <svg viewBox="0 0 40 36" aria-hidden="true"><path d="M2 11Q11 2 20 11T38 11M2 20Q11 11 20 20T38 20M2 29Q11 20 20 29T38 29" fill="none" stroke="currentColor" stroke-width="2.4"/></svg>
+      <span>Descriptive Physical Oceanography<small>Zhang Hao’s course notebook · 2026</small></span>
+    </a>
+    <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false">Contents</button>
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+      <a href="./en.html#classroom">Classroom</a>
+<a href="./en.html#textbook">Textbook</a>
+<a href="./en.html#story">Story Lab</a>
+<a href="./en.html#retell">Retell</a>
+<a href="./homework-en.html">Homework</a>
+    </nav>
+    <a class="language" href="./homework-s6.html" hreflang="zh-CN">中文</a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="hw-hero">
+    <div class="wrap">
+      <p class="hw-kicker">SESSION 6 · CLASS HOMEWORK</p>
+      <h1>Dynamical Oceanography: One Diagram, One System</h1>
+      <p class="hw-sub">Explain this diagram to someone who has never studied physical oceanography: no formulas first—just what each block is for.</p>
+      <div class="actions">
+        <a class="btn" href="#chain">Jump to the nine steps</a>
+        <a class="btn secondary" href="#retell">30-second retell</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap reader">
+    <aside class="contents" aria-label="On this page">
+      <strong>On this page</strong>
+      <a href="#one-line">One sentence</a>
+<a href="#difficulties">Two difficulties</a>
+<a href="#goal">Long-range goal</a>
+<a href="#chain">Nine-step chain</a>
+<a href="#mainline">One main line</a>
+<a href="#rossby">Planetary Rossby waves</a>
+<a href="#retell">30-second retell</a>
+<a href="#source">Slide and sources</a>
+    </aside>
+    <article class="reading">
+      <section id="one-line">
+        <h2>Start with one sentence</h2>
+        <p class="hw-lead">Dynamical oceanography uses simple laws—Newton's laws and friends—to explain why the ocean flows, turns, and changes the way it does.</p>
+        <p>Descriptive physical oceanography answers what and where; dynamical oceanography answers why. This diagram is the roadmap to why: start from the simplest balance, then add one real-world factor at a time.</p>
+      </section>
+
+      <section id="difficulties">
+        <h2>Two difficulties: why Newton's laws are not enough</h2>
+        <div class="hw-two">
+          <div class="hw-card"><span class="hw-num">1</span><h3>The ocean is rotating</h3><p>Earth spins. In a rotating frame, moving objects appear to curve—this is the Coriolis force. It is not a real force; it is inertia seen from a rotating frame.</p><p class="hw-analogy">Analogy: throw a ball straight across a spinning turntable; someone standing beside it sees the ball curve.</p></div>
+          <div class="hw-card"><span class="hw-num">2</span><h3>The ocean is a continuum</h3><p>Seawater is not a bag of billiard balls; it is a continuous fluid. We cannot track only individual parcels—we describe fields: velocity, pressure, density.</p><p class="hw-analogy">Analogy: a pot of soup, not a bag of marbles.</p></div>
+        </div>
+        <p class="hw-note">One sentence: rotation complicates direction; the continuum complicates the mathematics. The nine steps add these complications one by one.</p>
+      </section>
+
+      <section id="goal">
+        <h2>Long-range goal: from understanding to use</h2>
+        <div class="hw-goal">
+          <div><b>1</b><h3>Understand</h3><p>Why currents follow the paths they do; why water rises.</p></div>
+          <div class="hw-arrow">→</div>
+          <div><b>2</b><h3>Predict</h3><p>How conditions change tomorrow, next year, or in a decade.</p></div>
+          <div class="hw-arrow">→</div>
+          <div><b>3</b><h3>Environmental management</h3><p>Fisheries, pollution, shipping, and climate adaptation.</p></div>
+        </div>
+        <p>The nine concepts are not an exam list; they are the steps from understanding to prediction.</p>
+      </section>
+
+      <section id="chain">
+        <h2>The nine-step chain: add one real-world factor at a time</h2>
+        <p>The whole chain: geostrophy → add friction → add stratification → add vorticity → add potential vorticity → add boundaries → add wind curl → add the western boundary → add tropical air–sea coupling. Each step below follows “what is added / one sentence / a real example.”</p>
+        <div class="hw-chain"><span class="hw-chip"><b>1</b>Geostrophy</span>
+<span class="hw-chip"><b>2</b>Geostrophy + friction → Ekman layer and upwelling</span>
+<span class="hw-chip"><b>3</b>Geostrophy + stratification → Gulf Stream structure and river plumes</span>
+<span class="hw-chip"><b>4</b>Vorticity</span>
+<span class="hw-chip"><b>5</b>Potential vorticity</span>
+<span class="hw-chip"><b>6</b>PV conservation + coastally trapped waves</span>
+<span class="hw-chip"><b>7</b>Sverdrup relationship + Davidson Current</span>
+<span class="hw-chip"><b>8</b>Western boundary currents → Gulf Stream and Kuroshio</span>
+<span class="hw-chip"><b>9</b>El Niño and the Southern Oscillation</span></div>
+        <div class="hw-grid">
+          <article class="hw-step">
+          <span class="hw-step-no">STEP 1</span>
+          <h3>Geostrophy</h3>
+          <span class="hw-added">What is added：Keep only the pressure-gradient and Coriolis forces; ignore friction for now.</span>
+          <p class="hw-line">Large-scale water does not rush straight into a low; it flows along pressure contours. The pressure gradient pushes it across, and Coriolis turns it back.</p>
+          <p class="hw-example">Real example：The large-scale paths of the Gulf Stream and Kuroshio.</p>
+        </article>
+<article class="hw-step">
+          <span class="hw-step-no">STEP 2</span>
+          <h3>Geostrophy + friction → Ekman layer and upwelling</h3>
+          <span class="hw-added">What is added：Add wind stress and friction.</span>
+          <p class="hw-line">Wind pushes the surface layer; rotation turns the flow to the right (Northern Hemisphere). The surface flow is deflected 45°, while the depth-integrated transport is deflected 90°.</p>
+          <p class="hw-example">Real example：Offshore wind pushes surface water away from the coast; cold deep water rises to replace it—upwelling.</p>
+        </article>
+<article class="hw-step">
+          <span class="hw-step-no">STEP 3</span>
+          <h3>Geostrophy + stratification → Gulf Stream structure and river plumes</h3>
+          <span class="hw-added">What is added：Add density stratification: warm, light water above cold, dense water.</span>
+          <p class="hw-line">Tilted density surfaces make velocity change with depth (thermal wind). The Gulf Stream is not a uniform pipe; it has a baroclinic structure.</p>
+          <p class="hw-example">Real example：The Gulf Stream and freshwater plumes from rivers.</p>
+        </article>
+<article class="hw-step">
+          <span class="hw-step-no">STEP 4</span>
+          <h3>Vorticity</h3>
+          <span class="hw-added">What is added：Start describing the local rotation of a water parcel.</span>
+          <p class="hw-line">Vorticity measures how fast a fluid element rotates locally; its sign tells counter-clockwise from clockwise.</p>
+          <p class="hw-example">Real example：Eddies and shear flows.</p>
+        </article>
+<article class="hw-step">
+          <span class="hw-step-no">STEP 5</span>
+          <h3>Potential vorticity</h3>
+          <span class="hw-added">What is added：Combine vorticity, Earth's rotation, and water-column thickness: q=(ζ+f)/H.</span>
+          <p class="hw-line">PV is a conservation ledger of “spin + thickness.” Stretch or squeeze a column, and its spin must change.</p>
+          <p class="hw-example">Real example：A water column crossing a ridge or stretched by a coastal current.</p>
+        </article>
+<article class="hw-step">
+          <span class="hw-step-no">STEP 6</span>
+          <h3>PV conservation + coastally trapped waves</h3>
+          <span class="hw-added">What is added：Add boundaries (coast, shelf) and topography.</span>
+          <p class="hw-line">The coast and topography trap waves near the boundary; Rossby, shelf, and Kelvin waves all propagate by conserving PV.</p>
+          <p class="hw-example">Real example：Coastal sea-level signals and flow variability.</p>
+        </article>
+<article class="hw-step">
+          <span class="hw-step-no">STEP 7</span>
+          <h3>Sverdrup relationship + Davidson Current</h3>
+          <span class="hw-added">What is added：Add the curl of the wind stress—the “twist” of the wind field.</span>
+          <p class="hw-line">Wind-stress curl drives north–south transport in the ocean interior; Sverdrup balance links the wind field to meridional flow.</p>
+          <p class="hw-example">Real example：The Davidson Current off California.</p>
+        </article>
+<article class="hw-step">
+          <span class="hw-step-no">STEP 8</span>
+          <h3>Western boundary currents → Gulf Stream and Kuroshio</h3>
+          <span class="hw-added">What is added：Add the western boundary of the basin.</span>
+          <p class="hw-line">To return the Sverdrup transport at the boundary, a narrow, fast western boundary current forms.</p>
+          <p class="hw-example">Real example：The Gulf Stream and Kuroshio.</p>
+        </article>
+<article class="hw-step">
+          <span class="hw-step-no">STEP 9</span>
+          <h3>El Niño and the Southern Oscillation (ENSO)</h3>
+          <span class="hw-added">What is added：Add tropical air–sea coupling and climate variability.</span>
+          <p class="hw-line">Wind, thermocline depth, and SST in the equatorial Pacific feed back on one another, producing El Niño/La Niña.</p>
+          <p class="hw-example">Real example：The 1997–98 and 2015–16 El Niño events.</p>
+        </article>
+        </div>
+      </section>
+
+      <section id="mainline">
+        <h2>One main line: build it like blocks</h2>
+        <p>The nine steps are not a list; they build on one another. Start with no friction (geostrophy), add wind and friction (Ekman/upwelling), add stratification (Gulf Stream/plumes), add vorticity and PV (column stretching), add boundaries (coastal waves), add wind curl (Sverdrup), add the western boundary (Gulf Stream/Kuroshio), and finally add tropical air–sea coupling (ENSO). Each added factor explains another class of phenomena; each step back returns to a simpler idealization.</p>
+        <p class="hw-note">Memory line: spin, wind, density; vorticity, PV, coast; wind curl, west boundary, ENSO.</p>
+      </section>
+
+      <section id="rossby">
+        <h2>One more card: what exactly is a planetary Rossby wave?</h2>
+        <p class="hw-lead">In one sentence: a planetary Rossby wave is a large-scale wave caused by the change of Earth's rotation with latitude (the β effect); its phase always propagates westward.</p>
+        <p>Why it exists: when a parcel moves north, f increases; to conserve potential vorticity, relative vorticity must decrease (anticyclonic). When it moves south, f decreases; relative vorticity must increase (cyclonic). This restoring effect makes the disturbance shift westward.</p>
+        <div class="hw-beta"><div><b>Parcel moves north</b><span>f ↑</span><span>relative vorticity ζ ↓ (anticyclonic)</span></div><div class="hw-beta-core">PV conserved<br>q = (ζ + f)/H</div><div><b>Parcel moves south</b><span>f ↓</span><span>relative vorticity ζ ↑ (cyclonic)</span></div></div>
+        <div class="formula">β = df/dy = 2Ω cosφ / a<br>∂ζ/∂t + βv = 0<br>ω = −βk/(k² + l²)<br>c_x = ω/k = −β/(k² + l²) &lt; 0 (westward)</div>
+        <ul class="hw-points"><li>Longer waves propagate westward faster; short waves are slower.</li>
+<li>A westward phase speed does not mean energy can only go west: the group velocity of short waves can be eastward.</li>
+<li>In the ocean, the first baroclinic mode travels at a few cm/s, taking months to years to cross a basin; in the atmosphere, it appears as the long-wave troughs and ridges of the westerlies.</li>
+<li>Equatorial Rossby waves carry western-Pacific wind anomalies westward and reflect into Kelvin waves—an important part of ENSO; coastal Rossby and shelf waves are trapped by the boundary.</li></ul>
+        <p class="hw-analogy">Analogy: like a row of dominoes—each tile falls only once, but the falling pattern travels far along the row. In a Rossby wave, parcels mainly move north–south while the phase moves west.</p>
+        <p class="hw-note">So the Rossby wave in Step 6 is not a different wave: it is what PV conservation produces when Earth's rotation changes with latitude. Coastal trapping simply ties that wave to the boundary.</p>
+      </section>
+
+      <section id="retell">
+        <h2>30-second retell: can you explain these three?</h2>
+        <ol class="hw-questions"><li>Why does large-scale flow not rush straight into a low?</li>
+<li>How does wind bring deep cold water to the surface?</li>
+<li>Why are western boundary currents narrow and fast?</li></ol>
+        <p>If you can answer these in three sentences, the diagram is yours.</p>
+      </section>
+
+      <section id="source">
+        <h2>The homework slide and sources</h2>
+        <p>Textbook links: Ch.7 geostrophy, Ekman, and potential vorticity; Ch.8 waves and coasts; the ENSO chapters. Homework: explain the diagram in your own words—do not copy definitions; make clear what each step solves and how it builds on the previous one.</p>
+        <figure class="hw-figure">
+          <a href="./assets/session6-knowledge-system.jpg" target="_blank" rel="noopener">
+            <img src="./assets/session6-knowledge-system.jpg" alt="Session 6 homework slide: the knowledge system of dynamical oceanography" loading="lazy">
+          </a>
+          <figcaption>Session 6 homework slide: the knowledge system of dynamical oceanography. Click to enlarge.</figcaption>
+        </figure>
+        <p class="hw-back"><a href="./en.html#lesson-06">← Back to Session 6 notes</a></p>
+      </section>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <strong>Descriptive Physical Oceanography · Session 6 homework</strong>
+        <p>Zhang Hao · 22634120 · Ocean College, Zhejiang University · Fall/Winter 2026. Homework: explain this system in your own words; do not copy definitions.</p>
+      </div>
+      <div>
+        <p>2026-10-22</p>
+        <a href="./en.html#lesson-06">← Back to Session 6 notes</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var toggle=document.querySelector('.menu-toggle'), nav=document.getElementById('main-nav');
+  if(toggle&&nav){toggle.addEventListener('click',function(){var open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',open?'true':'false');});}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+{
+  "dataset": "NOAA NCEI ERSSTv5",
+  "period": [
+    "1979-01",
+    "2025-12"
+  ],
+  "months": 564,
+  "ocean_cells": 1626,
+  "grid_shape": [
+    21,
+    81
+  ],
+  "masked_cells": 75,
+  "climatology": "1991–2020, per calendar month",
+  "detrending": "Gridwise OLS intercept and linear trend removed after seasonal climatology subtraction",
+  "weighting": "sqrt(cos(latitude)); covariance EOF, no per-cell standard-deviation normalization",
+  "pc_scaling": "PC = sqrt(N-1) U; sample SD = 1",
+  "loading_scaling": "L = W^-1 V S / sqrt(N-1), degrees C per PC SD",
+  "sign_convention": "Largest absolute weighted loading positive for each mode",
+  "variance_fraction": [
+    0.5633601331145759,
+    0.13390672418378216,
+    0.05068353644195171,
+    0.037147415565597225,
+    0.031037500422472896,
+    0.023262016432168985,
+    0.02224910151034779,
+    0.015087027108055385,
+    0.013352625026488929,
+    0.01242750814996609,
+    0.01059008469372708,
+    0.00894662682348994
+  ],
+  "cumulative_fraction": [
+    0.5633601331145759,
+    0.697266857298358,
+    0.7479503937403097,
+    0.7850978093059069,
+    0.8161353097283798,
+    0.8393973261605487,
+    0.8616464276708965,
+    0.8767334547789519,
+    0.8900860798054409,
+    0.9025135879554069,
+    0.9131036726491341,
+    0.922050299472624
+  ],
+  "weighted_rmse_by_rank": {
+    "1": 0.36499748885070843,
+    "2": 0.3039192216363162,
+    "3": 0.27731361693300804,
+    "5": 0.23685216063653639,
+    "8": 0.1939325891707072
+  },
+  "full_reconstruction_max_error_C": 7.155387393709134e-14,
+  "sensitivity": {
+    "without_detrending_first_fraction": 0.5130074199113847,
+    "abs_weighted_eof1_cosine": 0.999926921760157
+  },
+  "downloaded": "2026-10-14",
+  "source": "https://www.ncei.noaa.gov/data/sea-surface-temperature-extended-reconstructed/v5/netcdf/",
+  "land": "Natural Earth 1:110m, public domain",
+  "subset_sha256": "4ed4d0d19c47411ee1bbf631bc1cfbfbfd395b3c7756ce36ebdddb85ef5b092e",
+  "interpretation": "Fractions describe the area-weighted detrended anomaly sample. ERSST is an observation-based reconstructed product, not direct measurements at every grid cell."
+}

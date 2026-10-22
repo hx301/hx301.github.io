@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#07566e">
+  <meta name="description" content="描述性物理海洋课程网站：汇集研究生课程作业、研究主题与课后出门票，记录对海洋的观察、思考和探索。">
+  <title>描述性物理海洋课程网站</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./locale.js" defer></script>
+  <script src="./data.js" defer></script>
+  <script src="./content-en.js" defer></script><script src="./eof/atlas.js" defer></script>
+  <script src="./app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要内容</a>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a aria-label='描述性物理海洋课程网站首页' class='brand' href='./index.html\'>
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M5 22c4-8 8-8 12 0s8 8 18-5M5 30c4-6 8-6 12 0s8 6 18-5"/><circle cx="28" cy="10" r="3"/></svg>
+        <span>描述性物理海洋<span class="brand-sub">个人课程网站</span></span>
+      </a>
+      <button class="language-toggle" data-language-toggle type="button">English</button>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="打开导航菜单"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+      <nav id="site-nav" class="site-nav" aria-label="主导航">
+        <a href="#home" data-nav="home" aria-current="page">首页</a>
+        <a href="#assignments" data-nav="assignments">作业</a>
+        <a href="#research" data-nav="research">研究主题</a>
+        <a href="#tickets" data-nav="tickets">出门票</a>
+        <a href="#about" data-nav="about">关于本站</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div id="home-view">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-art" aria-hidden="true"><svg id="current-lines" viewBox="0 0 820 510" preserveAspectRatio="xMidYMid slice"><g id="line-field"></g><g id="flow-field"></g></svg></div>
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <h1 id="hero-title" data-en="Descriptive&lt;br&gt;Physical Oceanography&lt;span&gt;Course notes&lt;/span&gt;">描述性<br>物理海洋<span>课程网站</span></h1>
+            <p class="hero-english" lang="en">Descriptive Physical Oceanography</p>
+            <p class="hero-intro">从观察出发，向深蓝探索。<br>把课堂里的问题，留给更辽阔的海洋。</p>
+            <a class="button button-light" href="#all">浏览课程内容 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
+          </div>
+          <p class="hero-side-note">记录 · 思考 · 探索<span>Learning, one question at a time.</span></p>
+        </div>
+      </section>
+
+      <div class="container category-band" aria-label="课程栏目">
+        <a class="category-entry" href="#assignments">
+          <span class="category-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M10 5H7v23h18V5h-3M12 4h8v5h-8zM11 15h10M11 20h7"/></svg></span>
+          <span class="category-copy"><strong>作业</strong><span>推导、练习与课程报告</span></span>
+          <svg class="category-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 17 10-10M7 7h10v10"/></svg>
+        </a>
+        <a class="category-entry" href="#research">
+          <span class="category-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="14" cy="14" r="8"/><path d="m20 20 7 7M10 15l3-4 3 5 3-3"/></svg></span>
+          <span class="category-copy"><strong>研究主题</strong><span>从一个问题，开始深入</span></span>
+          <svg class="category-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 17 10-10M7 7h10v10"/></svg>
+        </a>
+        <a class="category-entry" href="#tickets">
+          <span class="category-icon"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 8h22v6a3 3 0 0 0 0 6v5H5v-5a3 3 0 0 0 0-6zM20 8v3m0 4v3m0 4v3M10 13h6m-6 5h4"/></svg></span>
+          <span class="category-copy"><strong>出门票</strong><span>留下收获，也留下疑问</span></span>
+          <svg class="category-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 17 10-10M7 7h10v10"/></svg>
+        </a>
+      </div>
+
+<section class="eof-feature container" aria-labelledby="eof-feature-title"><div class="eof-feature-copy"><h2 id="eof-feature-title" data-en="Start with a figure.&lt;br&gt;See how ocean temperatures change together.">从一张图，<br>看懂海温的共同变化。</h2><p  data-en="An EOF study with real NOAA ERSSTv5 data. Explore spatial patterns, time coefficients and reconstruction through figures, animation and reproducible data.">EOF 真实数据专题。把 NOAA ERSSTv5 海温拆成空间模态和时间系数，用图表、动画和可复现数据建立直觉。</p><a class='feature-link' data-en='Explore the EOF figures' href='./eof.html#atlas'>查看 EOF 图版</a></div><a class='eof-feature-image' href='./eof.html#atlas'><img data-grid-figure="eof1-map" src="./eof/grid/eof1-map-zh.png" alt="NOAA ERSSTv5 EOF 1 spatial loading map" width="1298" height="754" loading="lazy"></a></section>
+      <section id="collection" class="container collection-section" aria-labelledby="collection-title">
+        <div class="section-top">
+          <div><h2 id="collection-title">课程内容</h2><p id="collection-description">让每一次学习，都有迹可循。</p></div>
+          <label class="search-box"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><span class="sr-only">搜索课程内容</span><input id="search" type="search" placeholder="搜索标题、关键词…" autocomplete="off"></label>
+        </div>
+        <div class="collection-toolbar">
+          <nav class="filter-nav" aria-label="内容分类">
+            <a href="#all" data-filter="all" aria-current="true">全部内容 <span data-count="all">0</span></a>
+            <a href="#assignments" data-filter="assignments">作业 <span data-count="assignments">0</span></a>
+            <a href="#research" data-filter="research">研究主题 <span data-count="research">0</span></a>
+            <a href="#tickets" data-filter="tickets">出门票 <span data-count="tickets">0</span></a>
+          </nav>
+          <label class="sort-label"><span class="sr-only">内容排序</span><select id="sort"><option value="newest">最新在前</option><option value="oldest">最早在前</option></select></label>
+        </div>
+        <div id="content-status" class="sr-only" role="status" aria-live="polite"></div>
+        <div id="content-list" class="content-list"></div>
+        <div id="empty-state" class="empty-state">
+          <svg class="empty-art" viewBox="0 0 90 62" aria-hidden="true"><path d="M29 9h25l10 10v25H29zM54 9v11h10M37 29h19M37 35h12M8 50c8-8 15-8 23 0s15 8 23 0 15-8 27 0M18 59c6-5 11-5 18 0s12 5 20 0 12-5 19 0"/></svg>
+          <h3 id="empty-title">第一份记录，正在路上</h3>
+          <p id="empty-description">作业、研究主题和课后出门票将在这里陆续整理与分享。</p>
+          <span class="empty-note" id="empty-note">内容准备中，欢迎之后再来看看。</span>
+          <button id="clear-search" class="text-button" type="button" hidden>清除搜索</button>
+        </div>
+        <noscript><p class="noscript-note">请启用 JavaScript 以浏览和搜索课程内容。</p></noscript>
+      </section>
+
+      <section id="about" class="about-section" aria-labelledby="about-title">
+        <div class="container about-inner">
+          <div class="about-heading"><h2 id="about-title">学习海洋，<br>也记录思考的轨迹。</h2><span lang="en">A personal learning collection.</span></div>
+          <div class="about-copy"><p>这是一个研究生的描述性物理海洋课程网站，用来收集课堂内外的学习记录，也与同学和老师分享探索过程。</p><p>在这里，<strong>作业</strong>保存推导与练习，<strong>研究主题</strong>整理问题与进展，<strong>出门票</strong>记录每次课后的收获、疑问与下一步思考。</p><p class="about-final">让问题有回声，让学习有积累。</p></div>
+        </div>
+      </section>
+    </div>
+
+    <section id="reader-view" class="reader-view container" hidden aria-labelledby="article-title">
+      <a id="reader-back" class="reader-back" href="#all"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"/></svg> 返回课程内容</a>
+      <div class="reader-grid"><article class="article"><div id="article-meta" class="article-meta"></div><h1 id="article-title" tabindex="-1"></h1><p id="article-summary" class="article-summary"></p><details id="article-contents" class="article-contents" open hidden><summary>本页目录</summary><nav aria-label="本页内容"><ul id="article-contents-list"></ul></nav></details><div id="article-body" class="article-body"></div><section id="article-files" class="article-files" hidden><h2>附件与相关资料</h2><div id="attachment-list"></div></section></article><aside class="reader-aside"><p>沿着一个问题，<br>再向前一步。</p><a id="reader-category" href="#all">浏览同类内容 <svg class="inline-arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="m7 17 10-10M7 7h10v10"/></svg></a></aside></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-inner"><p>描述性物理海洋课程网站<span>一份持续生长的学习记录。</span></p><a href="#home">回到首页 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5m-6 6 6-6 6 6"/></svg></a></div></footer>
+</body>
+</html>
+

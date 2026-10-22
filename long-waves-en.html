@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#073c61">
+<title>Class Homework | Long Waves in the Ocean</title>
+<meta name="description" content="Class homework: a classification of long waves in the ocean—gravity, Rossby, Kelvin, equatorial and shelf waves—organized by restoring force, rotation, stratification and boundaries.">
+<link rel="icon" href="./assets/favicon.svg">
+<link rel="stylesheet" href="./hub.css">
+<link rel="stylesheet" href="./dossier.css">
+<link rel="stylesheet" href="./homework.css">
+<link rel="stylesheet" href="./longwaves.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="identity" href="./en.html">
+      <svg viewBox="0 0 40 36" aria-hidden="true"><path d="M2 11Q11 2 20 11T38 11M2 20Q11 11 20 20T38 20M2 29Q11 20 20 29T38 29" fill="none" stroke="currentColor" stroke-width="2.4"/></svg>
+      <span>Descriptive Physical Oceanography<small>Zhang Hao’s course notebook · 2026</small></span>
+    </a>
+    <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false">Contents</button>
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+      <a href="./en.html#classroom">Classroom</a>
+<a href="./en.html#textbook">Textbook</a>
+<a href="./en.html#story">Story Lab</a>
+<a href="./en.html#retell">Retell</a>
+<a href="./homework-en.html">Homework</a>
+    </nav>
+    <a class="language" href="./long-waves.html" hreflang="zh-CN">中文</a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="hw-hero">
+    <div class="wrap">
+      <p class="hw-kicker">CLASS HOMEWORK · LONG WAVES</p>
+      <h1>Long Waves in the Ocean</h1>
+      <p class="hw-sub">First ask what force restores the water, then add rotation, stratification and boundaries—one tree and one table.</p>
+      <div class="actions">
+        <a class="btn" href="#tree">See the tree</a>
+        <a class="btn secondary" href="#table">See the table</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap reader">
+    <aside class="contents" aria-label="On this page">
+      <strong>On this page</strong>
+      <a href="#one-line">One sentence</a>
+<a href="#standard">Two definitions</a>
+<a href="#tree">Classification tree</a>
+<a href="#table">One table</a>
+<a href="#lines">Three main lines</a>
+<a href="#formulas">Formulas</a>
+<a href="#flow">Decision flow</a>
+<a href="#mis">Common pitfalls</a>
+<a href="#retell">30-second retell</a>
+    </aside>
+    <article class="reading">
+      <section id="one-line">
+        <h2>One sentence</h2>
+        <p class="hw-lead">“Long wave” in the ocean is not one wave but a family: gravity waves, Rossby waves, Kelvin waves, equatorial waves… The first question is: what force restores the water?</p>
+        <p>Treating “long wave” as one thing mixes tides, tsunamis, Rossby waves and ENSO. Start with the restoring force, then add rotation, stratification and boundaries.</p>
+      </section>
+
+      <section id="standard">
+        <h2>Two meanings of “long wave”</h2>
+        <p>(1) Shallow-water long wave: wavelength ≫ depth, c=√(gH), non-dispersive; tides, tsunami, seiche.</p>
+        <p>(2) Long wave in physical oceanography: wavelengths of hundreds to thousands of km and periods of days to years; Rossby, Kelvin, equatorial waves.</p>
+        <p class="hw-note">“Long” depends on what you compare it with: depth, stratification, or Earth's rotation.</p>
+      </section>
+
+      <section id="tree">
+        <h2>Classification tree: restoring force first, boundary second</h2>
+        <div class="lw-tree">
+          <div class="lw-root">Ocean long waves</div>
+          <div class="lw-branches">
+            <div class="lw-branch"><h3>Gravity waves</h3><small>Restoring force: gravity / buoyancy</small><ul><li>Surface long waves: tides, tsunami, seiche</li><li>Internal gravity waves: internal tides, SCS waves</li></ul><small>Fast: minutes–days; c=√(gH) or √(g'H)</small></div>
+<div class="lw-branch"><h3>Rotation waves</h3><small>Restoring force: β / potential vorticity</small><ul><li>Planetary Rossby wave</li><li>Topographic Rossby / shelf wave</li></ul><small>Slow: weeks–years; Rossby phase speed is westward</small></div>
+<div class="lw-branch"><h3>Boundary-trapped waves</h3><small>Rotation + boundary (coast/equator)</small><ul><li>Coastal Kelvin wave</li><li>Equatorial Kelvin wave</li><li>Equatorial Rossby wave</li><li>Mixed Rossby–gravity wave</li></ul><small>Tied to a coast or the equator; propagate along the boundary</small></div>
+          </div>
+        </div>
+        <p class="hw-note">Barotropic vs baroclinic is another axis: barotropic is in phase through the column with a strong surface signal; baroclinic involves density-surface displacement, weak at the surface but strong in the interior.</p>
+      </section>
+
+      <section id="table">
+        <h2>One table: typical wave types side by side</h2>
+        <p>Periods and wavelengths are orders of magnitude, not hard boundaries; they vary with region and stratification.</p>
+        <div class="table-scroll">
+          <table class="reference-table">
+            <thead><tr><th>Wave type</th><th>Restoring force</th><th>Typical period</th><th>Typical wavelength</th><th>Propagation</th><th>Example</th></tr></thead>
+            <tbody><tr><td>Surface gravity wave</td><td>Gravity</td><td>1–20 s</td><td>1 m–300 m</td><td>Wind/wave direction</td><td>Wind sea, swell</td></tr>
+<tr><td>Shallow-water long wave</td><td>Gravity</td><td>minutes–24 h</td><td>100–1000 km</td><td>c=√(gH)</td><td>Tides, tsunami, seiche</td></tr>
+<tr><td>Internal gravity wave</td><td>Buoyancy</td><td>minutes–hours</td><td>1–100 km</td><td>Along density surfaces</td><td>Internal tides, SCS internal waves</td></tr>
+<tr><td>Coastal Kelvin wave</td><td>Gravity + rotation + coast</td><td>days–months</td><td>100–1000 km</td><td>Along coast (coast on the right in NH)</td><td>Coastal sea level, ENSO signals</td></tr>
+<tr><td>Equatorial Kelvin wave</td><td>Gravity + rotation + equator</td><td>days–months</td><td>~1000 km</td><td>Eastward</td><td>ENSO</td></tr>
+<tr><td>Planetary Rossby wave</td><td>β (f varies with latitude)</td><td>weeks–years</td><td>500–5000 km</td><td>Westward</td><td>Basin adjustment, ENSO</td></tr>
+<tr><td>Topographic Rossby / shelf wave</td><td>Topography + rotation</td><td>days–months</td><td>10–500 km</td><td>Along isobaths</td><td>Shelf waves</td></tr>
+<tr><td>Equatorial Rossby wave</td><td>β + equator</td><td>weeks–months</td><td>~1000 km</td><td>Westward</td><td>ENSO</td></tr>
+<tr><td>Mixed Rossby–gravity wave</td><td>β + gravity</td><td>weeks</td><td>~1000 km</td><td>Westward</td><td>Equatorial waves</td></tr></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="lines">
+        <h2>Three main lines for classification</h2>
+        <div class="hw-two"><div class="hw-card"><h3>Gravity vs rotation</h3><p>Gravity waves are fast (minutes–days); rotation waves are slow (weeks–years). Gravity waves can be non-dispersive; Rossby waves are dispersive.</p></div>
+<div class="hw-card"><h3>Barotropic vs baroclinic</h3><p>Barotropic = whole column in phase, strong surface signal; baroclinic = density-surface displacement, weak surface signal but strong interior.</p></div>
+<div class="hw-card"><h3>Free vs trapped</h3><p>Free waves travel far; trapped waves are tied to a coast or the equator and propagate along the boundary.</p></div></div>
+      </section>
+
+      <section id="formulas">
+        <h2>A few formulas that are enough</h2>
+        <div class="hw-two"><div class="hw-card"><h3>Shallow-water long wave</h3><div class="formula">c = √(gH)</div><p>Non-dispersive; tides, tsunami, seiche. H is depth.</p></div>
+<div class="hw-card"><h3>Internal wave</h3><div class="formula">c = √(g'H), g' = g Δρ/ρ</div><p>Baroclinic; small surface signal, large density-surface displacement.</p></div>
+<div class="hw-card"><h3>Planetary Rossby wave</h3><div class="formula">ω = −βk/(k²+l²), c_x = ω/k < 0</div><p>Phase speed westward; long waves faster, short waves slower.</p></div>
+<div class="hw-card"><h3>Kelvin wave</h3><div class="formula">c = √(gH)</div><p>Geostrophic balance normal to the boundary; trapped within a deformation radius.</p></div>
+<div class="hw-card"><h3>Equatorial waves</h3><div class="formula">c = √(gH), with the equatorial deformation radius</div><p>Kelvin waves eastward, Rossby waves westward.</p></div></div>
+      </section>
+
+      <section id="flow">
+        <h2>Five-step decision flow</h2>
+        <p>Given a “long-wave” phenomenon, ask five questions in order:</p>
+        <ol class="lw-flow"><li>Wavelength ≫ depth? → shallow-water gravity wave (tide / tsunami / seiche).</li>
+<li>Stratification important? → internal wave / baroclinic (internal tides, SCS waves).</li>
+<li>Earth's rotation important? → rotation wave (Rossby / Kelvin).</li>
+<li>A coast or the equator? → trapped wave (coastal/equatorial Kelvin, equatorial Rossby).</li>
+<li>Topography important? → topographic Rossby / shelf wave.</li></ol>
+      </section>
+
+      <section id="mis">
+        <h2>Common pitfalls</h2>
+        <ul class="lw-mis"><li><b>“Long wave” is not one wave.</b> First ask the restoring force: gravity, buoyancy, β, or a boundary?</li>
+<li><b>A westward Rossby phase speed does not mean energy only goes west.</b> The group velocity of short waves can be eastward.</li>
+<li><b>A Kelvin wave is not an ordinary gravity wave.</b> It is a geostrophic-balanced wave shaped by rotation and a boundary.</li>
+<li><b>Tides are long waves, but their period is set by astronomical forcing.</b> They are forced, not free.</li>
+<li><b>A tsunami is a shallow-water long wave in the deep ocean:</b> fast and low-amplitude; it amplifies only as it shoals.</li></ul>
+      </section>
+
+      <section id="retell">
+        <h2>30-second retell</h2>
+        <ol class="hw-questions"><li>What is the first question in classifying a long wave?</li>
+<li>Why do Rossby waves propagate westward?</li>
+<li>Why is a Kelvin wave tied to a boundary?</li></ol>
+        <p>If you can answer these three in your own words, the classification is no longer a list of names.</p>
+        <p class="hw-back"><a href="./homework-en.html">← Back to homework</a></p>
+      </section>
+
+      <section id="source">
+        <h2>Textbook links</h2>
+        <p>Textbook Ch.7 (geostrophy, potential vorticity) and Ch.8 (waves, tides, coasts). The tree puts the restoring force first so that waves with different physics are not mixed into one class.</p>
+      </section>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <strong>Descriptive Physical Oceanography · Class homework: long waves in the ocean</strong>
+        <p>Zhang Hao · 22634120 · Ocean College, Zhejiang University · Fall/Winter 2026. Classify long waves by restoring force, rotation, stratification and boundaries—not by memorizing names.</p>
+      </div>
+      <div>
+        <p>2026-10-22</p>
+        <a href="./homework-en.html">← Back to homework</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var toggle=document.querySelector('.menu-toggle'), nav=document.getElementById('main-nav');
+  if(toggle&&nav){toggle.addEventListener('click',function(){var open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',open?'true':'false');});}
+})();
+</script>
+</body>
+</html>

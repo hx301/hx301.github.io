@@ -1,0 +1,833 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#073c61">
+<title>描述性物理海洋 · 张浩的学习档案｜课堂笔记·教材精读·故事会</title>
+<meta name="description" content="张浩（22634120）的描述性物理海洋课程学习档案：8 讲课堂笔记（含我自己的话、当时的疑问、出门票）、8 章教材笔记（公式/图/数据、与课堂对照、我的延伸）、1 个浮游植物水华故事会（NASA 影像、光—营养—损失模型、CSV 与 Python），以及 30 秒复述记录。">
+<meta name="author" content="张浩 22634120">
+<link rel="icon" href="./assets/favicon.svg">
+<link rel="stylesheet" href="./hub.css">
+<link rel="stylesheet" href="./dossier.css">
+</head>
+<body>
+<a class="skip" href="#main">跳至主要内容</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="identity" href="./index.html" aria-label="课程首页 / Course home">
+      <svg viewBox="0 0 40 36" aria-hidden="true"><path d="M2 11Q11 2 20 11T38 11M2 20Q11 11 20 20T38 20M2 29Q11 20 20 29T38 29" fill="none" stroke="currentColor" stroke-width="2.4"/></svg>
+      <span>描述性物理海洋<small>张浩的课程手记 · 2026</small></span>
+    </a>
+    <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false">目录</button>
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+      <a href="#classroom">课堂</a>
+      <a href="#textbook">教材</a>
+      <a href="#story">故事会</a>
+      <a href="#retell">复述</a>
+      <a href="./homework.html">课堂作业</a>
+    </nav>
+    <a class="language" href="./en.html" hreflang="en">EN</a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="intro">
+    <div class="wrap intro-grid">
+      <div class="intro-copy">
+        <h1>从海水的性质，<br>读到生命的繁盛。</h1>
+        <p>八讲课堂笔记、八章教材精读与一个浮游植物水华故事会。每个结论有解释，每张图能追溯来源；第 1–8 讲按课程日历排列，每讲都留下“我自己的话、当时的疑问、出门票”。</p>
+        <div class="actions">
+          <a class="btn" href="#lesson-01">从第1讲开始</a>
+          <a class="btn secondary" href="#story">进入水华故事会</a>
+        </div>
+      </div>
+      <figure class="intro-image">
+        <img src="./bloom/nasa-greenland-20240616.jpg" width="1600" height="1066" alt="Aqua/MODIS 在云隙间观测到格陵兰东侧蓝绿色水华纹理，2024 年 6 月 16 日">
+        <figcaption>真实的北大西洋水华 · Aqua/MODIS · 2024-06-16<br><a href="https://science.nasa.gov/earth/earth-observatory/peek-a-bloom-in-the-north-atlantic-152953/">NASA Earth Observatory · Lauren Dauphin</a></figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <nav class="paths" aria-label="Learning paths">
+      <a href="#classroom"><strong>课堂 · 8 讲</strong><span>每讲含课堂内容、我自己的话、疑问与出门票</span></a>
+      <a href="#textbook"><strong>教材 · 8 章</strong><span>公式/图/数据、与课堂对照、我的延伸</span></a>
+      <a href="#story"><strong>故事会 · 1 个</strong><span>NASA 影像、可复算模型、CSV 与 Python</span></a>
+    </nav>
+
+    <div class="evidence-map" aria-label="页面速览">
+      <div class="stat"><b>8</b><span>讲课堂记录<br>第1讲–第8讲</span></div>
+      <div class="stat"><b>8</b><span>章教材精读<br>Ch.1–Ch.8</span></div>
+      <div class="stat"><b>1</b><span>个故事会<br>开头→中间→结尾</span></div>
+      <div class="stat"><b>20,000</b><span>组光—营养—损失计算<br>3 组情景 + CSV</span></div>
+    </div>
+
+  </div>
+
+  <div class="wrap reader">
+    <aside class="contents" aria-label="本页阅读路径">
+      <strong>本页阅读路径</strong>
+      <a href="#classroom"><b>课堂笔记 · 八讲</b></a>
+<a href="#lesson-01">第1讲 · 描述性物理海洋学是什么</a>
+<a href="#lesson-02">第2讲 · 海盆、海峡与地形</a>
+<a href="#lesson-03">第3讲 · 海水的物理性质</a>
+<a href="#lesson-04">第4讲 · 典型分布与水团</a>
+<a href="#lesson-05">第5讲 · 质量、盐与热收支</a>
+<a href="#lesson-06">第6讲 · 动力过程：地转、Ekman 与位涡</a>
+<a href="#lesson-07">第7讲 · 波动、潮汐与沿岸</a>
+<a href="#lesson-08">第8讲 · 数据分析与观测方法</a>
+      <a href="#textbook" style="margin-top:10px"><b>教材笔记 · 八章</b></a>
+<a href="#book-01">第1章 · 描述性物理海洋学与尺度</a>
+<a href="#book-02">第2章 · 海盆、海槛与测深</a>
+<a href="#book-03">第3章 · 海水状态方程与层结</a>
+<a href="#book-04">第4章 · T-S 图与水团</a>
+<a href="#book-05">第5章 · 混合层热收支</a>
+<a href="#book-06">第6章 · EOF 与可复现分析</a>
+<a href="#book-07">第7章 · 地转、Ekman 与位涡</a>
+<a href="#book-08">第8章 · 波动、潮汐与沿岸</a>
+      <a href="#story" style="margin-top:10px"><b>故事会</b></a>
+      <a href="#retell">30 秒复述</a>
+    </aside>
+
+    <article class="reading">
+      <section id="classroom">
+        <h2>课堂笔记｜八讲</h2>
+        <p class="section-intro">按课次列（8 次主讲课，课程日历 9.17–11.05）：9.17 导论、9.24 海盆、10.08 海水物性、10.15 水文分布、10.22 收支、10.29 动力过程、10.30 线上模块 2（波动/潮汐）、11.05 数据分析。每讲保留“课堂内容 → 我自己的话 → 当时的疑问 → 出门票”四块；第 6–8 讲的教材章号分别是 Ch.7、Ch.8、Ch.6，和你看到的课本顺序不完全一样，这是课程日历的安排。</p>
+
+    <article class="lesson" id="lesson-01">
+      <div class="lesson-head">
+        <span class="lesson-no">第1讲</span>
+        <div>
+          <h3>描述性物理海洋学是什么</h3>
+          <p class="lesson-meta">2026-09-17 · 教材第1章 §1.1–1.2</p>
+        </div>
+      </div>
+      <p class="lesson-drive"><strong>驱动问题：</strong>海洋是一种不断运动的流体——我们怎样描述它，地球自转又在什么时候开始管事？</p>
+      <h4>课堂内容</h4>
+      <p>描述性物理海洋学从观测和模式输出出发，尽可能定量地描述海水的运动与性质；动力物理海洋学则用理论和过程实验解释背后的机制。先回答“在哪里、多少、怎样变化”，再问“为什么”。</p>
+      <p>海洋现象跨越多达十个数量级的空间尺度（1 mm–10,000 km）和时间尺度（秒–千年）。同一套观测方案不可能同时分辨海浪和气候，平均间隔本身就是科学定义的一部分。</p>
+      <p>判断自转是否重要，先算 Rossby 数 Ro=U/(fL)。大洋环流 Ro~10⁻³，地转近似很好；赤道、边界层和强摩擦处要重新检查。</p>
+      <ul class="key-points">
+        <li>描述不等于没有动力学；描述是动力学解释的起点。</li>
+        <li>读图五问：变量与单位、时间窗、空间范围、数据来源、误差与缺测。</li>
+        <li>数据来源：现场观测、卫星遥感、历史资料与模式再分析。</li>
+      </ul>
+      <div class="myvoice">
+        <h4>我自己的话</h4>
+        <p>我原以为物理海洋学一上来就是讲海流和方程，后来发现第一节课先教的是“怎样描述”：先问在哪里、多少、怎样变化，再问为什么。老师把 1 mm 到 10,000 km 的尺度图放在一页上，我第一次意识到：同一套近似不能同时解释海浪和气候。</p>
+      </div>
+      <div class="question">
+        <h4>❓ 当时的疑问 + ✅ 后来怎么想通</h4>
+        <p>❓ 我当时没懂：为什么 Rossby 数小就一定能用地转近似？<br>✅ 后来想通：Ro 小只说明旋转主导、平流项相对小；还要看时间尺度、摩擦和边界层。地转是“主平衡”，不是“没有加速度”。</p>
+      </div>
+      <div class="ticket">
+        <h4>🎫 出门票</h4>
+        <p><strong>题目：</strong>要研究约 6 小时的海温变化，仅有逐日平均数据是否足够？</p>
+        <details class="answer-reveal">
+          <summary>先自己想，再展开参考答案</summary>
+          <p><strong>我的回答：</strong>不够。日平均会把日内信号削弱甚至混叠掉；应改用明显短于 6 小时的采样（如小时级），并检查仪器响应、连续覆盖与缺测。</p>
+        </details>
+        <p class="next">这张票把我带到第2讲：先确认观测尺度，再谈海底地形怎样约束水的去路。</p>
+      </div>
+      <p class="lesson-sources">本讲来源：<a href="https://booksite.elsevier.com/samplechapters/9780750645522/9780750645522.pdf" target="_blank" rel="noopener">Elsevier · Chapter 1 sample</a> · <a href="https://talleylab.ucsd.edu/ltalley/sio210/data_analysis/lecture_data_analysis_2019.pdf" target="_blank" rel="noopener">Talley · Data analysis</a></p>
+    </article>
+
+    <article class="lesson" id="lesson-02">
+      <div class="lesson-head">
+        <span class="lesson-no">第2讲</span>
+        <div>
+          <h3>海盆、海峡与地形</h3>
+          <p class="lesson-meta">2026-09-24 · 教材第2章 §2.2–2.9</p>
+        </div>
+      </div>
+      <p class="lesson-drive"><strong>驱动问题：</strong>为什么海底地形不能只当作海流地图的背景？</p>
+      <h4>课堂内容</h4>
+      <p>海洋覆盖约 71% 的地球表面，平均深度约 3734 m；陆地平均海拔只有约 840 m。最深的马里亚纳海沟约 11,000 m。</p>
+      <p>大陆架—大陆坡—大陆隆—深海平原—洋中脊—海沟，这些形态由板块活动和沉积塑造，也决定不同深度的水能否直接交换。</p>
+      <p>海槛像门槛：它限制深层通道，但不是封闭墙。越槛的密水可以在混合后继续下沉，也可能停在较浅层；深盆水是否更新，要看密度差、输运和混合。</p>
+      <ul class="key-points">
+        <li>海盆、海岭与通道共同决定连通关系。</li>
+        <li>图上有网格，不等于每个格点都有直接测深。</li>
+        <li>测深手段：船载声学、卫星重力、GEBCO/ETOPO 网格。</li>
+      </ul>
+      <div class="myvoice">
+        <h4>我自己的话</h4>
+        <p>我原以为海底地形只是海流图的背景，后来发现海槛、海峡和海岭会直接决定哪一层水能进来。把 4000 m 的盆地和 800 m 的海槛放在一起看，“深”不等于“封闭”。</p>
+      </div>
+      <div class="question">
+        <h4>❓ 当时的疑问 + ✅ 后来怎么想通</h4>
+        <p>❓ 我当时没懂：海槛只有 800 m，4000 m 的深水是不是永远不更新？<br>✅ 后来想通：越槛水只要混合后仍比盆地水密，就能沿坡下沉；更新强弱取决于密度差、输运和混合，不是两个深度数字。</p>
+      </div>
+      <div class="ticket">
+        <h4>🎫 出门票</h4>
+        <p><strong>题目：</strong>想判断海岭两侧的深层水是否相通，应优先补查哪三类信息？</p>
+        <details class="answer-reveal">
+          <summary>先自己想，再展开参考答案</summary>
+          <p><strong>我的回答：</strong>第一，通道及海槛的深度与宽度；第二，两侧水体的温盐和密度结构；第三，通道流速或输运及其变化。仅看海面地图或盆地最大深度不够。</p>
+        </details>
+        <p class="next">下一讲从“水在哪里”转到“水是什么”：温度、盐度和密度。</p>
+      </div>
+      <p class="lesson-sources">本讲来源：<a href="https://shop.elsevier.com/books/descriptive-physical-oceanography/talley/978-0-7506-4552-2" target="_blank" rel="noopener">Elsevier · 章节目录</a> · <a href="https://www.gebco.net/data_and_products/gridded_bathymetry_data/" target="_blank" rel="noopener">GEBCO · 海底地形网格</a></p>
+    </article>
+
+    <article class="lesson" id="lesson-03">
+      <div class="lesson-head">
+        <span class="lesson-no">第3讲</span>
+        <div>
+          <h3>海水的物理性质</h3>
+          <p class="lesson-meta">2026-10-08 · 教材第3章 §3.2–3.5</p>
+        </div>
+      </div>
+      <p class="lesson-drive"><strong>驱动问题：</strong>比较两团海水的轻重，为什么不能只看温度？</p>
+      <h4>课堂内容</h4>
+      <p>密度由温度、盐度和压力共同决定，关系非线性。通常升温减密、增盐增密、加压压缩；“冷水一定重”不是无条件结论。</p>
+      <p>深水的现场温度含绝热压缩效应；位温把水团假想绝热移到同一参考压力。位密度也要注明参考压力。</p>
+      <p>TEOS-10 区分实用盐度 SP（电导率、无量纲）和绝对盐度 SA（常用 g/kg）；名字相似，不能在程序里随意互换。判断层结看水团被推开后能否回来：N²=−(g/ρ₀)∂ρ/∂z。</p>
+      <ul class="key-points">
+        <li>Cabbeling：两个同密度但温盐不同的水团混合后密度更大。</li>
+        <li>双扩散/盐指：热量扩散比盐分快，形成细长盐指。</li>
+        <li>SOFAR 通道：约 1000 m 声速最小，声波可传数千公里。</li>
+      </ul>
+      <div class="myvoice">
+        <h4>我自己的话</h4>
+        <p>我原以为冷水一定比暖水重，后来发现盐度可以把结论翻过来：较淡的冷水可能比高盐暖水轻。位温、位密度还要注明参考压力，否则两个数根本不能直接比。</p>
+      </div>
+      <div class="question">
+        <h4>❓ 当时的疑问 + ✅ 后来怎么想通</h4>
+        <p>❓ 我当时没懂：现场密度随深度增加，不就说明层结稳定吗？<br>✅ 后来想通：压力压缩也会让密度向下增加；判断稳定性要用位密度或 N²，看水团被推开后能不能回来。</p>
+      </div>
+      <div class="ticket">
+        <h4>🎫 出门票</h4>
+        <p><strong>题目：</strong>同一压力下，Δρ/ρ₀≈−αΔT+βΔSA。取 α=2×10⁻⁴ K⁻¹、β=8×10⁻⁴ (g/kg)⁻¹，升温 2 K、增盐 0.5 g/kg，密度一阶变化是多少？</p>
+        <details class="answer-reveal">
+          <summary>先自己想，再展开参考答案</summary>
+          <p><strong>我的回答：</strong>−2×10⁻⁴×2 + 8×10⁻⁴×0.5 = −4×10⁻⁴ + 4×10⁻⁴ = 0。两个一阶效应抵消；这是固定系数的教学近似，不代表完整非线性状态方程给出绝对相同的密度。</p>
+        </details>
+        <p class="next">下一讲把温盐放到真实剖面上，看水团和层结。</p>
+      </div>
+      <p class="lesson-sources">本讲来源：<a href="https://www.teos-10.org/" target="_blank" rel="noopener">TEOS-10 · 热力学定义</a> · <a href="https://sam.ucsd.edu/ltalley/sio210/PPSW/index.html" target="_blank" rel="noopener">Talley · 海水性质讲义</a></p>
+    </article>
+
+    <article class="lesson" id="lesson-04">
+      <div class="lesson-head">
+        <span class="lesson-no">第4讲</span>
+        <div>
+          <h3>典型分布与水团</h3>
+          <p class="lesson-meta">2026-10-15 · 教材第4章 §4.2–4.7</p>
+        </div>
+      </div>
+      <p class="lesson-drive"><strong>驱动问题：</strong>温盐剖面中的极值、斜坡与层次，分别能说明什么？</p>
+      <h4>课堂内容</h4>
+      <p>全球海洋平均温度约 3.5°C、平均盐度约 34.6；四分之三的体积落在 0–6°C、34–35 之间。</p>
+      <p>典型副热带剖面：上层混合层、温跃层、较冷深层。它是比较框架，不是所有海区全年固定的模板；副极地和极地可能由盐度主导层结。</p>
+      <p>T-S 图把温度和盐度同时比较：一个点是一种水型，两个水团混合落在一条直线上，等密度线给出密度背景。水团识别不能只看单一极值，还要看温盐关系、密度层位、氧/营养盐、空间连续性和通道。</p>
+      <ul class="key-points">
+        <li>AABW：南极陆架，约 −0.5°C、34.7。</li>
+        <li>NADW：挪威海/拉布拉多海，约 2–4°C、34.9–35.0。</li>
+        <li>AAIW：南极极锋以北，约 2–4°C、34.5–34.7。</li>
+      </ul>
+      <div class="myvoice">
+        <h4>我自己的话</h4>
+        <p>我原以为 T-S 图只是把温度和盐度画成散点，后来发现它是水团的“指纹”：两个水团混合会落在一条直线上，盐度还能区分温度相近但来源不同的水。</p>
+      </div>
+      <div class="question">
+        <h4>❓ 当时的疑问 + ✅ 后来怎么想通</h4>
+        <p>❓ 我当时没懂：副热带表层盐度最高，为什么不是蒸发最强的赤道？<br>✅ 后来想通：盐度看的是蒸发减降水（E-P），副热带降水少，净蒸发最大；赤道蒸发强但降水也强。</p>
+      </div>
+      <div class="ticket">
+        <h4>🎫 出门票</h4>
+        <p><strong>题目：</strong>两个站的同一中层都出现盐度极小值，能否直接认定它们属于同一来源水团？还应检查什么？</p>
+        <details class="answer-reveal">
+          <summary>先自己想，再展开参考答案</summary>
+          <p><strong>我的回答：</strong>不能直接认定。应比较温盐关系、密度层位、氧或其他示踪量，并查看两站之间的连续分布与可能通道；相似的单一极值可能由不同混合过程形成。</p>
+        </details>
+        <p class="next">下一讲把这套性质放进收支账本：先画控制体，再记账。</p>
+      </div>
+      <p class="lesson-sources">本讲来源：<a href="https://talleylab.ucsd.edu/ltalley/sio210/Distributions/lecture_structure1.pdf" target="_blank" rel="noopener">Talley · 典型分布 I</a> · <a href="https://talleylab.ucsd.edu/ltalley/sio210/Distributions/lecture_structure2.pdf" target="_blank" rel="noopener">Talley · 典型分布 II</a></p>
+    </article>
+
+    <article class="lesson" id="lesson-05">
+      <div class="lesson-head">
+        <span class="lesson-no">第5讲</span>
+        <div>
+          <h3>质量、盐与热收支</h3>
+          <p class="lesson-meta">2026-10-22 · 教材第5章 §5.1–5.8</p>
+        </div>
+      </div>
+      <p class="lesson-drive"><strong>驱动问题：</strong>一片海变暖或变咸，怎样判断是当地强迫还是海流输送造成的？</p>
+      <h4>课堂内容</h4>
+      <p>收支先选控制体、边界和正方向：储存变化 = 净输入 + 内部源汇。体积输运是流速在断面上的积分，不能用表层速度代表全深度。</p>
+      <p>海表热交换四项：短波 Qs、长波 Qb、潜热 Qe、感热 Qh。规定进入海洋为正时，蒸发潜热通常是负项。</p>
+      <p>混合层温度还受平流、层底夹卷和混合影响；穿透层底的短波没有被本层全部吸收。忽略这些时，ρ₀cₚh dT/dt≈Q。淡水收支改变盐度和浮力；风应力输入动量，也能加深混合层。</p>
+      <ul class="key-points">
+        <li>先定义控制体、边界、单位和符号。</li>
+        <li>表面通量与边界输送都能改变储存量。</li>
+        <li>强风可能同时增大蒸发和加深混合层，最终温变要看各项大小。</li>
+      </ul>
+      <div class="myvoice">
+        <h4>我自己的话</h4>
+        <p>我原以为热通量都是海洋给大气，后来发现短波是太阳给海洋，长波、潜热、感热通常是海洋向上损失；符号一错，整个账本都会反。</p>
+      </div>
+      <div class="question">
+        <h4>❓ 当时的疑问 + ✅ 后来怎么想通</h4>
+        <p>❓ 我当时没懂：净热通量向下为正，为什么 SST 还会下降？<br>✅ 后来想通：表面加热只是其中一项，冷水平流、夹卷和混合层加深都能把热量摊薄或带走。</p>
+      </div>
+      <div class="ticket">
+        <h4>🎫 出门票</h4>
+        <p><strong>题目：</strong>20 m 均匀混合层吸收 100 W/m² 持续一天，忽略平流、夹卷和穿透短波。取 ρ₀=1025 kg/m³、cₚ=4000 J/(kg·K)，温升约多少？</p>
+        <details class="answer-reveal">
+          <summary>先自己想，再展开参考答案</summary>
+          <p><strong>我的回答：</strong>ΔT = QΔt/(ρ₀cₚh) = 100×86400/(1025×4000×20) ≈ 0.105 K。若层深 100 m，其余不变，约 0.021 K。</p>
+        </details>
+        <p class="next">下一讲把风加上来，看地转、Ekman 和位涡怎样组织大尺度环流。</p>
+      </div>
+      <p class="lesson-sources">本讲来源：<a href="https://www.pmel.noaa.gov/pubs/outstand/cron1713/cron1713.shtml" target="_blank" rel="noopener">NOAA PMEL · 上层海洋热平衡</a> · <a href="https://talleylab.ucsd.edu/ltalley/sio210/Upper_ocean_water_masses/index.html" target="_blank" rel="noopener">Talley · 上层水团形成</a></p>
+    </article>
+
+    <article class="lesson" id="lesson-06">
+      <div class="lesson-head">
+        <span class="lesson-no">第6讲</span>
+        <div>
+          <h3>动力过程：地转、Ekman 与位涡</h3>
+          <p class="lesson-meta">2026-10-29 · 教材第7章 §7.2–7.8</p>
+        </div>
+      </div>
+      <p class="lesson-drive"><strong>驱动问题：</strong>为什么海流常沿着海面等高线走，而不是直接流向低处？</p>
+      <h4>课堂内容</h4>
+      <p>水平压强梯度先让海水加速，科氏力随速度增大并改变方向；在大尺度、低摩擦、缓变条件下两者近似平衡，形成地转流。取 x 向东、y 向北：u=−(g/f)η_y，v=(g/f)η_x。</p>
+      <p>密度水平差异通过静力关系改变不同深度的压强梯度，给出热成风切变；密度给相对速度，绝对速度还要参考层或观测约束。</p>
+      <p>风应力在表层驱动 Ekman 输运；风应力旋度通过 Ekman 层底的垂直运动让内区水柱伸缩，联系 Sverdrup 经向输运和西边界流。位涡 q=(ζ+f)/h 在理想单层、无摩擦、绝热条件下近似守恒。</p>
+      <ul class="key-points">
+        <li>科氏力永远垂直于运动方向，不做功。</li>
+        <li>表层 Ekman 流偏 45°，垂直积分后的净输送偏 90°。</li>
+        <li>西边界流（湾流、黑潮）参与闭合整体环流。</li>
+      </ul>
+      <figure class="lesson-figure">
+        <img src="./geostrophic/figures/force-balance-zh.png" alt="地转流受力平衡示意：压强梯度力、科氏力与流向" loading="lazy">
+        <figcaption>地转平衡示意：压强梯度力与科氏力近似抵消，流向沿等压线。图：本项目整理。</figcaption>
+      </figure>
+      <div class="myvoice">
+        <h4>我自己的话</h4>
+        <p>我原以为科氏力是一种真实的力，后来发现它只在旋转参考系里出现，而且永远垂直于运动方向、不做功；它改方向，不改速度大小。</p>
+      </div>
+      <div class="question">
+        <h4>❓ 当时的疑问 + ✅ 后来怎么想通</h4>
+        <p>❓ 我当时没懂：为什么 Ekman 输送是垂直风向 90°，表层流却只偏 45°？<br>✅ 后来想通：45° 是表层流速；把整个 Ekman 层垂直积分，各深度偏转相互抵消，净输送才是 90°。</p>
+      </div>
+      <div class="ticket">
+        <h4>🎫 出门票</h4>
+        <p><strong>题目：</strong>30°N 海面向东升高 0.20 m、水平距离 100 km，南北方向无坡度。取 g=9.81 m/s²、f=7.292×10⁻⁵ s⁻¹，地转流向哪里、速度约多大？</p>
+        <details class="answer-reveal">
+          <summary>先自己想，再展开参考答案</summary>
+          <p><strong>我的回答：</strong>ηx=2×10⁻⁶，u=0，v=gηx/f≈0.269 m/s，向北。压力梯度加速度向西，北向流在北半球的科氏加速度向东，二者平衡。</p>
+        </details>
+        <p class="next">下一讲离开稳态平衡，看波动和潮汐怎样传播。</p>
+      </div>
+      <p class="lesson-sources">本讲来源：<a href="https://talleylab.ucsd.edu/ltalley/DPO/supplementary/ch_s7.pdf" target="_blank" rel="noopener">Talley · 扩展动力章 S7</a> · <a href="https://uhslc.soest.hawaii.edu/ocn620/lectures/sverdrup-balance.html" target="_blank" rel="noopener">University of Hawai‘i · Sverdrup balance</a></p>
+    </article>
+
+    <article class="lesson" id="lesson-07">
+      <div class="lesson-head">
+        <span class="lesson-no">第7讲</span>
+        <div>
+          <h3>波动、潮汐与沿岸</h3>
+          <p class="lesson-meta">2026-10-30（线上模块 2） · 教材第8章 §8.2–8.8</p>
+        </div>
+      </div>
+      <p class="lesson-drive"><strong>驱动问题：</strong>海浪、潮汐与河口环流，为什么需要不同的解释？</p>
+      <h4>课堂内容</h4>
+      <p>波动传播的是扰动和能量，水质点运动不等于波峰相速。表面重力波以重力为恢复力；深水/浅水由水深与波长之比决定。</p>
+      <p>线性、无旋转浅水长波：c≈√(gH)。这里的“浅水”是相对波长而言，不是海图上水深小。</p>
+      <p>稳定层结支持内波；潮汐主要受日月引潮力周期强迫，但实际潮差和潮流还受海盆形状、水深、旋转、摩擦与共振影响。河口常见淡水在上、咸水在下，但潮混合、径流和形状会改变层结。</p>
+      <ul class="key-points">
+        <li>区分相速、群速和水质点运动。</li>
+        <li>大潮与日月作用同相有关，不是“春天才有”。</li>
+        <li>单一时刻的流向不能代表长期净输运。</li>
+      </ul>
+      <div class="myvoice">
+        <h4>我自己的话</h4>
+        <p>我原以为波峰向前跑，就是同一团水一路冲到岸边，后来发现小振幅波里水质点主要在原地转圈，波峰只是相位在传播；真正到岸的破碎和净漂移是另一层问题。</p>
+      </div>
+      <div class="question">
+        <h4>❓ 当时的疑问 + ✅ 后来怎么想通</h4>
+        <p>❓ 我当时没懂：为什么 100 m 和 25 m 水深的同一长波，相速比是 2？<br>✅ 后来想通：浅水长波 c≈√(gH)，相速比 √(100/25)=2；“浅水”是相对波长，不是海图上水浅。</p>
+      </div>
+      <div class="ticket">
+        <h4>🎫 出门票</h4>
+        <p><strong>题目：</strong>同一长波在 100 m 与 25 m 水深区都满足线性浅水近似，忽略旋转、背景流和耗散，两处相速之比是多少？</p>
+        <details class="answer-reveal">
+          <summary>先自己想，再展开参考答案</summary>
+          <p><strong>我的回答：</strong>c₁/c₂=√(100/25)=2。取 g=9.81 m/s²，分别约 31.3 和 15.7 m/s。这是波峰相速，不能直接当作净水流速度。</p>
+        </details>
+        <p class="next">下一讲回到数据：怎样把观测变成可检查、可复算的结论。</p>
+      </div>
+      <p class="lesson-sources">本讲来源：<a href="https://talleylab.ucsd.edu/ltalley/sio210/Waves_Tides/lecture_waves.pdf" target="_blank" rel="noopener">Talley · 波浪讲义</a> · <a href="https://oceanservice.noaa.gov/education/tutorial_tides/tides06_variations.html" target="_blank" rel="noopener">NOAA · 潮汐变化</a></p>
+    </article>
+
+    <article class="lesson" id="lesson-08">
+      <div class="lesson-head">
+        <span class="lesson-no">第8讲</span>
+        <div>
+          <h3>数据分析与观测方法</h3>
+          <p class="lesson-meta">2026-11-05 · 教材第6章 §6.1–6.7</p>
+        </div>
+      </div>
+      <p class="lesson-drive"><strong>驱动问题：</strong>一项海洋分析怎样做到别人能够理解、检查和重算？</p>
+      <h4>课堂内容</h4>
+      <p>分析从采样和质控开始：精密度是重复测量的离散程度，准确度是离真值有多近；数值平滑不代表没有系统偏差。采样不足会漏掉变化或产生混叠。</p>
+      <p>先检查单位、质量标识、传感器深度、缺测编码和采样间隔，再决定平均、滤波和绘图。EOF 把时空数据分解为空间模态（EOF）和时间系数（PC）：X=UΣVᵀ，方差比例 λᵢ/Σλ。</p>
+      <p>去季节、去趋势、面积加权和标准化会改变分析对象；报告有效样本、代码、误差和敏感性，结果才可复现。EOF 优化样本方差的重建效率，不检验因果机制。</p>
+      <ul class="key-points">
+        <li>相关不等于因果。</li>
+        <li>EOF1 不是机制 1。</li>
+        <li>缺测处理会改变样本代表性。</li>
+      </ul>
+      <div class="myvoice">
+        <h4>我自己的话</h4>
+        <p>我原以为 EOF1 解释 90% 方差，就等于解释了 90% 的物理原因，后来发现它只是在既定变量、区域、权重和预处理下，最能重建样本方差的空间模态；因果还要独立证据。</p>
+      </div>
+      <div class="question">
+        <h4>❓ 当时的疑问 + ✅ 后来怎么想通</h4>
+        <p>❓ 我当时没懂：两个 EOF 一个去趋势、一个保留趋势，第一模态方差比例不同，是不是程序错了？<br>✅ 后来想通：预处理改变了输入矩阵和总方差，先统一范围、缺测、权重和标度，再做敏感性比较。</p>
+      </div>
+      <div class="ticket">
+        <h4>🎫 出门票</h4>
+        <p><strong>题目：</strong>比较两个 EOF 结果，一个先去趋势、另一个保留趋势，第一模态方差比例不同，能否据此判断程序算错？</p>
+        <details class="answer-reveal">
+          <summary>先自己想，再展开参考答案</summary>
+          <p><strong>我的回答：</strong>不能。预处理改变了输入矩阵和总方差；应先统一时空范围、缺测规则、权重和标度，再检查 SVD 重建与数值误差。不同但明确的预处理可以作为敏感性比较。</p>
+        </details>
+        <p class="next">八讲到这里闭环：从描述、性质、分布、收支、动力学、波动到数据分析，再回到可检验的问题。</p>
+      </div>
+      <p class="lesson-sources">本讲来源：<a href="https://talleylab.ucsd.edu/ltalley/sio210/data_analysis/lecture_data_analysis_2019.pdf" target="_blank" rel="noopener">Talley · 数据分析</a> · <a href="https://data.pmel.noaa.gov/pmel/erddap/tabledap/pmelTaoDyT.html" target="_blank" rel="noopener">NOAA PMEL · TAO 日平均水温</a></p>
+    </article>
+      </section>
+
+      <section id="textbook">
+        <h2>教材笔记｜八章</h2>
+        <p class="section-intro">参考 Talley, Pickard, Emery &amp; Swift (2011), <em>Descriptive Physical Oceanography: An Introduction</em>, 6th ed.。每章给出一处教材原文（公式/图/数据），再写“我的解释 → 与课堂对照 → 我的延伸”；章号按教材，课堂讲次按实际上课时间，两边在每张卡片里互相标注。</p>
+        <div class="book-grid">
+
+    <article class="book-card" id="book-01">
+      <div class="book-head">
+        <span class="book-no">Ch.1</span>
+        <div>
+          <h3>描述性物理海洋学与尺度</h3>
+          <p class="book-meta">教材第1章 §1.1–1.2 · Talley et al. (2011), 6th ed.</p>
+        </div>
+      </div>
+      <div class="formula">空间尺度：1 mm – 10,000 km<br>时间尺度：秒 – 千年</div>
+      <p class="source">教材第1章 §1.2，图1.2（海洋时空尺度）</p>
+      <h4>我的解释</h4>
+      <p>教材先用一张尺度图把海洋现象排开：波浪在秒—米级，潮汐在小时—百公里级，环流在年到千年、千公里级。读这张图的意义不是背范围，而是判断哪些项可以忽略、观测要多密。</p>
+      <h4>🔗 与课堂对照</h4>
+      <p>第1讲用 Ro=U/(fL) 把“尺度”变成可算的判据；教材给全景，课上给判据。差异：教材更强调描述传统，课上更强调“可检验的问题”。</p>
+      <h4>📎 我的延伸</h4>
+      <p>Talley 的 S7 补充材料；NOAA/NASA 的数据源目录。</p>
+    </article>
+
+    <article class="book-card" id="book-02">
+      <div class="book-head">
+        <span class="book-no">Ch.2</span>
+        <div>
+          <h3>海盆、海槛与测深</h3>
+          <p class="book-meta">教材第2章 §2.2–2.9 · Talley et al. (2011), 6th ed.</p>
+        </div>
+      </div>
+      <div class="formula">海洋覆盖 71%<br>平均深度 3734 m · 陆地平均海拔 840 m</div>
+      <p class="source">教材第2章 §2.2–2.9；GEBCO 网格的背景数据</p>
+      <h4>我的解释</h4>
+      <p>平均深度 3734 m、陆地平均海拔 840 m，说明海洋是一个薄薄的水层；海槛和海峡则决定这层水在不同深度能否连通。只看到盆地很深，不能推出其中保存着最冷或最古老的海水。</p>
+      <h4>🔗 与课堂对照</h4>
+      <p>第2讲把海槛和“深水更新”放在一起；教材补充了板块活动和测深方法。差异：教材讲地形怎么形成，课上讲地形怎么约束水。</p>
+      <h4>📎 我的延伸</h4>
+      <p>GEBCO 2024 网格、ETOPO 2022；船载多波束与卫星重力的约束不同。</p>
+    </article>
+
+    <article class="book-card" id="book-03">
+      <div class="book-head">
+        <span class="book-no">Ch.3</span>
+        <div>
+          <h3>海水状态方程与层结</h3>
+          <p class="book-meta">教材第3章 §3.2–3.5 · Talley et al. (2011), 6th ed.</p>
+        </div>
+      </div>
+      <div class="formula">ρ = ρ(S, T, p)<br>∂p/∂z = −ρg<br>N² = −(g/ρ₀) ∂ρ/∂z</div>
+      <p class="source">教材第3章 §3.2–3.5</p>
+      <h4>我的解释</h4>
+      <p>密度不是温度的单一函数；盐度和压力会改变结论。位温/位密度要注明参考压力，TEOS-10 的 SP 和 SA 也不能混用。N²>0 表示稳定回复，N²<0 提示对流不稳定。</p>
+      <h4>🔗 与课堂对照</h4>
+      <p>第3讲用 N² 判断层结；教材从状态方程和位温定义推起。差异：教材给定义链，课上给判据和算例。</p>
+      <h4>📎 我的延伸</h4>
+      <p>TEOS-10 的 gsw Python 库；Argo 的 TEMP/PSAL/PRES 与 QC flag。</p><details class="deep"><summary>深入：静水压的符号与适用条件</summary>
+<p>z 向上、g 为重力加速度的正值。向下走意味着 dz &lt; 0，因此 dp &gt; 0。这个符号判断比记忆“负号”更有用；海水越深的部分并不因压强更高就自动向上流，因为重力同时参与垂直平衡。</p>
+<p>与本课对照：当垂直加速度较小时，静水近似适合许多大尺度海洋问题。它没有给出水平流速；还需要水平压强差与科里奥利项。</p>
+<p class="source"><a href="https://talleylab.ucsd.edu/ltalley/DPO/supplementary/ch_s7.pdf#page=31" target="_blank" rel="noopener">S7 §7.6.1 · p.31 · Eq.7.23d</a></p>
+</details>
+    </article>
+
+    <article class="book-card" id="book-04">
+      <div class="book-head">
+        <span class="book-no">Ch.4</span>
+        <div>
+          <h3>T-S 图与水团</h3>
+          <p class="book-meta">教材第4章 §4.2–4.7 · Talley et al. (2011), 6th ed.</p>
+        </div>
+      </div>
+      <div class="formula">平均温度 3.5 °C · 平均盐度 34.6<br>四分之三体积：0–6 °C，34–35</div>
+      <p class="source">教材第4章 §4.2–4.7</p>
+      <h4>我的解释</h4>
+      <p>T-S 图把两个变量放在一起：一个点是一种水型，混合线是直线，等密度线给出密度背景。水团识别还要氧、营养盐、密度层位和空间连续性共同约束。</p>
+      <h4>🔗 与课堂对照</h4>
+      <p>第4讲用副热带盐度极大值解释 E-P；教材补充了氧、营养盐和水龄。差异：教材把水团当多维示踪问题，课上先用 T-S 入门。</p>
+      <h4>📎 我的延伸</h4>
+      <p>Argo、WOA18、NOAA NCEI 水团数据；O₂/硝酸盐示踪。</p>
+    </article>
+
+    <article class="book-card" id="book-05">
+      <div class="book-head">
+        <span class="book-no">Ch.5</span>
+        <div>
+          <h3>混合层热收支</h3>
+          <p class="book-meta">教材第5章 §5.4–5.5 · Talley et al. (2011), 6th ed.</p>
+        </div>
+      </div>
+      <div class="formula">ρ₀ cₚ h ∂T/∂t = Qnet − advection − entrainment</div>
+      <p class="source">教材第5章 §5.4–5.5</p>
+      <h4>我的解释</h4>
+      <p>Qnet 是短波、长波、潜热、感热之和；混合层温度还受平流、夹卷和层厚变化影响。20 m 层吸 100 W/m² 一天约升温 0.105 K，100 m 层只有约 0.021 K。</p>
+      <h4>🔗 与课堂对照</h4>
+      <p>第5讲用控制体和符号约定算一遍；教材强调守恒和空间分布。差异：课上先算，教材后讲全球分布。</p>
+      <h4>📎 我的延伸</h4>
+      <p>OAFlux、ERA5、WHOI 的热通量产品；NOAA PMEL 上层海洋热平衡。</p>
+    </article>
+
+    <article class="book-card" id="book-06">
+      <div class="book-head">
+        <span class="book-no">Ch.6</span>
+        <div>
+          <h3>EOF 与可复现分析</h3>
+          <p class="book-meta">教材第6章 §6.1–6.7 · Talley et al. (2011), 6th ed.</p>
+        </div>
+      </div>
+      <div class="formula">X = U Σ Vᵀ<br>方差比例 = λᵢ / Σλ</div>
+      <p class="source">教材第6章 §6.1–6.7；EOF1 图见下方</p>
+      <h4>我的解释</h4>
+      <p>EOF 把时空数据分解成空间模态和时间系数；方差比例是在既定样本、权重和预处理下的统计量，不是因果贡献。本站示例用 ERSSTv5 1979–2025、564 个月、1,626 个格点，EOF1 解释 56.34% 的处理后加权方差。</p>
+      <h4>🔗 与课堂对照</h4>
+      <p>第8讲用真实海温 EOF 说明预处理会改变结果；教材讲采样、误差和多维分析。差异：教材给方法框架，课上给一个可复现的例子。</p>
+      <h4>📎 我的延伸</h4>
+      <p>NOAA ERSSTv5、eofs/xeofs、TAO 缺测例子。</p>
+      <figure>
+        <img src="./eof/grid/eof1-map-zh.png" alt="NOAA ERSSTv5 海温 EOF1 空间模态图" loading="lazy">
+        <figcaption>真实海温 EOF1：NOAA ERSSTv5，1979–2025，564 个月、1,626 格点；处理后加权方差 56.34%。图：本项目计算。</figcaption>
+      </figure>
+    </article>
+
+    <article class="book-card" id="book-07">
+      <div class="book-head">
+        <span class="book-no">Ch.7</span>
+        <div>
+          <h3>地转、Ekman 与位涡</h3>
+          <p class="book-meta">教材第7章 §7.2–7.8 · Talley et al. (2011), 6th ed.</p>
+        </div>
+      </div>
+      <div class="formula">f = 2Ω sinφ<br>u_g = −(g/f) η_y，v_g = (g/f) η_x<br>V_Ek = τ/(ρ₀ f)<br>q = (ζ + f)/H</div>
+      <p class="source">教材第7章 §7.2–7.8；S7 补充材料</p>
+      <h4>我的解释</h4>
+      <p>地转是压强梯度与科氏力的主平衡；密度梯度给热成风切变；Ekman 输运是风应力的表层响应；位涡把厚度、相对涡度和行星涡度放进一个守恒关系。</p>
+      <h4>🔗 与课堂对照</h4>
+      <p>第6讲用 30°N、0.2 m/100 km 算 v≈0.269 m/s；教材从动量方程推到 Sverdrup 和西边界流。差异：课上先判方向，教材再给完整推导。</p>
+      <h4>📎 我的延伸</h4>
+      <p>CMEMS DUACS 地转流、湾流断面；S7 补充材料。</p><details class="deep"><summary>深入：地转与位涡的适用条件</summary>
+<p>海面坡度对应水平压强差。北半球 f &gt; 0，海面向东升高时 v_g &gt; 0，流向北；压力梯度力指向西，科里奥利加速度指向东。流速与加速度单位不同，不能把速度箭头当作力来相加。</p>
+<p>位涡 q=(ζ+f)/H 中，相对涡度、行星涡度与水层厚度共同决定层模型的位涡。在无摩擦、无外加位涡源且满足层模型假设时，水柱伸长会要求绝对涡度随之增大，才能保持比值；位涡守恒不是“每一点 ζ 不变”。</p>
+<p>湾流断面（教材 S7 图 S7.20，PDF p.37；表 S7.3，p.38）：站距 78.0 km、纬度 38.65°N、表层东向流速 94.83 cm/s；计算假设 3000 m 为无运动参考面，不能把曲线解释成直接流速仪测量。</p>
+<p class="source"><a href="https://talleylab.ucsd.edu/ltalley/DPO/supplementary/ch_s7.pdf#page=31" target="_blank" rel="noopener">S7 §7.6.1 · p.31 · Eq.7.24a–b</a> · <a href="https://talleylab.ucsd.edu/ltalley/DPO/supplementary/ch_s7.pdf#page=44" target="_blank" rel="noopener">S7 §7.7.2 · p.44 · Eq.7.35</a></p>
+</details>
+      <figure>
+        <img src="./calculations/gulf-stream-section.jpg" alt="湾流断面的密度、比容异常、动力高度与地转流速四联图" loading="lazy">
+        <figcaption>湾流断面：密度→比容异常→动力高度→地转流速。图：课堂图片，教材 S7 图 S7.20。</figcaption>
+      </figure>
+    </article>
+
+    <article class="book-card" id="book-08">
+      <div class="book-head">
+        <span class="book-no">Ch.8</span>
+        <div>
+          <h3>波动、潮汐与沿岸</h3>
+          <p class="book-meta">教材第8章 §8.2–8.8 · Talley et al. (2011), 6th ed.</p>
+        </div>
+      </div>
+      <div class="formula">c = √(gH)（浅水长波）<br>c = √(g/k · tanh(kH))（一般）</div>
+      <p class="source">教材第8章 §8.2–8.8</p>
+      <h4>我的解释</h4>
+      <p>相速不是水质点速度；浅水长波 c≈√(gH)，所以 100 m 与 25 m 的相速比是 2。潮汐由日月引潮力强迫，但地方潮差还受海盆形状、摩擦和共振影响。</p>
+      <h4>🔗 与课堂对照</h4>
+      <p>第7讲用 100 m/25 m 算相速比；教材补充内波、潮汐和河口。差异：课上先区分三种“速度”，教材再展开机制。</p>
+      <h4>📎 我的延伸</h4>
+      <p>NOAA Tides & Currents、NDBC 浮标、Talley 波浪讲义。</p>
+    </article>
+        </div>
+      </section>
+    </article>
+  </div>
+
+
+<section id="story" class="story-field">
+  <div class="wrap story-body">
+    <p class="kicker" style="color:#8fd3b8;letter-spacing:.18em;font-size:.78rem">故事会 / STORY LAB</p>
+    <h2>故事会｜海洋为什么突然变绿？</h2>
+    <p class="lead" style="font-size:1.12rem">水华不是“阳光变强”一个条件的结果；种群能否积累，取决于增长是否持续超过损失。</p>
+    <p class="source" style="color:#cfe6dc">结构：开头（现象/疑问）→ 中间（怎么找答案 / 我做了什么）→ 结尾（结论 + 还想知道什么）。</p>
+
+    <div class="story-note">
+      <h3>给家人讲的三句话</h3>
+      <p>浮游植物是海里的微小“生产者”，它们利用光和营养制造有机物。水华发生时，数量的增加在一段时间里超过被吃掉、死亡和输运等损失。混合既送来营养，也把细胞带离阳光，所以海水变浅、变暖或变绿都不能单独证明原因。</p>
+    </div>
+
+    <div class="story-stage">
+      <h3><span class="stage-tag">开头</span> 海面变绿，究竟说明了什么？</h3>
+      <p>2024 年 6 月 16 日，Aqua 卫星在云隙间拍到格陵兰东侧的水华。这张图提出两个不同的问题：浮游植物在哪里聚集？又是什么让它们能够积累？前者可以从影像寻找空间线索，后者需要增长与损失的证据。</p>
+      <p>先把直觉说清楚：一粒随水运动的浮游植物需要光，也需要营养。混合像一部电梯，既能把深处营养带上来，也会让细胞暂时离开明亮表层。电梯停得浅，平均光可能增加；但如果营养已经耗尽，变浅也未必带来水华。</p>
+      <figure class="story-figure">
+        <img src="./bloom/nasa-greenland-20240616.jpg" alt="Aqua/MODIS 在云隙间观测到格陵兰东侧蓝绿色水华纹理，2024 年 6 月 16 日" loading="lazy">
+        <figcaption>真实观测｜2024-06-16，Aqua/MODIS，格陵兰以东、冰岛以南。自然色影像显示水华纹理，但不能仅凭颜色确定物种、叶绿素浓度或增长率。NASA Earth Observatory · Lauren Dauphin。</figcaption>
+      </figure>
+    </div>
+
+    <div class="story-stage">
+      <h3><span class="stage-tag">中间</span> 把这个直觉写成可检验的计算</h3>
+      <p>本项目在 AI 辅助下编写并运行一个教学模型：让光随深度指数衰减，逐深度计算光限制，再考虑营养限制和固定损失。我们计算了 20,000 组混合层深度与营养浓度组合，公开公式、参数、CSV 与源码。参数是示例，没有用卫星图片拟合，结果不是该海区的水华预报。</p>
+      <p>在相同示例表面光下，120 m 深混合层的平均光只有表面的 13.9%，20 m 浅层则为 58.2%。营养浓度固定为 5 mmol m⁻³ 时，净增长从 −0.031 d⁻¹ 变为 +0.336 d⁻¹；但在 20 m 处把营养降到 0.2 mmol m⁻³，净增长又变为 −0.093 d⁻¹。结论来自受控对比：光改善与营养充足必须共同考虑。</p>
+      <figure class="story-figure">
+        <img src="./bloom/light-and-mixing-zh.png" alt="图1 · 混合深度改变平均光环境" loading="lazy">
+        <figcaption>光的衰减曲线相同，均匀混合层从 120 m 变浅到 20 m，层平均光占表面光的比例从 0.139 升至 0.582。示例参数，不是观测。</figcaption>
+      </figure>
+      <div class="table-scroll">
+        <table class="reference-table">
+          <thead><tr><th>情景</th><th>混合层 H</th><th>营养 N</th><th>净增长 r</th></tr></thead>
+          <tbody>
+            <tr><td>深混合 · 富营养</td><td>120 m</td><td>5 mmol m⁻³</td><td>−0.031 d⁻¹</td></tr>
+            <tr><td>浅混合 · 富营养</td><td>20 m</td><td>5 mmol m⁻³</td><td>+0.336 d⁻¹</td></tr>
+            <tr><td>浅混合 · 贫营养</td><td>20 m</td><td>0.2 mmol m⁻³</td><td>−0.093 d⁻¹</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <figure class="story-figure">
+        <img src="./bloom/three-scenarios-zh.png" alt="图3 · 三个可复现的对比实验" loading="lazy">
+        <figcaption>左：三种情景的净增长率。右：所有环境参数固定 7 天的思想实验；真实水华会消耗营养并改变损失，因此该指数曲线不是预报。N 的单位为 mmol m⁻³。</figcaption>
+      </figure>
+      <div class="story-lab">
+        <h3>自己试一次：什么时候能积累？</h3>
+        <p>固定表面光照、衰减系数和损失率，调整混合层深度与营养盐。曲线是一组教学模型计算，不是海洋实测或预报。</p>
+        <div id="bloom-lab" class="lab">
+          <h4>把三个条件放在一起</h4>
+          <div class="lab-presets">
+            <button type="button" data-preset="120,5">深混合 · 富营养</button>
+            <button type="button" data-preset="20,5" aria-pressed="true">浅混合 · 富营养</button>
+            <button type="button" data-preset="20,0.2">浅混合 · 贫营养</button>
+          </div>
+          <div class="lab-grid lab-controls">
+            <div>
+              <label for="mix-depth">混合层深度 H</label>
+              <input id="mix-depth" type="range" min="5" max="150" step="1" value="20">
+              <output id="depth-value" for="mix-depth">20 m</output>
+            </div>
+            <div>
+              <label for="nutrient">营养盐浓度 N</label>
+              <input id="nutrient" type="range" min="0" max="8" step="0.1" value="5">
+              <output id="nutrient-value" for="nutrient">5.0 mmol m⁻³</output>
+            </div>
+          </div>
+          <p id="growth-result" class="result-line" role="status"></p>
+          <p id="light-result"></p>
+          <svg id="growth-chart" viewBox="0 0 580 285" role="img" aria-labelledby="growth-chart-title growth-chart-desc">
+            <title id="growth-chart-title">Net growth versus mixed-layer depth</title>
+            <desc id="growth-chart-desc">Teaching-model sensitivity curve</desc>
+            <rect x="55" y="30" width="490" height="200" fill="white"></rect>
+            <path d="M55 30V230H545" fill="none" stroke="#4b6778"></path>
+            <path d="M55 180H545" stroke="#7193a8" stroke-dasharray="5 5"></path>
+            <g font-family="sans-serif" font-size="12" fill="#334e60">
+              <text x="19" y="35">0.6</text><text x="29" y="184">0</text><text x="13" y="233">−0.2</text>
+              <text x="49" y="250">5</text><text x="200" y="250">50</text><text x="365" y="250">100</text><text x="530" y="250">150</text>
+              <text x="55" y="19">r (d⁻¹)</text><text x="270" y="275">H (m)</text>
+            </g>
+            <polyline id="growth-curve" fill="none" stroke="#086d66" stroke-width="3"></polyline>
+            <circle id="growth-dot" r="6" fill="#07538b" stroke="white" stroke-width="2"></circle>
+          </svg>
+          <p class="source">虚线 r = 0：上方表示净增长，下方表示净损失。蓝点为当前条件。H 变浅会提高光利用，但营养盐贫乏时仍可能不增长。</p>
+        </div>
+        <details class="story-deep">
+          <summary>按公式追溯每一个数（模型公式与参数）</summary>
+          <div class="formula">I(z) = I₀ exp(−kz)<br>L̄(H) = ln[(I_K + I₀)/(I_K + I₀e<sup>−kH</sup>)] / (kH)<br>r = μ_max [N/(K_N + N)] L̄(H) − ℓ</div>
+          <p>这里 z 是从海面向下的深度，H 是均匀、活跃混合的层厚。L̄ 是逐深度的饱和光响应 I/(I_K+I) 的平均，不是先平均光再代入非线性函数。</p>
+          <p>固定表面光、均匀营养、固定损失；忽略昼夜变化、营养消耗、自遮光、温度依赖、多物种与平流。光限制和营养限制相乘是教学简化。</p>
+          <div class="table-scroll">
+            <table class="reference-table">
+              <thead><tr><th>参数</th><th>示例取值</th></tr></thead>
+              <tbody>
+                <tr><td>I₀</td><td>100 μmol photons m⁻² s⁻¹</td></tr>
+                <tr><td>k</td><td>0.06 m⁻¹</td></tr>
+                <tr><td>I_K</td><td>30 μmol photons m⁻² s⁻¹</td></tr>
+                <tr><td>μ_max</td><td>1 d⁻¹</td></tr>
+                <tr><td>K_N</td><td>1 mmol m⁻³</td></tr>
+                <tr><td>ℓ</td><td>0.2 d⁻¹</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </details>
+      </div>
+      <div class="story-note">
+        <h3>我做了什么</h3>
+        <p>我查了 NASA 的观测时间、地点与图像能力；我用 Python 算了 20,000 组光—营养—损失组合，运行了 3 组情景；我输出了 CSV、图和可复现包。计算与文字由 AI 辅助，未开展实地采样；真实影像与教学结果分别标注。</p>
+      </div>
+    </div>
+
+    <div class="story-stage">
+      <h3><span class="stage-tag">结尾</span> 找到了机制，还没有替真实海洋下结论</h3>
+      <p>Sverdrup 临界深度的核心是整层收支：当整层光合作用收益超过整层损失，充分混合的种群可以积累。它不同于某个深度上局地收益等于损失的补偿深度。模型中 N=5 时的零净增长层深约 101.3 m，只属于这套参数，不能当成实测海区的临界深度。</p>
+      <p>真实海洋还会改变这笔账。WHOI 对 2008 年北大西洋航次的报道说明，涡旋造成的再层化可以让细胞留在有光层，并使水华提前出现；密度定义的混合层也未必等于正在湍混的层。</p>
+      <p><strong>还想知道什么：</strong>下一步需要同期叶绿素、营养、密度/湍流和摄食资料，区分光环境改善、营养输入、损失减弱与平流汇聚。单张自然色图不能完成这个判断。</p>
+      <figure class="story-figure">
+        <img src="./bloom/growth-threshold-zh.png" alt="图2 · 光、营养、损失的共同阈值" loading="lazy">
+        <figcaption>固定其他参数，提高营养可扩大正净增长的层深范围。N=0.2 mmol m⁻³ 时，本模型在所有层深下都为负增长；N=5 时阈值约 101.3 m。</figcaption>
+      </figure>
+    </div>
+
+    <div class="story-note">
+      <h3>📎 证据：图、CSV 与 Python</h3>
+      <p>三组情景 CSV · 20,000 组计算 CSV · Python 源码 · 可复现包。建议讲述顺序：30 秒说清卫星看见了什么；90 秒比较三种情景；最后 60 秒说出模型的限制和下一项观测。</p>
+      <p class="actions">
+        <a class="btn" href="./bloom/bloom-reproducibility.zip">下载图、CSV 与 Python</a>
+        <a class="btn secondary" href="./bloom/scenarios.csv">三组情景 CSV</a>
+        <a class="btn secondary" href="./bloom/model-grid.csv">20,000 组计算 CSV</a>
+        <a class="btn secondary" href="./bloom/bloom_model.py">Python 源码</a>
+      </p>
+      <pre style="background:rgba(0,0,0,.18);color:#eaf6f0;padding:12px 14px;border-radius:8px;overflow:auto">python -m pip install numpy matplotlib
+python bloom_model.py</pre>
+    </div>
+
+    <p class="story-sources">资料来源：<a href="https://science.nasa.gov/earth/earth-observatory/peek-a-bloom-in-the-north-atlantic-152953/">NASA Earth Observatory (2024), Peek-a-Bloom in the North Atlantic</a>；<a href="https://www.whoi.edu/press-room/news-release/scientists-discover-new-trigger-for-immense-north-atlantic-ocean-spring-plankton-bloom/">WHOI (2012), New trigger for the North Atlantic spring bloom</a>；Sverdrup (1953)；Franks (2015)；Kovač, Platt &amp; Sathyendranath (2021)；NASA Ocean Color。</p>
+  </div>
+</section>
+
+
+  <div class="wrap">
+    <section id="retell" class="section">
+      <div class="section-title">
+        <h2>30 秒复述：请一个人替你验证</h2>
+        <span class="source">人工确认 · 助教/老师</span>
+      </div>
+      <div class="retell-grid">
+        <div>
+          <p>把上面的故事给一位同学或家人看，不要先解释。请对方用自己的话回答三个问题：① 水华是什么？② 为什么混合层变浅不一定会水华？③ 这张卫星图能说明什么、不能说明什么？</p>
+          <ol class="retell-checklist">
+            <li><strong>能复述：</strong>对方说出“增长超过损失”这层意思，而不是只重复“水变绿了”。</li>
+            <li><strong>能区分：</strong>对方能说出卫星图看到的是颜色/纹理，不能直接给出物种、叶绿素浓度或增长率。</li>
+            <li><strong>能追问：</strong>对方至少提出一个“还需要什么证据”的问题。</li>
+          </ol>
+          <p class="note">网页记录只是证据，不能自动加分；最终“别人看得懂”由助教/老师确认。把复述者、日期和原话留在下面，打印出来或当面给助教看。</p>
+        </div>
+        <form class="retell-form" id="retell-form" onsubmit="return false">
+          <label for="reviewer">复述者称呼（同学/家人）</label>
+          <input id="reviewer" name="reviewer" type="text" autocomplete="off" placeholder="例如：同组同学 L">
+          <label for="retell-date">复述日期</label>
+          <input id="retell-date" name="date" type="date">
+          <label for="retell-text">他/她的复述（尽量记原话）</label>
+          <textarea id="retell-text" name="retell" placeholder="对方说：水华就是……；变浅不一定是因为……；卫星图只能看出……"></textarea>
+          <div class="retell-actions">
+            <button type="button" id="save-retell">保存复述记录</button>
+            <button type="button" id="print-retell">打印这一页</button>
+          </div>
+          <p class="retell-status" id="retell-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <strong>描述性物理海洋 · 一份可以核对证据的学习记录</strong>
+        <p>张浩 · 22634120 · 浙江大学海洋学院 · 2026 秋冬。按 Talley 等《描述性物理海洋学导论》第六版整理；观测、文献与教学模型分别标注。</p>
+      </div>
+      <div>
+        <p>本次整理：2026-10-21</p>
+      </div>
+    </div>
+    <div class="footer-links">
+      <a href="#classroom">课堂八讲</a>
+      <a href="#textbook">教材八章</a>
+      <a href="#story">水华故事会</a>
+      <a href="#retell">30 秒复述</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var toggle=document.querySelector('.menu-toggle'), nav=document.getElementById('main-nav');
+  if(toggle&&nav){toggle.addEventListener('click',function(){var open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',open?'true':'false');});}
+  var lab=document.getElementById('bloom-lab');
+  if(lab){
+    var depth=document.getElementById('mix-depth'), nutrient=document.getElementById('nutrient');
+    var avgResponse=function(h){return Math.log(130/(30+100*Math.exp(-.06*h)))/(.06*h);};
+    var rate=function(h,n){return n/(1+n)*avgResponse(h)-.2;};
+    var curve=document.getElementById('growth-curve'), dot=document.getElementById('growth-dot');
+    var updateLab=function(){
+      var h=Number(depth.value), n=Number(nutrient.value), r=rate(h,n);
+      var I=100*(-Math.expm1(-.06*h))/(.06*h);
+      document.getElementById('depth-value').textContent=h.toFixed(0)+' m';
+      document.getElementById('nutrient-value').textContent=n.toFixed(1)+' mmol m⁻³';
+      document.getElementById('growth-result').textContent='净增长率 '+(r>=0?'+':'')+r.toFixed(3)+' d⁻¹：'+(r>0?'生长超过损失':'损失超过生长')+'。';
+      document.getElementById('light-result').textContent='层平均光照 '+I.toFixed(1)+' μmol photons m⁻² s⁻¹；平均光响应 '+avgResponse(h).toFixed(3)+'。';
+      var X=function(v){return 55+(v-5)/145*490;};
+      var Y=function(v){return 230-(v+.2)/.8*200;};
+      var pts=[];
+      for(var hh=5;hh<=150;hh++){pts.push(X(hh).toFixed(2)+','+Y(rate(hh,n)).toFixed(2));}
+      curve.setAttribute('points',pts.join(' '));
+      dot.setAttribute('cx',X(h));dot.setAttribute('cy',Y(r));
+      document.getElementById('growth-chart-desc').textContent='固定营养盐 '+n.toFixed(1)+'，深度从 5 到 150 米时净增长率下降。当前深度 '+h+' 米，净增长率 '+r.toFixed(3)+' 每天。';
+      document.querySelectorAll('[data-preset]').forEach(function(b){
+        var p=b.dataset.preset.split(',').map(Number);
+        b.setAttribute('aria-pressed',String(h===p[0]&&n===p[1]));
+      });
+    };
+    depth.addEventListener('input',updateLab);nutrient.addEventListener('input',updateLab);
+    document.querySelectorAll('[data-preset]').forEach(function(b){b.addEventListener('click',function(){
+      var p=b.dataset.preset.split(',');depth.value=p[0];nutrient.value=p[1];updateLab();
+    });});
+    updateLab();
+  }
+  var form=document.getElementById('retell-form'), status=document.getElementById('retell-status');
+  if(!form) return;
+  var KEY='zhanghao-dpo2026-retell';
+  function load(){
+    try{
+      var d=JSON.parse(localStorage.getItem(KEY)||'{}');
+      if(d.reviewer) document.getElementById('reviewer').value=d.reviewer;
+      if(d.date) document.getElementById('retell-date').value=d.date;
+      if(d.text) document.getElementById('retell-text').value=d.text;
+      if(d.text) status.textContent='已读取本机保存的复述记录（仅本浏览器）。';
+    }catch(e){}
+  }
+  document.getElementById('save-retell').addEventListener('click',function(){
+    var d={reviewer:document.getElementById('reviewer').value.trim(),
+           date:document.getElementById('retell-date').value,
+           text:document.getElementById('retell-text').value.trim()};
+    if(!d.reviewer||!d.text){status.textContent='请至少填写复述者称呼和复述内容。';return;}
+    try{localStorage.setItem(KEY,JSON.stringify(d));status.textContent='已保存到本机浏览器；请把这一页打印或当面给助教确认。';}
+    catch(e){status.textContent='浏览器不允许本地保存，请直接打印这一页。';}
+  });
+  document.getElementById('print-retell').addEventListener('click',function(){window.print();});
+  load();
+})();
+</script>
+</body>
+</html>

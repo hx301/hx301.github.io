@@ -1,0 +1,33 @@
+/* longwaves.css — 海洋中的长波分类 */
+
+.lw-tree{margin:22px 0;text-align:center}
+.lw-root{display:inline-block;background:var(--deep);color:#fff;border-radius:12px;padding:12px 22px;font-weight:700;font-size:1.08rem}
+.lw-branches{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px;text-align:left}
+.lw-branch{background:#fff;border:1px solid var(--line);border-radius:13px;padding:16px}
+.lw-branch h3{margin:0 0 10px;font-size:1rem;color:var(--deep);padding-bottom:8px;border-bottom:1px solid var(--line)}
+.lw-branch ul{margin:0;padding-left:1.15em}
+.lw-branch li{font-size:.86rem;line-height:1.8;margin:5px 0;color:var(--ink)}
+.lw-branch small{display:block;font-size:.76rem;color:var(--muted);margin-top:8px;line-height:1.6}
+
+.lw-flow{list-style:none;padding:0;margin:18px 0;counter-reset:lw}
+.lw-flow li{counter-increment:lw;position:relative;padding:11px 14px 11px 46px;background:#fff;border:1px solid var(--line);border-radius:10px;margin:8px 0;font-size:.92rem;line-height:1.75}
+.lw-flow li::before{content:counter(lw);position:absolute;left:12px;top:11px;width:24px;height:24px;border-radius:50%;background:var(--teal);color:#fff;font-family:Consolas,monospace;font-weight:700;font-size:.8rem;display:flex;align-items:center;justify-content:center}
+
+.lw-mis{padding-left:1.2em;margin:16px 0}
+.lw-mis li{margin:8px 0;font-size:.92rem;line-height:1.8}
+.lw-mis b{color:var(--deep)}
+
+.lw-tagrow{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0}
+.lw-tag{background:var(--wash);border:1px solid var(--line);border-radius:999px;padding:4px 10px;font-size:.78rem;color:var(--deep)}
+
+@media(max-width:900px){.lw-branches{grid-template-columns:1fr}}
+@media print{.lw-branches{grid-template-columns:1fr 1fr}.lw-tree{break-inside:avoid}}
+
+
+/* 公式卡片：允许换行，避免长公式溢出 */
+.hw-card .formula{white-space:normal;font-size:1rem;padding:10px 12px;margin:10px 0}
+
+
+/* 长波对照表：6 列，字号略小、内边距略紧 */
+#table .reference-table{font-size:.82rem}
+#table .reference-table th,#table .reference-table td{padding:9px 8px}

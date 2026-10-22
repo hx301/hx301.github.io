@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#073c61">
+<title>第六讲课堂作业｜动力海洋学：一张图看懂的知识体系</title>
+<meta name="description" content="第六讲课堂作业：用清晰、简单、直接的语言解释动力海洋学的知识体系——从地转、Ekman、层结、涡度、位涡、沿岸波、Sverdrup、西边界流到 ENSO。">
+<link rel="icon" href="./assets/favicon.svg">
+<link rel="stylesheet" href="./hub.css">
+<link rel="stylesheet" href="./dossier.css">
+<link rel="stylesheet" href="./homework.css">
+</head>
+<body>
+<a class="skip" href="#main">跳至主要内容</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="identity" href="./index.html">
+      <svg viewBox="0 0 40 36" aria-hidden="true"><path d="M2 11Q11 2 20 11T38 11M2 20Q11 11 20 20T38 20M2 29Q11 20 20 29T38 29" fill="none" stroke="currentColor" stroke-width="2.4"/></svg>
+      <span>描述性物理海洋<small>张浩的课程手记 · 2026</small></span>
+    </a>
+    <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false">目录</button>
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+      <a href="./index.html#classroom">课堂</a>
+<a href="./index.html#textbook">教材</a>
+<a href="./index.html#story">故事会</a>
+<a href="./index.html#retell">复述</a>
+<a href="./homework.html">课堂作业</a>
+    </nav>
+    <a class="language" href="./homework-s6-en.html" hreflang="en">EN</a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="hw-hero">
+    <div class="wrap">
+      <p class="hw-kicker">SESSION 6 · CLASS HOMEWORK</p>
+      <h1>动力海洋学：一张图看懂的知识体系</h1>
+      <p class="hw-sub">把这张图讲给一个没学过物理海洋的人听：不先背公式，先说清楚每一块在解决什么问题。</p>
+      <div class="actions">
+        <a class="btn" href="#chain">直接看九步</a>
+        <a class="btn secondary" href="#retell">30 秒复述</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap reader">
+    <aside class="contents" aria-label="本页阅读路径">
+      <strong>本页阅读路径</strong>
+      <a href="#one-line">一句话</a>
+<a href="#difficulties">两个难点</a>
+<a href="#goal">长期目标</a>
+<a href="#chain">九步知识链</a>
+<a href="#mainline">一条主线</a>
+<a href="#rossby">行星罗斯贝波</a>
+<a href="#retell">30 秒复述</a>
+<a href="#source">作业原图与来源</a>
+    </aside>
+    <article class="reading">
+      <section id="one-line">
+        <h2>先记住一句话</h2>
+        <p class="hw-lead">动力海洋学，就是用牛顿定律这类简单规律，去解释海洋为什么这样流、这样转、这样变。</p>
+        <p>描述性物理海洋学回答“是什么、在哪里”；动力海洋学回答“为什么”。这张图就是“为什么”的路线图：从最简单的平衡开始，每走一步加一个现实因素。</p>
+      </section>
+
+      <section id="difficulties">
+        <h2>两个难点：为什么不能直接套牛顿定律</h2>
+        <div class="hw-two">
+          <div class="hw-card"><span class="hw-num">1</span><h3>海洋在旋转</h3><p>地球在自转。坐在旋转的参考系里看，运动的物体会“拐弯”——这就是科氏力。它不是真正的力，而是惯性在旋转坐标系里的表现。</p><p class="hw-analogy">类比：在旋转的转盘上把球直线扔出去，旁边的人看到球拐弯。</p></div>
+          <div class="hw-card"><span class="hw-num">2</span><h3>海洋是连续体</h3><p>海水不是一颗颗台球，而是一大片连续的水。不能只追踪单个水团，要用“场”来描述：速度场、压强场、密度场。</p><p class="hw-analogy">类比：一锅汤，不是一袋弹珠。</p></div>
+        </div>
+        <p class="hw-note">一句话：旋转让方向变复杂，连续体让数学变复杂。下面九步，就是逐步把这两个复杂因素加进来。</p>
+      </section>
+
+      <section id="goal">
+        <h2>长期目标：从“看懂”到“用得上”</h2>
+        <div class="hw-goal">
+          <div><b>1</b><h3>看懂</h3><p>为什么流这样走、为什么水会上升。</p></div>
+          <div class="hw-arrow">→</div>
+          <div><b>2</b><h3>预测</h3><p>明天、明年、十年后怎么变。</p></div>
+          <div class="hw-arrow">→</div>
+          <div><b>3</b><h3>环境管理</h3><p>渔业、污染、航运、气候适应。</p></div>
+        </div>
+        <p>九步概念不是考试清单，而是从“看懂”走到“预测”的台阶。</p>
+      </section>
+
+      <section id="chain">
+        <h2>九步知识链：每一步只加一个现实因素</h2>
+        <p>先看整条链：地转 → 加摩擦 → 加层结 → 加涡度 → 加位涡 → 加边界 → 加风旋度 → 加西边界 → 加热带海气。下面每一步都按“加了什么 / 一句话 / 现实例子”讲。</p>
+        <div class="hw-chain"><span class="hw-chip"><b>1</b>地转平衡</span>
+<span class="hw-chip"><b>2</b>地转 + 摩擦 → Ekman 层与上升流</span>
+<span class="hw-chip"><b>3</b>地转 + 层结 → 湾流结构与河口羽流</span>
+<span class="hw-chip"><b>4</b>涡度</span>
+<span class="hw-chip"><b>5</b>位涡</span>
+<span class="hw-chip"><b>6</b>位涡守恒 + 沿岸陷波</span>
+<span class="hw-chip"><b>7</b>Sverdrup 关系 + 加州 Davidson 流</span>
+<span class="hw-chip"><b>8</b>西边界流 → 湾流与黑潮</span>
+<span class="hw-chip"><b>9</b>厄尔尼诺与南方涛动</span></div>
+        <div class="hw-grid">
+          <article class="hw-step">
+          <span class="hw-step-no">STEP 1</span>
+          <h3>地转平衡（Geostrophy）</h3>
+          <span class="hw-added">加了什么：只保留压强梯度力 + 科氏力，先忽略摩擦。</span>
+          <p class="hw-line">大尺度海水不直接冲向低压，而是沿着等压线绕；压强梯度想把水推过去，科氏力把它拐回来。</p>
+          <p class="hw-example">现实例子：湾流、黑潮的大尺度路径。</p>
+        </article>
+<article class="hw-step">
+          <span class="hw-step-no">STEP 2</span>
+          <h3>地转 + 摩擦 → Ekman 层与上升流</h3>
+          <span class="hw-added">加了什么：加上风应力和摩擦。</span>
+          <p class="hw-line">风推表层水，水在旋转下向右偏；表层偏 45°，整层净输送偏 90°。</p>
+          <p class="hw-example">现实例子：离岸风把表层水推离海岸，深层冷水上来，形成上升流。</p>
+        </article>
+<article class="hw-step">
+          <span class="hw-step-no">STEP 3</span>
+          <h3>地转 + 层结 → 湾流结构与河口羽流</h3>
+          <span class="hw-added">加了什么：加上密度层结：暖轻水在冷重水上面。</span>
+          <p class="hw-line">密度面倾斜，流速随深度变化（热成风）；湾流不是一根均匀的管子，而是斜压结构。</p>
+          <p class="hw-example">现实例子：湾流、河口淡水羽流。</p>
+        </article>
+<article class="hw-step">
+          <span class="hw-step-no">STEP 4</span>
+          <h3>涡度（Vorticity）</h3>
+          <span class="hw-added">加了什么：开始描述“水团自己的旋转”。</span>
+          <p class="hw-line">涡度是流体局部转动的度量；正负表示逆时针或顺时针。</p>
+          <p class="hw-example">现实例子：涡旋、剪切流。</p>
+        </article>
+<article class="hw-step">
+          <span class="hw-step-no">STEP 5</span>
+          <h3>位涡（Potential Vorticity）</h3>
+          <span class="hw-added">加了什么：把涡度、地球自转、水柱厚度放在一起：q=(ζ+f)/H。</span>
+          <p class="hw-line">位涡像一个“旋转 + 厚度”的守恒账本；水柱被拉长或压缩，旋转就得变。</p>
+          <p class="hw-example">现实例子：水柱越过海脊、被沿岸流拉长。</p>
+        </article>
+<article class="hw-step">
+          <span class="hw-step-no">STEP 6</span>
+          <h3>位涡守恒 + 沿岸陷波</h3>
+          <span class="hw-added">加了什么：加上边界（海岸、陆架）和地形。</span>
+          <p class="hw-line">海岸和地形把波“拴”在岸边；罗斯贝波、陆架波、开尔文波都靠位涡守恒传播。</p>
+          <p class="hw-example">现实例子：沿岸水位和流量的传播。</p>
+        </article>
+<article class="hw-step">
+          <span class="hw-step-no">STEP 7</span>
+          <h3>Sverdrup 关系 + 加州 Davidson 流</h3>
+          <span class="hw-added">加了什么：加上风应力的“旋度”（风的拧劲）。</span>
+          <p class="hw-line">风应力旋度驱动海洋内部的南北向输送；Sverdrup 平衡把风场和经向流连起来。</p>
+          <p class="hw-example">现实例子：加州沿岸的 Davidson 流。</p>
+        </article>
+<article class="hw-step">
+          <span class="hw-step-no">STEP 8</span>
+          <h3>西边界流 → 湾流与黑潮</h3>
+          <span class="hw-added">加了什么：加上海盆的西边界。</span>
+          <p class="hw-line">为了把 Sverdrup 输送送回边界，西侧形成窄而快的西边界流。</p>
+          <p class="hw-example">现实例子：湾流、黑潮。</p>
+        </article>
+<article class="hw-step">
+          <span class="hw-step-no">STEP 9</span>
+          <h3>厄尔尼诺与南方涛动（ENSO）</h3>
+          <span class="hw-added">加了什么：加上热带海气耦合和气候变率。</span>
+          <p class="hw-line">赤道太平洋的风、温跃层、海温互相反馈，形成厄尔尼诺/拉尼娜。</p>
+          <p class="hw-example">现实例子：1997–98、2015–16 厄尔尼诺。</p>
+        </article>
+        </div>
+      </section>
+
+      <section id="mainline">
+        <h2>一条主线：像搭积木一样</h2>
+        <p>这九步不是并列的，而是递进的：先假设没有摩擦（地转），再加风与摩擦（Ekman/上升流），再加层结（湾流/羽流），再加涡度与位涡（水柱变形），再加边界（沿岸波），再加风旋度（Sverdrup），再加西边界（湾流/黑潮），最后加热带海气耦合（ENSO）。每加一个因素，就多解释一类现象；每退一步，就回到更简单的理想情况。</p>
+        <p class="hw-note">记忆口诀：一转二风三密度，四涡五位六沿岸，七风八界九厄尔尼诺。</p>
+      </section>
+
+      <section id="rossby">
+        <h2>补一张：行星罗斯贝波到底是什么？</h2>
+        <p class="hw-lead">一句话：行星罗斯贝波，是地球自转随纬度变化（β 效应）造成的大尺度波动；它的相位总是向西传。</p>
+        <p>为什么会有：水团向北移，f 变大；为了保持位涡，相对涡度必须变小（反气旋式）。水团向南移，f 变小；相对涡度必须变大（气旋式）。这种“恢复”让扰动整体向西挪。</p>
+        <div class="hw-beta"><div><b>水团向北</b><span>f ↑</span><span>相对涡度 ζ ↓（反气旋）</span></div><div class="hw-beta-core">位涡守恒<br>q = (ζ + f)/H</div><div><b>水团向南</b><span>f ↓</span><span>相对涡度 ζ ↑（气旋）</span></div></div>
+        <div class="formula">β = df/dy = 2Ω cosφ / a<br>∂ζ/∂t + βv = 0<br>ω = −βk/(k² + l²)<br>c_x = ω/k = −β/(k² + l²) &lt; 0（向西）</div>
+        <ul class="hw-points"><li>波长越长，向西越快；短波向西慢。</li>
+<li>相速向西，不代表能量只能向西：短波的群速可以向东。</li>
+<li>海洋里第一斜压模的罗斯贝波速度约几 cm/s，跨洋要数月到数年；大气里表现为西风带的长波槽脊。</li>
+<li>赤道罗斯贝波把西太平洋的风异常向西传，反射成开尔文波，是 ENSO 的重要环节；沿岸的罗斯贝波/陆架波被边界“拴”住。</li></ul>
+        <p class="hw-analogy">类比：像一排多米诺骨牌——每块牌只倒一下，倒下的“形状”却沿队列传很远；罗斯贝波里，水团只是南北晃，波的相位却向西走。</p>
+        <p class="hw-note">所以第 6 步的“罗斯贝波”不是另一种波，而是位涡守恒在地球自转随纬度变化下的必然结果；沿岸陷波只是把这种波“拴”在边界附近。</p>
+      </section>
+
+      <section id="retell">
+        <h2>30 秒复述：你能讲清这三句吗？</h2>
+        <ol class="hw-questions"><li>为什么大尺度海流不直接冲向低压？</li>
+<li>风怎样把深层冷水带到海面？</li>
+<li>为什么西边界流又窄又快？</li></ol>
+        <p>如果你能用三句话答出来，这张图就变成你的了。</p>
+      </section>
+
+      <section id="source">
+        <h2>作业原图与来源</h2>
+        <p>对应教材：Ch.7 地转、Ekman、位涡；Ch.8 波动与沿岸；ENSO 相关章节。作业要求：用自己的话解释这张图，不抄概念，讲清每一步在解决什么问题、和上一步是什么关系。</p>
+        <figure class="hw-figure">
+          <a href="./assets/session6-knowledge-system.jpg" target="_blank" rel="noopener">
+            <img src="./assets/session6-knowledge-system.jpg" alt="第六讲课堂作业幻灯片：动力海洋学的知识体系" loading="lazy">
+          </a>
+          <figcaption>第六讲课堂作业原图：动力海洋学的知识体系。点击看大图。</figcaption>
+        </figure>
+        <p class="hw-back"><a href="./index.html#lesson-06">← 回到第六讲课堂笔记</a></p>
+      </section>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <strong>描述性物理海洋 · 第六讲课堂作业</strong>
+        <p>张浩 · 22634120 · 浙江大学海洋学院 · 2026 秋冬。作业要求：用自己的话解释这张知识体系图，不抄概念。</p>
+      </div>
+      <div>
+        <p>2026-10-22</p>
+        <a href="./index.html#lesson-06">← 回到第六讲课堂笔记</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var toggle=document.querySelector('.menu-toggle'), nav=document.getElementById('main-nav');
+  if(toggle&&nav){toggle.addEventListener('click',function(){var open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',open?'true':'false');});}
+})();
+</script>
+</body>
+</html>

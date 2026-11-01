@@ -17,6 +17,7 @@
 .video-feature{margin:29px 0 26px;scroll-margin-top:100px}.video-feature video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#0c1422;border-radius:4px}.video-feature figcaption{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:13px}.video-feature figcaption strong{font-size:18px;color:var(--navy)}.video-feature figcaption span{font-size:12px;color:var(--muted)}.video-actions{display:flex;gap:22px;flex-wrap:wrap;margin-top:12px;font-size:13px}.video-actions a{padding-block:4px}.video-feature video:focus-visible{outline:3px solid #aa7336;outline-offset:4px}.watch-link{display:block;font-size:14px;font-weight:600;padding:13px 0;border-bottom:1px solid var(--line);text-decoration:none}@media(max-width:560px){.video-feature{margin-top:22px}.video-feature figcaption{gap:4px}.video-feature figcaption strong{font-size:16px}.video-actions{gap:16px;font-size:12px}}@media print{.video-feature,.watch-link{display:none!important}}
 </style>
 <link rel="canonical" href="https://hx301.github.io/story.html">
+<link rel="stylesheet" href="./story/research-figures.css">
 </head>
 <body id="top">
 <a class="skip" href="#main">跳至正文</a>
@@ -105,13 +106,28 @@
 
 <section class="article-section" id="frontier"><h2>七、藻类水华的前沿研究</h2>
 <p>海洋遥感让我们能够从太空持续观察水华。Dai 等于 2023 年发表在 <em>Nature</em> 的论文 <a href="https://doi.org/10.1038/s41586-023-05760-y" target="_blank" rel="noopener noreferrer" lang="en">Coastal phytoplankton blooms expand and intensify in the 21st century</a>，研究了一个问题：<strong>全球近岸浮游植物水华，是否正在变得更广、更频繁？</strong>标题提到“21 世纪”，实际分析时段是 2003—2020 年。</p>
+<figure class="paper-figure" id="paper-figure-1">
+<a class="paper-figure-image" href="./story/research/dai-2023-figure-1.png" target="_blank" rel="noopener" aria-label="查看原图（可放大） · 论文图 1"><img src="./story/research/dai-2023-figure-1.png" alt="论文图1：全球沿海年平均水华检出次数地图，以及各大洲检出次数与受影响面积的统计图。" width="1416" height="990" loading="lazy" decoding="async"></a>
+<figcaption><strong class="paper-figure-title">论文图 1 · 全球哪些海域更常出现水华？</strong><p class="paper-figure-reading">先看 a 面板：颜色表示年平均水华检出次数，暖色通常对应更高的数值。再看 b、c 面板，分别比较不同大洲的检出次数和受影响面积。这里展示的是多年统计格局，不是某一天全球海面同时发生水华的照片。</p>
+<div class="paper-figure-actions"><a href="./story/research/dai-2023-figure-1.png" target="_blank" rel="noopener">查看原图（可放大） ↗</a><a href="https://www.nature.com/articles/s41586-023-05760-y/figures/1" target="_blank" rel="noopener noreferrer">论文原图与图注 ↗</a></div>
+<p class="paper-figure-credit">Dai, Y. et al., <a href="https://doi.org/10.1038/s41586-023-05760-y" target="_blank" rel="noopener noreferrer"><em>Nature</em> 615, 280–284 (2023), Fig. 1</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>。原图未改动，仅等比例显示；中文读图说明为本页补充。</p></figcaption></figure>
 <h3>7.1　卫星怎样识别水华</h3>
 <p>研究使用 Aqua 卫星搭载的 MODIS 传感器，分析约 <strong>76 万景影像</strong>，在 <strong>1 千米空间分辨率</strong>下绘制逐日水华分布。近岸泥沙和有色溶解有机物会干扰常规叶绿素反演，因此作者利用约 678 纳米处的叶绿素荧光信号，并结合邻近波段，在 CIE 色度空间中区分水华与非水华像元。可以把它理解为：寻找藻类的“光谱线索”，而不是只看海水是否变绿。</p>
 <figure class="mechanism" aria-labelledby="remote-method-title"><div class="mechanism-title" id="remote-method-title">从卫星影像到长期变化</div><ol class="process"><li><strong>卫星观测</strong><span>收集多年 MODIS 影像，剔除云、耀斑等低质量像元</span></li><li><strong>荧光识别</strong><span>利用波段组合与分类边界识别水华</span></li><li><strong>逐日制图</strong><span>记录水华出现的位置及受影响面积</span></li><li><strong>分析变化</strong><span>统计长期趋势，联系水温和海洋动力过程</span></li></ol><figcaption>依据论文方法整理的概念流程；“逐日”不等于每个像元每天都有有效观测。</figcaption></figure>
 <h3>7.2　主要发现</h3>
 <ul class="impact-list"><li><strong>分布广：</strong>研究考察的 153 个沿海国家中，126 个国家的近岸海域检测到了水华。</li><li><strong>范围扩大：</strong>2003—2020 年，全球水华影响面积增加约 <strong>13.2%</strong>。</li><li><strong>出现更频繁：</strong>全球水华频率指标的中位数提高约 <strong>59.2%</strong>；但区域差异明显，北半球部分热带、亚热带海域呈减弱趋势。</li></ul>
+<figure class="paper-figure" id="paper-figure-2">
+<a class="paper-figure-image" href="./story/research/dai-2023-figure-2.png" target="_blank" rel="noopener" aria-label="查看原图（可放大） · 论文图 2"><img src="./story/research/dai-2023-figure-2.png" alt="论文图2：2003至2020年水华频率变化趋势的全球分布，以及全球水华频率和影响面积的逐年变化。" width="1418" height="989" loading="lazy" decoding="async"></a>
+<figcaption><strong class="paper-figure-title">论文图 2 · 水华范围和出现频率怎样变化？</strong><p class="paper-figure-reading">a 面板中，红色表示水华频率呈上升趋势，蓝色表示下降。b 面板的蓝线对应左轴（水华频率），红线对应右轴（受影响面积）；两条曲线整体上升，但都有年际波动。注意：两条纵轴的单位不同，不能直接比较曲线的高低。</p>
+<div class="paper-figure-actions"><a href="./story/research/dai-2023-figure-2.png" target="_blank" rel="noopener">查看原图（可放大） ↗</a><a href="https://www.nature.com/articles/s41586-023-05760-y/figures/2" target="_blank" rel="noopener noreferrer">论文原图与图注 ↗</a></div>
+<p class="paper-figure-credit">Dai, Y. et al., <a href="https://doi.org/10.1038/s41586-023-05760-y" target="_blank" rel="noopener noreferrer"><em>Nature</em> 615, 280–284 (2023), Fig. 2</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>。原图未改动，仅等比例显示；中文读图说明为本页补充。</p></figcaption></figure>
 <p>作者将这些变化与<strong>海表温度、海流及营养盐输送</strong>联系起来：适宜的增温可能促进生长，海流和上升流变化则会改变营养盐供给。不同海域的主导因素不同，不能简单理解为“海水越暖，水华一定越多”。</p>
 <p class="table-note">指标说明：文中的“频率”综合了 1° × 1° 网格内的水华检出次数与受影响面积。59.2% 是该指标的相对变化，不代表藻类浓度、毒性或有毒水华比例增加了 59.2%。</p>
+<figure class="paper-figure" id="paper-figure-3">
+<a class="paper-figure-image" href="./story/research/dai-2023-figure-3.png" target="_blank" rel="noopener" aria-label="查看原图（可放大） · 论文图 3"><img src="./story/research/dai-2023-figure-3.png" alt="论文图3：海表温度梯度和海表温度的变化地图，以及八个海区水华频率与两项温度指标的时间序列。" width="1399" height="881" loading="lazy" decoding="async"></a>
+<figcaption><strong class="paper-figure-title">论文图 3 · 海温与海洋动力过程有什么联系？</strong><p class="paper-figure-reading">a、b 面板分别展示海表温度梯度和海表温度的变化趋势。c 面板比较八个海区：黑线是水华频率，红线是海温梯度，紫线是海温。海温梯度表示温度在空间上变化的快慢，并非升温速度。不同海区的关系不同；相关性本身不能单独证明因果关系。</p>
+<div class="paper-figure-actions"><a href="./story/research/dai-2023-figure-3.png" target="_blank" rel="noopener">查看原图（可放大） ↗</a><a href="https://www.nature.com/articles/s41586-023-05760-y/figures/3" target="_blank" rel="noopener noreferrer">论文原图与图注 ↗</a></div>
+<p class="paper-figure-credit">Dai, Y. et al., <a href="https://doi.org/10.1038/s41586-023-05760-y" target="_blank" rel="noopener noreferrer"><em>Nature</em> 615, 280–284 (2023), Fig. 3</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>。原图未改动，仅等比例显示；中文读图说明为本页补充。</p></figcaption></figure>
 <h3>7.3　对海洋遥感研究的启发</h3>
 <p>这项工作的价值，是把局地的一次水华扩展为<strong>可比较的全球长期记录</strong>。作为海洋遥感方向的学习延伸，可以选择一个近岸海域，把水华遥感记录与海温、风场、海流及现场观测结合，研究水华何时出现、在哪里聚集，以及环境变化如何影响它。这是基于论文提出的研究思路，并非论文已经证明的局地结论。</p>
 <div class="summary-box"><p><strong>解读边界：</strong>这项方法识别的是具有可探测荧光信号的表层浮游植物水华，不能直接判断藻种或毒性，也可能漏掉水下、低生物量及云遮挡的事件。遥感适合追踪大范围变化，具体生态风险仍需现场采样验证。</p></div>

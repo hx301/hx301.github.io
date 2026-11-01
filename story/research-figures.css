@@ -1,0 +1,20 @@
+/* Original Nature figures, kept at their native aspect ratios. */
+#frontier .paper-figure{margin:30px 0 34px;padding:0;background:#fff;border:1px solid #d9e2e4;border-radius:8px;overflow:hidden;break-inside:avoid}
+#frontier .paper-figure-image{display:block;padding:16px;background:#fff;cursor:zoom-in}
+#frontier .paper-figure img{display:block;width:100%;height:auto;max-width:100%;object-fit:contain;border:0;border-radius:0;margin:0;background:#fff}
+#frontier .paper-figure figcaption{padding:18px 22px 20px;margin:0;background:#f1f6f6;color:#243d48;font-size:14px;line-height:1.85}
+#frontier .paper-figure-title{display:block;font-size:17px;line-height:1.6;color:#123e50;margin-bottom:9px;font-weight:700}
+#frontier .paper-figure-reading{margin:0;max-width:none;text-align:left}
+#frontier .paper-figure-actions{display:flex;flex-wrap:wrap;gap:8px 22px;margin:12px 0 0;font-size:13px;line-height:1.8}
+#frontier .paper-figure-actions a{display:inline-flex;align-items:center;min-height:36px;font-weight:600}
+#frontier .paper-figure-credit{margin:8px 0 0;padding-top:11px;border-top:1px solid #d9e2e4;color:#576e76;font-size:12px;line-height:1.85}
+#frontier .paper-figure-credit a{color:inherit}
+#frontier .paper-figure-image:focus-visible{outline:3px solid #aa7336;outline-offset:-5px}
+@media(max-width:600px){
+ #frontier .paper-figure{margin:24px 0 29px}
+ #frontier .paper-figure-image{padding:8px}
+ #frontier .paper-figure figcaption{padding:15px 16px 16px;font-size:14px}
+ #frontier .paper-figure-title{font-size:16px}
+ #frontier .paper-figure-actions{gap:5px 18px}
+}
+@media print{#frontier .paper-figure-actions{display:none}#frontier .paper-figure figcaption{font-size:10pt}#frontier .paper-figure-credit{font-size:8pt}}

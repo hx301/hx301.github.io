@@ -1,0 +1,61 @@
+.story-refresh{background:#fff;color:#243d48;border-top:1px solid #d9e2e4;border-bottom:1px solid #d9e2e4;padding:68px 0;font:17px/1.95 "Segoe UI","Microsoft YaHei",sans-serif;scroll-margin-top:85px}
+.story-refresh-inner{width:min(870px,calc(100% - 48px));margin:auto}
+.story-refresh h2,.story-refresh h3,.story-refresh h4,.story-refresh p,.story-refresh figure{margin:0}
+.story-refresh a{color:#116e66;text-underline-offset:4px}
+.story-refresh p+p{margin-top:16px}
+.story-refresh a:focus-visible,.story-refresh video:focus-visible,.story-refresh summary:focus-visible{outline:3px solid #aa7336;outline-offset:4px}
+.story-refresh .article-header{border:0;padding:0;margin-bottom:38px}
+.story-refresh .article-header h2{font:700 38px/1.5 "Noto Serif CJK SC","SimSun",serif;color:#123e50;margin-bottom:10px}
+.story-refresh .subtitle{color:#576e76;font-size:21px;margin:0}
+.story-refresh .abstract{font-size:16px;margin-top:25px}
+.story-refresh .abstract strong,.story-refresh .keywords strong{margin-right:10px;color:#123e50}
+.story-refresh .keywords{font-size:13px;color:#576e76;margin-top:15px}
+.story-refresh .video-feature{margin:27px 0;scroll-margin-top:90px}
+.story-refresh .video-feature figcaption{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:12px;font-size:13px;color:#576e76;line-height:1.7}
+.story-refresh .video-feature figcaption strong{font-size:18px;color:#123e50}
+.story-refresh video{display:block;width:100%;height:auto;aspect-ratio:16/9;background:#0c1422;border-radius:4px}
+.story-refresh .video-actions{display:flex;flex-wrap:wrap;gap:22px;margin-top:12px;font-size:13px}
+.story-refresh .video-actions a{padding:5px 0}
+.story-refresh .story-reading-link{font-size:14px;margin:16px 0 24px}
+.story-refresh .article-section{padding:0;margin:40px 0 0;scroll-margin-top:95px;background:transparent;border:0;border-radius:0;box-shadow:none}
+.story-refresh .article-section h3{font:700 28px/1.6 "Noto Serif CJK SC","SimSun",serif;color:#123e50;padding-bottom:13px;border-bottom:1px solid #d9e2e4;margin-bottom:22px}
+.story-refresh .article-section h4{font-size:19px;line-height:1.7;color:#123e50;margin:25px 0 11px}
+.story-refresh .citation{font-size:12px;white-space:nowrap;vertical-align:super;line-height:1}
+.story-refresh .citation a{text-decoration:none;padding:0 2px}
+.story-refresh .figure{margin:26px 0 0}
+.story-refresh .figure img{width:100%;height:310px;object-fit:cover;display:block;border:0;border-radius:0}
+.story-refresh .figure figcaption{font-size:12px;line-height:1.85;color:#576e76;margin-top:12px}
+.story-refresh .table-title{font-size:14px;color:#576e76;margin:24px 0 10px}
+.story-refresh .taxonomy{width:100%;border-collapse:collapse;table-layout:fixed;font-size:14px;line-height:1.8}
+.story-refresh .taxonomy th{background:#f1f6f6;text-align:left;color:#123e50;border-top:1px solid #97b1b5;border-bottom:1px solid #b8c9cc}
+.story-refresh .taxonomy th,.story-refresh .taxonomy td{padding:13px 15px;vertical-align:top;overflow-wrap:anywhere}
+.story-refresh .taxonomy td{border-bottom:1px solid #d9e2e4}
+.story-refresh .taxonomy th:first-child{width:17%}
+.story-refresh .taxonomy th:nth-child(2){width:39%}
+.story-refresh .taxonomy td:first-child{font-weight:600;color:#123e50}
+.story-refresh .table-note{font-size:13px;color:#576e76;margin-top:12px}
+.story-refresh .definition{background:#f1f6f6;padding:21px 25px;margin:24px 0}
+.story-refresh .conditions,.story-refresh .impact-list{padding-left:1.3em;margin:16px 0}
+.story-refresh .conditions li,.story-refresh .impact-list li{padding:6px 0}
+.story-refresh .role-list{margin:0}
+.story-refresh .role-list dt{font-size:18px;font-weight:600;color:#123e50;margin-top:24px}
+.story-refresh .role-list dd{margin:10px 0 0}
+.story-refresh .mechanism{background:#f1f6f6;padding:23px 24px;margin:25px 0}
+.story-refresh .mechanism-title{font-size:15px;font-weight:600;color:#123e50;margin-bottom:18px}
+.story-refresh .process{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;list-style:none;padding:0;margin:0}
+.story-refresh .process li{position:relative}
+.story-refresh .process li:not(:last-child):after{content:"";position:absolute;right:-14px;top:10px;width:6px;height:6px;border-top:1px solid #116e66;border-right:1px solid #116e66;transform:rotate(45deg)}
+.story-refresh .process strong{display:block;font-size:15px;color:#123e50}
+.story-refresh .process span{display:block;font-size:13px;color:#576e76;line-height:1.85;margin-top:5px}
+.story-refresh .mechanism figcaption{font-size:12px;color:#576e76;line-height:1.8;margin-top:18px;padding-top:14px;border-top:1px solid #d1dfdf}
+.story-refresh .summary-box{background:#f1f6f6;border-top:2px solid #116e66;padding:23px 26px;margin-top:24px}
+.story-refresh .references{margin-top:45px;padding-top:25px;border-top:1px solid #b8c9cc;scroll-margin-top:90px}
+.story-refresh .references h4{font-size:18px;color:#123e50;margin-bottom:14px}
+.story-refresh .references ol{padding-left:23px;font-size:13px;line-height:1.85;color:#576e76}
+.story-refresh .references li{padding:5px 0;overflow-wrap:anywhere;scroll-margin-top:90px}
+.story-refresh .editor-note{font-size:13px;color:#576e76;line-height:1.9;margin-top:18px}
+.story-refresh .story-transcript{margin:25px 0;border-top:1px solid #d9e2e4;border-bottom:1px solid #d9e2e4;padding:15px 0}
+.story-refresh .story-transcript summary{cursor:pointer;font-size:16px;font-weight:600;color:#123e50}
+.story-refresh .story-transcript p{font-size:15px;padding-top:12px}
+@media(max-width:600px){.story-refresh{font-size:16px;padding:39px 0}.story-refresh-inner{width:calc(100% - 36px)}.story-refresh .article-header h2{font-size:28px}.story-refresh .subtitle{font-size:18px}.story-refresh .article-section h3{font-size:23px}.story-refresh .article-section h4{font-size:18px}.story-refresh .taxonomy{font-size:13px}.story-refresh .taxonomy th,.story-refresh .taxonomy td{padding:10px 7px}.story-refresh .taxonomy th:first-child{width:20%}.story-refresh .figure img{height:225px}.story-refresh .process{grid-template-columns:1fr;gap:24px}.story-refresh .process li:not(:last-child):after{right:auto;left:6px;top:auto;bottom:-14px;transform:rotate(135deg)}.story-refresh .definition,.story-refresh .mechanism,.story-refresh .summary-box{padding:18px}.story-refresh .video-feature figcaption strong{font-size:16px}}
+@media print{.story-refresh{padding:25px 0;font-size:11pt}.story-refresh-inner{width:100%}.story-refresh .video-feature,.story-refresh .story-reading-link{display:none}.story-refresh .article-section h3{font-size:17pt;break-after:avoid}.story-refresh .article-section h4{break-after:avoid}.story-refresh .figure,.story-refresh .mechanism{break-inside:avoid}}

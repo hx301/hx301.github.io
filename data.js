@@ -132,24 +132,28 @@ window.COURSE_DATA = {
     {
       "id": "phytoplankton-blooms",
       "category": "research",
-      "title": "故事会｜Phytoplankton blooms 浮游植物水华",
-      "date": "2026-10-19",
-      "summary": "真实 NASA 水华影像、光—营养—损失教学模型、三组对比情景与20,000组可复现计算。附双语图解、CSV和Python。",
+      "title": "故事会｜藻类水华：小藻的水下派对",
+      "date": "2026-11-01",
+      "summary": "两分钟原创科普动画，配中文旁白与中英双语字幕；七部分正文解释藻类、水华、生态作用、发生机制、影响与防控。",
       "tags": [
-        "浮游植物",
+        "藻类水华",
         "故事会",
-        "可复现模型",
-        "双语"
+        "科普动画",
+        "中英双语字幕"
       ],
-      "body": "完整故事已移至独立页面。真实影像和教学模型分别标注；科普视频仍为后续计划。",
+      "body": "从小藻的正常生活到营养输入、增长与聚集、缺氧风险，再到综合防控。图形为概念示意，配音为 AI 合成；完整文章保留科学边界与资料来源。",
       "attachments": [
         {
           "name": "完整故事会",
-          "url": "./index.html#story"
+          "url": "./story.html"
         },
         {
-          "name": "模型与证据包",
-          "url": "./bloom/bloom-reproducibility.zip"
+          "name": "两分钟双语动画",
+          "url": "./story/algal-bloom-story-2min.mp4"
+        },
+        {
+          "name": "中英双语字幕",
+          "url": "./story/algal-bloom-story-bilingual.srt"
         }
       ],
       "published": true

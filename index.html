@@ -5,11 +5,12 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#073c61">
 <title>描述性物理海洋 · 张浩的学习档案｜课堂笔记·教材精读·故事会</title>
-<meta name="description" content="张浩（22634120）的描述性物理海洋课程学习档案：8 讲课堂笔记（含我自己的话、当时的疑问、出门票）、8 章教材笔记（公式/图/数据、与课堂对照、我的延伸）、1 个浮游植物水华故事会（NASA 影像、光—营养—损失模型、CSV 与 Python），以及 30 秒复述记录。">
+<meta name="description" content="张浩（22634120）的描述性物理海洋课程学习档案：8 讲课堂笔记（含我自己的话、当时的疑问、出门票）、8 章教材笔记（公式/图/数据、与课堂对照、我的延伸）、1 个浮游植物水华故事会（两分钟原创动画、中英双语字幕与七部分专题文章），以及 30 秒复述记录。">
 <meta name="author" content="张浩 22634120">
 <link rel="icon" href="./assets/favicon.svg">
 <link rel="stylesheet" href="./hub.css">
 <link rel="stylesheet" href="./dossier.css">
+<link rel="stylesheet" href="./story/story-section.css">
 </head>
 <body>
 <a class="skip" href="#main">跳至主要内容</a>
@@ -53,14 +54,14 @@
     <nav class="paths" aria-label="Learning paths">
       <a href="#classroom"><strong>课堂 · 8 讲</strong><span>每讲含课堂内容、我自己的话、疑问与出门票</span></a>
       <a href="#textbook"><strong>教材 · 8 章</strong><span>公式/图/数据、与课堂对照、我的延伸</span></a>
-      <a href="#story"><strong>故事会 · 1 个</strong><span>NASA 影像、可复算模型、CSV 与 Python</span></a>
+      <a href="#story"><strong>故事会 · 1 个</strong><span>两分钟双语动画、形成机制、生态影响与防控</span></a>
     </nav>
 
     <div class="evidence-map" aria-label="页面速览">
       <div class="stat"><b>8</b><span>讲课堂记录<br>第1讲–第8讲</span></div>
       <div class="stat"><b>8</b><span>章教材精读<br>Ch.1–Ch.8</span></div>
-      <div class="stat"><b>1</b><span>个故事会<br>开头→中间→结尾</span></div>
-      <div class="stat"><b>20,000</b><span>组光—营养—损失计算<br>3 组情景 + CSV</span></div>
+      <div class="stat"><b>1</b><span>个故事会<br>动画故事 + 七部分正文</span></div>
+      <div class="stat"><b>2:00</b><span>分钟原创动画<br>中英双语字幕</span></div>
     </div>
 
   </div>
@@ -575,142 +576,95 @@
   </div>
 
 
-<section id="story" class="story-field">
-  <div class="wrap story-body">
-    <p class="kicker" style="color:#8fd3b8;letter-spacing:.18em;font-size:.78rem">故事会 / STORY LAB</p>
-    <h2>故事会｜海洋为什么突然变绿？</h2>
-    <p class="lead" style="font-size:1.12rem">水华不是“阳光变强”一个条件的结果；种群能否积累，取决于增长是否持续超过损失。</p>
-    <p class="source" style="color:#cfe6dc">结构：开头（现象/疑问）→ 中间（怎么找答案 / 我做了什么）→ 结尾（结论 + 还想知道什么）。</p>
+<section id="story" class="story-refresh">
+<div class="story-refresh-inner">
+<article aria-labelledby="story-title">
+<header class="article-header"><h2 id="story-title">故事会｜藻类水华</h2><p class="subtitle">生态作用、发生机制与防控措施</p>
+<figure class="video-feature" id="video-story"><figcaption><strong>视频故事会｜小藻的水下派对</strong><span>02:00 · 1080p · 中英双语字幕</span></figcaption><video id="story-video" controls playsinline preload="metadata" poster="./story/algal-bloom-story-cover.png" width="1920" height="1080" aria-label="小藻的水下派对，两分钟科普动画，中文配音、中英双语字幕"><source src="./story/algal-bloom-story-2min.mp4" type="video/mp4">此浏览器不支持内嵌视频，请使用下方下载入口。</video><div class="video-actions"><a id="video-download" href="./story/algal-bloom-story-2min.mp4" download="algal-bloom-story-2min.mp4">下载视频</a><a href="./story/algal-bloom-story-bilingual.srt" download="algal-bloom-story-bilingual.srt">下载双语字幕</a></div></figure>
+<p class="story-reading-link"><a href="./story.html">单独打开完整故事会</a></p><p class="abstract"><strong>摘要</strong>藻类是水生态系统的重要初级生产者，其大量增长和聚集可形成水华。水华的发生与营养供应、光照、温度及水体运动等因素有关，部分水华会引发缺氧、毒素暴露和水资源利用问题。本文从基本概念出发，介绍藻类的生态作用、水华的形成过程与主要影响，并概述综合防控思路。</p><p class="keywords"><strong>关键词</strong>藻类水华；富营养化；水动力；生态影响；综合防控</p></header>
 
-    <div class="story-note">
-      <h3>给家人讲的三句话</h3>
-      <p>浮游植物是海里的微小“生产者”，它们利用光和营养制造有机物。水华发生时，数量的增加在一段时间里超过被吃掉、死亡和输运等损失。混合既送来营养，也把细胞带离阳光，所以海水变浅、变暖或变绿都不能单独证明原因。</p>
-    </div>
+<section class="article-section" id="introduction"><h3>一、引言</h3>
+<p>湖泊、水库和近海出现的水色变化，常与藻类的生长和分布有关。当特定类群在适宜条件下大量积累时，便可能形成水华。水华既是水生态过程的一种表现，也是水质保护、渔业生产与海洋环境研究关注的重要现象。</p>
+<p>认识水华，需要同时理解藻类的正常生态功能和过量积累可能带来的影响。对于描述性物理海洋课程而言，水流、混合和分层如何改变藻类获得的光照、营养以及停留时间，是联系物理环境与生物响应的重要切入点。<sup class="citation"><a href="#ref-causes" aria-label="参考资料 3">[3]</a></sup></p>
+<figure class="figure"><img src="./bloom/nasa-greenland-20240616.jpg" width="1600" height="1066" alt="北大西洋蓝绿色浮游植物水华的卫星影像，水华在云隙间呈现弯曲纹理。"><figcaption><strong>图 1　北大西洋浮游植物水华。</strong>2024 年 6 月 16 日，Aqua / MODIS 观测。影像：NASA Earth Observatory / Lauren Dauphin。卫星影像可显示水华的空间分布，但不能仅凭颜色判断其毒性。<a href="https://science.nasa.gov/earth/earth-observatory/peek-a-bloom-in-the-north-atlantic-152953/" target="_blank" rel="noopener noreferrer">查看影像来源</a></figcaption></figure>
+</section>
 
-    <div class="story-stage">
-      <h3><span class="stage-tag">开头</span> 海面变绿，究竟说明了什么？</h3>
-      <p>2024 年 6 月 16 日，Aqua 卫星在云隙间拍到格陵兰东侧的水华。这张图提出两个不同的问题：浮游植物在哪里聚集？又是什么让它们能够积累？前者可以从影像寻找空间线索，后者需要增长与损失的证据。</p>
-      <p>先把直觉说清楚：一粒随水运动的浮游植物需要光，也需要营养。混合像一部电梯，既能把深处营养带上来，也会让细胞暂时离开明亮表层。电梯停得浅，平均光可能增加；但如果营养已经耗尽，变浅也未必带来水华。</p>
-      <figure class="story-figure">
-        <img src="./bloom/nasa-greenland-20240616.jpg" alt="Aqua/MODIS 在云隙间观测到格陵兰东侧蓝绿色水华纹理，2024 年 6 月 16 日" loading="lazy">
-        <figcaption>真实观测｜2024-06-16，Aqua/MODIS，格陵兰以东、冰岛以南。自然色影像显示水华纹理，但不能仅凭颜色确定物种、叶绿素浓度或增长率。NASA Earth Observatory · Lauren Dauphin。</figcaption>
-      </figure>
-    </div>
+<section class="article-section" id="algae"><h3>二、藻类简介</h3>
+<h4>2.1　基本概念与生活方式</h4>
+<p>藻类是一个广义的生物学称谓，包含许多能够进行光合作用的生物类群，并非单一的分类单元。它们既有显微镜下才能观察到的单细胞种类，也有肉眼可见的大型海藻，广泛分布于淡水和海洋环境。</p>
+<p>水体中随水流漂浮的微小藻类，是浮游植物的重要组成部分；另一些藻类附着在底部、岩石或其他生物表面。不同类群在形态、生理特征和环境适应性上存在差异，因此并非所有藻类都会在同样的条件下形成水华。</p>
+<h4>2.2　主要类群及其特征</h4>
+<p>与水华相关的常见类群包括蓝细菌、绿藻、硅藻和甲藻等。通常所说的“蓝藻”实际属于蓝细菌，不属于真核藻类；在水华研究与管理中，二者常被共同讨论。<sup class="citation"><a href="#ref-epa" aria-label="参考资料 2">[2]</a></sup></p>
+<p class="table-title" id="taxonomy-caption">表 1　常见藻类及蓝细菌类群概览</p>
+<table class="taxonomy" aria-labelledby="taxonomy-caption"><thead><tr><th scope="col">类群</th><th scope="col">基本特征与例子</th><th scope="col">与水华的关系</th></tr></thead><tbody>
+<tr><td>蓝细菌</td><td>能进行光合作用的细菌，俗称蓝藻，如微囊藻。</td><td>部分种类可形成淡水水华，其中一些种类或株系能够产毒。</td></tr>
+<tr><td>绿藻</td><td>包括微小藻类和大型藻类，如小球藻、水绵、浒苔。</td><td>部分种类可大量增殖；大型绿藻大量生长和聚集可形成绿潮。</td></tr>
+<tr><td>硅藻</td><td>细胞壁含硅质结构，是常见的浮游植物类群。</td><td>参与许多自然藻华；部分种类能够产生毒素。</td></tr>
+<tr><td>甲藻</td><td>许多种类具有鞭毛，如亚历山大藻属的部分种类。</td><td>是海洋有害藻华的重要类群之一，但并非所有甲藻都有害。</td></tr>
+<tr><td>红藻</td><td>多见于海洋，如紫菜，部分种类为大型海藻。</td><td>是认识藻类多样性的重要类群；“红藻”与“赤潮”不是同一概念。</td></tr>
+</tbody></table>
+<p class="table-note">分类说明：螺旋藻属于蓝细菌，不能列为绿藻的例子。上表用于概念介绍，并非完整的藻类分类体系。</p>
+</section>
 
-    <div class="story-stage">
-      <h3><span class="stage-tag">中间</span> 把这个直觉写成可检验的计算</h3>
-      <p>本项目在 AI 辅助下编写并运行一个教学模型：让光随深度指数衰减，逐深度计算光限制，再考虑营养限制和固定损失。我们计算了 20,000 组混合层深度与营养浓度组合，公开公式、参数、CSV 与源码。参数是示例，没有用卫星图片拟合，结果不是该海区的水华预报。</p>
-      <p>在相同示例表面光下，120 m 深混合层的平均光只有表面的 13.9%，20 m 浅层则为 58.2%。营养浓度固定为 5 mmol m⁻³ 时，净增长从 −0.031 d⁻¹ 变为 +0.336 d⁻¹；但在 20 m 处把营养降到 0.2 mmol m⁻³，净增长又变为 −0.093 d⁻¹。结论来自受控对比：光改善与营养充足必须共同考虑。</p>
-      <figure class="story-figure">
-        <img src="./bloom/light-and-mixing-zh.png" alt="图1 · 混合深度改变平均光环境" loading="lazy">
-        <figcaption>光的衰减曲线相同，均匀混合层从 120 m 变浅到 20 m，层平均光占表面光的比例从 0.139 升至 0.582。示例参数，不是观测。</figcaption>
-      </figure>
-      <div class="table-scroll">
-        <table class="reference-table">
-          <thead><tr><th>情景</th><th>混合层 H</th><th>营养 N</th><th>净增长 r</th></tr></thead>
-          <tbody>
-            <tr><td>深混合 · 富营养</td><td>120 m</td><td>5 mmol m⁻³</td><td>−0.031 d⁻¹</td></tr>
-            <tr><td>浅混合 · 富营养</td><td>20 m</td><td>5 mmol m⁻³</td><td>+0.336 d⁻¹</td></tr>
-            <tr><td>浅混合 · 贫营养</td><td>20 m</td><td>0.2 mmol m⁻³</td><td>−0.093 d⁻¹</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <figure class="story-figure">
-        <img src="./bloom/three-scenarios-zh.png" alt="图3 · 三个可复现的对比实验" loading="lazy">
-        <figcaption>左：三种情景的净增长率。右：所有环境参数固定 7 天的思想实验；真实水华会消耗营养并改变损失，因此该指数曲线不是预报。N 的单位为 mmol m⁻³。</figcaption>
-      </figure>
-      <div class="story-lab">
-        <h3>自己试一次：什么时候能积累？</h3>
-        <p>固定表面光照、衰减系数和损失率，调整混合层深度与营养盐。曲线是一组教学模型计算，不是海洋实测或预报。</p>
-        <div id="bloom-lab" class="lab">
-          <h4>把三个条件放在一起</h4>
-          <div class="lab-presets">
-            <button type="button" data-preset="120,5">深混合 · 富营养</button>
-            <button type="button" data-preset="20,5" aria-pressed="true">浅混合 · 富营养</button>
-            <button type="button" data-preset="20,0.2">浅混合 · 贫营养</button>
-          </div>
-          <div class="lab-grid lab-controls">
-            <div>
-              <label for="mix-depth">混合层深度 H</label>
-              <input id="mix-depth" type="range" min="5" max="150" step="1" value="20">
-              <output id="depth-value" for="mix-depth">20 m</output>
-            </div>
-            <div>
-              <label for="nutrient">营养盐浓度 N</label>
-              <input id="nutrient" type="range" min="0" max="8" step="0.1" value="5">
-              <output id="nutrient-value" for="nutrient">5.0 mmol m⁻³</output>
-            </div>
-          </div>
-          <p id="growth-result" class="result-line" role="status"></p>
-          <p id="light-result"></p>
-          <svg id="growth-chart" viewBox="0 0 580 285" role="img" aria-labelledby="growth-chart-title growth-chart-desc">
-            <title id="growth-chart-title">Net growth versus mixed-layer depth</title>
-            <desc id="growth-chart-desc">Teaching-model sensitivity curve</desc>
-            <rect x="55" y="30" width="490" height="200" fill="white"></rect>
-            <path d="M55 30V230H545" fill="none" stroke="#4b6778"></path>
-            <path d="M55 180H545" stroke="#7193a8" stroke-dasharray="5 5"></path>
-            <g font-family="sans-serif" font-size="12" fill="#334e60">
-              <text x="19" y="35">0.6</text><text x="29" y="184">0</text><text x="13" y="233">−0.2</text>
-              <text x="49" y="250">5</text><text x="200" y="250">50</text><text x="365" y="250">100</text><text x="530" y="250">150</text>
-              <text x="55" y="19">r (d⁻¹)</text><text x="270" y="275">H (m)</text>
-            </g>
-            <polyline id="growth-curve" fill="none" stroke="#086d66" stroke-width="3"></polyline>
-            <circle id="growth-dot" r="6" fill="#07538b" stroke="white" stroke-width="2"></circle>
-          </svg>
-          <p class="source">虚线 r = 0：上方表示净增长，下方表示净损失。蓝点为当前条件。H 变浅会提高光利用，但营养盐贫乏时仍可能不增长。</p>
-        </div>
-        <details class="story-deep">
-          <summary>按公式追溯每一个数（模型公式与参数）</summary>
-          <div class="formula">I(z) = I₀ exp(−kz)<br>L̄(H) = ln[(I_K + I₀)/(I_K + I₀e<sup>−kH</sup>)] / (kH)<br>r = μ_max [N/(K_N + N)] L̄(H) − ℓ</div>
-          <p>这里 z 是从海面向下的深度，H 是均匀、活跃混合的层厚。L̄ 是逐深度的饱和光响应 I/(I_K+I) 的平均，不是先平均光再代入非线性函数。</p>
-          <p>固定表面光、均匀营养、固定损失；忽略昼夜变化、营养消耗、自遮光、温度依赖、多物种与平流。光限制和营养限制相乘是教学简化。</p>
-          <div class="table-scroll">
-            <table class="reference-table">
-              <thead><tr><th>参数</th><th>示例取值</th></tr></thead>
-              <tbody>
-                <tr><td>I₀</td><td>100 μmol photons m⁻² s⁻¹</td></tr>
-                <tr><td>k</td><td>0.06 m⁻¹</td></tr>
-                <tr><td>I_K</td><td>30 μmol photons m⁻² s⁻¹</td></tr>
-                <tr><td>μ_max</td><td>1 d⁻¹</td></tr>
-                <tr><td>K_N</td><td>1 mmol m⁻³</td></tr>
-                <tr><td>ℓ</td><td>0.2 d⁻¹</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </details>
-      </div>
-      <div class="story-note">
-        <h3>我做了什么</h3>
-        <p>我查了 NASA 的观测时间、地点与图像能力；我用 Python 算了 20,000 组光—营养—损失组合，运行了 3 组情景；我输出了 CSV、图和可复现包。计算与文字由 AI 辅助，未开展实地采样；真实影像与教学结果分别标注。</p>
-      </div>
-    </div>
+<section class="article-section" id="bloom"><h3>三、水华简介</h3>
+<h4>3.1　水华的定义与表现</h4>
+<div class="definition"><strong>水华</strong>是指某些藻类或蓝细菌在一定水域内大量增长或聚集，使其细胞浓度或生物量显著升高的现象。水华可发生在水体表层或水柱内部，并不总是形成肉眼可见的漂浮层。</div>
+<p>水华的颜色可能呈绿色、褐色或红色等，取决于优势种类、色素和水体条件。有害藻华强调的是对生态系统或人类活动造成的危害，不能单凭水色判断。海洋中常用的“赤潮”一词也不意味着水一定呈红色。<sup class="citation"><a href="#ref-whoi" aria-label="参考资料 5">[5]</a></sup></p>
+<h4>3.2　水华形成的主要条件</h4>
+<ul class="conditions">
+<li><strong>营养物质供应：</strong>氮、磷等是藻类生长所需的资源。农业径流、城市排水等输入过多，会增加部分水域发生水华的风险。</li>
+<li><strong>光照条件：</strong>光合作用需要光，但藻类实际获得的光照还受到透明度、水深和垂向混合的影响。</li>
+<li><strong>温度条件：</strong>适宜温度有利于生长，但不同种类的适温范围不同，不能简单认为温度越高，水华就越严重。</li>
+<li><strong>水动力条件：</strong>水流影响藻类的输送和停留时间；分层与混合影响细胞在水柱中的位置，以及光和营养物质的供应。</li>
+</ul>
+<p>这些因素相互作用，共同影响水华的形成与维持。富营养化能够增加风险，但并不是所有水华都由单一的营养输入过程造成。<sup class="citation"><a href="#ref-causes" aria-label="参考资料 3">[3]</a><a href="#ref-whoi" aria-label="参考资料 5">[5]</a></sup></p>
+</section>
 
-    <div class="story-stage">
-      <h3><span class="stage-tag">结尾</span> 找到了机制，还没有替真实海洋下结论</h3>
-      <p>Sverdrup 临界深度的核心是整层收支：当整层光合作用收益超过整层损失，充分混合的种群可以积累。它不同于某个深度上局地收益等于损失的补偿深度。模型中 N=5 时的零净增长层深约 101.3 m，只属于这套参数，不能当成实测海区的临界深度。</p>
-      <p>真实海洋还会改变这笔账。WHOI 对 2008 年北大西洋航次的报道说明，涡旋造成的再层化可以让细胞留在有光层，并使水华提前出现；密度定义的混合层也未必等于正在湍混的层。</p>
-      <p><strong>还想知道什么：</strong>下一步需要同期叶绿素、营养、密度/湍流和摄食资料，区分光环境改善、营养输入、损失减弱与平流汇聚。单张自然色图不能完成这个判断。</p>
-      <figure class="story-figure">
-        <img src="./bloom/growth-threshold-zh.png" alt="图2 · 光、营养、损失的共同阈值" loading="lazy">
-        <figcaption>固定其他参数，提高营养可扩大正净增长的层深范围。N=0.2 mmol m⁻³ 时，本模型在所有层深下都为负增长；N=5 时阈值约 101.3 m。</figcaption>
-      </figure>
-    </div>
+<section class="article-section" id="ecology"><h3>四、藻类在水生态系统的作用</h3>
+<dl class="role-list">
+<dt>4.1　初级生产与食物网支持</dt><dd>许多藻类通过光合作用固定无机碳，形成有机物，将太阳能转化为生物可利用的化学能。浮游动物和其他摄食者利用这些有机物，能量随后向鱼类等生物传递。因此，藻类是水域食物网的重要基础。<sup class="citation"><a href="#ref-noaa" aria-label="参考资料 1">[1]</a></sup></dd>
+<dt>4.2　氧气产生与物质循环</dt><dd>藻类的光合作用能够释放氧气，生长过程中也会吸收营养元素。与此同时，藻类自身的呼吸及其死亡后的微生物分解会消耗氧气，并使部分营养物质重新进入环境。水体的氧平衡取决于这些过程及水体交换的共同作用。</dd>
+<dt>4.3　生境维持与生态联系</dt><dd>大型海藻形成的植被可为其他生物提供附着空间、庇护和食物。微小藻类则通过与细菌、浮游动物等生物的联系，参与水体中的能量传递和物质转化。</dd>
+<dt>4.4　水环境变化的指示</dt><dd>藻类的种类组成、生物量和空间分布能够反映环境变化。观察这些特征有助于认识水生态状态，但评估水质仍需结合营养盐、溶解氧等指标，不能仅以“藻多”或“藻少”作出判断。</dd>
+</dl>
+</section>
 
-    <div class="story-note">
-      <h3>📎 证据：图、CSV 与 Python</h3>
-      <p>三组情景 CSV · 20,000 组计算 CSV · Python 源码 · 可复现包。建议讲述顺序：30 秒说清卫星看见了什么；90 秒比较三种情景；最后 60 秒说出模型的限制和下一项观测。</p>
-      <p class="actions">
-        <a class="btn" href="./bloom/bloom-reproducibility.zip">下载图、CSV 与 Python</a>
-        <a class="btn secondary" href="./bloom/scenarios.csv">三组情景 CSV</a>
-        <a class="btn secondary" href="./bloom/model-grid.csv">20,000 组计算 CSV</a>
-        <a class="btn secondary" href="./bloom/bloom_model.py">Python 源码</a>
-      </p>
-      <pre style="background:rgba(0,0,0,.18);color:#eaf6f0;padding:12px 14px;border-radius:8px;overflow:auto">python -m pip install numpy matplotlib
-python bloom_model.py</pre>
-    </div>
+<section class="article-section" id="occurrence"><h3>五、藻类水华的发生及影响</h3>
+<h4>5.1　水华的发生与演变</h4>
+<p>从过程上看，水华的形成与藻类的<strong>增长、损失和空间输送</strong>有关。当细胞生长及外部输入持续超过摄食、死亡和输出等损失时，局部生物量就可能积累。已有藻类也可能因水流汇聚或上浮而集中，使水面在较短时间内出现明显变化。</p>
+<figure class="mechanism"><p class="mechanism-title">水华发生与消退的主要过程</p><ol class="process"><li><strong>条件适宜</strong><span>光、营养与温度等条件支持藻类生长。</span></li><li><strong>生物量积累</strong><span>增长和输入持续超过损失，藻量增加。</span></li><li><strong>输送与聚集</strong><span>水体运动等过程改变藻类的空间分布。</span></li><li><strong>衰退与分解</strong><span>营养限制、摄食和死亡等促进水华消退。</span></li></ol><figcaption>图 2　水华演变的概念示意。各过程可能同时发生，实际事件不一定严格依次经历全部阶段。</figcaption></figure>
+<p>因此，岸边藻类浓度突然升高，不一定意味着整个水域的藻类都在同步增加。研究和监测中，需要区分生物增长与物理聚集，并注意水华在衰退后仍可能产生影响。</p>
+<h4>5.2　对水生态系统的影响</h4>
+<ul class="impact-list"><li><strong>光环境改变。</strong>高浓度藻类削弱进入水下的光照，影响沉水植物和其他光合生物。</li><li><strong>低氧或缺氧。</strong>大量藻体死亡后，微生物分解有机物会消耗氧气；夜间光合作用停止时，呼吸耗氧也可能使缺氧风险增加。</li><li><strong>生物群落变化。</strong>毒性作用、氧条件和栖息环境的变化，可能影响鱼贝类及其他生物，改变食物网关系。</li></ul>
+<p>并非所有水华都有害，也并非所有有害水华都产毒。即使不产毒，过量生物量造成的遮光、缺氧等过程仍可能导致生态损害。<sup class="citation"><a href="#ref-noaa" aria-label="参考资料 1">[1]</a></sup></p>
+<h4>5.3　对社会经济及人类健康的影响</h4>
+<p>水华可能增加供水处理难度，影响渔业养殖、旅游和水上休闲活动。部分种类产生的毒素还可通过受影响的水体或水产品造成暴露。具体风险取决于种类、毒素浓度和暴露途径，需要相应检测与监测支持。<sup class="citation"><a href="#ref-epa" aria-label="参考资料 2">[2]</a><a href="#ref-whoi" aria-label="参考资料 5">[5]</a></sup></p>
+</section>
 
-    <p class="story-sources">资料来源：<a href="https://science.nasa.gov/earth/earth-observatory/peek-a-bloom-in-the-north-atlantic-152953/">NASA Earth Observatory (2024), Peek-a-Bloom in the North Atlantic</a>；<a href="https://www.whoi.edu/press-room/news-release/scientists-discover-new-trigger-for-immense-north-atlantic-ocean-spring-plankton-bloom/">WHOI (2012), New trigger for the North Atlantic spring bloom</a>；Sverdrup (1953)；Franks (2015)；Kovač, Platt &amp; Sathyendranath (2021)；NASA Ocean Color。</p>
-  </div>
+<section class="article-section" id="prevention"><h3>六、藻类水华的防控措施</h3>
+<h4>6.1　源头控制与营养负荷削减</h4>
+<p>防控应首先关注进入水体的营养物质来源。通过改善污水处理、优化农业施肥与排水管理、减少养殖和生活污染输入等措施，降低流域氮、磷负荷。具体方案需要结合当地污染来源及水体特征制定。<sup class="citation"><a href="#ref-control" aria-label="参考资料 4">[4]</a></sup></p>
+<h4>6.2　生态保护与修复</h4>
+<p>在适宜区域保护和恢复湿地、岸带植被及水生生态系统，有助于拦截部分营养输入并改善生境。生态修复需要考虑水深、光照、底质及原有生物群落，治理效果应通过持续观测评估。</p>
+<h4>6.3　监测、预警与效果评估</h4>
+<p>将藻类种类和数量观测，与水温、营养盐、透明度、溶解氧及水流条件结合，可更完整地认识水华变化。对可能产毒的事件，还需开展针对性的毒素检测。监测既服务于早期识别，也用于判断治理后的水质是否改善。</p>
+<h4>6.4　应急处置与综合管理</h4>
+<p>水华发生后，应结合供水、养殖和公众活动等实际需求开展响应。物理、生物或化学控制手段各有适用条件和局限，需根据水域情况评估；短期降低藻量不能替代长期源头管理。对于可能产毒的蓝细菌水华，细胞破裂还可能使毒素释放到水中。<sup class="citation"><a href="#ref-control" aria-label="参考资料 4">[4]</a><a href="#ref-epa" aria-label="参考资料 2">[2]</a></sup></p>
+<p>防控工作需要流域管理、水环境监测、供水和渔业等环节协同，并通过信息公开与公众参与保持长期治理的连续性。</p>
+</section>
+
+<section class="article-section" id="conclusion"><h3>七、总结</h3>
+<p>藻类既是水生态系统的基础生产者，也可能在特定条件下大量积累并形成水华。认识水华，应把生物过程与环境条件联系起来，理解营养、光照、温度和水动力如何共同影响其发生、维持与消退。</p>
+<p>评价水华影响，需要区分正常生态功能、过量生物量效应和毒性风险。防控则应贯穿源头削减、生态保护、持续监测和应急管理，依据观测结果选择适合具体水域的措施。</p>
+<div class="summary-box"><p><strong>核心认识：</strong>水华是生物过程与物理、化学环境共同作用的结果。有效管理的目标，是降低有害事件的风险、维护水生态功能，而不是消除水体中的所有藻类。</p></div>
+</section>
+
+<aside class="references" id="references" aria-labelledby="references-title"><h4 id="references-title">参考资料与内容说明</h4>
+<ol><li id="ref-noaa"><a href="https://oceanservice.noaa.gov/facts/habharm.html" target="_blank" rel="noopener noreferrer">NOAA. Are all algal blooms harmful?</a></li><li id="ref-epa"><a href="https://www.epa.gov/habs/learn-about-harmful-algae-cyanobacteria-and-cyanotoxins" target="_blank" rel="noopener noreferrer">US EPA. Learn about Harmful Algae, Cyanobacteria and Cyanotoxins.</a></li><li id="ref-causes"><a href="https://www.epa.gov/habs/what-causes-habs" target="_blank" rel="noopener noreferrer">US EPA. What Causes HABs.</a></li><li id="ref-control"><a href="https://www.epa.gov/habs/managing-habs-surface-water" target="_blank" rel="noopener noreferrer">US EPA. Managing HABs in Surface Water.</a></li><li id="ref-whoi"><a href="https://hab.whoi.edu/faqs/" target="_blank" rel="noopener noreferrer">U.S. National Office for Harmful Algal Blooms / WHOI. FAQs.</a></li><li><a href="https://science.nasa.gov/earth/earth-observatory/peek-a-bloom-in-the-north-atlantic-152953/" target="_blank" rel="noopener noreferrer">NASA Earth Observatory. Peek-a-Bloom in the North Atlantic.</a></li></ol>
+<p class="editor-note">篇章框架参考搜狐号“知识璞玉”的<a href="https://www.sohu.com/a/878462774_121956422" target="_blank" rel="noopener noreferrer">《涨知识！一文看懂藻类水华的成因与防控》</a>（2025 年 4 月 1 日）。正文为重新编写的课程专题读物，已合并重复内容，并校正藻类分类、水华与毒性关系等表述。</p>
+</aside>
+</article>
+</div>
 </section>
 
 
@@ -722,11 +676,11 @@ python bloom_model.py</pre>
       </div>
       <div class="retell-grid">
         <div>
-          <p>把上面的故事给一位同学或家人看，不要先解释。请对方用自己的话回答三个问题：① 水华是什么？② 为什么混合层变浅不一定会水华？③ 这张卫星图能说明什么、不能说明什么？</p>
+          <p>先播放上面的两分钟动画，再请一位同学或家人用自己的话回答：① 什么是水华？② 岸边变绿为什么不一定是全湖藻量增加？③ 水华不产毒，为什么仍可能有害？</p>
           <ol class="retell-checklist">
-            <li><strong>能复述：</strong>对方说出“增长超过损失”这层意思，而不是只重复“水变绿了”。</li>
-            <li><strong>能区分：</strong>对方能说出卫星图看到的是颜色/纹理，不能直接给出物种、叶绿素浓度或增长率。</li>
-            <li><strong>能追问：</strong>对方至少提出一个“还需要什么证据”的问题。</li>
+            <li><strong>能复述：</strong>对方能说明藻类大量增长或聚集，可使局部浓度升高。</li>
+            <li><strong>能区分：</strong>对方能区分生物增长和水流聚集，也能区分缺氧影响与毒素风险。</li>
+            <li><strong>能追问：</strong>对方能提出一项防控措施，并说出需要监测什么。</li>
           </ol>
           <p class="note">网页记录只是证据，不能自动加分；最终“别人看得懂”由助教/老师确认。把复述者、日期和原话留在下面，打印出来或当面给助教看。</p>
         </div>
@@ -736,7 +690,7 @@ python bloom_model.py</pre>
           <label for="retell-date">复述日期</label>
           <input id="retell-date" name="date" type="date">
           <label for="retell-text">他/她的复述（尽量记原话）</label>
-          <textarea id="retell-text" name="retell" placeholder="对方说：水华就是……；变浅不一定是因为……；卫星图只能看出……"></textarea>
+          <textarea id="retell-text" name="retell" placeholder="对方说：水华就是……；聚集与增长的区别是……；不产毒也可能有害，因为……"></textarea>
           <div class="retell-actions">
             <button type="button" id="save-retell">保存复述记录</button>
             <button type="button" id="print-retell">打印这一页</button>
@@ -758,7 +712,7 @@ python bloom_model.py</pre>
         <p>张浩 · 22634120 · 浙江大学海洋学院 · 2026 秋冬。按 Talley 等《描述性物理海洋学导论》第六版整理；观测、文献与教学模型分别标注。</p>
       </div>
       <div>
-        <p>本次整理：2026-10-21</p>
+        <p>故事会更新：2026-11-01</p>
       </div>
     </div>
     <div class="footer-links">
@@ -774,40 +728,9 @@ python bloom_model.py</pre>
 (function(){
   var toggle=document.querySelector('.menu-toggle'), nav=document.getElementById('main-nav');
   if(toggle&&nav){toggle.addEventListener('click',function(){var open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',open?'true':'false');});}
-  var lab=document.getElementById('bloom-lab');
-  if(lab){
-    var depth=document.getElementById('mix-depth'), nutrient=document.getElementById('nutrient');
-    var avgResponse=function(h){return Math.log(130/(30+100*Math.exp(-.06*h)))/(.06*h);};
-    var rate=function(h,n){return n/(1+n)*avgResponse(h)-.2;};
-    var curve=document.getElementById('growth-curve'), dot=document.getElementById('growth-dot');
-    var updateLab=function(){
-      var h=Number(depth.value), n=Number(nutrient.value), r=rate(h,n);
-      var I=100*(-Math.expm1(-.06*h))/(.06*h);
-      document.getElementById('depth-value').textContent=h.toFixed(0)+' m';
-      document.getElementById('nutrient-value').textContent=n.toFixed(1)+' mmol m⁻³';
-      document.getElementById('growth-result').textContent='净增长率 '+(r>=0?'+':'')+r.toFixed(3)+' d⁻¹：'+(r>0?'生长超过损失':'损失超过生长')+'。';
-      document.getElementById('light-result').textContent='层平均光照 '+I.toFixed(1)+' μmol photons m⁻² s⁻¹；平均光响应 '+avgResponse(h).toFixed(3)+'。';
-      var X=function(v){return 55+(v-5)/145*490;};
-      var Y=function(v){return 230-(v+.2)/.8*200;};
-      var pts=[];
-      for(var hh=5;hh<=150;hh++){pts.push(X(hh).toFixed(2)+','+Y(rate(hh,n)).toFixed(2));}
-      curve.setAttribute('points',pts.join(' '));
-      dot.setAttribute('cx',X(h));dot.setAttribute('cy',Y(r));
-      document.getElementById('growth-chart-desc').textContent='固定营养盐 '+n.toFixed(1)+'，深度从 5 到 150 米时净增长率下降。当前深度 '+h+' 米，净增长率 '+r.toFixed(3)+' 每天。';
-      document.querySelectorAll('[data-preset]').forEach(function(b){
-        var p=b.dataset.preset.split(',').map(Number);
-        b.setAttribute('aria-pressed',String(h===p[0]&&n===p[1]));
-      });
-    };
-    depth.addEventListener('input',updateLab);nutrient.addEventListener('input',updateLab);
-    document.querySelectorAll('[data-preset]').forEach(function(b){b.addEventListener('click',function(){
-      var p=b.dataset.preset.split(',');depth.value=p[0];nutrient.value=p[1];updateLab();
-    });});
-    updateLab();
-  }
   var form=document.getElementById('retell-form'), status=document.getElementById('retell-status');
   if(!form) return;
-  var KEY='zhanghao-dpo2026-retell';
+  var KEY='zhanghao-dpo2026-retell-bloom-story-v2';
   function load(){
     try{
       var d=JSON.parse(localStorage.getItem(KEY)||'{}');

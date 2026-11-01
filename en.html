@@ -5,11 +5,12 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#073c61">
 <title>Descriptive Physical Oceanography · Zhang Hao’s Learning Dossier | Classroom Notes, Textbook, Story Lab</title>
-<meta name="description" content="Zhang Hao (22634120) · Descriptive Physical Oceanography learning dossier: 8 sessions of class notes (my own words, questions, exit tickets), 8 textbook chapters (formulas, figures, data, links to class, extensions), a phytoplankton-bloom story lab (NASA image, light–nutrient–loss model, CSV and Python), and a 30-second retell record.">
+<meta name="description" content="Zhang Hao (22634120) · Descriptive Physical Oceanography learning dossier: 8 sessions of class notes (my own words, questions, exit tickets), 8 textbook chapters (formulas, figures, data, links to class, extensions), a phytoplankton-bloom story lab (two-minute animation, bilingual subtitles, and an explanatory article), and a 30-second retell record.">
 <meta name="author" content="Zhang Hao 22634120">
 <link rel="icon" href="./assets/favicon.svg">
 <link rel="stylesheet" href="./hub.css">
 <link rel="stylesheet" href="./dossier.css">
+<link rel="stylesheet" href="./story/story-section.css">
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
@@ -53,14 +54,14 @@
     <nav class="paths" aria-label="Learning paths">
       <a href="#classroom"><strong>Classroom · 8 sessions</strong><span>Each session: class notes, my own words, questions, and an exit ticket</span></a>
       <a href="#textbook"><strong>Textbook · 8 chapters</strong><span>Formulas, figures, data, links to class, and my extensions</span></a>
-      <a href="#story"><strong>Story Lab · 1</strong><span>NASA image, reproducible model, CSV and Python</span></a>
+      <a href="#story"><strong>Story Lab · 1</strong><span>Two-minute animation, bilingual subtitles, impacts and prevention</span></a>
     </nav>
 
     <div class="evidence-map" aria-label="At a glance">
       <div class="stat"><b>8</b><span>session records<br>Sessions 1–8</span></div>
       <div class="stat"><b>8</b><span>textbook chapters<br>Ch.1–Ch.8</span></div>
-      <div class="stat"><b>1</b><span>story lab<br>Beginning → middle → ending</span></div>
-      <div class="stat"><b>20,000</b><span>light–nutrient–loss runs<br>3 scenarios + CSV</span></div>
+      <div class="stat"><b>1</b><span>story lab<br>Animation + explanatory article</span></div>
+      <div class="stat"><b>2:00</b><span>minute animation<br>Chinese + English subtitles</span></div>
     </div>
 
   </div>
@@ -575,144 +576,31 @@
   </div>
 
 
-<section id="story" class="story-field">
-  <div class="wrap story-body">
-    <p class="kicker" style="color:#8fd3b8;letter-spacing:.18em;font-size:.78rem">STORY LAB</p>
-    <h2>Story Lab | Why does the ocean suddenly turn green?</h2>
-    <p class="lead" style="font-size:1.12rem">A bloom is not the result of “more sunlight” alone; a population accumulates only when growth persistently exceeds losses.</p>
-    <p class="source" style="color:#cfe6dc">Structure: beginning (phenomenon/question) → middle (how I looked for answers / what I did) → ending (conclusion + what I still want to know).</p>
+<section id="story" class="story-refresh">
+<div class="story-refresh-inner">
+<article aria-labelledby="story-title">
+<header class="article-header"><h2 id="story-title">Story | Algal blooms</h2><p class="subtitle">Ecological roles, bloom formation, impacts and management</p>
+<figure class="video-feature" id="video-story"><figcaption><strong>Little Alga’s Underwater Party</strong><span>02:00 · 1080p · Chinese + English subtitles</span></figcaption><video id="story-video" controls playsinline preload="metadata" poster="./story/algal-bloom-story-cover.png" width="1920" height="1080" aria-label="Little Alga’s Underwater Party: two minutes, Mandarin narration, Chinese and English subtitles"><source src="./story/algal-bloom-story-2min.mp4" type="video/mp4">This browser cannot play the embedded video. Use the download link below.</video><div class="video-actions"><a id="video-download" href="./story/algal-bloom-story-2min.mp4" download="algal-bloom-story-2min.mp4">Download video</a><a href="./story/algal-bloom-story-bilingual.srt" download="algal-bloom-story-bilingual.srt">Download bilingual subtitles</a></div></figure>
+<p class="abstract"><strong>Overview</strong>Algae are essential aquatic producers. When their growth or aggregation raises local concentrations, a bloom can develop. This story follows Little Alga from everyday life to a nutrient feast, a crowded shoreline and an oxygen shortage, then explains how management can reduce harmful impacts.</p>
+<p class="story-reading-link"><a href="./story.html">Read the full Chinese article</a> · <a href="./story/algal-bloom-story-bilingual.srt" download>Download bilingual subtitles</a></p></header>
+<section class="article-section" id="introduction"><h3>1. Introduction</h3><p>Algal blooms occur in lakes, reservoirs, estuaries and the ocean. They connect biological processes with physical and chemical conditions. Currents, mixing and stratification affect the light and nutrients available to algae, as well as where cells accumulate.</p><p>The animation is a conceptual explanation. Its characters, cell counts and oxygen gauge are illustrations, not environmental measurements.</p></section>
+<section class="article-section" id="algae"><h3>2. An introduction to algae</h3><p>Algae include many different groups, ranging from microscopic cells to large seaweeds. Many use sunlight to produce organic matter. Some drift with the water; others live attached to surfaces.</p><p>Common bloom-forming groups include diatoms, dinoflagellates, green algae and cyanobacteria. The organisms commonly called “blue-green algae” are actually cyanobacteria. Different groups thrive under different conditions, and only some species or strains produce toxins.</p></section>
+<section class="article-section" id="bloom"><h3>3. What is an algal bloom?</h3><div class="definition">A <strong>bloom</strong> develops when algae or cyanobacteria grow or gather in large amounts, substantially increasing their local concentration or biomass.</div><p>Blooms may occur at the surface or within the water column. Their appearance varies, and some harmful events are not obvious to the eye. Water colour alone cannot establish whether toxins are present.</p><p>Nutrient supply, available light, temperature and water movement interact. Excess nitrogen and phosphorus can increase bloom risk, but no single factor explains every event.</p></section>
+<section class="article-section" id="ecology"><h3>4. Ecological roles of algae</h3><h4>Primary production and food webs</h4><p>Algae convert light energy into chemical energy stored in organic matter. Grazers consume this production, passing energy through aquatic food webs.</p><h4>Oxygen and nutrient cycling</h4><p>Photosynthesis releases oxygen and growth takes up nutrients. Respiration and decomposition consume oxygen, while recycling some nutrients. Water exchange also helps determine the overall oxygen balance.</p><h4>Habitats and environmental change</h4><p>Large seaweeds can provide habitat and shelter. Changes in algal communities can help reveal environmental change, but water quality must be assessed using several indicators.</p></section>
+<section class="article-section" id="occurrence"><h3>5. Bloom formation and impacts</h3><h4>Growth, losses and transport</h4><p>Think of algal biomass as a budget. Growth and incoming cells add to it; grazing, death and transport away subtract from it. If gains keep exceeding losses, biomass can accumulate.</p><p>Wind and currents can also gather existing cells. A greener shoreline therefore does not necessarily mean that the whole lake contains more algae.</p><h4>Shading, oxygen loss and toxins</h4><p>Dense algae can reduce underwater light. When large quantities die, microbial decomposition can consume oxygen and harm fish and other aquatic life. Some species produce toxins that can affect ecosystems and people through contaminated water or seafood.</p><p>Not all blooms are harmful, and harmful blooms need not be toxic: excess biomass can cause damage through shading and oxygen depletion. Clearer water does not necessarily mean all risks have ended.</p></section>
+<section class="article-section" id="prevention"><h3>6. Prevention and management</h3><h4>Reduce excess nutrient inputs</h4><p>Improve wastewater and agricultural nutrient management, guided by the sources and conditions of the local watershed.</p><h4>Protect and restore suitable habitats</h4><p>Wetlands and shoreline vegetation can intercept some inputs and support aquatic habitats. Restoration measures need to fit the local ecosystem.</p><h4>Monitor and respond</h4><p>Combine observations of algae with nutrients, temperature, oxygen and water movement. Test for toxins when relevant. Short-term control measures have limits and should complement long-term source management.</p></section>
+<section class="article-section" id="conclusion"><h3>7. Conclusion</h3><p>Blooms emerge from interactions between living organisms and their physical and chemical environment. Distinguishing growth from aggregation, and biomass effects from toxicity, helps explain both their causes and their consequences.</p><div class="summary-box"><strong>The goal is not to eliminate all algae. It is to reduce harmful bloom risks while protecting the functions of aquatic ecosystems.</strong></div></section>
+<details class="story-transcript"><summary>Read the English video transcript</summary><p>The lake has turned green. Who did it?</p><p>I&#x27;m Little Alga. Don&#x27;t blame me just yet!</p><p>Algae are the water&#x27;s primary producers.</p><p>They use sunlight to make food, release oxygen, and support the food web.</p><p>So-called blue-green algae are actually cyanobacteria.</p><p>One day, runoff brings excess nitrogen and phosphorus into the water.</p><p>It&#x27;s like a nutrient feast for Little Alga.</p><p>Wastewater can bring these nutrients too.</p><p>Time to eat!</p><p>With suitable light and temperature, algae may grow faster.</p><p>But different algae thrive under different conditions.</p><p>Think of an algae budget: when gains keep exceeding losses,</p><p>algae accumulate.</p><p>Wind and currents can also gather existing algae together.</p><p>Look: the number is unchanged. They&#x27;re just packed closer.</p><p>A green shoreline doesn&#x27;t always mean more algae across the lake.</p><p>When algae grow or gather in large amounts, their local concentration rises.</p><p>That&#x27;s a bloom.</p><p>It can happen in lakes and oceans alike.</p><p>But when the party gets too crowded, trouble follows.</p><p>Too many algae block light.</p><p>When masses of algae die, microbes use oxygen to break them down.</p><p>Even when the water clears, the risk may remain.</p><p>I can barely breathe!</p><p>Some species also produce toxins.</p><p>But not every bloom is toxic.</p><p>Non-toxic blooms can still deplete oxygen.</p><p>What can we do?</p><p>Reduce nutrient inputs. Protect wetlands and shorelines.</p><p>Monitor algae, oxygen and, when needed, algal toxins.</p><p>The goal isn&#x27;t to wipe out Little Alga. It&#x27;s to bring aquatic life</p><p>back into balance.</p></details>
+<aside class="references" id="references"><h4>Sources and credits</h4><ol>
+<li><a href="https://oceanservice.noaa.gov/facts/habharm.html">NOAA: Are all algal blooms harmful?</a></li>
+<li><a href="https://www.epa.gov/habs/learn-about-harmful-algae-cyanobacteria-and-cyanotoxins">US EPA: Algae, cyanobacteria and cyanotoxins</a></li>
+<li><a href="https://www.epa.gov/habs/what-causes-habs">US EPA: What Causes HABs</a></li>
+<li><a href="https://www.epa.gov/habs/managing-habs-surface-water">US EPA: Managing HABs in Surface Water</a></li>
+<li><a href="https://hab.whoi.edu/faqs/">WHOI: Harmful Algal Blooms FAQs</a></li></ol>
+<p class="editor-note">Original conceptual animation and synthesized Mandarin voices. The article framework was inspired by <a href="https://www.sohu.com/a/878462774_121956422">the supplied introductory article</a>, with independently written explanations and scientific corrections based on the sources above.</p></aside>
+</article>
 
-    <div class="story-note">
-      <h3>Three sentences for a friend</h3>
-      <p>Phytoplankton are tiny ocean producers that use light and nutrients to make organic matter. A bloom builds when population growth exceeds grazing, mortality, and other losses for a period. Mixing supplies nutrients but also carries cells away from light, so shallower, warmer, or greener water alone does not establish the cause.</p>
-    </div>
-
-    <div class="story-stage">
-      <h3><span class="stage-tag">Beginning</span> What does a greener ocean actually show?</h3>
-      <p>On 16 June 2024, Aqua observed a bloom east of Greenland through a gap in the clouds. The image raises two different questions: where are phytoplankton concentrated, and what allows them to accumulate? Imagery offers spatial clues; the second question requires evidence about growth and losses.</p>
-      <p>A drifting cell needs both light and nutrients. Mixing acts like an elevator: it can replenish surface nutrients while also moving cells away from the well-lit surface. A shallower elevator can increase average light, but shoaling alone may not help if nutrients are depleted.</p>
-      <figure class="story-figure">
-        <img src="./bloom/nasa-greenland-20240616.jpg" alt="Aqua/MODIS observes blue-green bloom patterns through clouds east of Greenland, 16 June 2024" loading="lazy">
-        <figcaption>Real observation | Aqua/MODIS, 16 June 2024, east of Greenland and south of Iceland. Natural colour shows bloom patterns, but cannot by itself identify species, chlorophyll concentration, or growth rate. NASA Earth Observatory · Lauren Dauphin.</figcaption>
-      </figure>
-    </div>
-
-    <div class="story-stage">
-      <h3><span class="stage-tag">Middle</span> Turning the intuition into a testable calculation</h3>
-      <p>With AI assistance, this project implemented a teaching model: light decays exponentially with depth; a depth-averaged light response is combined with nutrient limitation and fixed losses. We calculated 20,000 combinations of mixing depth and nutrient concentration and publish the equations, parameters, CSV files, and code. Parameters are illustrative, not fitted to the satellite image; outputs are not a regional bloom forecast.</p>
-      <p>For the same illustrative surface light, mean light is 13.9% of the surface value in a 120 m layer and 58.2% in a 20 m layer. At N=5 mmol m⁻³, net growth changes from −0.031 to +0.336 d⁻¹. But reducing N to 0.2 mmol m⁻³ at 20 m gives −0.093 d⁻¹. This controlled comparison shows why light availability and nutrients must be considered together.</p>
-      <figure class="story-figure">
-        <img src="./bloom/light-and-mixing-zh.png" alt="Figure 1 · Mixing depth changes the average light environment" loading="lazy">
-        <figcaption>With unchanged attenuation, mean light rises from 0.139 to 0.582 of the surface value when the idealized layer changes from 120 to 20 m. Illustrative parameters, not observations.</figcaption>
-      </figure>
-      <div class="table-scroll">
-        <table class="reference-table">
-          <thead><tr><th>Case</th><th>Mixed layer H</th><th>Nutrient N</th><th>Net growth r</th></tr></thead>
-          <tbody>
-            <tr><td>Deep · nutrient-rich</td><td>120 m</td><td>5 mmol m⁻³</td><td>−0.031 d⁻¹</td></tr>
-            <tr><td>Shallow · nutrient-rich</td><td>20 m</td><td>5 mmol m⁻³</td><td>+0.336 d⁻¹</td></tr>
-            <tr><td>Shallow · nutrient-poor</td><td>20 m</td><td>0.2 mmol m⁻³</td><td>−0.093 d⁻¹</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <figure class="story-figure">
-        <img src="./bloom/three-scenarios-zh.png" alt="Figure 3 · Three reproducible comparisons" loading="lazy">
-        <figcaption>Left: net growth for three cases. Right: a seven-day thought experiment with all conditions fixed. Real blooms consume nutrients and alter losses, so these exponentials are not forecasts. N is in mmol m⁻³.</figcaption>
-      </figure>
-
-      <div class="story-lab">
-        <h3>Try it yourself: when can biomass accumulate?</h3>
-        <p>Keep surface light, attenuation, and loss fixed, then adjust mixed-layer depth and nutrients. The curve is a teaching-model calculation, not an observation or forecast.</p>
-        <div id="bloom-lab" class="lab">
-          <h4>Put the three conditions together</h4>
-          <div class="lab-presets">
-            <button type="button" data-preset="120,5">Deep · nutrient-rich</button>
-            <button type="button" data-preset="20,5" aria-pressed="true">Shallow · nutrient-rich</button>
-            <button type="button" data-preset="20,0.2">Shallow · nutrient-poor</button>
-          </div>
-          <div class="lab-grid lab-controls">
-            <div>
-              <label for="mix-depth">Mixed-layer depth H</label>
-              <input id="mix-depth" type="range" min="5" max="150" step="1" value="20">
-              <output id="depth-value" for="mix-depth">20 m</output>
-            </div>
-            <div>
-              <label for="nutrient">Nutrient concentration N</label>
-              <input id="nutrient" type="range" min="0" max="8" step="0.1" value="5">
-              <output id="nutrient-value" for="nutrient">5.0 mmol m⁻³</output>
-            </div>
-          </div>
-          <p id="growth-result" class="result-line" role="status"></p>
-          <p id="light-result"></p>
-          <svg id="growth-chart" viewBox="0 0 580 285" role="img" aria-labelledby="growth-chart-title growth-chart-desc">
-            <title id="growth-chart-title">Net growth versus mixed-layer depth</title>
-            <desc id="growth-chart-desc">Teaching-model sensitivity curve</desc>
-            <rect x="55" y="30" width="490" height="200" fill="white"></rect>
-            <path d="M55 30V230H545" fill="none" stroke="#4b6778"></path>
-            <path d="M55 180H545" stroke="#7193a8" stroke-dasharray="5 5"></path>
-            <g font-family="sans-serif" font-size="12" fill="#334e60">
-              <text x="19" y="35">0.6</text><text x="29" y="184">0</text><text x="13" y="233">−0.2</text>
-              <text x="49" y="250">5</text><text x="200" y="250">50</text><text x="365" y="250">100</text><text x="530" y="250">150</text>
-              <text x="55" y="19">r (d⁻¹)</text><text x="270" y="275">H (m)</text>
-            </g>
-            <polyline id="growth-curve" fill="none" stroke="#086d66" stroke-width="3"></polyline>
-            <circle id="growth-dot" r="6" fill="#07538b" stroke="white" stroke-width="2"></circle>
-          </svg>
-          <p class="source">Dashed line: r = 0. Above it is net growth, below it net loss. The blue point marks the current setting. Shallower mixing improves light exposure, but nutrient scarcity can still prevent growth.</p>
-        </div>
-        <details class="story-deep">
-          <summary>Trace each number to its equation (model and parameters)</summary>
-          <div class="formula">I(z) = I₀ exp(−kz)<br>L̄(H) = ln[(I_K + I₀)/(I_K + I₀e<sup>−kH</sup>)] / (kH)<br>r = μ_max [N/(K_N + N)] L̄(H) − ℓ</div>
-          <p>Here z is depth below the surface, and H is the uniformly, actively mixed layer thickness. L̄ averages the local saturating light response I/(I_K+I); it is not the response evaluated at mean light.</p>
-          <p>Fixed surface light, uniform nutrients, and fixed losses; no diel cycle, nutrient depletion, self-shading, temperature dependence, species competition, or advection. Multiplying light and nutrient limitation is a teaching simplification.</p>
-          <div class="table-scroll">
-            <table class="reference-table">
-              <thead><tr><th>Parameter</th><th>Illustrative value</th></tr></thead>
-              <tbody>
-                <tr><td>I₀</td><td>100 μmol photons m⁻² s⁻¹</td></tr>
-                <tr><td>k</td><td>0.06 m⁻¹</td></tr>
-                <tr><td>I_K</td><td>30 μmol photons m⁻² s⁻¹</td></tr>
-                <tr><td>μ_max</td><td>1 d⁻¹</td></tr>
-                <tr><td>K_N</td><td>1 mmol m⁻³</td></tr>
-                <tr><td>ℓ</td><td>0.2 d⁻¹</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </details>
-      </div>
-
-      <div class="story-note">
-        <h3>What I did</h3>
-        <p>I checked NASA's observation time, location, and image limits; I used Python to compute 20,000 light–nutrient–loss combinations and ran three scenarios; I output the CSV, figures, and reproducibility package. Analysis and writing were AI-assisted; no in-situ samples were collected. Observations and teaching results are labelled separately.</p>
-      </div>
-    </div>
-
-    <div class="story-stage">
-      <h3><span class="stage-tag">Ending</span> A mechanism is not yet a diagnosis of the real ocean</h3>
-      <p>Sverdrup's critical-depth idea is a whole-layer budget: a well-mixed population can accumulate when depth-integrated production exceeds losses. This differs from the compensation depth, where local production equals local loss. The neutral depth of about 101.3 m at N=5 belongs only to this model and its parameters, not to the observed ocean.</p>
-      <p>The real ocean can alter the budget. WHOI's account of the 2008 North Atlantic study describes eddy restratification retaining cells in lit waters and advancing the bloom. A density-defined mixed layer also need not equal the actively turbulent layer.</p>
-      <p><strong>What I still want to know:</strong> next, coincident chlorophyll, nutrients, density/turbulence, and grazing observations are needed to distinguish improved light, nutrient input, reduced loss, and advective convergence. One natural-colour image cannot do that.</p>
-      <figure class="story-figure">
-        <img src="./bloom/growth-threshold-zh.png" alt="Figure 2 · A joint threshold of light, nutrients, and losses" loading="lazy">
-        <figcaption>With other parameters fixed, more nutrients extend the range of positive net growth. At N=0.2 mmol m⁻³, this model has negative net growth at every depth; at N=5 the neutral depth is about 101.3 m.</figcaption>
-      </figure>
-    </div>
-
-    <div class="story-note">
-      <h3>📎 Evidence: figures, CSV, and Python</h3>
-      <p>Three-scenario CSV · 20,000-run grid CSV · Python source · reproducibility package. Suggested sequence: 30 seconds on the satellite observation, 90 seconds comparing the scenarios, then 60 seconds on limitations and the next observation.</p>
-      <p class="actions">
-        <a class="btn" href="./bloom/bloom-reproducibility.zip">Download figures, CSV, and Python</a>
-        <a class="btn secondary" href="./bloom/scenarios.csv">Three-scenario CSV</a>
-        <a class="btn secondary" href="./bloom/model-grid.csv">20,000-run CSV</a>
-        <a class="btn secondary" href="./bloom/bloom_model.py">Python source</a>
-      </p>
-      <pre style="background:rgba(0,0,0,.18);color:#eaf6f0;padding:12px 14px;border-radius:8px;overflow:auto">python -m pip install numpy matplotlib
-python bloom_model.py</pre>
-    </div>
-
-    <p class="story-sources">Sources: <a href="https://science.nasa.gov/earth/earth-observatory/peek-a-bloom-in-the-north-atlantic-152953/">NASA Earth Observatory (2024), Peek-a-Bloom in the North Atlantic</a>; <a href="https://www.whoi.edu/press-room/news-release/scientists-discover-new-trigger-for-immense-north-atlantic-ocean-spring-plankton-bloom/">WHOI (2012), New trigger for the North Atlantic spring bloom</a>; Sverdrup (1953); Franks (2015); Kovač, Platt &amp; Sathyendranath (2021); NASA Ocean Color.</p>
-  </div>
+</div>
 </section>
 
 
@@ -724,11 +612,11 @@ python bloom_model.py</pre>
       </div>
       <div class="retell-grid">
         <div>
-          <p>Show the story to a classmate or family member without explaining it first. Ask them to answer three questions in their own words: (1) What is a bloom? (2) Why does a shallower mixed layer not always cause a bloom? (3) What can this satellite image show, and what can it not show?</p>
+          <p>Show the two-minute animation to a classmate or family member. Ask: (1) What is a bloom? (2) Why does a green shoreline not necessarily mean more algae across the lake? (3) How can a non-toxic bloom still cause harm?</p>
           <ol class="retell-checklist">
-            <li><strong>Can retell: </strong>The reviewer conveys “growth exceeds losses,” not just “the water turned green.”</li>
-            <li><strong>Can distinguish: </strong>The reviewer can say the satellite image shows colour/texture, not species, chlorophyll concentration, or growth rate.</li>
-            <li><strong>Can ask: </strong>The reviewer raises at least one “what evidence is still missing?” question.</li>
+            <li><strong>Can retell: </strong>The reviewer explains how growth or aggregation can raise local algal concentrations.</li>
+            <li><strong>Can distinguish: </strong>The reviewer distinguishes growth from aggregation, and oxygen depletion from toxicity.</li>
+            <li><strong>Can ask: </strong>The reviewer suggests a management measure and an indicator to monitor.</li>
           </ol>
           <p class="note">The web record is only evidence and does not add points automatically; the final “can someone else understand it?” item is confirmed by the TA/instructor. Keep the reviewer, date, and their words below, then print the page or show it to the TA.</p>
         </div>
@@ -738,7 +626,7 @@ python bloom_model.py</pre>
           <label for="retell-date">Date of retelling</label>
           <input id="retell-date" name="date" type="date">
           <label for="retell-text">Their retelling (as close to their words as possible)</label>
-          <textarea id="retell-text" name="retell" placeholder="They said: a bloom is ...; shallower water does not necessarily mean ...; the satellite image can only show ..."></textarea>
+          <textarea id="retell-text" name="retell" placeholder="They said: a bloom is ...; aggregation differs from growth because ...; a non-toxic bloom can still harm ..."></textarea>
           <div class="retell-actions">
             <button type="button" id="save-retell">Save retelling record</button>
             <button type="button" id="print-retell">Print this page</button>
@@ -760,7 +648,7 @@ python bloom_model.py</pre>
         <p>Zhang Hao · 22634120 · Ocean College, Zhejiang University · Fall/Winter 2026. Based on Talley et al., Descriptive Physical Oceanography, 6th ed.; observations, literature, and teaching models are labelled separately.</p>
       </div>
       <div>
-        <p>Updated: 2026-10-21</p>
+        <p>Story updated: 2026-11-01</p>
       </div>
     </div>
     <div class="footer-links">
@@ -776,40 +664,9 @@ python bloom_model.py</pre>
 (function(){
   var toggle=document.querySelector('.menu-toggle'), nav=document.getElementById('main-nav');
   if(toggle&&nav){toggle.addEventListener('click',function(){var open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',open?'true':'false');});}
-  var lab=document.getElementById('bloom-lab');
-  if(lab){
-    var depth=document.getElementById('mix-depth'), nutrient=document.getElementById('nutrient');
-    var avgResponse=function(h){return Math.log(130/(30+100*Math.exp(-.06*h)))/(.06*h);};
-    var rate=function(h,n){return n/(1+n)*avgResponse(h)-.2;};
-    var curve=document.getElementById('growth-curve'), dot=document.getElementById('growth-dot');
-    var updateLab=function(){
-      var h=Number(depth.value), n=Number(nutrient.value), r=rate(h,n);
-      var I=100*(-Math.expm1(-.06*h))/(.06*h);
-      document.getElementById('depth-value').textContent=h.toFixed(0)+' m';
-      document.getElementById('nutrient-value').textContent=n.toFixed(1)+' mmol m⁻³';
-      document.getElementById('growth-result').textContent='Net growth '+(r>=0?'+':'')+r.toFixed(3)+' d⁻¹：'+(r>0?'growth exceeds losses':'losses exceed growth')+'.';
-      document.getElementById('light-result').textContent='Layer-mean light '+I.toFixed(1)+' μmol photons m⁻² s⁻¹; mean light response '+avgResponse(h).toFixed(3)+'.';
-      var X=function(v){return 55+(v-5)/145*490;};
-      var Y=function(v){return 230-(v+.2)/.8*200;};
-      var pts=[];
-      for(var hh=5;hh<=150;hh++){pts.push(X(hh).toFixed(2)+','+Y(rate(hh,n)).toFixed(2));}
-      curve.setAttribute('points',pts.join(' '));
-      dot.setAttribute('cx',X(h));dot.setAttribute('cy',Y(r));
-      document.getElementById('growth-chart-desc').textContent='At fixed nutrient '+n.toFixed(1)+', net growth decreases from 5 to 150 m. Current depth '+h+' m, net growth '+r.toFixed(3)+' per day.';
-      document.querySelectorAll('[data-preset]').forEach(function(b){
-        var p=b.dataset.preset.split(',').map(Number);
-        b.setAttribute('aria-pressed',String(h===p[0]&&n===p[1]));
-      });
-    };
-    depth.addEventListener('input',updateLab);nutrient.addEventListener('input',updateLab);
-    document.querySelectorAll('[data-preset]').forEach(function(b){b.addEventListener('click',function(){
-      var p=b.dataset.preset.split(',');depth.value=p[0];nutrient.value=p[1];updateLab();
-    });});
-    updateLab();
-  }
   var form=document.getElementById('retell-form'), status=document.getElementById('retell-status');
   if(!form) return;
-  var KEY='zhanghao-dpo2026-retell';
+  var KEY='zhanghao-dpo2026-retell-bloom-story-v2';
   function load(){
     try{
       var d=JSON.parse(localStorage.getItem(KEY)||'{}');

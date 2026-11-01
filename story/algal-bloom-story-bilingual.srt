@@ -1,0 +1,159 @@
+1
+00:00:00,455 --> 00:00:03,392
+湖水突然变绿，是谁干的？
+The lake has turned green. Who did it?
+
+2
+00:00:04,438 --> 00:00:06,748
+我叫小藻，先别急着怪我！
+I'm Little Alga. Don't blame me just yet!
+
+3
+00:00:09,455 --> 00:00:11,597
+藻类本来是水里的生产者。
+Algae are the water's primary producers.
+
+4
+00:00:12,036 --> 00:00:17,045
+靠阳光制造食物，释放氧气，还养活浮游动物和鱼类。
+They use sunlight to make food, release oxygen, and support the food web.
+
+5
+00:00:18,114 --> 00:00:20,881
+常说的蓝藻，其实是蓝细菌。
+So-called blue-green algae are actually cyanobacteria.
+
+6
+00:00:23,455 --> 00:00:27,214
+一天，多余的氮和磷随径流进入水里，
+One day, runoff brings excess nitrogen and phosphorus into the water.
+
+7
+00:00:27,340 --> 00:00:29,599
+像给小藻送来了一大桌营养。
+It's like a nutrient feast for Little Alga.
+
+8
+00:00:30,038 --> 00:00:32,871
+污水排放，也可能带来这些营养。
+Wastewater can bring these nutrients too.
+
+9
+00:00:33,949 --> 00:00:34,830
+开饭啦！
+Time to eat!
+
+10
+00:00:36,455 --> 00:00:40,370
+再遇上适宜的光照和温度，藻类就可能加快生长。
+With suitable light and temperature, algae may grow faster.
+
+11
+00:00:40,809 --> 00:00:44,124
+但不同的藻，喜欢的条件并不相同。
+But different algae thrive under different conditions.
+
+12
+00:00:45,189 --> 00:00:48,935
+把藻量想成一本账：增加持续超过减少，
+Think of an algae budget: when gains keep exceeding losses,
+
+13
+00:00:49,022 --> 00:00:50,317
+就会越积越多。
+algae accumulate.
+
+14
+00:00:53,454 --> 00:00:57,087
+风和水流，还会把已有的藻推到一起。
+Wind and currents can also gather existing algae together.
+
+15
+00:00:57,520 --> 00:01:00,958
+看，数量没变，只是站得更挤了。
+Look: the number is unchanged. They're just packed closer.
+
+16
+00:01:02,003 --> 00:01:05,894
+岸边变绿，不一定等于全湖都长出了新藻。
+A green shoreline doesn't always mean more algae across the lake.
+
+17
+00:01:07,455 --> 00:01:11,777
+当藻类大量增长或聚集，局部浓度明显升高，
+When algae grow or gather in large amounts, their local concentration rises.
+
+18
+00:01:11,797 --> 00:01:12,804
+就是水华。
+That's a bloom.
+
+19
+00:01:13,243 --> 00:01:15,854
+湖泊和海洋里，都可能发生。
+It can happen in lakes and oceans alike.
+
+20
+00:01:17,452 --> 00:01:19,728
+但热闹过头，就有麻烦了。
+But when the party gets too crowded, trouble follows.
+
+21
+00:01:20,133 --> 00:01:21,502
+藻太多会遮光；
+Too many algae block light.
+
+22
+00:01:21,682 --> 00:01:25,910
+大量藻体死亡后，微生物分解它们，又会消耗氧气。
+When masses of algae die, microbes use oxygen to break them down.
+
+23
+00:01:26,330 --> 00:01:29,336
+即使水变清了，风险也未必结束。
+Even when the water clears, the risk may remain.
+
+24
+00:01:30,387 --> 00:01:31,883
+我快喘不过气了。
+I can barely breathe!
+
+25
+00:01:33,455 --> 00:01:35,089
+还有些种类会产毒。
+Some species also produce toxins.
+
+26
+00:01:35,501 --> 00:01:38,138
+不过，不是每次水华都有毒；
+But not every bloom is toxic.
+
+27
+00:01:38,395 --> 00:01:40,772
+不产毒，也可能造成缺氧。
+Non-toxic blooms can still deplete oxygen.
+
+28
+00:01:42,455 --> 00:01:43,189
+怎么办？
+What can we do?
+
+29
+00:01:43,615 --> 00:01:47,503
+减少多余营养进入水体，保护湿地和岸带，
+Reduce nutrient inputs. Protect wetlands and shorelines.
+
+30
+00:01:47,604 --> 00:01:51,036
+持续监测藻类、氧气和必要的毒素。
+Monitor algae, oxygen and, when needed, algal toxins.
+
+31
+00:01:54,446 --> 00:01:57,666
+目标不是消灭小藻，而是让水里的生活，
+The goal isn't to wipe out Little Alga. It's to bring aquatic life
+
+32
+00:01:57,686 --> 00:01:58,974
+重新保持平衡。
+back into balance.

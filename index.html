@@ -10,6 +10,7 @@
 <link rel="icon" href="./assets/favicon.svg">
 <link rel="stylesheet" href="./hub.css">
 <link rel="stylesheet" href="./dossier.css">
+<link rel="stylesheet" href="./textbook.css">
 <link rel="stylesheet" href="./story/story-section.css">
 </head>
 <body>
@@ -53,7 +54,7 @@
   <div class="wrap">
     <nav class="paths" aria-label="Learning paths">
       <a href="#classroom"><strong>课堂 · 8 讲</strong><span>每讲含课堂内容、我自己的话、疑问与出门票</span></a>
-      <a href="#textbook"><strong>教材 · 8 章</strong><span>公式/图/数据、与课堂对照、我的延伸</span></a>
+      <a href="#textbook"><strong>教材 · 8 章</strong><span>下载课程教材 · 八章笔记与课堂对照</span></a>
       <a href="#story"><strong>故事会 · 1 个</strong><span>两分钟双语动画、形成机制、生态影响与防控</span></a>
     </nav>
 
@@ -78,7 +79,8 @@
 <a href="#lesson-06">第6讲 · 动力过程：地转、Ekman 与位涡</a>
 <a href="#lesson-07">第7讲 · 波动、潮汐与沿岸</a>
 <a href="#lesson-08">第8讲 · 数据分析与观测方法</a>
-      <a href="#textbook" style="margin-top:10px"><b>教材笔记 · 八章</b></a>
+      <a href="#textbook-download" style="margin-top:10px"><b>教材下载</b></a>
+      <a href="#textbook-notes"><b>教材笔记 · 八章</b></a>
 <a href="#book-01">第1章 · 描述性物理海洋学与尺度</a>
 <a href="#book-02">第2章 · 海盆、海槛与测深</a>
 <a href="#book-03">第3章 · 海水状态方程与层结</a>
@@ -406,7 +408,19 @@
       </section>
 
       <section id="textbook">
-        <h2>教材笔记｜八章</h2>
+        <div class="textbook-download" id="textbook-download" role="region" aria-labelledby="textbook-download-title">
+          <h2 id="textbook-download-title"><svg viewBox="0 0 28 32" aria-hidden="true" fill="none"><path d="M6 3h18v23H6a3 3 0 0 0 0 6" transform="translate(0 -2)" fill="currentColor"/><path d="M6 1a3 3 0 0 0-3 3v23a3 3 0 0 0 3 3h18M7 3v20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Textbook ·《物理海洋学》教材</span></h2>
+          <p class="textbook-download-intro">通过分享链接下载课程教材 · Download the course textbook</p>
+          <div class="textbook-download-card">
+            <svg class="textbook-book-icon" viewBox="0 0 64 56" aria-hidden="true" fill="none"><path d="M32 12C24 6 13 6 4 9v37c10-3 20-2 28 3 8-5 18-6 28-3V9c-9-3-20-3-28 3Z" fill="#eef0ff" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M32 12v37M10 16c6-1 12 0 16 2M10 24c6-1 12 0 16 2M38 18c4-2 10-3 16-2M38 26c4-2 10-3 16-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <h3><span>《物理海洋学》</span> <span lang="en">Physical Oceanography</span></h3>
+            <p class="textbook-download-meta">Course textbook · 课程指定教材</p>
+            <a class="textbook-download-button" href="https://pan.zju.edu.cn/share/6984d8c68b4eac504045f029c4" target="_blank" rel="noopener noreferrer" aria-describedby="textbook-download-help"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10 13 4-4M8 15l-2 2a4 4 0 0 1-6-6l4-4a4 4 0 0 1 6 0M14 9l2-2a4 4 0 0 1 6 6l-4 4a4 4 0 0 1-6 0" transform="translate(1 -1)"/></svg><span>下载教材 · Download</span></a>
+            <p class="textbook-download-help" id="textbook-download-help">在新标签页打开浙江大学云盘分享页</p>
+            <p class="textbook-download-source">浙江大学云盘分享 · ZJU Cloud Drive share<br><a href="https://pan.zju.edu.cn/share/6984d8c68b4eac504045f029c4" target="_blank" rel="noopener noreferrer">pan.zju.edu.cn/share/<wbr>6984d8c68b4eac504045f029c4</a></p>
+          </div>
+        </div>
+        <h2 id="textbook-notes">教材笔记｜八章</h2>
         <p class="section-intro">参考 Talley, Pickard, Emery &amp; Swift (2011), <em>Descriptive Physical Oceanography: An Introduction</em>, 6th ed.。每章给出一处教材原文（公式/图/数据），再写“我的解释 → 与课堂对照 → 我的延伸”；章号按教材，课堂讲次按实际上课时间，两边在每张卡片里互相标注。</p>
         <div class="book-grid">
 

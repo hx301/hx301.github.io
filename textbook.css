@@ -1,0 +1,30 @@
+/* Textbook download: a shared cloud-drive entry above the chapter notes. */
+.textbook-download{padding:30px 26px;background:#eef8fc;border-radius:16px;margin-bottom:42px;text-align:center;scroll-margin-top:110px}
+.reading .textbook-download h2{display:flex;align-items:center;justify-content:center;gap:12px;font-size:clamp(1.3rem,2.3vw,1.85rem);color:var(--deep);margin:0 0 12px}
+.textbook-download h2 svg{width:28px;height:32px;flex:none;color:#ce285e}
+.reading .textbook-download-intro{color:var(--muted);margin:0 auto 26px;font-size:.95rem;line-height:1.7}
+.textbook-download-card{padding:36px 24px 28px;border:2px solid #ffae3d;border-radius:16px;background:#fffbf2}
+.textbook-book-icon{width:64px;height:56px;margin:0 auto 22px;color:var(--blue)}
+.reading .textbook-download-card h3{margin:0 0 12px;color:var(--deep);font-size:clamp(1.2rem,2vw,1.45rem);line-height:1.5}
+.textbook-download-card h3 span{display:inline-block}
+.reading .textbook-download-meta{margin:0 auto 24px;color:var(--muted);font-size:.92rem}
+.textbook-download-button{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:13px 27px;background:#ffad38;color:#073c61;border-radius:10px;text-decoration:none;font-weight:750;font-size:1.08rem;line-height:1.5;transition:background .16s ease}
+.textbook-download-button svg{width:22px;height:22px;flex:none}
+.textbook-download-button:hover{background:#ffbd5c;color:#073c61}
+.textbook-download-button:focus-visible{outline:3px solid var(--deep);outline-offset:5px}
+.reading .textbook-download-help{margin:12px auto 0;color:var(--muted);font-size:.8rem}
+.reading .textbook-download-source{margin:22px auto 0;color:var(--muted);font-size:.83rem;line-height:1.75}
+.textbook-download-source a{display:inline-block;overflow-wrap:anywhere;max-width:100%}
+#textbook-notes{scroll-margin-top:110px}
+@media(max-width:600px){
+ .textbook-download{padding:25px 16px;margin-bottom:32px}
+ .reading .textbook-download h2{align-items:flex-start;gap:8px}
+ .textbook-download h2 svg{width:24px;height:28px}
+ .reading .textbook-download-intro{font-size:.88rem;margin-bottom:22px}
+ .textbook-download-card{padding:28px 16px 24px}
+ .textbook-book-icon{width:56px;height:50px;margin-bottom:18px}
+ .textbook-download-button{width:100%;max-width:320px;padding:13px 14px;font-size:1rem}
+ .reading .textbook-download-source{font-size:.78rem}
+}
+@media(prefers-reduced-motion:reduce){.textbook-download-button{transition:none}}
+@media print{.textbook-download{background:white;break-inside:avoid}.textbook-download-button{background:white;border:1px solid var(--deep)}.textbook-download-help{display:none}}

@@ -8,7 +8,7 @@
     tickets: { title: L('出门票'), description: L('每次课后，记下一点收获，带走一个问题。'), empty: L('第一张出门票，待记录'), hint: L('课后的学习收获、尚存的疑问与下一步计划将在这里记录。') }
   };
   const $ = id => document.getElementById(id);
-  const lessonPages = { 'phytoplankton-blooms': './index.html#story', 'eof-method': './eof.html', 'geostrophic-current': './geostrophic.html', 'ocean-dynamics-five': './ocean-dynamics-homework.html', 'geostrophic-calculations': './geostrophic-calculations.html' };
+  const lessonPages = { 'phytoplankton-blooms': './index.html#story', 'eof-method': './eof.html', 'geostrophic-current': './geostrophic.html', 'ocean-dynamics-five': './ocean-dynamics-homework.html', 'geostrophic-calculations': './geostrophic-calculations.html', 'mixed-layer-homework': window.COURSE_LANG === 'en' ? './homework-mixed-layer-en.html' : './homework-mixed-layer.html', 'heat-budget-homework': window.COURSE_LANG === 'en' ? './homework-heat-budget-en.html' : './homework-heat-budget.html' };
   const text = (tag, value, className) => { const node = document.createElement(tag); node.textContent = value; if (className) node.className = className; return node; };
   function linkArrow() { const svg=document.createElementNS('http://www.w3.org/2000/svg','svg'); svg.setAttribute('viewBox','0 0 24 24'); svg.setAttribute('class','inline-arrow'); svg.setAttribute('aria-hidden','true'); const p=document.createElementNS('http://www.w3.org/2000/svg','path'); p.setAttribute('d','m7 17 10-10M7 7h10v10'); svg.append(p); return svg; }
   const data = window.COURSE_DATA;
@@ -119,6 +119,7 @@
   }
   function route(initial = false) {
     const hash = location.hash.slice(1) || 'home';
+    if(hash === 'assignments') { location.replace(window.COURSE_LANG === 'en' ? './homework-en.html' : './homework.html'); return; }
     if(hash === 'main') { $('main').focus(); return; }
     $('site-nav').classList.remove('is-open'); document.querySelector('.menu-toggle').setAttribute('aria-expanded','false'); document.querySelector('.menu-toggle').setAttribute('aria-label',L('打开导航菜单'));
     if(hash.startsWith('entry/')) { let id; try { id=decodeURIComponent(hash.slice(6)); } catch { id=''; } showEntry(id); return; }

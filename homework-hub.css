@@ -5,7 +5,7 @@
 .hub-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px;text-decoration:none;color:inherit;min-height:260px;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
 .hub-card:hover,.hub-card:focus-visible{transform:translateY(-3px);box-shadow:0 14px 34px rgba(7,60,97,.12);border-color:var(--teal);outline:none}
 .hub-tag{font-family:Consolas,monospace;font-size:.72rem;letter-spacing:.16em;color:var(--teal);font-weight:700}
-.hub-card h2{font-size:1.35rem;line-height:1.45;margin:12px 0 10px;color:var(--deep)}
+.hub-card h2,.hub-card h3{font-size:1.35rem;line-height:1.45;margin:12px 0 10px;color:var(--deep)}
 .hub-card p{font-size:.94rem;line-height:1.8;color:var(--muted);margin:0 0 18px}
 .hub-arrow{margin-top:auto;font-size:.92rem;font-weight:700;color:var(--teal)}
 .hub-note{background:#fff8e8;border-left:4px solid #c58a1a;border-radius:0 10px 10px 0;padding:14px 18px;font-size:.9rem;line-height:1.8;color:var(--ink);margin:0 0 40px}
@@ -22,3 +22,5 @@
   .hub-card{break-inside:avoid}
   .site-header,.site-footer,.hub-note{display:none}
 }
+
+.homework-group{margin:38px 0 42px;scroll-margin-top:100px}.homework-group>h2{font-size:1.5rem;color:var(--deep);line-height:1.5;margin:0 0 20px}.homework-group .hub-grid{margin-top:0}.hub-related{font-size:.95rem;line-height:1.9;padding:14px 0;border-top:1px solid var(--line)}.hub-related a{font-weight:600}.hw-hero .actions{flex-wrap:wrap}@media(max-width:760px){.homework-group{margin-top:28px}.homework-group>h2{font-size:1.3rem}.hw-hero .actions{gap:10px}}

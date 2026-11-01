@@ -1,0 +1,14 @@
+.homework-notes .hw-hero h1{max-width:30em;font-size:clamp(1.9rem,3.3vw,3rem)}
+.homework-notes .hw-hero .hw-sub{max-width:50em}
+.homework-notes .note-date{font-size:.82rem;color:#d4e8f1;margin:15px 0 0}
+.homework-notes .hw-hero .actions{flex-wrap:wrap}
+.homework-notes button.btn{font:inherit;cursor:pointer}
+.homework-notes .reading p{white-space:pre-line;line-height:1.95}
+.homework-notes .reading h3{font-size:1rem;color:var(--teal);margin-top:24px}
+.homework-notes .reading section{scroll-margin-top:100px}
+.homework-notes .contents a{font-size:.85rem;line-height:1.7}
+.note-resources{padding-left:1.2em;font-size:.88rem;line-height:1.85;overflow-wrap:anywhere}
+.note-resources li{margin:12px 0}
+.homework-notes :is(a,button):focus-visible{outline:3px solid #b08029;outline-offset:4px}
+@media(max-width:760px){.homework-notes .hw-hero h1{font-size:1.9rem}.homework-notes .reading h2{font-size:1.4rem}.homework-notes .hw-hero .actions{gap:10px}}
+@media print{.homework-notes .hw-hero{background:#fff}.homework-notes .hw-hero :is(h1,p){color:#000}.homework-notes .actions{display:none}.homework-notes .reading{max-width:none}}

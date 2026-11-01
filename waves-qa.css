@@ -1,0 +1,65 @@
+/* waves-qa.css — 海洋波动：七道思考题 */
+
+/* 中文标题下的一行副标题：70ch 按拉丁字符宽算，中文会过早换行 */
+html[lang="zh-CN"] .hw-hero .hw-sub{max-width:48em}
+
+.wq-params{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:22px 0}
+.wq-param{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.wq-param b{display:block;font-family:Consolas,monospace;color:var(--teal);font-size:1.02rem;margin-bottom:4px;line-height:1.4}
+.wq-param span{display:block;font-size:.8rem;color:var(--muted);line-height:1.6}
+
+.wq-q{position:relative;background:var(--wash);border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:0 12px 12px 0;padding:16px 20px 16px 58px;margin:0 0 18px}
+.wq-q .wq-no{position:absolute;left:14px;top:17px;width:30px;height:30px;border-radius:50%;background:var(--deep);color:#fff;font-family:Consolas,monospace;font-weight:700;font-size:.82rem;display:flex;align-items:center;justify-content:center}
+.wq-q p{margin:0;font-weight:650;color:var(--deep);line-height:1.8;max-width:none}
+.wq-q small{display:block;margin-top:3px;color:var(--muted);font-weight:400;font-size:.8rem}
+
+.wq-a{font-size:1.06rem;font-weight:650;color:var(--deep);border-left:4px solid var(--teal);padding:4px 0 4px 16px;line-height:1.85;margin:0 0 18px}
+.wq-a b{color:var(--teal)}
+
+.wq-formula{font-family:"Cambria Math","STIX Two Math","Segoe UI",serif;font-size:1.16rem;line-height:1.9;padding:14px 18px;background:var(--wash);border:1px solid var(--line);border-radius:8px;margin:14px 0;overflow-x:auto}
+.wq-formula small{display:block;font-family:"Segoe UI","Microsoft YaHei","PingFang SC",sans-serif;font-size:.78rem;color:var(--muted);margin-top:5px;line-height:1.65}
+
+.wq-split{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0}
+.wq-box{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.wq-box h3{margin:0 0 8px;font-size:1rem;color:var(--deep);line-height:1.5}
+.wq-box p,.wq-box li{font-size:.9rem;line-height:1.8}
+.wq-box p{margin:.4em 0 .6em}
+.wq-box ul{margin:6px 0 0;padding-left:1.2em}
+.wq-box .wq-formula{font-size:1rem;padding:10px 12px;margin:10px 0}
+
+.wq-four{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:18px 0}
+.wq-four .wq-box h3{display:flex;align-items:center;gap:8px}
+.wq-four .wq-box h3 span{display:inline-flex;align-items:center;justify-content:center;min-width:24px;height:24px;padding:0 6px;border-radius:6px;background:var(--deep);color:#fff;font-family:Consolas,monospace;font-size:.72rem}
+
+.wq-key{background:#eef8f4;border:1px solid #bfe0d4;border-radius:10px;padding:13px 18px;margin:16px 0;font-size:.93rem;line-height:1.85}
+.wq-key b{color:var(--teal)}
+
+.wq-note{background:#fff8e8;border-left:4px solid #c58a1a;border-radius:0 10px 10px 0;padding:13px 18px;margin:16px 0;font-size:.92rem;line-height:1.85}
+
+.wq-steps{list-style:none;padding:0;margin:18px 0;counter-reset:wq}
+.wq-steps li{counter-increment:wq;position:relative;padding:11px 14px 11px 46px;background:#fff;border:1px solid var(--line);border-radius:10px;margin:8px 0;font-size:.92rem;line-height:1.8}
+.wq-steps li::before{content:counter(wq);position:absolute;left:12px;top:11px;width:24px;height:24px;border-radius:50%;background:var(--teal);color:#fff;font-family:Consolas,monospace;font-weight:700;font-size:.78rem;display:flex;align-items:center;justify-content:center}
+
+.wq-table{font-size:.8rem}
+.wq-table th,.wq-table td{padding:9px 8px}
+.wq-table td:first-child{white-space:nowrap}
+
+.wq-mis{padding-left:1.2em;margin:16px 0}
+.wq-mis li{margin:9px 0;font-size:.93rem;line-height:1.85}
+.wq-mis b{color:var(--deep)}
+
+@media(max-width:900px){
+  .wq-split,.wq-four{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .wq-params{grid-template-columns:1fr}
+  .wq-q{padding:14px 16px 14px 52px}
+  .wq-q .wq-no{left:12px;top:15px;width:26px;height:26px;font-size:.74rem}
+  .wq-formula{font-size:1rem}
+}
+@media print{
+  .wq-params{grid-template-columns:1fr 1fr}
+  .wq-split,.wq-four{grid-template-columns:1fr 1fr}
+  .wq-q,.wq-box,.wq-steps li{break-inside:avoid}
+  .wq-formula{white-space:normal}
+}

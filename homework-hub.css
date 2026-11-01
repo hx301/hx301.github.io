@@ -1,6 +1,7 @@
 /* homework-hub.css — 课堂作业总览 */
 
 .hub-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin:34px 0 22px}
+.hub-grid.three{grid-template-columns:repeat(3,1fr)}
 .hub-card{display:flex;flex-direction:column;background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px;text-decoration:none;color:inherit;min-height:260px;transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease}
 .hub-card:hover,.hub-card:focus-visible{transform:translateY(-3px);box-shadow:0 14px 34px rgba(7,60,97,.12);border-color:var(--teal);outline:none}
 .hub-tag{font-family:Consolas,monospace;font-size:.72rem;letter-spacing:.16em;color:var(--teal);font-weight:700}
@@ -9,12 +10,15 @@
 .hub-arrow{margin-top:auto;font-size:.92rem;font-weight:700;color:var(--teal)}
 .hub-note{background:#fff8e8;border-left:4px solid #c58a1a;border-radius:0 10px 10px 0;padding:14px 18px;font-size:.9rem;line-height:1.8;color:var(--ink);margin:0 0 40px}
 
+@media(max-width:1050px){
+  .hub-grid.three{grid-template-columns:1fr 1fr}
+}
 @media(max-width:760px){
-  .hub-grid{grid-template-columns:1fr;gap:14px;margin-top:24px}
+  .hub-grid,.hub-grid.three{grid-template-columns:1fr;gap:14px;margin-top:24px}
   .hub-card{min-height:0;padding:22px}
 }
 @media print{
-  .hub-grid{grid-template-columns:1fr 1fr}
+  .hub-grid,.hub-grid.three{grid-template-columns:1fr 1fr}
   .hub-card{break-inside:avoid}
   .site-header,.site-footer,.hub-note{display:none}
 }

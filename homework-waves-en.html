@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#073c61">
+<title>Class Homework | Ocean Waves: Seven Thinking Questions</title>
+<meta name="description" content="Class homework: seven questions on ocean waves—the Coriolis criterion, dispersion, the equatorial waveguide, shelf waves, seiches, internal waves and tsunamis.">
+<link rel="icon" href="./assets/favicon.svg">
+<link rel="stylesheet" href="./hub.css">
+<link rel="stylesheet" href="./dossier.css">
+<link rel="stylesheet" href="./homework.css">
+<link rel="stylesheet" href="./waves-qa.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="identity" href="./en.html">
+      <svg viewBox="0 0 40 36" aria-hidden="true"><path d="M2 11Q11 2 20 11T38 11M2 20Q11 11 20 20T38 20M2 29Q11 20 20 29T38 29" fill="none" stroke="currentColor" stroke-width="2.4"/></svg>
+      <span>Descriptive Physical Oceanography<small>Zhang Hao’s course notebook · 2026</small></span>
+    </a>
+    <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false">Contents</button>
+    <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+      <a href="./en.html#classroom">Classroom</a>
+<a href="./en.html#textbook">Textbook</a>
+<a href="./en.html#story">Story Lab</a>
+<a href="./en.html#retell">Retell</a>
+<a href="./homework-en.html" aria-current="page">Homework</a>
+    </nav>
+    <a class="language" href="./homework-waves.html" hreflang="zh-CN">中文</a>
+  </div>
+</header>
+
+<main id="main">
+  <div class="hw-hero">
+    <div class="wrap">
+      <p class="hw-kicker">CLASS HOMEWORK · WAVE THINKING</p>
+      <h1>Ocean Waves: Seven Thinking Questions</h1>
+      <p class="hw-sub">From “when can Coriolis be ignored” to “why a tsunami crosses an ocean”—seven questions, one chain of wave physics.</p>
+      <div class="actions">
+        <a class="btn" href="#q1">Start with Q1</a>
+        <a class="btn secondary" href="#table">See the table</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap reader">
+    <aside class="contents" aria-label="On this page">
+      <strong>On this page</strong>
+      <a href="#frame">Framework</a>
+<a href="#q1">01 Coriolis</a>
+<a href="#q2">02 Dispersion</a>
+<a href="#q3">03 Equatorial waveguide</a>
+<a href="#q4">04 Shelf waves</a>
+<a href="#q5">05 Seiche</a>
+<a href="#q6">06 Internal waves</a>
+<a href="#q7">07 Tsunami</a>
+<a href="#table">Table</a>
+<a href="#mis">Pitfalls</a>
+<a href="#retell">Retell</a>
+    </aside>
+    <article class="reading">
+      <section id="frame">
+<h2>Framework: four criteria</h2>
+<p class="hw-lead">All seven questions ask the same thing: <b>at what scale do gravity, rotation, stratification and boundaries take over?</b></p>
+<p>Break it into four criteria; each question below is an application of one of them.</p>
+<div class="wq-params">
+  <div class="wq-param"><b>σ / f</b><span>Is rotation important? ≫ 1 no, ~1 yes</span></div>
+  <div class="wq-param"><b>kR<sub>d</sub></b><span>Wavelength vs deformation radius: ≫ 1 short, ≪ 1 long</span></div>
+  <div class="wq-param"><b>kH</b><span>Shallow-water criterion: ≪ 1 gives c = √(gH)</span></div>
+  <div class="wq-param"><b>f &lt; σ &lt; N</b><span>Frequency window for free internal waves</span></div>
+</div>
+<p class="hw-note">The chain: Q1 asks whether f can be dropped; Q2 asks what sets dispersion; Q3–Q4 ask how boundaries trap waves; Q5 asks how a boundary turns a traveling wave into a standing one; Q6 adds stratification plus a disturbance; Q7 is the “long but high-frequency” extreme.</p>
+</section>
+      <section id="q1">
+<h2>01 · Coriolis: when can it be dropped</h2>
+<div class="wq-q"><span class="wq-no">01</span><p>Under what conditions can Coriolis be neglected for gravity waves?</p></div>
+<p class="wq-a">When <b>σ ≫ f</b>—period much shorter than the inertial period, wavelength much smaller than the deformation radius.</p>
+<p>The rotating shallow-water dispersion relation is</p>
+<div class="wq-formula">σ² = f² + gHk²　(long waves)<small>General depth: σ² = f² + gk tanh(kH). Without rotation, σ² = gHk².</small></div>
+<p>The relative importance of Coriolis is about (f/σ)². “Ignoring Coriolis” therefore gives two equivalent criteria:</p>
+<div class="wq-split">
+  <div class="wq-box"><h3>Time criterion</h3><p><b>T ≪ 2π/f = 12 h / sinφ</b>. At mid-latitudes the inertial period is about 14–24 h; wind sea, swell and tsunami with periods of minutes to a few hours all satisfy this.</p></div>
+  <div class="wq-box"><h3>Space criterion</h3><p><b>λ ≪ 2πR<sub>d</sub></b>, R<sub>d</sub> = √(gH)/f. Barotropic R<sub>d</sub> ≈ 2000 km; the first baroclinic mode is 25–50 km; that is, kR<sub>d</sub> ≫ 1.</p></div>
+</div>
+<ul>
+<li><b>Low latitudes:</b> f → 0 at the equator, so Coriolis itself vanishes; but β takes over and long waves become equatorial or Rossby waves.</li>
+<li><b>Small basins:</b> if the basin size L ≪ R<sub>d</sub> (crossing time much shorter than the inertial period), rotation can also be dropped—e.g., a seiche in a small lake.</li>
+</ul>
+<p><b>Physical picture:</b> Coriolis deflects water parcels and turns a back-and-forth oscillation into an ellipse or rotation. When the oscillation is fast, a parcel has no time to be deflected before the wave has passed—Coriolis is not “small”, it is “too slow”.</p>
+<div class="wq-key"><b>Example:</b> wind waves with T ≈ 3 s have σ/f ≈ 10⁴ and are non-rotating; the M2 tide at 45°N has T = 12.4 h and σ/f ≈ 1.4, so rotation is essential (Kelvin waves, amphidromic points).</div>
+</section>
+<section id="q2">
+<h2>02 · Three waves: who is dispersive</h2>
+<div class="wq-q"><span class="wq-no">02</span><p>Are gravity, inertia-gravity and Rossby waves dispersive? Why?</p></div>
+<p class="wq-a">In general <b>all three are dispersive</b>, but each has a non-dispersive limit: shallow-water gravity, short inertia-gravity, long Rossby.</p>
+<p>First agree on terms: <b>dispersion means the phase speed c = σ/k depends on wavelength</b>, so a wave packet spreads; equivalently c ≠ c<sub>g</sub> and c<sub>g</sub> depends on k.</p>
+
+<h3>Surface gravity waves</h3>
+<div class="wq-split">
+  <div class="wq-box"><h3>Deep water</h3>
+    <div class="wq-formula">σ² = gk　→　c = √(g/k), c<sub>g</sub> = c/2</div>
+    <p><b>Strongly dispersive.</b> Long swell arrives first and short waves later—the classic dispersion of swell.</p>
+  </div>
+  <div class="wq-box"><h3>Shallow water (λ ≫ H)</h3>
+    <div class="wq-formula">σ = k√(gH)　→　c = c<sub>g</sub> = √(gH)</div>
+    <p><b>Non-dispersive.</b> This is why tides and tsunamis keep their shape in shallow water.</p>
+  </div>
+</div>
+<p>So whether a gravity wave is dispersive depends on depth versus wavelength: <b>deep water is dispersive, shallow-water long waves are not</b>. With surface tension, σ² = gk + γk³/ρ: still dispersive, with a minimum phase speed.</p>
+
+<h3>Inertia-gravity waves</h3>
+<div class="wq-formula">σ² = f² + gHk²　→　c = √(gH + f²/k²), c<sub>g</sub> = gHk/σ, c·c<sub>g</sub> = gH</div>
+<p><b>Generally dispersive.</b> Two limits: for kR ≫ 1, σ ≈ k√(gH) and the wave approaches the non-dispersive limit; for kR ≪ 1, σ → f, the phase speed formally diverges, the group velocity goes to zero and energy barely propagates—extremely dispersive.</p>
+<p>It also has a <b>lower frequency bound f</b>: for σ &lt; f it cannot propagate freely and the motion becomes geostrophic or Rossby-like. Inertia-gravity waves thus act as a high-pass filter.</p>
+
+<h3>Rossby waves</h3>
+<div class="wq-formula">σ = −βk / (k² + l² + R⁻²), c<sub>x</sub> = −β / (k² + l² + R⁻²)<small>Barotropic R = √(gH)/f; for baroclinic modes replace R by R<sub>n</sub> = c<sub>n</sub>/f.</small></div>
+<p><b>Dispersive, and anomalously so: the longer the wave, the faster it travels</b>—long waves go west quickly, short waves slowly. The group velocity is</p>
+<div class="wq-formula">c<sub>gx</sub> = β(k² − l² − R⁻²) / (k² + l² + R⁻²)²</div>
+<p>For long waves (kR ≪ 1) the group velocity is also westward; for short waves (large k) it can be eastward. Key limit: as kR ≪ 1, σ ≈ −βR²k and c = −βR² independent of k, so the wave becomes <b>non-dispersive</b>—this is why “long Rossby waves” in ENSO theory can carry a signal westward without much distortion.</p>
+
+<div class="wq-key"><b>Summary:</b> all three are dispersive in general, but each has a non-dispersive limit: shallow-water gravity, short inertia-gravity, long Rossby.</div>
+</section>
+<section id="q3">
+<h2>03 · The equator: a waveguide for waves</h2>
+<div class="wq-q"><span class="wq-no">03</span><p>Why does the equatorial wave system form a waveguide? Which waves can it support?</p></div>
+<p class="wq-a">Because <b>f = 0 and changes sign</b> at the equator while β provides the restoring force; waves are trapped within about <b>√(c/β)</b> of the equator.</p>
+<h3>Why the equator is a waveguide</h3>
+<ol class="wq-steps">
+<li><b>f = 0 and changes sign.</b> At the equator the Coriolis parameter vanishes; toward the poles f = βy grows and reverses. A wave of frequency σ can only propagate where |f(y)| &lt; σ, i.e. |y| &lt; σ/β; farther poleward it becomes evanescent and is totally internally reflected.</li>
+<li><b>β provides the restoring force.</b> A parcel displaced meridionally feels the βy term, which pulls it back and sets up a meridional oscillation.</li>
+<li><b>Mathematically, a trapped harmonic oscillator.</b> Separating variables on the equatorial β-plane leaves a harmonic-oscillator equation in y; the solutions are Hermite functions times a Gaussian envelope whose width is the equatorial Rossby deformation radius L<sub>eq</sub> = √(c/β).</li>
+<li><b>No steady geostrophic balance.</b> Because f changes sign, large-scale disturbances cannot settle into geostrophy; they must propagate as waves, and eastern/western boundaries reflect them, completing the wave system.</li>
+</ol>
+<div class="wq-formula">V<sub>n</sub> ∝ H<sub>n</sub>(y/L<sub>eq</sub>) · e<sup>−y²/(2L<sub>eq</sub>²)</sup>,　L<sub>eq</sub> = √(c/β)</div>
+<p><b>Scales:</b> barotropic c ≈ 200 m/s → L<sub>eq</sub> ≈ 3000 km; first baroclinic mode c ≈ 2.5 m/s → L<sub>eq</sub> ≈ 300 km. Waves are confined to a few L<sub>eq</sub>.</p>
+
+<h3>Which equatorial trapped waves exist</h3>
+<div class="table-scroll"><table class="reference-table wq-table">
+<thead><tr><th>Wave</th><th>Dispersion relation</th><th>Direction</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>Equatorial Kelvin</td><td>σ = ck</td><td>Eastward only</td><td>Non-dispersive, v = 0, u and η in phase</td></tr>
+<tr><td>Equatorial Rossby (n ≥ 1)</td><td>σ ≈ −βk / [k² + (2n+1)β/c]</td><td>Westward</td><td>Dispersive, long waves faster</td></tr>
+<tr><td>Mixed Rossby–gravity (n = 0)</td><td>σ² − ckσ − βc = 0</td><td>Westward for long, eastward for short</td><td>Connects Rossby and gravity branches</td></tr>
+<tr><td>Equatorial inertia-gravity (n ≥ 1)</td><td>σ² ≈ c²k² + (2n+1)βc</td><td>East or west</td><td>Has a lower frequency bound</td></tr>
+</tbody></table></div>
+<p><b>Generation:</b> equatorial wind bursts (MJO), instability of equatorial currents, reflection at the eastern/western boundaries, tides over topography. Kelvin waves travel east and Rossby waves west; boundary reflection converts one into the other—the core of ENSO recharge–discharge theory.</p>
+<div class="wq-key"><b>One sentence:</b> the equator is where rotation is weakest and β is cleanest; waves cannot escape meridionally and cannot settle into geostrophy, so they travel along the equator.</div>
+</section>
+<section id="q4">
+<h2>04 · Shelf waves: tied to the coast</h2>
+<div class="wq-q"><span class="wq-no">04</span><p>What kinds of shelf long waves are there, and how do they propagate?</p></div>
+<p class="wq-a">Mainly <b>Kelvin, shelf and edge waves</b>, plus the double Kelvin wave; all are trapped by the coast and topography, with the coast (and shallow water) on the right in the NH.</p>
+<div class="wq-four">
+<div class="wq-box"><h3><span>K</span>Kelvin wave</h3><p>Restoring force: gravity + Coriolis, with geostrophic balance normal to the coast. σ = kc, c = √(gH), <b>non-dispersive</b>; cross-shore velocity v = 0, amplitude decays offshore as e<sup>−x/R</sup> with R = c/f.</p></div>
+<div class="wq-box"><h3><span>S</span>Shelf wave</h3><p>A topographic Rossby wave. Restoring force: potential-vorticity conservation over a sloping bottom, <b>σ &lt; f (sub-inertial)</b>, generally dispersive; amplitude concentrated over the shelf/slope, decaying offshore, with multiple modes.</p></div>
+<div class="wq-box"><h3><span>E</span>Edge wave</h3><p>Trapped by the beach slope and able to travel near the shoreline; Stokes edge waves (super-inertial) and sub-inertial edge waves matter for run-up and beach morphology.</p></div>
+<div class="wq-box"><h3><span>D</span>Double Kelvin wave</h3><p>Propagates along a depth step (shelf break), decaying exponentially on both sides; unidirectional, with a speed between √(gH₁) and √(gH₂).</p></div>
+</div>
+<h3>Common propagation features</h3>
+<ul>
+<li><b>Energy travels along isobaths or the coastline</b>, trapped by topography and the coast, decaying offshore.</li>
+<li><b>In the NH the coast is on the right, and so is shallow water</b>: poleward along eastern boundaries (west coasts of continents), equatorward along western boundaries (east coasts); reversed in the SH.</li>
+<li><b>Dispersion differs:</b> Kelvin waves are non-dispersive, shelf waves generally dispersive, yet both travel in the same alongshore direction.</li>
+<li><b>They are the coastal signal highway:</b> storms, tides and ENSO signals propagate along the coast this way; friction, scattering and changing bathymetry damp and deform them.</li>
+</ul>
+<div class="wq-key"><b>One sentence:</b> Kelvin waves are trapped by “coast + geostrophy”, shelf waves by “slope + potential vorticity”; the first keeps its shape, the second disperses, but both are tied to the same coastline.</div>
+</section>
+<section id="q5">
+<h2>05 · Bay seiche: a gravity wave put in a box</h2>
+<div class="wq-q"><span class="wq-no">05</span><p>How is a bay seiche similar to and different from a gravity wave?</p></div>
+<p class="wq-a">A seiche is a <b>standing gravity wave</b> enclosed by boundaries; a gravity wave is a <b>traveling wave</b> in open water. Same restoring force, different waveform, energy flux and period structure.</p>
+<p>A <b>seiche</b> is a standing free oscillation of an enclosed or semi-enclosed water body (lake, bay, harbour), excited by wind, air-pressure jumps, earthquakes or tides—a resonant response to forcing.</p>
+<div class="wq-split">
+<div class="wq-box"><h3>Closed basin</h3><div class="wq-formula">T<sub>n</sub> = 2L / (n√(gH))</div><p>Antinodes at both ends with nodes in between; the fundamental is n = 1.</p></div>
+<div class="wq-box"><h3>Bay open at one end</h3><div class="wq-formula">T<sub>n</sub> = 4L / [(2n−1)√(gH)]</div><p>The open end is approximately a node and the closed end an antinode; this is Merian’s formula.</p></div>
+</div>
+<h3>Similarities</h3>
+<ul>
+<li>Both are <b>surface gravity waves</b> with gravity as the restoring force; for λ ≫ H both obey the shallow-water equations with c = √(gH).</li>
+<li>A seiche is the superposition of two oppositely traveling gravity waves, so it is a special form of gravity wave.</li>
+<li>Both have nodes and antinodes, can resonate, and are damped by friction; at large scales both feel rotation (Kelvin-wave seiches, amphidromic points).</li>
+</ul>
+<h3>Differences</h3>
+<div class="table-scroll"><table class="reference-table wq-table">
+<thead><tr><th></th><th>Bay seiche</th><th>Open-ocean gravity wave</th></tr></thead>
+<tbody>
+<tr><td>Waveform</td><td><b>Standing wave</b>, fixed nodes/antinodes</td><td><b>Traveling wave</b>, pattern propagates</td></tr>
+<tr><td>Energy</td><td>Zero net energy flux (except forcing/damping)</td><td>Non-zero net flux, directed transport</td></tr>
+<tr><td>Period</td><td>Discrete eigenperiods set by basin geometry</td><td>Continuous spectrum set by the source</td></tr>
+<tr><td>Boundaries</td><td>Sustained by reflection at walls or the bay mouth</td><td>No closed boundary needed</td></tr>
+<tr><td>Phase</td><td>η and u are 90° out of phase in time</td><td>η and u are in phase for a shallow-water traveling wave</td></tr>
+<tr><td>Formula</td><td>T = 2L/√(gH) or 4L/√(gH)</td><td>T = λ/√(gH), with λ set by the source</td></tr>
+</tbody></table></div>
+<p><b>Why the phase differs:</b> a standing wave can be written η = A cos(kx) cos(σt); the momentum equation then gives u ∝ sin(kx) sin(σt), exactly 90° out of phase in time. For a traveling wave η and u are in phase, so the velocity is largest at the crest.</p>
+<div class="wq-key"><b>One sentence:</b> a seiche is a gravity wave trapped by boundaries and turned into a standing wave; a gravity wave is a traveling wave in open water.</div>
+</section>
+<section id="q6">
+<h2>06 · Internal waves: stratification + disturbance</h2>
+<div class="wq-q"><span class="wq-no">06</span><p>What are the basic conditions for internal waves to occur?</p></div>
+<p class="wq-a">Three conditions: <b>stable stratification</b>, a <b>disturbance that displaces isopycnals</b>, and a frequency inside <b>f &lt; σ &lt; N</b>.</p>
+<h3>① Stable density stratification</h3>
+<p>Density increases with depth (light over heavy), i.e.</p>
+<div class="wq-formula">N² = −(g/ρ₀) · dρ/dz &gt; 0</div>
+<p>This is the source of the buoyancy restoring force. Without stratification there are no internal waves; in the real ocean the thermocline or halocline provides strong stratification.</p>
+
+<h3>② A disturbance that displaces isopycnals</h3>
+<ul>
+<li>Barotropic tides over rough topography → internal tides;</li>
+<li>Wind stress → near-inertial waves (especially in the mixed layer);</li>
+<li>Geostrophic adjustment → fronts, eddies, convection;</li>
+<li>Shear instability, baroclinic instability;</li>
+<li>Nonlinear interactions of surface waves;</li>
+<li>River plumes, submarine landslides, earthquakes.</li>
+</ul>
+
+<h3>③ Frequency inside the window</h3>
+<div class="wq-formula">f &lt; σ &lt; N<small>Continuously stratified internal waves: σ² = (N²k<sub>h</sub>² + f²m²) / (k<sub>h</sub>² + m²)</small></div>
+<p>For σ &gt; N or σ &lt; f the wave becomes evanescent and cannot propagate freely (for σ &lt; f the motion becomes geostrophic or Rossby-like).</p>
+
+<h3>Additional conditions</h3>
+<ul>
+<li>Interfacial waves (two-layer fluid) need a pycnocline and an interfacial disturbance; internal solitary waves also need a balance of nonlinearity and dispersion (KdV) and a finite amplitude.</li>
+<li>Background flow Doppler-shifts the frequency and creates critical layers; strong shear can make internal waves unstable (Ri &lt; 1/4) and break them.</li>
+<li>Horizontal and vertical scales are constrained by stratification, depth and the Rossby radius; the first baroclinic mode is the most common.</li>
+</ul>
+<div class="wq-key"><b>One sentence:</b> stratification is the “medium” condition, a disturbance is the “excitation” condition, and f &lt; σ &lt; N is the “propagation” condition.</div>
+</section>
+<section id="q7">
+<h2>07 · Tsunami: a long wave, not a low frequency</h2>
+<div class="wq-q"><span class="wq-no">07</span><p>How does a tsunami form? Is its long-distance propagation affected by Coriolis? Why?</p></div>
+<p class="wq-a">Seafloor displacement radiates a <b>shallow-water long wave</b>; over long distances Coriolis is <b>negligible</b> because σ ≫ f and kR<sub>d</sub> ≫ 1.</p>
+<h3>Generation</h3>
+<ol class="wq-steps">
+<li><b>Source:</b> a shallow submarine earthquake on a thrust fault displaces the seafloor vertically over a large area; landslides, volcanic flank collapse, eruptions and impacts also work.</li>
+<li><b>Long-wave radiation:</b> the displaced water column restores under gravity and radiates long gravity waves. The source is tens to hundreds of km across—much larger than the depth (~4 km)—so the wave is a shallow-water long wave.</li>
+<li><b>Deep-ocean propagation:</b> c = √(gH) ≈ 200 m/s ≈ 700 km/h (H = 4 km); amplitude only cm–m, wavelength hundreds of km, often an N-wave. Dispersion is weak (λ ≫ H), so the shallow-water equations apply; when λ is comparable to H, Boussinesq/KdV corrections are needed.</li>
+<li><b>Coastal amplification:</b> as H decreases, c decreases and energy-flux conservation raises the amplitude by Green’s law A ∝ H<sup>−1/4</sup> (with a width factor b<sup>−1/2</sup> when refraction is included); refraction turns crests parallel to the coast; shoaling, run-up and inundation follow; harbour resonance and edge waves can amplify locally.</li>
+<li><b>Period:</b> minutes to about an hour, typically 10–40 min.</li>
+</ol>
+<div class="wq-formula">c = √(gH),　T = λ/c,　A ∝ H<sup>−1/4</sup></div>
+
+<h3>Is long-distance propagation affected by Coriolis?</h3>
+<p><b>Answer:</b> to first order, no; Coriolis is a secondary effect.</p>
+<div class="wq-split">
+<div class="wq-box"><h3>Frequency criterion</h3><p>T = 30 min → σ ≈ 3.5×10<sup>−3</sup> s<sup>−1</sup>; at mid-latitudes f ≈ 1×10<sup>−4</sup> s<sup>−1</sup>; <b>σ/f ≈ 35 ≫ 1</b>.</p></div>
+<div class="wq-box"><h3>Space criterion</h3><p>λ = 300–500 km; barotropic R<sub>d</sub> = √(gH)/f ≈ 2000 km; <b>kR<sub>d</sub> ≈ 25–40 ≫ 1</b>.</p></div>
+</div>
+<p>So a tsunami is “high frequency” relative to the inertial period and a “short wave” relative to the deformation radius. It travels essentially as a <b>non-rotating shallow-water wave</b>: along great-circle paths (refracted by bathymetry), without significant deflection, trapping or dispersion by Coriolis; arrival times are controlled mainly by depth and path.</p>
+<p>Rotation matters only for ultra-long waves with σ ≲ f (period ≳ the inertial period, i.e. &gt; 12–24 h) or λ ≳ 2πR<sub>d</sub> (tens of thousands of km). The finite source size rarely produces such long waves.</p>
+<p>Coriolis does play a second-order role in several ways:</p>
+<ul>
+<li>the tsunami excites <b>coastal Kelvin and edge waves</b>, which are rotationally trapped and affect later wave trains, arrival times and nearshore amplification;</li>
+<li>it leaves a weak <b>geostrophic current or eddy</b> behind (geostrophic adjustment);</li>
+<li>on shallow shelves (smaller R<sub>d</sub>) or at high latitudes (larger f) rotation is relatively more important;</li>
+<li>near the equator f → 0, so rotation matters even less, though β can generate equatorial waves.</li>
+</ul>
+<div class="wq-note"><b>The usual confusion:</b> “long wave” does not mean “low frequency”. A tsunami is a long wave (λ ≫ H) but its frequency is not low (T ≪ inertial period), so Coriolis can still be neglected.</div>
+</section>
+
+      <section id="table">
+        <h2>One table: ten wave types side by side</h2>
+        <p>The dispersion relations are linear and assume no background flow; in the real ocean, stratification, topography and mean currents modify them.</p>
+        <div class="table-scroll"><table class="reference-table wq-table">
+          <thead><tr><th>Wave</th><th>Restoring force</th><th>Dispersion relation</th><th>Dispersive?</th><th>Propagation / notes</th></tr></thead>
+          <tbody>
+            <tr><td>Surface gravity (deep)</td><td>Gravity</td><td>σ² = gk</td><td>Strongly dispersive</td><td>Isotropic, c = √(g/k)</td></tr>
+<tr><td>Surface gravity (shallow)</td><td>Gravity</td><td>σ = k√(gH)</td><td>Non-dispersive</td><td>c = c<sub>g</sub> = √(gH)</td></tr>
+<tr><td>Inertia-gravity</td><td>Gravity + Coriolis</td><td>σ² = f² + gHk²</td><td>Generally dispersive</td><td>σ ≥ f; short waves approach non-dispersive</td></tr>
+<tr><td>Coastal Kelvin</td><td>Gravity + Coriolis + coast</td><td>σ = kc</td><td>Non-dispersive</td><td>Coast on the right in the NH</td></tr>
+<tr><td>Shelf wave</td><td>PV + topography</td><td>σ &lt; f (topography-dependent)</td><td>Generally dispersive</td><td>Shallow water on the right in the NH</td></tr>
+<tr><td>Rossby</td><td>β effect</td><td>σ = −βk/(k²+l²+R⁻²)</td><td>Dispersive; non-dispersive long-wave limit</td><td>Westward, long waves faster</td></tr>
+<tr><td>Equatorial Kelvin</td><td>Gravity + β</td><td>σ = ck</td><td>Non-dispersive</td><td>Eastward only</td></tr>
+<tr><td>Equatorial Rossby</td><td>β effect</td><td>σ ≈ −βk/[k²+(2n+1)β/c]</td><td>Dispersive</td><td>Westward</td></tr>
+<tr><td>Tsunami</td><td>Gravity</td><td>σ ≈ k√(gH)</td><td>Weakly dispersive</td><td>√(gH); Coriolis secondary</td></tr>
+<tr><td>Bay seiche</td><td>Gravity + boundaries</td><td>Standing modes, discrete periods</td><td>—</td><td>T = 2L/√(gH)</td></tr>
+          </tbody>
+        </table></div>
+      </section>
+
+      <section id="mis">
+        <h2>Six common pitfalls</h2>
+        <ul class="wq-mis">
+          <li><b>“Long wave” does not mean “low frequency”.</b> A tsunami has a long λ but a short T; it is high-frequency relative to the inertial period, so Coriolis is weak.</li>
+<li><b>Shallow-water gravity waves are non-dispersive, but adding rotation (Poincaré waves) makes them dispersive again.</b> σ² = f² + gHk² reintroduces k-dependence.</li>
+<li><b>Rossby waves are generally dispersive, but the long-wave limit is not.</b> For kR ≪ 1, σ ≈ −βR²k and c = −βR².</li>
+<li><b>Kelvin waves are non-dispersive; shelf waves generally dispersive.</b> The former has σ = kc; the latter’s speed depends on topography and mode.</li>
+<li><b>The equatorial waveguide width is √(c/β), not √(gH)/f.</b> The latter diverges at the equator and cannot describe equatorial trapping.</li>
+<li><b>A seiche is not a different restoring force.</b> It is still a gravity wave, merely turned into a standing wave by boundaries.</li>
+        </ul>
+      </section>
+
+      <section id="retell">
+        <h2>30-second retell</h2>
+        <ol class="hw-questions">
+          <li>Why can wind waves ignore Coriolis, while the M2 tide cannot?</li>
+<li>Deep-water gravity waves are dispersive and long Rossby waves are not—what is the criterion for each?</li>
+<li>What sets the width of the equatorial waveguide? Why not √(gH)/f?</li>
+<li>What do Kelvin and shelf waves have in common in propagation direction?</li>
+<li>A tsunami is a long wave—why can Coriolis still be neglected?</li>
+        </ol>
+        <p>If you can answer these five in your own words, this is no longer formula memorization.</p>
+        <p class="hw-back"><a href="./homework-en.html">← Back to homework</a></p>
+      </section>
+
+      <section id="source">
+        <h2>Textbook link and the original slide</h2>
+        <p>Corresponds to textbook Ch. 8 (waves, tides, coastal). The main thread of these seven questions is criteria: σ/f, kR<sub>d</sub>, kH, f &lt; σ &lt; N—decide what matters first, then choose the formula.</p>
+        <figure class="hw-figure">
+          <img src="./assets/homework-waves-questions.jpg" alt="Original homework slide: seven thinking questions on ocean waves" width="1280" height="960" loading="lazy">
+          <figcaption>The original slide: seven questions. Each section above answers one of them.</figcaption>
+        </figure>
+      </section>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <strong>Descriptive Physical Oceanography · Class homework: seven questions on ocean waves</strong>
+        <p>Zhang Hao · 22634120 · Ocean College, Zhejiang University · Fall/Winter 2026. Judge the scale first, then pick the formula.</p>
+      </div>
+      <div>
+        <p>2026-10-23</p>
+        <a href="./homework-en.html">← Back to homework</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var toggle=document.querySelector('.menu-toggle'), nav=document.getElementById('main-nav');
+  if(toggle&&nav){toggle.addEventListener('click',function(){var open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',open?'true':'false');});}
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+/* Static provenance notes, visible without JavaScript. */
+body .ai-disclosure-wrap{width:min(1000px,calc(100% - 40px));margin:0 auto 44px;min-width:0}
+body .ai-disclosure{display:block;position:static;float:none;width:auto;max-width:100%;min-width:0;margin:32px 0 0;padding:20px 0 0;border:0;border-top:1px solid #cadade;background:none;border-radius:0;box-shadow:none;color:#50656d;font:400 13px/1.85 "Segoe UI","Microsoft YaHei","PingFang SC",sans-serif;text-align:left;overflow-wrap:anywhere;break-inside:avoid}
+body .ai-disclosure .ai-disclosure-title{color:#174e59;font-size:14px;font-weight:650;letter-spacing:.02em;margin:0 0 8px}
+body .ai-disclosure p{color:inherit;font-size:inherit;line-height:inherit;margin:6px 0;text-align:left;max-width:none}
+body .ai-disclosure .ai-copyright{color:#344e57}
+body .ai-disclosure .ai-disclosure-details{display:block;background:none;border:0;border-radius:0;padding:0;margin:10px 0 0}
+body .ai-disclosure summary{display:list-item;list-style:disclosure-closed inside;color:#256474;font:600 12px/1.8 "Segoe UI","Microsoft YaHei","PingFang SC",sans-serif;padding:4px 0;cursor:pointer;min-height:32px}
+body .ai-disclosure details[open]>summary{list-style-type:disclosure-open}
+body .ai-disclosure summary::after{content:none}
+body .ai-disclosure summary:focus-visible{outline:2px solid #256474;outline-offset:4px}
+@media(max-width:600px){body .ai-disclosure{margin-top:25px;padding-top:16px;font-size:12px}body .ai-disclosure .ai-disclosure-title{font-size:13px}body .ai-disclosure summary{min-height:44px;padding-top:10px}}
+@media print{body .ai-disclosure{color:#333;font-size:9pt;margin-top:16pt;padding-top:10pt}body .ai-disclosure .ai-disclosure-title{color:#222;font-size:10pt}body .ai-disclosure-wrap{width:100%;margin:0}}

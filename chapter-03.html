@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#123e50"><meta name="author" content="张浩">
+<title>海水状态方程与层结 · 张浩的物理海洋学</title>
+<meta name="description" content="海水状态方程与层结 · 课程笔记、图件、公式与资料来源。">
+<link rel="icon" href="./assets/favicon.svg"><link rel="canonical" href="https://hx301.github.io/chapter-03.html">
+<link rel="stylesheet" href="./vendor/katex/katex.min.css?v=0.19.1"><link rel="stylesheet" href="./math.css?v=20261105"><script src="./vendor/katex/katex.min.js?v=0.19.1" defer></script><script src="./vendor/katex/contrib/auto-render.min.js?v=0.19.1" defer></script><script src="./vendor/katex/contrib/copy-tex.min.js?v=0.19.1" defer></script><script src="./math.js?v=20261105" defer></script><link rel="stylesheet" href="./ai-disclosure.css?v=20261105-1"><link rel="stylesheet" href="./site-frame.css?v=20261105-1">
+<script src="./site-frame.js?v=20261105-1" defer></script></head>
+<body id="top" class="frame-site frame-page-article" data-frame-alias=""><a class="frame-skip" href="#main">跳至正文</a>
+<header class="frame-header"><div class="frame-header-inner">
+<a class="frame-brand" href="./index.html"><svg viewbox="0 0 40 36" aria-hidden="true"><path d="M2 11Q11 2 20 11T38 11M2 20Q11 11 20 20T38 20M2 29Q11 20 20 29T38 29"></path></svg><span><strong data-en="Physical Oceanography">描述性物理海洋</strong><small data-en="Zhang Hao · Course notes">张浩 · 课程学习档案</small></span></a>
+<nav class="frame-nav" aria-label="主导航"><a href="./notes.html" data-section="notes" data-en="Notes">课堂笔记</a><a href="./textbook.html" data-section="textbook" data-en="Textbook" aria-current="page">教材导读</a><a href="./homework.html" data-section="homework" data-en="Assignments">课堂作业</a><a href="./story.html" data-section="story" data-en="Story">故事会</a></nav><a class="frame-language" href="./chapter-03-en.html" hreflang="en" data-language-link>EN</a>
+</div></header>
+<main id="main" class="frame-reading"><nav class="frame-breadcrumb" aria-label="面包屑导航"><a href="./index.html" data-en="Home">首页</a><span aria-hidden="true">/</span><a href="./textbook.html" data-en="Textbook">教材导读</a></nav><article class="reading-entry chapter" id="book-03">
+      <div class="frame-article-heading">
+        <div>
+          <h1>海水状态方程与层结</h1>
+          <p class="frame-meta">第3章 · 教材第3章 §3.2–3.5 · Talley et al. (2011), 6th ed.</p>
+        </div>
+      </div>
+      <div class="formula"><div class="math-display">\[\rho=\rho(S,T,p)\]</div><div class="math-display">\[\frac{\partial p}{\partial z}=-\rho g\]</div><div class="math-display">\[N^2=-\frac{g}{\rho_0}\frac{\partial\rho}{\partial z}\]</div></div>
+      <p class="source">教材第3章 §3.2–3.5</p>
+      <h2>我的解释</h2>
+      <p>密度不是温度的单一函数；盐度和压力会改变结论。位温/位密度要注明参考压力，TEOS-10 的 \(S_P\) 和 \(S_A\) 也不能混用。\(N^{2}&gt;0\) 表示稳定回复，\(N^{2}&lt;0\) 提示对流不稳定。</p>
+      <h2> 与课堂对照</h2>
+      <p>第3讲用 \(N^{2}\) 判断层结；教材从状态方程和位温定义推起。差异：教材给定义链，课上给判据和算例。</p>
+      <h2> 我的延伸</h2>
+      <p>TEOS-10 的 gsw Python 库；Argo 的 TEMP/PSAL/PRES 与 QC flag。</p><details class="deep"><summary>深入：静水压的符号与适用条件</summary>
+<p>z 向上、g 为重力加速度的正值。向下走意味着 \(dz &lt; 0\)，因此 \(dp &gt; 0\)。这个符号判断比记忆“负号”更有用；海水越深的部分并不因压强更高就自动向上流，因为重力同时参与垂直平衡。</p>
+<p>与本课对照：当垂直加速度较小时，静水近似适合许多大尺度海洋问题。它没有给出水平流速；还需要水平压强差与科里奥利项。</p>
+<p class="source"><a href="https://talleylab.ucsd.edu/ltalley/DPO/supplementary/ch_s7.pdf#page=31" target="_blank" rel="noopener">S7 §7.6.1 · p.31 · Eq.7.23d</a></p>
+</details>
+    </article><nav class="frame-pager" aria-label="篇章导航"><a href="./chapter-02.html">上一篇<span>第2章</span></a><a href="./chapter-04.html">下一篇<span>第4章</span></a></nav><aside class="ai-disclosure" id="ai-book-03" aria-labelledby="ai-book-03-title"><p class="ai-disclosure-title" id="ai-book-03-title" data-en="AI assistance &amp; disclaimer">AI 辅助说明与免责声明</p><p data-en="Content model: GPT-6 Astra.">内容模型：GPT-6 Astra。</p><p data-en="Skills: not recorded for the original reading notes; impeccable for the website structure and reading interface.">使用技能：原始导读的技能未记录；impeccable（网页结构与阅读界面）。</p><p data-en="AI-assisted explanations, translations, examples and calculations may contain errors. Use them for learning and check against textbooks, original references and data.">AI 参与的讲解、翻译、示例与计算可能有误，仅供学习参考；请结合教材、原始文献和数据核对。</p><p class="ai-copyright" data-en="Use and copyright: All content on this site is provided solely for teaching, research and learning, with no commercial profit. If any content infringes your rights, please contact the author; once verified, it will be promptly removed or otherwise addressed.">使用与版权：本站所有内容仅供教学、研究与学习使用，不用于商业获利。如有内容涉及侵权，请联系作者，核实后将及时删除或处理。</p><details class="ai-disclosure-details"><summary data-en="Editing record and scope">查看修改记录与适用范围</summary><p data-en="Confirmed model for recent edits: OpenAI GPT-6 (Codex), used for LaTeX conversion, website maintenance and this disclosure. Earlier content was generated with GPT-6 Astra; the two records are separate.">已确认的最近修改模型：OpenAI GPT-6（Codex），用于公式 LaTeX 化、网页维护及本声明。历史内容生成模型为 GPT-6 Astra；两者分别记录。</p><p data-en="The AI disclosure covers this site’s reading notes and supplementary explanations. Textbook text, authors’ ideas and cited figures retain their original attribution.">本声明适用于本站教材导读和补充讲解；教材原文、作者观点及引用图件按原来源归属。</p><p data-en="Recent tools: GitHub, browser checks and Python / Node.js; KaTeX typesets the mathematics. Tools and typesetting libraries are distinct from skills and generation models.">本轮工具：GitHub、浏览器检查、Python / Node.js；KaTeX 负责公式排版。工具与排版库不作为技能或生成模型名称。</p></details></aside></main><footer class="frame-footer"><div><p data-en="Zhang Hao · School of Oceanography, Zhejiang University">张浩 · 浙江大学海洋学院</p><p data-en="2026 autumn–winter · Course learning archive">2026 秋冬 · 课程学习档案</p></div><a href="#top" data-en="Back to top">回到顶部</a></footer></body></html>

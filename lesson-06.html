@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#123e50"><meta name="author" content="张浩">
+<title>动力过程：地转、Ekman 与位涡 · 张浩的物理海洋学</title>
+<meta name="description" content="动力过程：地转、Ekman 与位涡 · 课程笔记、图件、公式与资料来源。">
+<link rel="icon" href="./assets/favicon.svg"><link rel="canonical" href="https://hx301.github.io/lesson-06.html">
+<link rel="stylesheet" href="./vendor/katex/katex.min.css?v=0.19.1"><link rel="stylesheet" href="./math.css?v=20261105"><script src="./vendor/katex/katex.min.js?v=0.19.1" defer></script><script src="./vendor/katex/contrib/auto-render.min.js?v=0.19.1" defer></script><script src="./vendor/katex/contrib/copy-tex.min.js?v=0.19.1" defer></script><script src="./math.js?v=20261105" defer></script><link rel="stylesheet" href="./ai-disclosure.css?v=20261105-1"><link rel="stylesheet" href="./site-frame.css?v=20261105-1">
+<script src="./site-frame.js?v=20261105-1" defer></script></head>
+<body id="top" class="frame-site frame-page-article" data-frame-alias=""><a class="frame-skip" href="#main">跳至正文</a>
+<header class="frame-header"><div class="frame-header-inner">
+<a class="frame-brand" href="./index.html"><svg viewbox="0 0 40 36" aria-hidden="true"><path d="M2 11Q11 2 20 11T38 11M2 20Q11 11 20 20T38 20M2 29Q11 20 20 29T38 29"></path></svg><span><strong data-en="Physical Oceanography">描述性物理海洋</strong><small data-en="Zhang Hao · Course notes">张浩 · 课程学习档案</small></span></a>
+<nav class="frame-nav" aria-label="主导航"><a href="./notes.html" data-section="notes" data-en="Notes" aria-current="page">课堂笔记</a><a href="./textbook.html" data-section="textbook" data-en="Textbook">教材导读</a><a href="./homework.html" data-section="homework" data-en="Assignments">课堂作业</a><a href="./story.html" data-section="story" data-en="Story">故事会</a></nav><a class="frame-language" href="./lesson-06-en.html" hreflang="en" data-language-link>EN</a>
+</div></header>
+<main id="main" class="frame-reading"><nav class="frame-breadcrumb" aria-label="面包屑导航"><a href="./index.html" data-en="Home">首页</a><span aria-hidden="true">/</span><a href="./notes.html" data-en="Notes">课堂笔记</a></nav><article class="reading-entry lesson" id="lesson-06">
+      <div class="frame-article-heading">
+        <div>
+          <h1>动力过程：地转、Ekman 与位涡</h1>
+          <p class="frame-meta">第6讲 · 2026-10-29 · 教材第7章 §7.2–7.8</p>
+        </div>
+      </div>
+      <p class="lesson-drive"><strong>驱动问题：</strong>为什么海流常沿着海面等高线走，而不是直接流向低处？</p>
+      <h2>课堂内容</h2>
+      <p>水平压强梯度先让海水加速，科氏力随速度增大并改变方向；在大尺度、低摩擦、缓变条件下两者近似平衡，形成地转流。取 x 向东、y 向北：\(u=-(g/f)\eta _y\)，\(v=(g/f)\eta _x\)。</p>
+      <p>密度水平差异通过静力关系改变不同深度的压强梯度，给出热成风切变；密度给相对速度，绝对速度还要参考层或观测约束。</p>
+      <p>风应力在表层驱动 Ekman 输运；风应力旋度通过 Ekman 层底的垂直运动让内区水柱伸缩，联系 Sverdrup 经向输运和西边界流。位涡 \(q=(\zeta +f)/h\) 在理想单层、无摩擦、绝热条件下近似守恒。</p>
+      <ul class="key-points">
+        <li>科氏力永远垂直于运动方向，不做功。</li>
+        <li>表层 Ekman 流偏 45°，垂直积分后的净输送偏 90°。</li>
+        <li>西边界流（湾流、黑潮）参与闭合整体环流。</li>
+      </ul>
+      <figure class="lesson-figure">
+        <img src="./geostrophic/figures/force-balance-zh.png" alt="地转流受力平衡示意：压强梯度力、科氏力与流向" loading="lazy">
+        <figcaption>地转平衡示意：压强梯度力与科氏力近似抵消，流向沿等压线。图：本项目整理。</figcaption>
+      </figure>
+      <div class="myvoice">
+        <h2>我自己的话</h2>
+        <p>我原以为科氏力是一种真实的力，后来发现它只在旋转参考系里出现，而且永远垂直于运动方向、不做功；它改方向，不改速度大小。</p>
+      </div>
+      <div class="question">
+        <h2> 当时的疑问 +  后来怎么想通</h2>
+        <p> 我当时没懂：为什么 Ekman 输送是垂直风向 90°，表层流却只偏 45°？<br> 后来想通：45° 是表层流速；把整个 Ekman 层垂直积分，各深度偏转相互抵消，净输送才是 90°。</p>
+      </div>
+      <div class="ticket" id="exit-ticket">
+        <h2> 第6周出门票</h2>
+        <p><strong>本周记录：</strong>对照课堂材料，整理不同波动的时间尺度、波的特征，以及深水和浅水条件下的相速。</p>
+        <div class="ticket-gallery" aria-label="第6周配图">
+          <figure><a href="./exit-tickets/week-06-01.jpeg" target="_blank" rel="noopener" aria-label="查看原图：不同波动的时间尺度图"><img src="./exit-tickets/week-06-01.jpeg" width="674" height="505" loading="lazy" decoding="async" alt="不同波动的时间尺度图"></a><figcaption>不同波动的时间尺度图</figcaption></figure>
+          <figure><a href="./exit-tickets/week-06-02.jpeg" target="_blank" rel="noopener" aria-label="查看原图：波的特征课堂材料"><img src="./exit-tickets/week-06-02.jpeg" width="854" height="640" loading="lazy" decoding="async" alt="波的特征课堂材料"></a><figcaption>波的特征课堂材料</figcaption></figure>
+          <figure class="ticket-wave-formulas"><figcaption>深水波与浅水波的相速</figcaption><p>一般色散关系</p><div class="math-display">\[\omega^2=gk\tanh(kh),\quad c=\frac{\omega}{k}=\sqrt{\frac gk\tanh(kh)}\]</div><p>深水</p><div class="math-display">\[h&gt;\frac{\lambda}{2},\quad c=\sqrt{\frac gk}=\sqrt{\frac{g\lambda}{2\pi}}\]</div><p>浅水</p><div class="math-display">\[h&lt;\frac{\lambda}{20},\quad c=\sqrt{gh}\]</div><p>深水波相速依赖波长；浅水波相速依赖水深。</p></figure>
+        </div>
+      </div>
+      <p class="lesson-sources">本讲来源：<a href="https://talleylab.ucsd.edu/ltalley/DPO/supplementary/ch_s7.pdf" target="_blank" rel="noopener">Talley · 扩展动力章 S7</a> · <a href="https://uhslc.soest.hawaii.edu/ocn620/lectures/sverdrup-balance.html" target="_blank" rel="noopener">University of Hawai‘i · Sverdrup balance</a></p>
+    </article><nav class="frame-pager" aria-label="篇章导航"><a href="./lesson-05.html">上一篇<span>第5讲</span></a><a href="./lesson-07.html">下一篇<span>第7讲</span></a></nav><aside class="ai-disclosure" id="ai-lesson-06" aria-labelledby="ai-lesson-06-title"><p class="ai-disclosure-title" id="ai-lesson-06-title" data-en="AI assistance &amp; disclaimer">AI 辅助说明与免责声明</p><p data-en="Content model: GPT-6 Astra.">内容模型：GPT-6 Astra。</p><p data-en="Skills: documents:documents for preparing the exit-ticket document; skills for the original lesson explanations were not recorded; impeccable for the website structure and reading interface.">使用技能：documents:documents（出门票文档整理）；原始课程讲解的技能未记录；impeccable（网页结构与阅读界面）。</p><p data-en="AI-assisted explanations, translations, examples and calculations may contain errors. Use them for learning and check against textbooks, original references and data.">AI 参与的讲解、翻译、示例与计算可能有误，仅供学习参考；请结合教材、原始文献和数据核对。</p><p class="ai-copyright" data-en="Use and copyright: All content on this site is provided solely for teaching, research and learning, with no commercial profit. If any content infringes your rights, please contact the author; once verified, it will be promptly removed or otherwise addressed.">使用与版权：本站所有内容仅供教学、研究与学习使用，不用于商业获利。如有内容涉及侵权，请联系作者，核实后将及时删除或处理。</p><details class="ai-disclosure-details"><summary data-en="Editing record and scope">查看修改记录与适用范围</summary><p data-en="Confirmed model for recent edits: OpenAI GPT-6 (Codex), used for LaTeX conversion, website maintenance and this disclosure. Earlier content was generated with GPT-6 Astra; the two records are separate.">已确认的最近修改模型：OpenAI GPT-6（Codex），用于公式 LaTeX 化、网页维护及本声明。历史内容生成模型为 GPT-6 Astra；两者分别记录。</p><p data-en="The exit-ticket text and classroom photos come from the author’s document. AI assisted with transcription, translation and layout; the original records and photos are not attributed to AI.">出门票的原始文字与课堂照片来自作者提供的文档；AI 辅助转录、翻译与排版。本声明不将作者原始记录或照片视为 AI 原创。</p><p data-en="Recent tools: GitHub, browser checks and Python / Node.js; KaTeX typesets the mathematics. Tools and typesetting libraries are distinct from skills and generation models.">本轮工具：GitHub、浏览器检查、Python / Node.js；KaTeX 负责公式排版。工具与排版库不作为技能或生成模型名称。</p></details></aside></main><footer class="frame-footer"><div><p data-en="Zhang Hao · School of Oceanography, Zhejiang University">张浩 · 浙江大学海洋学院</p><p data-en="2026 autumn–winter · Course learning archive">2026 秋冬 · 课程学习档案</p></div><a href="#top" data-en="Back to top">回到顶部</a></footer></body></html>

@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#123e50"><meta name="author" content="张浩">
+<title>海盆、海峡与地形 · 张浩的物理海洋学</title>
+<meta name="description" content="海盆、海峡与地形 · 课程笔记、图件、公式与资料来源。">
+<link rel="icon" href="./assets/favicon.svg"><link rel="canonical" href="https://hx301.github.io/lesson-02.html">
+<link rel="stylesheet" href="./vendor/katex/katex.min.css?v=0.19.1"><link rel="stylesheet" href="./math.css?v=20261105"><script src="./vendor/katex/katex.min.js?v=0.19.1" defer></script><script src="./vendor/katex/contrib/auto-render.min.js?v=0.19.1" defer></script><script src="./vendor/katex/contrib/copy-tex.min.js?v=0.19.1" defer></script><script src="./math.js?v=20261105" defer></script><link rel="stylesheet" href="./ai-disclosure.css?v=20261105-1"><link rel="stylesheet" href="./site-frame.css?v=20261105-1">
+<script src="./site-frame.js?v=20261105-1" defer></script></head>
+<body id="top" class="frame-site frame-page-article" data-frame-alias=""><a class="frame-skip" href="#main">跳至正文</a>
+<header class="frame-header"><div class="frame-header-inner">
+<a class="frame-brand" href="./index.html"><svg viewbox="0 0 40 36" aria-hidden="true"><path d="M2 11Q11 2 20 11T38 11M2 20Q11 11 20 20T38 20M2 29Q11 20 20 29T38 29"></path></svg><span><strong data-en="Physical Oceanography">描述性物理海洋</strong><small data-en="Zhang Hao · Course notes">张浩 · 课程学习档案</small></span></a>
+<nav class="frame-nav" aria-label="主导航"><a href="./notes.html" data-section="notes" data-en="Notes" aria-current="page">课堂笔记</a><a href="./textbook.html" data-section="textbook" data-en="Textbook">教材导读</a><a href="./homework.html" data-section="homework" data-en="Assignments">课堂作业</a><a href="./story.html" data-section="story" data-en="Story">故事会</a></nav><a class="frame-language" href="./lesson-02-en.html" hreflang="en" data-language-link>EN</a>
+</div></header>
+<main id="main" class="frame-reading"><nav class="frame-breadcrumb" aria-label="面包屑导航"><a href="./index.html" data-en="Home">首页</a><span aria-hidden="true">/</span><a href="./notes.html" data-en="Notes">课堂笔记</a></nav><article class="reading-entry lesson" id="lesson-02">
+      <div class="frame-article-heading">
+        <div>
+          <h1>海盆、海峡与地形</h1>
+          <p class="frame-meta">第2讲 · 2026-09-24 · 教材第2章 §2.2–2.9</p>
+        </div>
+      </div>
+      <p class="lesson-drive"><strong>驱动问题：</strong>为什么海底地形不能只当作海流地图的背景？</p>
+      <h2>课堂内容</h2>
+      <p>海洋覆盖约 71% 的地球表面，平均深度约 3734 m；陆地平均海拔只有约 840 m。最深的马里亚纳海沟约 11,000 m。</p>
+      <p>大陆架—大陆坡—大陆隆—深海平原—洋中脊—海沟，这些形态由板块活动和沉积塑造，也决定不同深度的水能否直接交换。</p>
+      <p>海槛像门槛：它限制深层通道，但不是封闭墙。越槛的密水可以在混合后继续下沉，也可能停在较浅层；深盆水是否更新，要看密度差、输运和混合。</p>
+      <ul class="key-points">
+        <li>海盆、海岭与通道共同决定连通关系。</li>
+        <li>图上有网格，不等于每个格点都有直接测深。</li>
+        <li>测深手段：船载声学、卫星重力、GEBCO/ETOPO 网格。</li>
+      </ul>
+      <div class="myvoice">
+        <h2>我自己的话</h2>
+        <p>我原以为海底地形只是海流图的背景，后来发现海槛、海峡和海岭会直接决定哪一层水能进来。把 4000 m 的盆地和 800 m 的海槛放在一起看，“深”不等于“封闭”。</p>
+      </div>
+      <div class="question">
+        <h2> 当时的疑问 +  后来怎么想通</h2>
+        <p> 我当时没懂：海槛只有 800 m，4000 m 的深水是不是永远不更新？<br> 后来想通：越槛水只要混合后仍比盆地水密，就能沿坡下沉；更新强弱取决于密度差、输运和混合，不是两个深度数字。</p>
+      </div>
+      <div class="ticket" id="exit-ticket">
+        <h2> 第2周出门票</h2>
+        <p><strong>本周记录：</strong>学习借助 Trae 绘图，并用代码复现海表温度图和海底年龄图。</p>
+        <div class="ticket-gallery" aria-label="第2周配图">
+          <figure><a href="./exit-tickets/week-02-01.jpeg" target="_blank" rel="noopener" aria-label="查看原图：WOA 2023 年平均海表温度图"><img src="./exit-tickets/week-02-01.jpeg" width="763" height="343" loading="lazy" decoding="async" alt="WOA 2023 年平均海表温度图"></a><figcaption>WOA 2023 年平均海表温度图</figcaption></figure>
+          <figure><a href="./exit-tickets/week-02-02.jpeg" target="_blank" rel="noopener" aria-label="查看原图：海底岩石圈年龄图"><img src="./exit-tickets/week-02-02.jpeg" width="773" height="348" loading="lazy" decoding="async" alt="海底岩石圈年龄图"></a><figcaption>海底岩石圈年龄图</figcaption></figure>
+          <figure><a href="./exit-tickets/week-02-03.jpeg" target="_blank" rel="noopener" aria-label="查看原图：复现海底年龄图的代码截图"><img src="./exit-tickets/week-02-03.jpeg" width="1920" height="863" loading="lazy" decoding="async" alt="复现海底年龄图的代码截图"></a><figcaption>复现海底年龄图的代码截图</figcaption></figure>
+        </div>
+      </div>
+      <p class="lesson-sources">本讲来源：<a href="https://shop.elsevier.com/books/descriptive-physical-oceanography/talley/978-0-7506-4552-2" target="_blank" rel="noopener">Elsevier · 章节目录</a> · <a href="https://www.gebco.net/data_and_products/gridded_bathymetry_data/" target="_blank" rel="noopener">GEBCO · 海底地形网格</a></p>
+    </article><nav class="frame-pager" aria-label="篇章导航"><a href="./lesson-01.html">上一篇<span>第1讲</span></a><a href="./lesson-03.html">下一篇<span>第3讲</span></a></nav><aside class="ai-disclosure" id="ai-lesson-02" aria-labelledby="ai-lesson-02-title"><p class="ai-disclosure-title" id="ai-lesson-02-title" data-en="AI assistance &amp; disclaimer">AI 辅助说明与免责声明</p><p data-en="Content model: GPT-6 Astra.">内容模型：GPT-6 Astra。</p><p data-en="Skills: documents:documents for preparing the exit-ticket document; skills for the original lesson explanations were not recorded; impeccable for the website structure and reading interface.">使用技能：documents:documents（出门票文档整理）；原始课程讲解的技能未记录；impeccable（网页结构与阅读界面）。</p><p data-en="AI-assisted explanations, translations, examples and calculations may contain errors. Use them for learning and check against textbooks, original references and data.">AI 参与的讲解、翻译、示例与计算可能有误，仅供学习参考；请结合教材、原始文献和数据核对。</p><p class="ai-copyright" data-en="Use and copyright: All content on this site is provided solely for teaching, research and learning, with no commercial profit. If any content infringes your rights, please contact the author; once verified, it will be promptly removed or otherwise addressed.">使用与版权：本站所有内容仅供教学、研究与学习使用，不用于商业获利。如有内容涉及侵权，请联系作者，核实后将及时删除或处理。</p><details class="ai-disclosure-details"><summary data-en="Editing record and scope">查看修改记录与适用范围</summary><p data-en="Confirmed model for recent edits: OpenAI GPT-6 (Codex), used for LaTeX conversion, website maintenance and this disclosure. Earlier content was generated with GPT-6 Astra; the two records are separate.">已确认的最近修改模型：OpenAI GPT-6（Codex），用于公式 LaTeX 化、网页维护及本声明。历史内容生成模型为 GPT-6 Astra；两者分别记录。</p><p data-en="The exit-ticket text and classroom photos come from the author’s document. AI assisted with transcription, translation and layout; the original records and photos are not attributed to AI.">出门票的原始文字与课堂照片来自作者提供的文档；AI 辅助转录、翻译与排版。本声明不将作者原始记录或照片视为 AI 原创。</p><p data-en="Recent tools: GitHub, browser checks and Python / Node.js; KaTeX typesets the mathematics. Tools and typesetting libraries are distinct from skills and generation models.">本轮工具：GitHub、浏览器检查、Python / Node.js；KaTeX 负责公式排版。工具与排版库不作为技能或生成模型名称。</p></details></aside></main><footer class="frame-footer"><div><p data-en="Zhang Hao · School of Oceanography, Zhejiang University">张浩 · 浙江大学海洋学院</p><p data-en="2026 autumn–winter · Course learning archive">2026 秋冬 · 课程学习档案</p></div><a href="#top" data-en="Back to top">回到顶部</a></footer></body></html>

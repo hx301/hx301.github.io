@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#123e50"><meta name="author" content="张浩">
+<title>Physical Properties of Seawater · Zhang Hao · Oceanography</title>
+<meta name="description" content="Physical Properties of Seawater · Course notes, figures, mathematics and sources.">
+<link rel="icon" href="./assets/favicon.svg"><link rel="canonical" href="https://hx301.github.io/lesson-03-en.html">
+<link rel="stylesheet" href="./vendor/katex/katex.min.css?v=0.19.1"><link rel="stylesheet" href="./math.css?v=20261105"><script src="./vendor/katex/katex.min.js?v=0.19.1" defer></script><script src="./vendor/katex/contrib/auto-render.min.js?v=0.19.1" defer></script><script src="./vendor/katex/contrib/copy-tex.min.js?v=0.19.1" defer></script><script src="./math.js?v=20261105" defer></script><link rel="stylesheet" href="./ai-disclosure.css?v=20261105-1"><link rel="stylesheet" href="./site-frame.css?v=20261105-1">
+<script src="./site-frame.js?v=20261105-1" defer></script></head>
+<body id="top" class="frame-site frame-page-article" data-frame-alias=""><a class="frame-skip" href="#main">Skip to content</a>
+<header class="frame-header"><div class="frame-header-inner">
+<a class="frame-brand" href="./en.html"><svg viewbox="0 0 40 36" aria-hidden="true"><path d="M2 11Q11 2 20 11T38 11M2 20Q11 11 20 20T38 20M2 29Q11 20 20 29T38 29"></path></svg><span><strong data-en="Physical Oceanography">Physical Oceanography</strong><small data-en="Zhang Hao · Course notes">Zhang Hao · Course notes</small></span></a>
+<nav class="frame-nav" aria-label="Main navigation"><a href="./notes-en.html" data-section="notes" data-en="Notes" aria-current="page">Notes</a><a href="./textbook-en.html" data-section="textbook" data-en="Textbook">Textbook</a><a href="./homework-en.html" data-section="homework" data-en="Assignments">Assignments</a><a href="./story-en.html" data-section="story" data-en="Story">Story</a></nav><a class="frame-language" href="./lesson-03.html" hreflang="zh-CN" data-language-link>中文</a>
+</div></header>
+<main id="main" class="frame-reading"><nav class="frame-breadcrumb" aria-label="Breadcrumb"><a href="./en.html" data-en="Home">Home</a><span aria-hidden="true">/</span><a href="./notes-en.html" data-en="Notes">Notes</a></nav><article class="reading-entry lesson" id="lesson-03">
+      <div class="frame-article-heading">
+        <div>
+          <h1>Physical Properties of Seawater</h1>
+          <p class="frame-meta">Session 3 · 2026-10-08 · Textbook Ch.3 §3.2–3.5</p>
+        </div>
+      </div>
+      <p class="lesson-drive"><strong>Driving question:</strong> Why is temperature alone not enough to compare the buoyancy of two water parcels?</p>
+      <h2>Class notes</h2>
+      <p>Density depends nonlinearly on temperature, salinity, and pressure. Warming usually lowers density, adding salt raises it, and pressure compresses water; “cold water is always heavier” is not an unconditional rule.</p>
+      <p>In-situ temperature at depth includes adiabatic compression. Potential temperature compares parcels after an imaginary adiabatic move to a common reference pressure; potential density also needs a stated reference pressure.</p>
+      <p>TEOS-10 distinguishes Practical Salinity \(S_P\)(conductivity-based, dimensionless) from Absolute Salinity \(S_A\)(often \(g/\mathrm{kg}\)); similar names do not make them interchangeable in code. Stratification asks whether a displaced parcel returns: \(N^{2}=-(g/\rho _{0})\partial \rho /\partial z\).</p>
+      <ul class="key-points">
+        <li>Cabbeling: mixing two water masses with the same density but different T–S can produce denser water.</li>
+        <li>Double diffusion / salt fingers: heat diffuses faster than salt, forming thin finger structures.</li>
+        <li>SOFAR channel: a sound-speed minimum near 1,000 m lets sound travel thousands of kilometres.</li>
+      </ul>
+      <div class="myvoice">
+        <h2>In my own words</h2>
+        <p>I used to think cold water must be heavier than warm water. Later I saw that salinity can reverse the conclusion: relatively fresh cold water can be lighter than salty warm water. Potential temperature and potential density also need a reference pressure; otherwise two numbers cannot be compared directly.</p>
+      </div>
+      <div class="question">
+        <h2> What I did not understand +  How I worked it out</h2>
+        <p> What I did not understand at first: if in-situ density increases with depth, isn't the stratification stable?<br> What I later worked out: pressure compression also increases density downward. Use potential density or \(N^{2}\) to see whether a displaced parcel returns.</p>
+      </div>
+      <div class="ticket" id="exit-ticket">
+        <h2> Week 3 exit ticket</h2>
+        <p><strong>This week's record:</strong> Learned the EOF method and used figures from equatorial TAO temperature stations to practice reading spatial patterns and time coefficients.</p>
+        <div class="ticket-gallery" aria-label="Week 3 images">
+          <figure><a href="./exit-tickets/week-03-01.png" target="_blank" rel="noopener" aria-label="Open original image: EOF results for TAO equatorial sea temperature"><img src="./exit-tickets/week-03-01.png" width="1737" height="1093" loading="lazy" decoding="async" alt="EOF results for TAO equatorial sea temperature"></a><figcaption>EOF results for TAO equatorial sea temperature</figcaption></figure>
+        </div>
+      </div>
+      <p class="lesson-sources">Sources for this session: <a href="https://www.teos-10.org/" target="_blank" rel="noopener">TEOS-10 · Thermodynamic definitions</a> · <a href="https://sam.ucsd.edu/ltalley/sio210/PPSW/index.html" target="_blank" rel="noopener">Talley · Seawater properties</a></p>
+    </article><nav class="frame-pager" aria-label="Article navigation"><a href="./lesson-02-en.html">Previous<span>Session 2</span></a><a href="./lesson-04-en.html">Next<span>Session 4</span></a></nav><aside class="ai-disclosure" id="ai-lesson-03" aria-labelledby="ai-lesson-03-title"><p class="ai-disclosure-title" id="ai-lesson-03-title">AI assistance &amp; disclaimer</p><p>Content model: GPT-6 Astra.</p><p>Skills: documents:documents for preparing the exit-ticket document; skills for the original lesson explanations were not recorded; impeccable for the website structure and reading interface.</p><p>AI-assisted explanations, translations, examples and calculations may contain errors. Use them for learning and check against textbooks, original references and data.</p><p class="ai-copyright">Use and copyright: All content on this site is provided solely for teaching, research and learning, with no commercial profit. If any content infringes your rights, please contact the author; once verified, it will be promptly removed or otherwise addressed.</p><details class="ai-disclosure-details"><summary>Editing record and scope</summary><p>Confirmed model for recent edits: OpenAI GPT-6 (Codex), used for LaTeX conversion, website maintenance and this disclosure. Earlier content was generated with GPT-6 Astra; the two records are separate.</p><p>The exit-ticket text and classroom photos come from the author’s document. AI assisted with transcription, translation and layout; the original records and photos are not attributed to AI.</p><p>Recent tools: GitHub, browser checks and Python / Node.js; KaTeX typesets the mathematics. Tools and typesetting libraries are distinct from skills and generation models.</p></details></aside></main><footer class="frame-footer"><div><p data-en="Zhang Hao · School of Oceanography, Zhejiang University">Zhang Hao · School of Oceanography, Zhejiang University</p><p data-en="2026 autumn–winter · Course learning archive">2026 autumn–winter · Course learning archive</p></div><a href="#top" data-en="Back to top">Back to top</a></footer></body></html>

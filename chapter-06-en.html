@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#123e50"><meta name="author" content="张浩">
+<title>EOF and Reproducible Analysis · Zhang Hao · Oceanography</title>
+<meta name="description" content="EOF and Reproducible Analysis · Course notes, figures, mathematics and sources.">
+<link rel="icon" href="./assets/favicon.svg"><link rel="canonical" href="https://hx301.github.io/chapter-06-en.html">
+<link rel="stylesheet" href="./vendor/katex/katex.min.css?v=0.19.1"><link rel="stylesheet" href="./math.css?v=20261105"><script src="./vendor/katex/katex.min.js?v=0.19.1" defer></script><script src="./vendor/katex/contrib/auto-render.min.js?v=0.19.1" defer></script><script src="./vendor/katex/contrib/copy-tex.min.js?v=0.19.1" defer></script><script src="./math.js?v=20261105" defer></script><link rel="stylesheet" href="./ai-disclosure.css?v=20261105-1"><link rel="stylesheet" href="./site-frame.css?v=20261105-1">
+<script src="./site-frame.js?v=20261105-1" defer></script></head>
+<body id="top" class="frame-site frame-page-article" data-frame-alias=""><a class="frame-skip" href="#main">Skip to content</a>
+<header class="frame-header"><div class="frame-header-inner">
+<a class="frame-brand" href="./en.html"><svg viewbox="0 0 40 36" aria-hidden="true"><path d="M2 11Q11 2 20 11T38 11M2 20Q11 11 20 20T38 20M2 29Q11 20 20 29T38 29"></path></svg><span><strong data-en="Physical Oceanography">Physical Oceanography</strong><small data-en="Zhang Hao · Course notes">Zhang Hao · Course notes</small></span></a>
+<nav class="frame-nav" aria-label="Main navigation"><a href="./notes-en.html" data-section="notes" data-en="Notes">Notes</a><a href="./textbook-en.html" data-section="textbook" data-en="Textbook" aria-current="page">Textbook</a><a href="./homework-en.html" data-section="homework" data-en="Assignments">Assignments</a><a href="./story-en.html" data-section="story" data-en="Story">Story</a></nav><a class="frame-language" href="./chapter-06.html" hreflang="zh-CN" data-language-link>中文</a>
+</div></header>
+<main id="main" class="frame-reading"><nav class="frame-breadcrumb" aria-label="Breadcrumb"><a href="./en.html" data-en="Home">Home</a><span aria-hidden="true">/</span><a href="./textbook-en.html" data-en="Textbook">Textbook</a></nav><article class="reading-entry chapter" id="book-06">
+      <div class="frame-article-heading">
+        <div>
+          <h1>EOF and Reproducible Analysis</h1>
+          <p class="frame-meta">Chapter 6 · Textbook Ch.6 §6.1–6.7 · Talley et al. (2011), 6th ed.</p>
+        </div>
+      </div>
+      <div class="formula"><div class="math-display">\[X=U\Sigma V^{\mathsf T}\]</div><div class="math-display">\[\text{Variance fraction}=\frac{\lambda_i}{\sum_j\lambda_j}\]</div></div>
+      <p class="source">Textbook Ch.6 §6.1–6.7; EOF1 map below</p>
+      <h2>My explanation</h2>
+      <p>EOF decomposes space–time data into spatial modes and time coefficients; the variance fraction is a statistic under a given sample, weighting, and preprocessing, not a causal contribution. This site uses ERSSTv5 1979–2025, 564 months, and 1,626 grid cells; EOF1 explains 56.34% of the processed, weighted variance.</p>
+      <h2> Link to class</h2>
+      <p>Session 8 used a real SST EOF to show how preprocessing changes the result; the textbook covers sampling, error, and multidimensional analysis. Difference: the textbook gives the framework; the class gives a reproducible example.</p>
+      <h2> My extension</h2>
+      <p>NOAA ERSSTv5, eofs/xeofs, TAO missing-data example.</p>
+      <figure>
+        <img src="./eof/grid/eof1-map-zh.png" alt="NOAA ERSSTv5 sea-surface-temperature EOF1 spatial pattern" loading="lazy">
+        <figcaption>Real SST EOF1: NOAA ERSSTv5, 1979–2025, 564 months, 1,626 grid cells; 56.34% of processed weighted variance. Figure: this project.</figcaption>
+      </figure>
+    </article><nav class="frame-pager" aria-label="Article navigation"><a href="./chapter-05-en.html">Previous<span>Chapter 5</span></a><a href="./chapter-07-en.html">Next<span>Chapter 7</span></a></nav><aside class="ai-disclosure" id="ai-book-06" aria-labelledby="ai-book-06-title"><p class="ai-disclosure-title" id="ai-book-06-title">AI assistance &amp; disclaimer</p><p>Content model: GPT-6 Astra.</p><p>Skills: not recorded for the original reading notes; impeccable for the website structure and reading interface.</p><p>AI-assisted explanations, translations, examples and calculations may contain errors. Use them for learning and check against textbooks, original references and data.</p><p class="ai-copyright">Use and copyright: All content on this site is provided solely for teaching, research and learning, with no commercial profit. If any content infringes your rights, please contact the author; once verified, it will be promptly removed or otherwise addressed.</p><details class="ai-disclosure-details"><summary>Editing record and scope</summary><p>Confirmed model for recent edits: OpenAI GPT-6 (Codex), used for LaTeX conversion, website maintenance and this disclosure. Earlier content was generated with GPT-6 Astra; the two records are separate.</p><p>The AI disclosure covers this site’s reading notes and supplementary explanations. Textbook text, authors’ ideas and cited figures retain their original attribution.</p><p>Recent tools: GitHub, browser checks and Python / Node.js; KaTeX typesets the mathematics. Tools and typesetting libraries are distinct from skills and generation models.</p></details></aside></main><footer class="frame-footer"><div><p data-en="Zhang Hao · School of Oceanography, Zhejiang University">Zhang Hao · School of Oceanography, Zhejiang University</p><p data-en="2026 autumn–winter · Course learning archive">2026 autumn–winter · Course learning archive</p></div><a href="#top" data-en="Back to top">Back to top</a></footer></body></html>

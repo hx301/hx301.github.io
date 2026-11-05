@@ -1,6 +1,17 @@
 # DPO2026 · 张浩的描述性物理海洋
 
-纯静态站点，入口 index.html，英文版 en.html，课堂作业 homework.html。
+纯静态站点，使用共享 HTML 阅读框架，无构建步骤和运行时框架依赖。
+
+## 页面结构（2026-11-05）
+
+- 首页：index.html / en.html，只保留四个内容入口。
+- 课堂笔记目录：notes.html / notes-en.html；八讲正文为 lesson-01.html 至 lesson-08.html，英文版本加 -en。
+- 教材导读目录：textbook.html / textbook-en.html；八章正文为 chapter-01.html 至 chapter-08.html，英文版本加 -en。教材下载密码弹窗位于此目录。
+- 作业目录：homework.html / homework-en.html；原有十份作业与 TAO 拓展案例保留。
+- 故事会：story.html / story-en.html，包含原有视频、文章、来源及本机保存的复述记录。
+- 公共布局与旧书签兼容：site-frame.css / site-frame.js。原首页 #lesson-XX、#book-XX、#story、#retell 等地址自动跳转；course.html 保留旧课程入口兼容。
+
+独立页面采用统一顶部导航、正文宽度、折叠页内目录及页尾声明。所有原始课堂图件、作者出门票照片、公式排版和专题计算脚本继续使用既有资源。目录页不加载数学渲染脚本，阅读页按需加载。
 
 ## GitHub Pages
 
@@ -41,11 +52,11 @@ Settings → Pages → Deploy from a branch → main / / (root)。
 
 ## AI 内容披露
 
-22 个页面的正文末尾使用静态 .ai-disclosure 说明，样式为 ai-disclosure.css；首页每讲、每章及故事会各自标注，课程阅读器的说明位于正文与附件之后。独立英文页面和 data-en 语言切换均有英文版本。新增正文时应在内容末尾保留或补充声明。
+59 个页面的正文末尾使用静态 .ai-disclosure 说明，样式为 ai-disclosure.css；独立篇章、目录和专题各自保留说明。独立英文页面和 data-en 语言切换均有英文版本。新增正文时应在内容末尾保留或补充声明。
 
 - 历史内容生成模型：**GPT-6 Astra**。
 - 本轮已确认的修改模型为 **OpenAI GPT-6（Codex）**，负责公式 LaTeX 化、网页维护与声明添加；不将其追溯为所有历史内容的生成模型。
-- 有记录的技能：documents:documents 用于作者出门票文档整理；scientific-visualization 用于动画的科学表述与图形审核（见 story/algal-bloom-story-script.md 制作说明）。其他原始内容的技能未记录。本轮公式与网页修改未调用专门技能。
+- 有记录的技能：documents:documents 用于作者出门票文档整理；scientific-visualization 用于动画的科学表述与图形审核（见 story/algal-bloom-story-script.md 制作说明）；impeccable 用于本次网页结构与阅读界面重构。其他原始内容的技能未记录。
 - GitHub、浏览器、Python / Node.js、KaTeX、Pillow、FFmpeg 和合成声音属于工具或库，不能替代模型或技能名称。
 - 作者的出门票原文与照片、教材原文、实测数据以及引用的第三方内容保留各自来源。AI 参与内容可能存在事实、公式、计算或引用错误，需对照教材、原始文献与数据核验。
 - 全站使用与版权声明：本站所有内容仅供教学、研究与学习使用，不用于商业获利。如有内容涉及侵权，请联系作者，核实后将及时删除或处理。

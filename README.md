@@ -43,7 +43,7 @@ Settings → Pages → Deploy from a branch → main / / (root)。
 
 22 个页面的正文末尾使用静态 .ai-disclosure 说明，样式为 ai-disclosure.css；首页每讲、每章及故事会各自标注，课程阅读器的说明位于正文与附件之后。独立英文页面和 data-en 语言切换均有英文版本。新增正文时应在内容末尾保留或补充声明。
 
-- 历史内容统一采用作者指定的模型标注 **GPT6.ASTRO（作者提供的名称）**。这是作者提供的来源信息，不作为官方模型名称或版本的独立核验。
+- 历史内容生成模型：**GPT-6 Astra**。
 - 本轮已确认的修改模型为 **OpenAI GPT-6（Codex）**，负责公式 LaTeX 化、网页维护与声明添加；不将其追溯为所有历史内容的生成模型。
 - 有记录的技能：documents:documents 用于作者出门票文档整理；scientific-visualization 用于动画的科学表述与图形审核（见 story/algal-bloom-story-script.md 制作说明）。其他原始内容的技能未记录。本轮公式与网页修改未调用专门技能。
 - GitHub、浏览器、Python / Node.js、KaTeX、Pillow、FFmpeg 和合成声音属于工具或库，不能替代模型或技能名称。

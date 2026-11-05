@@ -23,3 +23,17 @@ Settings → Pages → Deploy from a branch → main / / (root)。
 旧站课程目录的六份作业已统一接入 `homework.html` 与 `homework-en.html`，共十份作业，并补充 TAO EOF 拓展案例入口。混合层七题、海表热收支两题的原有中英文正文已生成独立静态页面。原有地转流、动力学、EOF 的正文、图件与计算数据保留。旧 `course.html#assignments` 入口转到新目录；修复返回链接，TAO 复现包仅更新 README 中的本站地址。第三方 Netlify 参考资料链接保留。
 
 浏览器检查发现旧发布目录缺少英文图件及 EOF 第二、第三模态图件；从各专题原始复现包恢复 62 个 PNG/PDF 文件，修复语言切换与模态切换后的图件、下载链接。现有图件未覆盖。
+
+
+
+## 数学公式
+
+全站数学内容使用 LaTeX 源码，由站内 KaTeX 0.19.1 排成可选中的 HTML，并附可访问的 MathML。字体、脚本随网站保存于 `vendor/katex/`，不依赖公式图片或第三方 CDN。
+
+- 行内公式：`\(c=\sqrt{gH}\)`。
+- 独立公式：`\[u_g=-\frac{g}{f}\frac{\partial\eta}{\partial y}\]`。多行推导可拆成多个 `.math-display` 块。
+- 英文内容在独立 `*-en.html` 页面或 `data-en` 属性中维护；两种语言均使用相同的 LaTeX 语法。
+- JavaScript 动态结果用 `String.raw` 模板字符串，或把反斜杠写成 `\\`。`math.js` 会排版新增或更新的公式，也可调用 `window.renderCourseMath(element)`。
+- 选中公式复制时，`copy-tex` 会提供 LaTeX 源码。原始观测图、曲线、课堂照片保留；独立的波速公式图片已替换为文本公式卡片。
+
+共享样式在 `math.css`，长公式在自己的区域内横向滚动。KaTeX 原许可证和版本校验信息保留在 `vendor/katex/`。

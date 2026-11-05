@@ -11,13 +11,13 @@
 <link rel="stylesheet" href="./dossier.css">
 <link rel="stylesheet" href="./homework.css">
 <link rel="stylesheet" href="./longwaves.css">
-</head>
+<link rel="stylesheet" href="./vendor/katex/katex.min.css?v=0.19.1"><link rel="stylesheet" href="./math.css?v=20261105"><script src="./vendor/katex/katex.min.js?v=0.19.1" defer></script><script src="./vendor/katex/contrib/auto-render.min.js?v=0.19.1" defer></script><script src="./vendor/katex/contrib/copy-tex.min.js?v=0.19.1" defer></script><script src="./math.js?v=20261105" defer></script></head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="identity" href="./en.html">
-      <svg viewBox="0 0 40 36" aria-hidden="true"><path d="M2 11Q11 2 20 11T38 11M2 20Q11 11 20 20T38 20M2 29Q11 20 20 29T38 29" fill="none" stroke="currentColor" stroke-width="2.4"/></svg>
+      <svg viewbox="0 0 40 36" aria-hidden="true"><path d="M2 11Q11 2 20 11T38 11M2 20Q11 11 20 20T38 20M2 29Q11 20 20 29T38 29" fill="none" stroke="currentColor" stroke-width="2.4"></path></svg>
       <span>Descriptive Physical Oceanography<small>Zhang Hao’s course notebook · 2026</small></span>
     </a>
     <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false">Contents</button>
@@ -67,7 +67,7 @@
 
       <section id="standard">
         <h2>Two meanings of “long wave”</h2>
-        <p>(1) Shallow-water long wave: wavelength ≫ depth, c=√(gH), non-dispersive; tides, tsunami, seiche.</p>
+        <p>(1) Shallow-water long wave: wavelength ≫ depth, \(c=\sqrt{gH}\), non-dispersive; tides, tsunami, seiche.</p>
         <p>(2) Long wave in physical oceanography: wavelengths of hundreds to thousands of km and periods of days to years; Rossby, Kelvin, equatorial waves.</p>
         <p class="hw-note">“Long” depends on what you compare it with: depth, stratification, or Earth's rotation.</p>
       </section>
@@ -77,8 +77,8 @@
         <div class="lw-tree">
           <div class="lw-root">Ocean long waves</div>
           <div class="lw-branches">
-            <div class="lw-branch"><h3>Gravity waves</h3><small>Restoring force: gravity / buoyancy</small><ul><li>Surface long waves: tides, tsunami, seiche</li><li>Internal gravity waves: internal tides, SCS waves</li></ul><small>Fast: minutes–days; c=√(gH) or √(g'H)</small></div>
-<div class="lw-branch"><h3>Rotation waves</h3><small>Restoring force: β / potential vorticity</small><ul><li>Planetary Rossby wave</li><li>Topographic Rossby / shelf wave</li></ul><small>Slow: weeks–years; Rossby phase speed is westward</small></div>
+            <div class="lw-branch"><h3>Gravity waves</h3><small>Restoring force: gravity / buoyancy</small><ul><li>Surface long waves: tides, tsunami, seiche</li><li>Internal gravity waves: internal tides, SCS waves</li></ul><small>Fast: minutes–days; \(c=\sqrt{gH}\) or \(\sqrt{g'H}\)</small></div>
+<div class="lw-branch"><h3>Rotation waves</h3><small>Restoring force: \(\beta \)/ potential vorticity</small><ul><li>Planetary Rossby wave</li><li>Topographic Rossby / shelf wave</li></ul><small>Slow: weeks–years; Rossby phase speed is westward</small></div>
 <div class="lw-branch"><h3>Boundary-trapped waves</h3><small>Rotation + boundary (coast/equator)</small><ul><li>Coastal Kelvin wave</li><li>Equatorial Kelvin wave</li><li>Equatorial Rossby wave</li><li>Mixed Rossby–gravity wave</li></ul><small>Tied to a coast or the equator; propagate along the boundary</small></div>
           </div>
         </div>
@@ -92,14 +92,14 @@
           <table class="reference-table">
             <thead><tr><th>Wave type</th><th>Restoring force</th><th>Typical period</th><th>Typical wavelength</th><th>Propagation</th><th>Example</th></tr></thead>
             <tbody><tr><td>Surface gravity wave</td><td>Gravity</td><td>1–20 s</td><td>1 m–300 m</td><td>Wind/wave direction</td><td>Wind sea, swell</td></tr>
-<tr><td>Shallow-water long wave</td><td>Gravity</td><td>minutes–24 h</td><td>100–1000 km</td><td>c=√(gH)</td><td>Tides, tsunami, seiche</td></tr>
+<tr><td>Shallow-water long wave</td><td>Gravity</td><td>minutes–24 h</td><td>100–1000 km</td><td>\(c=\sqrt{gH}\)</td><td>Tides, tsunami, seiche</td></tr>
 <tr><td>Internal gravity wave</td><td>Buoyancy</td><td>minutes–hours</td><td>1–100 km</td><td>Along density surfaces</td><td>Internal tides, SCS internal waves</td></tr>
 <tr><td>Coastal Kelvin wave</td><td>Gravity + rotation + coast</td><td>days–months</td><td>100–1000 km</td><td>Along coast (coast on the right in NH)</td><td>Coastal sea level, ENSO signals</td></tr>
 <tr><td>Equatorial Kelvin wave</td><td>Gravity + rotation + equator</td><td>days–months</td><td>~1000 km</td><td>Eastward</td><td>ENSO</td></tr>
-<tr><td>Planetary Rossby wave</td><td>β (f varies with latitude)</td><td>weeks–years</td><td>500–5000 km</td><td>Westward</td><td>Basin adjustment, ENSO</td></tr>
+<tr><td>Planetary Rossby wave</td><td>\(\beta \)(f varies with latitude)</td><td>weeks–years</td><td>500–5000 km</td><td>Westward</td><td>Basin adjustment, ENSO</td></tr>
 <tr><td>Topographic Rossby / shelf wave</td><td>Topography + rotation</td><td>days–months</td><td>10–500 km</td><td>Along isobaths</td><td>Shelf waves</td></tr>
-<tr><td>Equatorial Rossby wave</td><td>β + equator</td><td>weeks–months</td><td>~1000 km</td><td>Westward</td><td>ENSO</td></tr>
-<tr><td>Mixed Rossby–gravity wave</td><td>β + gravity</td><td>weeks</td><td>~1000 km</td><td>Westward</td><td>Equatorial waves</td></tr></tbody>
+<tr><td>Equatorial Rossby wave</td><td>\(\beta \)+ equator</td><td>weeks–months</td><td>~1000 km</td><td>Westward</td><td>ENSO</td></tr>
+<tr><td>Mixed Rossby–gravity wave</td><td>\(\beta \)+ gravity</td><td>weeks</td><td>~1000 km</td><td>Westward</td><td>Equatorial waves</td></tr></tbody>
           </table>
         </div>
       </section>
@@ -113,11 +113,11 @@
 
       <section id="formulas">
         <h2>A few formulas that are enough</h2>
-        <div class="hw-two"><div class="hw-card"><h3>Shallow-water long wave</h3><div class="formula">c = √(gH)</div><p>Non-dispersive; tides, tsunami, seiche. H is depth.</p></div>
-<div class="hw-card"><h3>Internal wave</h3><div class="formula">c = √(g'H), g' = g Δρ/ρ</div><p>Baroclinic; small surface signal, large density-surface displacement.</p></div>
-<div class="hw-card"><h3>Planetary Rossby wave</h3><div class="formula">ω = −βk/(k²+l²), c_x = ω/k < 0</div><p>Phase speed westward; long waves faster, short waves slower.</p></div>
-<div class="hw-card"><h3>Kelvin wave</h3><div class="formula">c = √(gH)</div><p>Geostrophic balance normal to the boundary; trapped within a deformation radius.</p></div>
-<div class="hw-card"><h3>Equatorial waves</h3><div class="formula">c = √(gH), with the equatorial deformation radius</div><p>Kelvin waves eastward, Rossby waves westward.</p></div></div>
+        <div class="hw-two"><div class="hw-card"><h3>Shallow-water long wave</h3><div class="formula"><div class="math-display">\[c=\sqrt{gH}\]</div></div><p>Non-dispersive; tides, tsunami, seiche. H is depth.</p></div>
+<div class="hw-card"><h3>Internal wave</h3><div class="formula"><div class="math-display">\[c=\sqrt{g^\prime H},\quad g^\prime=g\frac{\Delta\rho}{\rho}\]</div></div><p>Baroclinic; small surface signal, large density-surface displacement.</p></div>
+<div class="hw-card"><h3>Planetary Rossby wave</h3><div class="formula"><div class="math-display">\[\omega=-\frac{\beta k}{k^2+l^2},\quad c_x=\frac\omega k&lt;0\]</div></div><p>Phase speed westward; long waves faster, short waves slower.</p></div>
+<div class="hw-card"><h3>Kelvin wave</h3><div class="formula"><div class="math-display">\[c=\sqrt{gH}\]</div></div><p>Geostrophic balance normal to the boundary; trapped within a deformation radius.</p></div>
+<div class="hw-card"><h3>Equatorial waves</h3><div class="formula"><div class="math-display">\[c=\sqrt{gH}\quad\text{(with the equatorial deformation radius)}\]</div></div><p>Kelvin waves eastward, Rossby waves westward.</p></div></div>
       </section>
 
       <section id="flow">
@@ -132,7 +132,7 @@
 
       <section id="mis">
         <h2>Common pitfalls</h2>
-        <ul class="lw-mis"><li><b>“Long wave” is not one wave.</b> First ask the restoring force: gravity, buoyancy, β, or a boundary?</li>
+        <ul class="lw-mis"><li><b>“Long wave” is not one wave.</b> First ask the restoring force: gravity, buoyancy, \(\beta \), or a boundary?</li>
 <li><b>A westward Rossby phase speed does not mean energy only goes west.</b> The group velocity of short waves can be eastward.</li>
 <li><b>A Kelvin wave is not an ordinary gravity wave.</b> It is a geostrophic-balanced wave shaped by rotation and a boundary.</li>
 <li><b>Tides are long waves, but their period is set by astronomical forcing.</b> They are forced, not free.</li>

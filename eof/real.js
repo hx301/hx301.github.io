@@ -57,14 +57,14 @@
       $('right-title').textContent=`PC ${mode+1} · ${T('标准差为 1','Unit sample standard deviation')}`;
       plot($('spatial'),[{y:d.loadings.map(row=>row[mode]*sign),color:palette.blue}],{unit:T('°C / PC 标准差','°C / PC SD')});
       plot($('temporal'),[{x:times,y:d.pc.map(row=>row[mode]*sign),color:palette.blue}],{time:true,unit:T('标准差','SD')});
-      $('readout').textContent=`${d.dates[month]} · PC ${mode+1} = ${(d.pc[month][mode]*sign).toFixed(3)} · `+T('点击“翻转正负号”，空间形状和 PC 同时反向，二者乘积保持不变。','Flip both signs: the pattern and PC reverse together, leaving their product unchanged.');
+      $('readout').textContent=String.raw`${d.dates[month]} · \(\mathrm{PC}_{${mode+1}}=${(d.pc[month][mode]*sign).toFixed(3)}\) · `+T('点击“翻转正负号”，空间形状和 PC 同时反向，二者乘积保持不变。','Flip both signs: the pattern and PC reverse together, leaving their product unchanged.');
     } else {
       $('view-explanation').textContent=T('将前 K 个“空间形状 × 时间系数”加起来，与实际异常比较。增加模态会减小整份样本的平方误差；五个模态可以重建整个矩阵。','Add the first K products of spatial pattern and time coefficient, then compare with the observed anomalies. More modes reduce the full-sample squared error; five modes reconstruct the entire matrix.');
       $('left-title').textContent=legend(['青色：观测异常','Cyan: observed anomaly'],['橙色：重建','Orange: reconstruction']);$('right-title').textContent=T('还没解释掉的残差 / °C','Unexplained residual / °C');
       plot($('spatial'),[{y:d.X[month],color:palette.blue},{y:rec,color:palette.warm,dash:[5,4]}],{limit:anomalyLimit});
       plot($('temporal'),[{y:d.X[month].map((v,j)=>v-rec[j]),color:palette.warm}],{limit:anomalyLimit});
       const rmse=Math.sqrt(rec.reduce((s,v,j)=>s+(v-d.X[month][j])**2,0)/d.m);
-      $('readout').textContent=T(`保留 ${rank} 个模态：全样本累计贡献率 ${frac(rank).toFixed(2)}%；当前月份重建 RMSE = ${rmse.toFixed(4)} °C。`,`Keep ${rank} modes: ${frac(rank).toFixed(2)}% of full-sample variance; this month’s reconstruction RMSE = ${rmse.toFixed(4)} °C.`);
+      $('readout').textContent=T(`保留 ${rank} 个模态：全样本累计贡献率 ${frac(rank).toFixed(2)}%；当前月份重建 \\(\\mathrm{RMSE} = ${rmse.toFixed(4)}\\,{}^{\\circ}\\mathrm C\\)。`,`Keep ${rank} modes: ${frac(rank).toFixed(2)}% of full-sample variance; this month’s reconstruction \\(\\mathrm{RMSE} = ${rmse.toFixed(4)}\\,{}^{\\circ}\\mathrm C\\).`);
     }
     $('spatial').setAttribute('aria-label',$('left-title').textContent+'; '+$('readout').textContent);$('temporal').setAttribute('aria-label',$('right-title').textContent+'; '+T('当前数值见下方表格，全部时间序列可下载 CSV。','Current values are in the table below; download CSV for the full series.'));
     $('values').replaceChildren(...d.stations.map((station,j)=>{const row=document.createElement('tr');[station,d.X[month][j],component[j],rec[j],d.X[month][j]-rec[j]].forEach((value,k)=>{const cell=document.createElement(k?'td':'th');if(!k)cell.scope='row';cell.textContent=typeof value==='number'?value.toFixed(4):value;row.append(cell);});return row;}));
@@ -96,3 +96,4 @@
   let resizeFrame;window.addEventListener('resize',()=>{cancelAnimationFrame(resizeFrame);resizeFrame=requestAnimationFrame(()=>{render();projection();});});
   render();projection();
 })();
+

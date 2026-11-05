@@ -11,13 +11,13 @@
 <link rel="stylesheet" href="./dossier.css">
 <link rel="stylesheet" href="./homework.css">
 <link rel="stylesheet" href="./waves-qa.css">
-</head>
+<link rel="stylesheet" href="./vendor/katex/katex.min.css?v=0.19.1"><link rel="stylesheet" href="./math.css?v=20261105"><script src="./vendor/katex/katex.min.js?v=0.19.1" defer></script><script src="./vendor/katex/contrib/auto-render.min.js?v=0.19.1" defer></script><script src="./vendor/katex/contrib/copy-tex.min.js?v=0.19.1" defer></script><script src="./math.js?v=20261105" defer></script></head>
 <body>
 <a class="skip" href="#main">跳至主要内容</a>
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="identity" href="./index.html">
-      <svg viewBox="0 0 40 36" aria-hidden="true"><path d="M2 11Q11 2 20 11T38 11M2 20Q11 11 20 20T38 20M2 29Q11 20 20 29T38 29" fill="none" stroke="currentColor" stroke-width="2.4"/></svg>
+      <svg viewbox="0 0 40 36" aria-hidden="true"><path d="M2 11Q11 2 20 11T38 11M2 20Q11 11 20 20T38 20M2 29Q11 20 20 29T38 29" fill="none" stroke="currentColor" stroke-width="2.4"></path></svg>
       <span>描述性物理海洋<small>张浩的课程手记 · 2026</small></span>
     </a>
     <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false">目录</button>
@@ -66,98 +66,98 @@
 <p class="hw-lead">七道题其实在问同一件事：<b>在什么尺度上，重力、旋转、层结、边界谁说了算？</b></p>
 <p>把这句话拆成四个判据，后面每一题都只是其中一个判据的应用。</p>
 <div class="wq-params">
-  <div class="wq-param"><b>σ / f</b><span>旋转重不重要：≫ 1 可忽略，~1 必须考虑</span></div>
-  <div class="wq-param"><b>kR<sub>d</sub></b><span>波长相对变形半径：≫ 1 短波，≪ 1 长波</span></div>
-  <div class="wq-param"><b>kH</b><span>浅水判据：≪ 1 为浅水长波，c = √(gH)</span></div>
-  <div class="wq-param"><b>f &lt; σ &lt; N</b><span>内波能自由传播的频率窗口</span></div>
+  <div class="wq-param"><b>\(\sigma  / f\)</b><span>旋转重不重要：≫ 1 可忽略，~1 必须考虑</span></div>
+  <div class="wq-param"><b>\(kR_{d}\)</b><span>波长相对变形半径：≫ 1 短波，≪ 1 长波</span></div>
+  <div class="wq-param"><b>kH</b><span>浅水判据：≪ 1 为浅水长波，\(c = \sqrt{gH}\)</span></div>
+  <div class="wq-param"><b>\(f &lt; \sigma  &lt; N\)</b><span>内波能自由传播的频率窗口</span></div>
 </div>
 <p class="hw-note">七题的主线：第 1 题问“能不能不要 f”；第 2 题问“频散由谁决定”；第 3、4 题问“边界怎样把波陷住”；第 5 题问“边界怎样把行波变成驻波”；第 6 题问“层结加扰动会怎样”；第 7 题是“长波但高频”的极端例子。</p>
 </section>
       <section id="q1">
 <h2>01 · 科氏力：什么时候可以不要</h2>
 <div class="wq-q"><span class="wq-no">01</span><p>在什么条件下重力波可以不考虑科氏力的作用。</p></div>
-<p class="wq-a">当 <b>σ ≫ f</b>——周期远短于惯性周期、波长远小于变形半径时，科氏力可以忽略。</p>
+<p class="wq-a">当 <b>\(\sigma  \gg  f\)</b>——周期远短于惯性周期、波长远小于变形半径时，科氏力可以忽略。</p>
 <p>旋转浅水波的频散关系是</p>
-<div class="wq-formula">σ² = f² + gHk²　（长波）<small>一般水深：σ² = f² + gk tanh(kH)。非旋转时 σ² = gHk²。</small></div>
-<p>科氏力的相对重要性约为 (f/σ)²。因此“忽略科氏力”可以写成两个等价判据：</p>
+<div class="wq-formula"><div class="math-display">\[\sigma^2=f^2+gHk^2\quad\text{（长波）}\]</div><div class="math-display">\[\text{一般水深：}\sigma^2=f^2+gk\tanh(kH)\]</div><div class="math-display">\[\text{非旋转：}\sigma^2=gHk^2\]</div></div>
+<p>科氏力的相对重要性约为 \((f/\sigma )^{2}\)。因此“忽略科氏力”可以写成两个等价判据：</p>
 <div class="wq-split">
-  <div class="wq-box"><h3>时间判据</h3><p><b>T ≪ 2π/f = 12 h / sinφ</b>。中纬度惯性周期约 14–24 h；周期几分钟到几小时的风浪、涌浪、海啸都满足。</p></div>
-  <div class="wq-box"><h3>空间判据</h3><p><b>λ ≪ 2πR<sub>d</sub></b>，R<sub>d</sub> = √(gH)/f。正压 R<sub>d</sub> ≈ 2000 km，斜压第一模态约 25–50 km；即 kR<sub>d</sub> ≫ 1。</p></div>
+  <div class="wq-box"><h3>时间判据</h3><p><b>\(T \ll  2\pi /f = 12 h / \sin \varphi \)</b>。中纬度惯性周期约 14–24 h；周期几分钟到几小时的风浪、涌浪、海啸都满足。</p></div>
+  <div class="wq-box"><h3>空间判据</h3><p><b>\(\lambda  \ll  2\pi R_{d}\)</b>，\(R_{d} = \sqrt{gH}/f\)。正压 \(R_{d} \approx  2000 \mathrm{km}\)，斜压第一模态约 25–50 km；即 \(kR_{d} \gg  1\)。</p></div>
 </div>
 <ul>
-<li><b>低纬：</b>赤道 f → 0，科氏力本身消失；但 β 效应接手，长波变成赤道波或罗斯贝波。</li>
-<li><b>小盆地：</b>盆地尺度 L ≪ R<sub>d</sub>（穿越时间远短于惯性周期）时，旋转也可忽略，例如小湖静振。</li>
+<li><b>低纬：</b>赤道 \(f \to  0\)，科氏力本身消失；但 \(\beta \) 效应接手，长波变成赤道波或罗斯贝波。</li>
+<li><b>小盆地：</b>盆地尺度 \(L \ll  R_{d}\)（穿越时间远短于惯性周期）时，旋转也可忽略，例如小湖静振。</li>
 </ul>
 <p><b>物理图像：</b>科氏力让水质点偏转，把往返振动变成椭圆或旋转运动。振动很快时，质点在一个惯性周期内还来不及明显偏转，波已经传过去了——不是科氏力“小”，而是它“来不及”。</p>
-<div class="wq-key"><b>例子：</b>湖面风浪 T ≈ 3 s，σ/f ≈ 10⁴，完全忽略；M2 潮波在 45°N，T = 12.4 h，σ/f ≈ 1.4，必须考虑（开尔文波、无潮点）。</div>
+<div class="wq-key"><b>例子：</b>湖面风浪 \(T \approx  3 s\)，\(\sigma /f \approx  10^{4}\)，完全忽略；M2 潮波在 45°N，\(T = 12.4 h\)，\(\sigma /f \approx  1.4\)，必须考虑（开尔文波、无潮点）。</div>
 </section>
 <section id="q2">
 <h2>02 · 三类波：谁频散，谁不频散</h2>
 <div class="wq-q"><span class="wq-no">02</span><p>重力波、惯性重力波和罗斯贝波是否弥散？为什么？</p></div>
 <p class="wq-a">一般情况<b>都频散</b>；但各有非频散极限：浅水重力波、短惯性重力波、长罗斯贝波。</p>
-<p>先把说法统一：<b>频散（弥散）指相速 c = σ/k 随波长变化</b>，波包在传播中会散开；等价地，c ≠ c<sub>g</sub>，且 c<sub>g</sub> 依赖 k。</p>
+<p>先把说法统一：<b>频散（弥散）指相速 \(c = \sigma /k\) 随波长变化</b>，波包在传播中会散开；等价地，\(c \ne  c_{g}\)，且 \(c_{g}\) 依赖 k。</p>
 
 <h3>表面重力波</h3>
 <div class="wq-split">
   <div class="wq-box"><h3>深水</h3>
-    <div class="wq-formula">σ² = gk　→　c = √(g/k)，c<sub>g</sub> = c/2</div>
+    <div class="wq-formula"><div class="math-display">\[\sigma^2=gk\quad\Longrightarrow\quad c=\sqrt{\frac gk},\quad c_g=\frac c2\]</div></div>
     <p><b>强频散。</b>长波（涌浪）先到、短波后到，就是涌浪频散。</p>
   </div>
-  <div class="wq-box"><h3>浅水（λ ≫ H）</h3>
-    <div class="wq-formula">σ = k√(gH)　→　c = c<sub>g</sub> = √(gH)</div>
+  <div class="wq-box"><h3>浅水（\(\lambda  \gg  H\)）</h3>
+    <div class="wq-formula"><div class="math-display">\[\sigma=k\sqrt{gH}\quad\Longrightarrow\quad c=c_g=\sqrt{gH}\]</div></div>
     <p><b>非频散。</b>潮波、海啸在浅水中的保形传播就靠这一点。</p>
   </div>
 </div>
-<p>所以“重力波是否频散”取决于水深与波长之比：<b>深水频散，浅水长波不频散</b>。考虑表面张力时 σ² = gk + γk³/ρ，仍然频散，并存在最小相速。</p>
+<p>所以“重力波是否频散”取决于水深与波长之比：<b>深水频散，浅水长波不频散</b>。考虑表面张力时 \(\sigma ^{2} = gk + \gamma k^{3}/\rho \)，仍然频散，并存在最小相速。</p>
 
 <h3>惯性重力波</h3>
-<div class="wq-formula">σ² = f² + gHk²　→　c = √(gH + f²/k²)，c<sub>g</sub> = gHk/σ，c·c<sub>g</sub> = gH</div>
-<p><b>一般频散。</b>两个极限：kR ≫ 1 时 σ ≈ k√(gH)，趋于非频散；kR ≪ 1 时 σ → f，相速形式上发散、群速趋于零，能量几乎不传播，频散极强。</p>
-<p>它还有<b>下限频率 f</b>：σ &lt; f 时不能自由传播，运动趋于地转平衡或罗斯贝波。所以惯性重力波像一个高通滤波器。</p>
+<div class="wq-formula"><div class="math-display">\[\sigma^2=f^2+gHk^2\]</div><div class="math-display">\[c=\sqrt{gH+\frac{f^2}{k^2}},\quad c_g=\frac{gHk}{\sigma},\quad cc_g=gH\]</div></div>
+<p><b>一般频散。</b>两个极限：\(kR \gg  1\) 时 \(\sigma  \approx  k\sqrt{gH}\)，趋于非频散；\(kR \ll  1\) 时 \(\sigma  \to  f\)，相速形式上发散、群速趋于零，能量几乎不传播，频散极强。</p>
+<p>它还有<b>下限频率 f</b>：\(\sigma  &lt; f\) 时不能自由传播，运动趋于地转平衡或罗斯贝波。所以惯性重力波像一个高通滤波器。</p>
 
 <h3>罗斯贝波</h3>
-<div class="wq-formula">σ = −βk / (k² + l² + R⁻²)，c<sub>x</sub> = −β / (k² + l² + R⁻²)<small>正压 R = √(gH)/f；斜压把 R 换成 R<sub>n</sub> = c<sub>n</sub>/f。</small></div>
+<div class="wq-formula"><div class="math-display">\[\sigma=-\frac{\beta k}{k^2+l^2+R^{-2}},\quad c_x=-\frac{\beta}{k^2+l^2+R^{-2}}\]</div><div class="math-display">\[R=\frac{\sqrt{gH}}f\quad\text{（正压）}\]</div><div class="math-display">\[R_n=\frac{c_n}f\quad\text{（斜压模态）}\]</div></div>
 <p><b>频散，而且是“反常”的：波长越长，相速越大</b>——长波西传快、短波慢。群速为</p>
-<div class="wq-formula">c<sub>gx</sub> = β(k² − l² − R⁻²) / (k² + l² + R⁻²)²</div>
-<p>长波（kR ≪ 1）群速也向西；短波（k 大）群速可以向东。关键极限：kR ≪ 1 时 σ ≈ −βR²k，c = −βR² 与 k 无关，<b>变为非频散</b>——这正是 ENSO 理论里“长罗斯贝波”能把信号较保形地向西送的原因。</p>
+<div class="wq-formula"><div class="math-display">\[c_{gx}=\frac{\beta(k^2-l^2-R^{-2})}{(k^2+l^2+R^{-2})^2}\]</div></div>
+<p>长波（\(kR \ll  1\)）群速也向西；短波（k 大）群速可以向东。关键极限：\(kR \ll  1\) 时 \(\sigma  \approx  -\beta R^{2}k\)，\(c = -\beta R^{2}\) 与 k 无关，<b>变为非频散</b>——这正是 ENSO 理论里“长罗斯贝波”能把信号较保形地向西送的原因。</p>
 
 <div class="wq-key"><b>小结：</b>三类波一般情况都频散，但各有非频散极限：浅水重力波、短惯性重力波、长罗斯贝波。</div>
 </section>
 <section id="q3">
 <h2>03 · 赤道：一条会陷波的“光纤”</h2>
 <div class="wq-q"><span class="wq-no">03</span><p>赤道波系形成波导的原因是什么？可以产生哪几种波动？</p></div>
-<p class="wq-a">因为赤道处 <b>f = 0 且变号</b>，β 提供恢复力；波被 Hermite 函数陷在赤道附近，宽度约为 <b>√(c/β)</b>。</p>
+<p class="wq-a">因为赤道处 <b>\(f = 0\) 且变号</b>，\(\beta \) 提供恢复力；波被 Hermite 函数陷在赤道附近，宽度约为 <b>\(\sqrt{c/\beta }\)</b>。</p>
 <h3>为什么赤道能形成波导</h3>
 <ol class="wq-steps">
-<li><b>f = 0 且变号。</b>赤道处科氏参数为零，向两极 f = βy 增大并改号。频率 σ 的波只能在 |f(y)| &lt; σ，即 |y| &lt; σ/β 的纬度带内传播；再向极地变成倏逝波，被“全反射”回来。</li>
-<li><b>β 提供恢复力。</b>经向位移的流体质点受到 βy 项作用，产生回复力，形成经向振荡。</li>
-<li><b>数学上是被陷住的谐振子。</b>赤道 β 平面分离变量后，经向结构满足谐振子方程，解为 Hermite 函数乘高斯包络，宽度为赤道罗斯贝变形半径 L<sub>eq</sub> = √(c/β)。</li>
+<li><b>\(f = 0\) 且变号。</b>赤道处科氏参数为零，向两极 \(f = \beta y\) 增大并改号。频率 \(\sigma \) 的波只能在 \(|f(y)| &lt; \sigma \)，即 \(|y| &lt; \sigma /\beta \) 的纬度带内传播；再向极地变成倏逝波，被“全反射”回来。</li>
+<li><b>\(\beta \) 提供恢复力。</b>经向位移的流体质点受到 \(\beta y\) 项作用，产生回复力，形成经向振荡。</li>
+<li><b>数学上是被陷住的谐振子。</b>赤道 \(\beta \) 平面分离变量后，经向结构满足谐振子方程，解为 Hermite 函数乘高斯包络，宽度为赤道罗斯贝变形半径 \(L_{eq} = \sqrt{c/\beta }\)。</li>
 <li><b>不能建立稳定地转平衡。</b>赤道附近 f 变号，大尺度扰动只能以波的形式传播；东、西边界还会反射，形成完整波系。</li>
 </ol>
-<div class="wq-formula">V<sub>n</sub> ∝ H<sub>n</sub>(y/L<sub>eq</sub>) · e<sup>−y²/(2L<sub>eq</sub>²)</sup>，　L<sub>eq</sub> = √(c/β)</div>
-<p><b>尺度：</b>正压 c ≈ 200 m/s → L<sub>eq</sub> ≈ 3000 km；斜压第一模态 c ≈ 2.5 m/s → L<sub>eq</sub> ≈ 300 km。波被限制在几个 L<sub>eq</sub> 之内。</p>
+<div class="wq-formula"><div class="math-display">\[V_n\propto H_n\!\left(\frac y{L_{\mathrm{eq}}}\right)e^{-y^2/(2L_{\mathrm{eq}}^2)},\quad L_{\mathrm{eq}}=\sqrt{\frac c\beta}\]</div></div>
+<p><b>尺度：</b>正压 \(c \approx  200 m/s \to  L_{eq} \approx  3000 \mathrm{km}\)；斜压第一模态 \(c \approx  2.5 m/s \to  L_{eq} \approx  300 \mathrm{km}\)。波被限制在几个 \(L_{eq}\) 之内。</p>
 
 <h3>能产生哪几种赤道陷波</h3>
 <div class="table-scroll"><table class="reference-table wq-table">
 <thead><tr><th>波型</th><th>频散关系</th><th>传播方向</th><th>特点</th></tr></thead>
 <tbody>
-<tr><td>赤道开尔文波</td><td>σ = ck</td><td>只能向东</td><td>非频散，v = 0，u 与 η 同相</td></tr>
-<tr><td>赤道罗斯贝波（n ≥ 1）</td><td>σ ≈ −βk / [k² + (2n+1)β/c]</td><td>向西</td><td>频散，长波快</td></tr>
-<tr><td>混合罗斯贝-重力波（n = 0）</td><td>σ² − ckσ − βc = 0</td><td>长波向西、短波向东</td><td>连接罗斯贝支与重力支</td></tr>
-<tr><td>赤道惯性重力波（n ≥ 1）</td><td>σ² ≈ c²k² + (2n+1)βc</td><td>可东可西</td><td>有下限频率</td></tr>
+<tr><td>赤道开尔文波</td><td>\(\sigma  = ck\)</td><td>只能向东</td><td>非频散，\(v = 0\)，u 与 \(\eta \) 同相</td></tr>
+<tr><td>赤道罗斯贝波（\(n \ge  1\)）</td><td>\(\sigma  \approx  -\beta k / [k^{2} + (2n+1)\beta /c]\)</td><td>向西</td><td>频散，长波快</td></tr>
+<tr><td>混合罗斯贝-重力波（\(n = 0\)）</td><td>\(\sigma ^{2} - ck\sigma  - \beta c = 0\)</td><td>长波向西、短波向东</td><td>连接罗斯贝支与重力支</td></tr>
+<tr><td>赤道惯性重力波（\(n \ge  1\)）</td><td>\(\sigma ^{2} \approx  c^{2}k^{2} + (2n+1)\beta c\)</td><td>可东可西</td><td>有下限频率</td></tr>
 </tbody></table></div>
 <p><b>生成机制：</b>赤道风爆发（MJO）、赤道流系不稳定、东/西边界反射、潮汐与地形相互作用等。开尔文波向东、罗斯贝波向西，两者在边界反射后可以互相转换——这是 ENSO 充放电理论的核心。</p>
-<div class="wq-key"><b>一句话：</b>赤道是旋转最弱、β 最“干净”的地方；波既跑不掉（经向陷获），又停不下来（不能地转平衡），于是只能沿着赤道传。</div>
+<div class="wq-key"><b>一句话：</b>赤道是旋转最弱、\(\beta \) 最“干净”的地方；波既跑不掉（经向陷获），又停不下来（不能地转平衡），于是只能沿着赤道传。</div>
 </section>
 <section id="q4">
 <h2>04 · 陆架长波：被海岸拴住的波</h2>
 <div class="wq-q"><span class="wq-no">04</span><p>陆架长波有哪几种，其传播有什么特点。</p></div>
 <p class="wq-a">常见的是<b>开尔文波、陆架波、边缘波</b>，另外还有双开尔文波；它们都被海岸/地形陷获，北半球“岸在右、浅水在右”。</p>
 <div class="wq-four">
-<div class="wq-box"><h3><span>K</span>开尔文波</h3><p>恢复力是重力 + 科氏力，跨岸方向地转平衡。σ = kc，c = √(gH)，<b>非频散</b>；跨岸速度 v = 0，振幅从岸向外按 e<sup>−x/R</sup> 衰减，R = c/f。</p></div>
-<div class="wq-box"><h3><span>S</span>陆架波</h3><p>地形罗斯贝波。恢复力是位涡守恒 + 底坡，<b>σ &lt; f（亚惯性）</b>，一般频散；振幅集中在陆架/陆坡，向外海指数衰减，有多个模态。</p></div>
+<div class="wq-box"><h3><span>K</span>开尔文波</h3><p>恢复力是重力 + 科氏力，跨岸方向地转平衡。\(\sigma  = kc\)，\(c = \sqrt{gH}\)，<b>非频散</b>；跨岸速度 \(v = 0\)，振幅从岸向外按 \(e^{-x/R}\) 衰减，\(R = c/f\)。</p></div>
+<div class="wq-box"><h3><span>S</span>陆架波</h3><p>地形罗斯贝波。恢复力是位涡守恒 + 底坡，<b>\(\sigma  &lt; f\)（亚惯性）</b>，一般频散；振幅集中在陆架/陆坡，向外海指数衰减，有多个模态。</p></div>
 <div class="wq-box"><h3><span>E</span>边缘波</h3><p>被海滩坡度陷获，可在岸线附近传播；有 Stokes 边缘波（超惯性）和亚惯性边缘波，对海岸爬高和海滩地形演变很重要。</p></div>
-<div class="wq-box"><h3><span>D</span>双开尔文波</h3><p>沿深度阶跃（陆架坡折）传播，两侧都指数衰减，单向传播，相速介于 √(gH₁) 与 √(gH₂) 之间。</p></div>
+<div class="wq-box"><h3><span>D</span>双开尔文波</h3><p>沿深度阶跃（陆架坡折）传播，两侧都指数衰减，单向传播，相速介于 \(\sqrt{gH_{1}}\) 与 \(\sqrt{gH_{2}}\) 之间。</p></div>
 </div>
 <h3>共同传播特点</h3>
 <ul>
@@ -174,12 +174,12 @@
 <p class="wq-a">静振是边界围成的<b>驻波型重力波</b>；重力波是开阔水域的<b>行波</b>。两者恢复力相同，波形、能量和周期性质不同。</p>
 <p><b>静振（seiche）</b>是封闭或半封闭水体（湖、海湾、港湾）中的驻波式自由振荡，由风、气压突变、地震或潮汐激发，是水体对强迫的共振响应。</p>
 <div class="wq-split">
-<div class="wq-box"><h3>闭合盆地</h3><div class="wq-formula">T<sub>n</sub> = 2L / (n√(gH))</div><p>两端为腹点，中间出现节点；基频 n = 1。</p></div>
-<div class="wq-box"><h3>一端开口的海湾</h3><div class="wq-formula">T<sub>n</sub> = 4L / [(2n−1)√(gH)]</div><p>开口端近似为节点，封闭端为腹点；这就是 Merian 公式。</p></div>
+<div class="wq-box"><h3>闭合盆地</h3><div class="wq-formula"><div class="math-display">\[T_n=\frac{2L}{n\sqrt{gH}}\]</div></div><p>两端为腹点，中间出现节点；基频 \(n = 1\)。</p></div>
+<div class="wq-box"><h3>一端开口的海湾</h3><div class="wq-formula"><div class="math-display">\[T_n=\frac{4L}{(2n-1)\sqrt{gH}}\]</div></div><p>开口端近似为节点，封闭端为腹点；这就是 Merian 公式。</p></div>
 </div>
 <h3>相同点</h3>
 <ul>
-<li>都是<b>表面重力波</b>，恢复力都是重力；λ ≫ H 时都满足浅水方程，c = √(gH)。</li>
+<li>都是<b>表面重力波</b>，恢复力都是重力；\(\lambda  \gg  H\) 时都满足浅水方程，\(c = \sqrt{gH}\)。</li>
 <li>静振可以看作两列相反方向传播的重力波叠加成的驻波，所以本质上是重力波的一种特殊形态。</li>
 <li>都有节点、腹点，都可能共振放大，都受摩擦阻尼；大尺度时都受科氏力影响（可形成开尔文波型驻波、无潮点）。</li>
 </ul>
@@ -191,19 +191,19 @@
 <tr><td>能量</td><td>净能通量为零（只在强迫/阻尼时变化）</td><td>净能通量非零，定向输运</td></tr>
 <tr><td>周期</td><td>离散本征周期，由盆地几何决定</td><td>连续谱，由生成机制决定</td></tr>
 <tr><td>边界</td><td>靠岸壁或湾口反射维持</td><td>不需要闭合边界</td></tr>
-<tr><td>相位</td><td>η 与 u 在时间上相差 90°</td><td>浅水行波中 η 与 u 同相</td></tr>
-<tr><td>公式</td><td>T = 2L/√(gH) 或 4L/√(gH)</td><td>T = λ/√(gH)，λ 由源决定</td></tr>
+<tr><td>相位</td><td>\(\eta \) 与 u 在时间上相差 90°</td><td>浅水行波中 \(\eta \) 与 u 同相</td></tr>
+<tr><td>公式</td><td>\(T = 2L/\sqrt{gH}\) 或 \(4L/\sqrt{gH}\)</td><td>\(T = \lambda /\sqrt{gH}\)，\(\lambda \) 由源决定</td></tr>
 </tbody></table></div>
-<p><b>为什么相位不同：</b>驻波可以写成 η = A cos(kx) cos(σt)，由动量方程得到 u ∝ sin(kx) sin(σt)，时间上正好差 90°；行波 η 与 u 同相，所以波峰处流速也最大。</p>
+<p><b>为什么相位不同：</b>驻波可以写成 \(\eta  = A \cos (kx) \cos (\sigma t)\)，由动量方程得到 \(u \propto  \sin (kx) \sin (\sigma t)\)，时间上正好差 90°；行波 \(\eta \) 与 u 同相，所以波峰处流速也最大。</p>
 <div class="wq-key"><b>一句话：</b>静振是“被边界关起来、来回反射形成的驻波型重力波”；重力波是“在开阔水域自由传播的行波”。</div>
 </section>
 <section id="q6">
 <h2>06 · 内波：层结 + 扰动</h2>
 <div class="wq-q"><span class="wq-no">06</span><p>海洋内波发生的基本条件是什么？</p></div>
-<p class="wq-a">三个条件：<b>稳定层结</b>、<b>让等密面偏离平衡的扰动</b>、以及频率落在 <b>f &lt; σ &lt; N</b> 的窗口内。</p>
+<p class="wq-a">三个条件：<b>稳定层结</b>、<b>让等密面偏离平衡的扰动</b>、以及频率落在 <b>\(f &lt; \sigma  &lt; N\)</b> 的窗口内。</p>
 <h3>① 稳定的密度层结</h3>
 <p>密度随深度增大（轻上重下），即</p>
-<div class="wq-formula">N² = −(g/ρ₀) · dρ/dz &gt; 0</div>
+<div class="wq-formula"><div class="math-display">\[N^2=-\frac g{\rho_0}\frac{\mathrm d\rho}{\mathrm dz}&gt;0\]</div></div>
 <p>这是内波恢复力（浮力）的来源。没有层结就没有内波；实际海洋里，温跃层或盐跃层提供强层结。</p>
 
 <h3>② 一个让等密面偏离平衡的扰动</h3>
@@ -217,47 +217,47 @@
 </ul>
 
 <h3>③ 频率必须落在窗口里</h3>
-<div class="wq-formula">f &lt; σ &lt; N<small>连续层结内波：σ² = (N²k<sub>h</sub>² + f²m²) / (k<sub>h</sub>² + m²)</small></div>
-<p>σ &gt; N 或 σ &lt; f 时变为倏逝波，不能自由传播（σ &lt; f 时运动趋于地转或罗斯贝波）。</p>
+<div class="wq-formula"><div class="math-display">\[f&lt;\sigma&lt;N\]</div><div class="math-display">\[\text{连续层结内波：}\sigma^2=\frac{N^2k_h^2+f^2m^2}{k_h^2+m^2}\]</div></div>
+<p>\(\sigma  &gt; N\) 或 \(\sigma  &lt; f\) 时变为倏逝波，不能自由传播（\(\sigma  &lt; f\) 时运动趋于地转或罗斯贝波）。</p>
 
 <h3>补充条件</h3>
 <ul>
 <li>界面波（两层流体）需要密跃层和界面扰动；内孤立波还需要非线性与频散平衡（KdV），以及有限振幅。</li>
-<li>背景流会多普勒平移频率、产生临界层；强剪切可使内波不稳定（Ri &lt; 1/4）而破碎。</li>
+<li>背景流会多普勒平移频率、产生临界层；强剪切可使内波不稳定（\(\mathrm{Ri} &lt; 1/4\)）而破碎。</li>
 <li>内波的水平和垂向尺度受层结、水深、Rossby 半径约束；第一斜压模态最常见。</li>
 </ul>
-<div class="wq-key"><b>一句话：</b>层结是“介质条件”，扰动是“激发条件”，f &lt; σ &lt; N 是“传播条件”。</div>
+<div class="wq-key"><b>一句话：</b>层结是“介质条件”，扰动是“激发条件”，\(f &lt; \sigma  &lt; N\) 是“传播条件”。</div>
 </section>
 <section id="q7">
 <h2>07 · 海啸：长波，但不低频</h2>
 <div class="wq-q"><span class="wq-no">07</span><p>海啸的发生机制是什么？长距离传输是否受科氏力的影响？为什么？</p></div>
-<p class="wq-a">海底垂直位移辐射出<b>浅水长波</b>；远距离传播基本<b>不受科氏力影响</b>，因为 σ ≫ f 且 kR<sub>d</sub> ≫ 1。</p>
+<p class="wq-a">海底垂直位移辐射出<b>浅水长波</b>；远距离传播基本<b>不受科氏力影响</b>，因为 \(\sigma  \gg  f\) 且 \(kR_{d} \gg  1\)。</p>
 <h3>发生机制</h3>
 <ol class="wq-steps">
 <li><b>源：</b>海底浅源大地震（逆冲断层）造成大面积海底垂直位移；此外还有海底滑坡、火山侧翼崩塌、火山喷发、陨石撞击。</li>
 <li><b>辐射长波：</b>水体被抬升或下沉后，在重力作用下恢复平衡，向外辐射长重力波。源区水平尺度几十到几百 km，远大于水深（约 4 km），所以是浅水长波。</li>
-<li><b>深海传播：</b>c = √(gH) ≈ 200 m/s ≈ 700 km/h（H = 4 km）；振幅只有 cm–m 量级，波长几百 km，波形常呈 N 波。此时频散很弱（λ ≫ H），可用浅水方程；λ 与 H 可比时需 Boussinesq / KdV 修正。</li>
-<li><b>近岸放大：</b>H 减小 → c 减小，能量通量守恒使振幅按 Green 定律 A ∝ H<sup>−1/4</sup> 增大（考虑折射时还有宽度因子 b<sup>−1/2</sup>）；折射使波峰趋于平行岸线；浅化、爬高、淹没；港湾共振、边缘波可局部放大。</li>
+<li><b>深海传播：</b>\(c = \sqrt{gH} \approx  200 m/s \approx  700 \mathrm{km}/h\)（\(H = 4 \mathrm{km}\)）；振幅只有 cm–m 量级，波长几百 km，波形常呈 N 波。此时频散很弱（\(\lambda  \gg  H\)），可用浅水方程；\(\lambda \) 与 H 可比时需 Boussinesq / KdV 修正。</li>
+<li><b>近岸放大：</b>H 减小 \(\to  c\) 减小，能量通量守恒使振幅按 Green 定律 \(A \propto  H^{-1/4}\) 增大（考虑折射时还有宽度因子 \(b^{-1/2}\)）；折射使波峰趋于平行岸线；浅化、爬高、淹没；港湾共振、边缘波可局部放大。</li>
 <li><b>周期：</b>几分钟到约 1 小时，典型 10–40 min。</li>
 </ol>
-<div class="wq-formula">c = √(gH)，　T = λ/c，　A ∝ H<sup>−1/4</sup></div>
+<div class="wq-formula"><div class="math-display">\[c=\sqrt{gH},\qquad T=\frac\lambda c,\qquad A\propto H^{-1/4}\]</div></div>
 
 <h3>长距离传播受科氏力影响吗？</h3>
 <p><b>结论：</b>一阶近似下不受显著影响；科氏力是次要效应。</p>
 <div class="wq-split">
-<div class="wq-box"><h3>频率判据</h3><p>T = 30 min → σ ≈ 3.5×10<sup>−3</sup> s<sup>−1</sup>；中纬度 f ≈ 1×10<sup>−4</sup> s<sup>−1</sup>；<b>σ/f ≈ 35 ≫ 1</b>。</p></div>
-<div class="wq-box"><h3>空间判据</h3><p>λ = 300–500 km；正压 R<sub>d</sub> = √(gH)/f ≈ 2000 km；<b>kR<sub>d</sub> ≈ 25–40 ≫ 1</b>。</p></div>
+<div class="wq-box"><h3>频率判据</h3><p>\(T = 30 \operatorname{min} \to  \sigma  \approx  3.5\times 10^{-3} s^{-1}\)；中纬度 \(f \approx  1\times 10^{-4} s^{-1}\)；<b>\(\sigma /f \approx  35 \gg  1\)</b>。</p></div>
+<div class="wq-box"><h3>空间判据</h3><p>\(\lambda  = 300\text{–}500 \mathrm{km}\)；正压 \(R_{d} = \sqrt{gH}/f \approx  2000 \mathrm{km}\)；<b>\(kR_{d} \approx  25\text{–}40 \gg  1\)</b>。</p></div>
 </div>
 <p>所以海啸相对于惯性周期是“高频”的、相对于变形半径是“短波”的，基本按<b>非旋转浅水波</b>传播：沿大圆路径（受海底地形折射），不被科氏力明显偏转、陷获或频散；到达时间主要由水深和路径决定。</p>
-<p>只有满足 σ ≲ f（周期 ≳ 惯性周期，即 &gt; 12–24 h）或 λ ≳ 2πR<sub>d</sub>（上万 km）的超长波，旋转才重要。海啸源尺度有限，很少产生这么长的波。</p>
+<p>只有满足 \(\sigma  \lesssim  f\)（周期 ≳ 惯性周期，即 &gt; 12–24 h）或 \(\lambda  \gtrsim  2\pi R_{d}\)（上万 km）的超长波，旋转才重要。海啸源尺度有限，很少产生这么长的波。</p>
 <p>但以下情形科氏力有“二阶”作用：</p>
 <ul>
 <li>海啸会激发<b>沿岸开尔文波和边缘波</b>，这些是旋转陷获的，会影响后续波列、到达时间和近岸增幅；</li>
 <li>波过后会留下弱的<b>地转流或涡</b>（地转调整）；</li>
-<li>在浅海、陆架（R<sub>d</sub> 变小）或高纬（f 大）时，旋转的相对作用增强；</li>
-<li>赤道附近 f → 0，旋转更不重要，但 β 效应可能产生赤道波。</li>
+<li>在浅海、陆架（\(R_{d}\) 变小）或高纬（f 大）时，旋转的相对作用增强；</li>
+<li>赤道附近 \(f \to  0\)，旋转更不重要，但 \(\beta \) 效应可能产生赤道波。</li>
 </ul>
-<div class="wq-note"><b>最容易混的一点：</b>“长波”不等于“低频”。海啸是长波（λ ≫ H），但频率并不低（T ≪ 惯性周期），所以科氏力仍然可以忽略。</div>
+<div class="wq-note"><b>最容易混的一点：</b>“长波”不等于“低频”。海啸是长波（\(\lambda  \gg  H\)），但频率并不低（T ≪ 惯性周期），所以科氏力仍然可以忽略。</div>
 </section>
 
       <section id="table">
@@ -266,16 +266,16 @@
         <div class="table-scroll"><table class="reference-table wq-table">
           <thead><tr><th>波型</th><th>恢复力</th><th>频散关系</th><th>频散性</th><th>传播 / 备注</th></tr></thead>
           <tbody>
-            <tr><td>表面重力波（深水）</td><td>重力</td><td>σ² = gk</td><td>强频散</td><td>各向同性，c = √(g/k)</td></tr>
-<tr><td>表面重力波（浅水）</td><td>重力</td><td>σ = k√(gH)</td><td>非频散</td><td>c = c<sub>g</sub> = √(gH)</td></tr>
-<tr><td>惯性重力波</td><td>重力 + 科氏</td><td>σ² = f² + gHk²</td><td>一般频散</td><td>σ ≥ f；短波趋于非频散</td></tr>
-<tr><td>海岸开尔文波</td><td>重力 + 科氏 + 岸</td><td>σ = kc</td><td>非频散</td><td>北半球岸在右</td></tr>
-<tr><td>陆架波</td><td>位涡 + 地形</td><td>σ &lt; f（依地形）</td><td>一般频散</td><td>北半球浅水在右</td></tr>
-<tr><td>罗斯贝波</td><td>β 效应</td><td>σ = −βk/(k²+l²+R⁻²)</td><td>频散；长波极限非频散</td><td>向西，长波快</td></tr>
-<tr><td>赤道开尔文波</td><td>重力 + β</td><td>σ = ck</td><td>非频散</td><td>只能向东</td></tr>
-<tr><td>赤道罗斯贝波</td><td>β 效应</td><td>σ ≈ −βk/[k²+(2n+1)β/c]</td><td>频散</td><td>向西</td></tr>
-<tr><td>海啸</td><td>重力</td><td>σ ≈ k√(gH)</td><td>弱频散</td><td>√(gH)；科氏次要</td></tr>
-<tr><td>海湾静振</td><td>重力 + 边界</td><td>驻波，离散本征周期</td><td>—</td><td>T = 2L/√(gH)</td></tr>
+            <tr><td>表面重力波（深水）</td><td>重力</td><td>\(\sigma ^{2} = gk\)</td><td>强频散</td><td>各向同性，\(c = \sqrt{g/k}\)</td></tr>
+<tr><td>表面重力波（浅水）</td><td>重力</td><td>\(\sigma  = k\sqrt{gH}\)</td><td>非频散</td><td>\(c = c_{g} = \sqrt{gH}\)</td></tr>
+<tr><td>惯性重力波</td><td>重力 + 科氏</td><td>\(\sigma ^{2} = f^{2} + gHk^{2}\)</td><td>一般频散</td><td>\(\sigma  \ge  f\)；短波趋于非频散</td></tr>
+<tr><td>海岸开尔文波</td><td>重力 + 科氏 + 岸</td><td>\(\sigma  = kc\)</td><td>非频散</td><td>北半球岸在右</td></tr>
+<tr><td>陆架波</td><td>位涡 + 地形</td><td>\(\sigma  &lt; f\)（依地形）</td><td>一般频散</td><td>北半球浅水在右</td></tr>
+<tr><td>罗斯贝波</td><td>\(\beta \) 效应</td><td>\(\sigma  = -\beta k/(k^{2}+l^{2}+R^{-2})\)</td><td>频散；长波极限非频散</td><td>向西，长波快</td></tr>
+<tr><td>赤道开尔文波</td><td>重力 \(+ \beta \)</td><td>\(\sigma  = ck\)</td><td>非频散</td><td>只能向东</td></tr>
+<tr><td>赤道罗斯贝波</td><td>\(\beta \) 效应</td><td>\(\sigma  \approx  -\beta k/[k^{2}+(2n+1)\beta /c]\)</td><td>频散</td><td>向西</td></tr>
+<tr><td>海啸</td><td>重力</td><td>\(\sigma  \approx  k\sqrt{gH}\)</td><td>弱频散</td><td>\(\sqrt{gH}\)；科氏次要</td></tr>
+<tr><td>海湾静振</td><td>重力 + 边界</td><td>驻波，离散本征周期</td><td>—</td><td>\(T = 2L/\sqrt{gH}\)</td></tr>
           </tbody>
         </table></div>
       </section>
@@ -283,11 +283,11 @@
       <section id="mis">
         <h2>六个易错点</h2>
         <ul class="wq-mis">
-          <li><b>“长波”不等于“低频”。</b>海啸 λ 很长，但 T 很短，相对惯性周期是高频，所以科氏力弱。</li>
-<li><b>浅水重力波非频散，但加旋转后（Poincaré 波）又频散。</b>σ² = f² + gHk² 使 c 重新依赖 k。</li>
-<li><b>罗斯贝波一般频散，但长波极限非频散。</b>kR ≪ 1 时 σ ≈ −βR²k，c = −βR²。</li>
-<li><b>开尔文波非频散，陆架波一般频散。</b>前者 σ = kc，后者相速依地形和模态而变。</li>
-<li><b>赤道波导的宽度是 √(c/β)，不是 √(gH)/f。</b>后者在赤道发散，不能用来描述赤道陷波。</li>
+          <li><b>“长波”不等于“低频”。</b>海啸 \(\lambda \) 很长，但 T 很短，相对惯性周期是高频，所以科氏力弱。</li>
+<li><b>浅水重力波非频散，但加旋转后（Poincaré 波）又频散。</b>\(\sigma ^{2} = f^{2} + gHk^{2}\) 使 c 重新依赖 k。</li>
+<li><b>罗斯贝波一般频散，但长波极限非频散。</b>\(kR \ll  1\) 时 \(\sigma  \approx  -\beta R^{2}k\)，\(c = -\beta R^{2}\)。</li>
+<li><b>开尔文波非频散，陆架波一般频散。</b>前者 \(\sigma  = kc\)，后者相速依地形和模态而变。</li>
+<li><b>赤道波导的宽度是 \(\sqrt{c/\beta }\)，不是 \(\sqrt{gH}/f\)。</b>后者在赤道发散，不能用来描述赤道陷波。</li>
 <li><b>静振不是另一种恢复力。</b>它仍是重力波，只是被边界关成了驻波。</li>
         </ul>
       </section>
@@ -297,7 +297,7 @@
         <ol class="hw-questions">
           <li>为什么风浪可以忽略科氏力，而 M2 潮波不能？</li>
 <li>深水重力波频散、长罗斯贝波不频散，判据各是什么？</li>
-<li>赤道波导的宽度由什么决定？为什么不是 √(gH)/f？</li>
+<li>赤道波导的宽度由什么决定？为什么不是 \(\sqrt{gH}/f\)？</li>
 <li>开尔文波和陆架波在传播方向上有什么共同点？</li>
 <li>海啸是长波，为什么科氏力仍然可以忽略？</li>
         </ol>
@@ -307,7 +307,7 @@
 
       <section id="source">
         <h2>教材连接与作业原图</h2>
-        <p>对应教材 Ch.8（波动、潮汐、沿岸）。这七道题的主线是判据：σ/f、kR<sub>d</sub>、kH、f &lt; σ &lt; N——先判断谁重要，再决定用哪个公式。</p>
+        <p>对应教材 Ch.8（波动、潮汐、沿岸）。这七道题的主线是判据：\(\sigma /f\)、\(kR_{d}\)、kH、\(f &lt; \sigma  &lt; N\)——先判断谁重要，再决定用哪个公式。</p>
         <figure class="hw-figure">
           <img src="./assets/homework-waves-questions.jpg" alt="课堂作业原图：七道海洋波动思考题" width="1280" height="960" loading="lazy">
           <figcaption>作业原图：七道思考题。上面每一节对应其中一题。</figcaption>

@@ -10,13 +10,13 @@
 <link rel="stylesheet" href="./hub.css">
 <link rel="stylesheet" href="./dossier.css">
 <link rel="stylesheet" href="./homework.css">
-</head>
+<link rel="stylesheet" href="./vendor/katex/katex.min.css?v=0.19.1"><link rel="stylesheet" href="./math.css?v=20261105"><script src="./vendor/katex/katex.min.js?v=0.19.1" defer></script><script src="./vendor/katex/contrib/auto-render.min.js?v=0.19.1" defer></script><script src="./vendor/katex/contrib/copy-tex.min.js?v=0.19.1" defer></script><script src="./math.js?v=20261105" defer></script></head>
 <body>
 <a class="skip" href="#main">跳至主要内容</a>
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="identity" href="./index.html">
-      <svg viewBox="0 0 40 36" aria-hidden="true"><path d="M2 11Q11 2 20 11T38 11M2 20Q11 11 20 20T38 20M2 29Q11 20 20 29T38 29" fill="none" stroke="currentColor" stroke-width="2.4"/></svg>
+      <svg viewbox="0 0 40 36" aria-hidden="true"><path d="M2 11Q11 2 20 11T38 11M2 20Q11 11 20 20T38 20M2 29Q11 20 20 29T38 29" fill="none" stroke="currentColor" stroke-width="2.4"></path></svg>
       <span>描述性物理海洋<small>张浩的课程手记 · 2026</small></span>
     </a>
     <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false">目录</button>
@@ -128,7 +128,7 @@
 <article class="hw-step">
           <span class="hw-step-no">STEP 5</span>
           <h3>位涡（Potential Vorticity）</h3>
-          <span class="hw-added">加了什么：把涡度、地球自转、水柱厚度放在一起：q=(ζ+f)/H。</span>
+          <span class="hw-added">加了什么：把涡度、地球自转、水柱厚度放在一起：\(q=(\zeta +f)/H\)。</span>
           <p class="hw-line">位涡像一个“旋转 + 厚度”的守恒账本；水柱被拉长或压缩，旋转就得变。</p>
           <p class="hw-example">现实例子：水柱越过海脊、被沿岸流拉长。</p>
         </article>
@@ -171,13 +171,13 @@
 
       <section id="rossby">
         <h2>补一张：行星罗斯贝波到底是什么？</h2>
-        <p class="hw-lead">一句话：行星罗斯贝波，是地球自转随纬度变化（β 效应）造成的大尺度波动；它的相位总是向西传。</p>
+        <p class="hw-lead">一句话：行星罗斯贝波，是地球自转随纬度变化（\(\beta \) 效应）造成的大尺度波动；它的相位总是向西传。</p>
         <p>为什么会有：水团向北移，f 变大；为了保持位涡，相对涡度必须变小（反气旋式）。水团向南移，f 变小；相对涡度必须变大（气旋式）。这种“恢复”让扰动整体向西挪。</p>
-        <div class="hw-beta"><div><b>水团向北</b><span>f ↑</span><span>相对涡度 ζ ↓（反气旋）</span></div><div class="hw-beta-core">位涡守恒<br>q = (ζ + f)/H</div><div><b>水团向南</b><span>f ↓</span><span>相对涡度 ζ ↑（气旋）</span></div></div>
-        <div class="formula">β = df/dy = 2Ω cosφ / a<br>∂ζ/∂t + βv = 0<br>ω = −βk/(k² + l²)<br>c_x = ω/k = −β/(k² + l²) &lt; 0（向西）</div>
+        <div class="hw-beta"><div><b>水团向北</b><span>f ↑</span><span>相对涡度 \(\zeta  \downarrow \)（反气旋）</span></div><div class="hw-beta-core">位涡守恒<br>\(q = (\zeta  + f)/H\)</div><div><b>水团向南</b><span>f ↓</span><span>相对涡度 \(\zeta  \uparrow \)（气旋）</span></div></div>
+        <div class="formula"><div class="math-display">\[\beta=\frac{\mathrm df}{\mathrm dy}=\frac{2\Omega\cos\varphi}{a}\]</div><div class="math-display">\[\frac{\partial\zeta}{\partial t}+\beta v=0\]</div><div class="math-display">\[\omega=-\frac{\beta k}{k^2+l^2}\]</div><div class="math-display">\[c_x=\frac{\omega}{k}=-\frac{\beta}{k^2+l^2}&lt;0\quad\text{（向西）}\]</div></div>
         <ul class="hw-points"><li>波长越长，向西越快；短波向西慢。</li>
 <li>相速向西，不代表能量只能向西：短波的群速可以向东。</li>
-<li>海洋里第一斜压模的罗斯贝波速度约几 cm/s，跨洋要数月到数年；大气里表现为西风带的长波槽脊。</li>
+<li>海洋里第一斜压模的罗斯贝波速度约几 \(\mathrm{cm}/s\)，跨洋要数月到数年；大气里表现为西风带的长波槽脊。</li>
 <li>赤道罗斯贝波把西太平洋的风异常向西传，反射成开尔文波，是 ENSO 的重要环节；沿岸的罗斯贝波/陆架波被边界“拴”住。</li></ul>
         <p class="hw-analogy">类比：像一排多米诺骨牌——每块牌只倒一下，倒下的“形状”却沿队列传很远；罗斯贝波里，水团只是南北晃，波的相位却向西走。</p>
         <p class="hw-note">所以第 6 步的“罗斯贝波”不是另一种波，而是位涡守恒在地球自转随纬度变化下的必然结果；沿岸陷波只是把这种波“拴”在边界附近。</p>

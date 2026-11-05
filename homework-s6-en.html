@@ -10,13 +10,13 @@
 <link rel="stylesheet" href="./hub.css">
 <link rel="stylesheet" href="./dossier.css">
 <link rel="stylesheet" href="./homework.css">
-</head>
+<link rel="stylesheet" href="./vendor/katex/katex.min.css?v=0.19.1"><link rel="stylesheet" href="./math.css?v=20261105"><script src="./vendor/katex/katex.min.js?v=0.19.1" defer></script><script src="./vendor/katex/contrib/auto-render.min.js?v=0.19.1" defer></script><script src="./vendor/katex/contrib/copy-tex.min.js?v=0.19.1" defer></script><script src="./math.js?v=20261105" defer></script></head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="identity" href="./en.html">
-      <svg viewBox="0 0 40 36" aria-hidden="true"><path d="M2 11Q11 2 20 11T38 11M2 20Q11 11 20 20T38 20M2 29Q11 20 20 29T38 29" fill="none" stroke="currentColor" stroke-width="2.4"/></svg>
+      <svg viewbox="0 0 40 36" aria-hidden="true"><path d="M2 11Q11 2 20 11T38 11M2 20Q11 11 20 20T38 20M2 29Q11 20 20 29T38 29" fill="none" stroke="currentColor" stroke-width="2.4"></path></svg>
       <span>Descriptive Physical Oceanography<small>Zhang Hao’s course notebook · 2026</small></span>
     </a>
     <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false">Contents</button>
@@ -67,7 +67,7 @@
         <h2>Two difficulties: why Newton's laws are not enough</h2>
         <div class="hw-two">
           <div class="hw-card"><span class="hw-num">1</span><h3>The ocean is rotating</h3><p>Earth spins. In a rotating frame, moving objects appear to curve—this is the Coriolis force. It is not a real force; it is inertia seen from a rotating frame.</p><p class="hw-analogy">Analogy: throw a ball straight across a spinning turntable; someone standing beside it sees the ball curve.</p></div>
-          <div class="hw-card"><span class="hw-num">2</span><h3>The ocean is a continuum</h3><p>Seawater is not a bag of billiard balls; it is a continuous fluid. We cannot track only individual parcels—we describe fields: velocity, pressure, density.</p><p class="hw-analogy">Analogy: a pot of soup, not a bag of marbles.</p></div>
+          <div class="hw-card"><span class="hw-num">2</span><h3>The ocean is a continuum</h3><p>Seawater is not a bag of billiard balls; it is a continuous fluid. We cannot track only individual parcels—\(w_e\) describe fields: velocity, pressure, density.</p><p class="hw-analogy">Analogy: a pot of soup, not a bag of marbles.</p></div>
         </div>
         <p class="hw-note">One sentence: rotation complicates direction; the continuum complicates the mathematics. The nine steps add these complications one by one.</p>
       </section>
@@ -128,7 +128,7 @@
 <article class="hw-step">
           <span class="hw-step-no">STEP 5</span>
           <h3>Potential vorticity</h3>
-          <span class="hw-added">What is added：Combine vorticity, Earth's rotation, and water-column thickness: q=(ζ+f)/H.</span>
+          <span class="hw-added">What is added：Combine vorticity, Earth's rotation, and water-column thickness: \(q=(\zeta +f)/H\).</span>
           <p class="hw-line">PV is a conservation ledger of “spin + thickness.” Stretch or squeeze a column, and its spin must change.</p>
           <p class="hw-example">Real example：A water column crossing a ridge or stretched by a coastal current.</p>
         </article>
@@ -171,13 +171,13 @@
 
       <section id="rossby">
         <h2>One more card: what exactly is a planetary Rossby wave?</h2>
-        <p class="hw-lead">In one sentence: a planetary Rossby wave is a large-scale wave caused by the change of Earth's rotation with latitude (the β effect); its phase always propagates westward.</p>
+        <p class="hw-lead">In one sentence: a planetary Rossby wave is a large-scale wave caused by the change of Earth's rotation with latitude (the \(\beta \) effect); its phase always propagates westward.</p>
         <p>Why it exists: when a parcel moves north, f increases; to conserve potential vorticity, relative vorticity must decrease (anticyclonic). When it moves south, f decreases; relative vorticity must increase (cyclonic). This restoring effect makes the disturbance shift westward.</p>
-        <div class="hw-beta"><div><b>Parcel moves north</b><span>f ↑</span><span>relative vorticity ζ ↓ (anticyclonic)</span></div><div class="hw-beta-core">PV conserved<br>q = (ζ + f)/H</div><div><b>Parcel moves south</b><span>f ↓</span><span>relative vorticity ζ ↑ (cyclonic)</span></div></div>
-        <div class="formula">β = df/dy = 2Ω cosφ / a<br>∂ζ/∂t + βv = 0<br>ω = −βk/(k² + l²)<br>c_x = ω/k = −β/(k² + l²) &lt; 0 (westward)</div>
+        <div class="hw-beta"><div><b>Parcel moves north</b><span>f ↑</span><span>relative vorticity \(\zeta  \downarrow \)(anticyclonic)</span></div><div class="hw-beta-core">PV conserved<br>\(q = (\zeta  + f)/H\)</div><div><b>Parcel moves south</b><span>f ↓</span><span>relative vorticity \(\zeta  \uparrow \)(cyclonic)</span></div></div>
+        <div class="formula"><div class="math-display">\[\beta=\frac{\mathrm df}{\mathrm dy}=\frac{2\Omega\cos\varphi}{a}\]</div><div class="math-display">\[\frac{\partial\zeta}{\partial t}+\beta v=0\]</div><div class="math-display">\[\omega=-\frac{\beta k}{k^2+l^2}\]</div><div class="math-display">\[c_x=\frac{\omega}{k}=-\frac{\beta}{k^2+l^2}&lt;0\quad\text{(westward)}\]</div></div>
         <ul class="hw-points"><li>Longer waves propagate westward faster; short waves are slower.</li>
 <li>A westward phase speed does not mean energy can only go west: the group velocity of short waves can be eastward.</li>
-<li>In the ocean, the first baroclinic mode travels at a few cm/s, taking months to years to cross a basin; in the atmosphere, it appears as the long-wave troughs and ridges of the westerlies.</li>
+<li>In the ocean, the first baroclinic mode travels at a few \(\mathrm{cm}/s\), taking months to years to cross a basin; in the atmosphere, it appears as the long-wave troughs and ridges of the westerlies.</li>
 <li>Equatorial Rossby waves carry western-Pacific wind anomalies westward and reflect into Kelvin waves—an important part of ENSO; coastal Rossby and shelf waves are trapped by the boundary.</li></ul>
         <p class="hw-analogy">Analogy: like a row of dominoes—each tile falls only once, but the falling pattern travels far along the row. In a Rossby wave, parcels mainly move north–south while the phase moves west.</p>
         <p class="hw-note">So the Rossby wave in Step 6 is not a different wave: it is what PV conservation produces when Earth's rotation changes with latitude. Coastal trapping simply ties that wave to the boundary.</p>

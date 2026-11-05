@@ -13,13 +13,13 @@
 <link rel="stylesheet" href="./textbook.css?v=20261105-1">
 <link rel="stylesheet" href="./story/story-section.css">
 <link rel="stylesheet" href="./story/research-figures.css">
-</head>
+<link rel="stylesheet" href="./vendor/katex/katex.min.css?v=0.19.1"><link rel="stylesheet" href="./math.css?v=20261105"><script src="./vendor/katex/katex.min.js?v=0.19.1" defer></script><script src="./vendor/katex/contrib/auto-render.min.js?v=0.19.1" defer></script><script src="./vendor/katex/contrib/copy-tex.min.js?v=0.19.1" defer></script><script src="./math.js?v=20261105" defer></script></head>
 <body>
 <a class="skip" href="#main">跳至主要内容</a>
 <header class="site-header">
   <div class="wrap header-inner">
     <a class="identity" href="./index.html" aria-label="课程首页 / Course home">
-      <svg viewBox="0 0 40 36" aria-hidden="true"><path d="M2 11Q11 2 20 11T38 11M2 20Q11 11 20 20T38 20M2 29Q11 20 20 29T38 29" fill="none" stroke="currentColor" stroke-width="2.4"/></svg>
+      <svg viewbox="0 0 40 36" aria-hidden="true"><path d="M2 11Q11 2 20 11T38 11M2 20Q11 11 20 20T38 20M2 29Q11 20 20 29T38 29" fill="none" stroke="currentColor" stroke-width="2.4"></path></svg>
       <span>描述性物理海洋<small>张浩的课程手记 · 2026</small></span>
     </a>
     <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false">目录</button>
@@ -111,7 +111,7 @@
       <h4>课堂内容</h4>
       <p>描述性物理海洋学从观测和模式输出出发，尽可能定量地描述海水的运动与性质；动力物理海洋学则用理论和过程实验解释背后的机制。先回答“在哪里、多少、怎样变化”，再问“为什么”。</p>
       <p>海洋现象跨越多达十个数量级的空间尺度（1 mm–10,000 km）和时间尺度（秒–千年）。同一套观测方案不可能同时分辨海浪和气候，平均间隔本身就是科学定义的一部分。</p>
-      <p>判断自转是否重要，先算 Rossby 数 Ro=U/(fL)。大洋环流 Ro~10⁻³，地转近似很好；赤道、边界层和强摩擦处要重新检查。</p>
+      <p>判断自转是否重要，先算 Rossby 数 \(\mathrm{Ro}=U/(fL)\)。大洋环流 \(\mathrm{Ro}\sim 10^{-3}\)，地转近似很好；赤道、边界层和强摩擦处要重新检查。</p>
       <ul class="key-points">
         <li>描述不等于没有动力学；描述是动力学解释的起点。</li>
         <li>读图五问：变量与单位、时间窗、空间范围、数据来源、误差与缺测。</li>
@@ -123,7 +123,7 @@
       </div>
       <div class="question">
         <h4>❓ 当时的疑问 + ✅ 后来怎么想通</h4>
-        <p>❓ 我当时没懂：为什么 Rossby 数小就一定能用地转近似？<br>✅ 后来想通：Ro 小只说明旋转主导、平流项相对小；还要看时间尺度、摩擦和边界层。地转是“主平衡”，不是“没有加速度”。</p>
+        <p>❓ 我当时没懂：为什么 Rossby 数小就一定能用地转近似？<br>✅ 后来想通：\(\mathrm{Ro}\) 小只说明旋转主导、平流项相对小；还要看时间尺度、摩擦和边界层。地转是“主平衡”，不是“没有加速度”。</p>
       </div>
       <div class="ticket">
         <h4>🎫 第1周出门票</h4>
@@ -187,7 +187,7 @@
       <h4>课堂内容</h4>
       <p>密度由温度、盐度和压力共同决定，关系非线性。通常升温减密、增盐增密、加压压缩；“冷水一定重”不是无条件结论。</p>
       <p>深水的现场温度含绝热压缩效应；位温把水团假想绝热移到同一参考压力。位密度也要注明参考压力。</p>
-      <p>TEOS-10 区分实用盐度 SP（电导率、无量纲）和绝对盐度 SA（常用 g/kg）；名字相似，不能在程序里随意互换。判断层结看水团被推开后能否回来：N²=−(g/ρ₀)∂ρ/∂z。</p>
+      <p>TEOS-10 区分实用盐度 \(S_P\)（电导率、无量纲）和绝对盐度 \(S_A\)（常用 \(g/\mathrm{kg}\)）；名字相似，不能在程序里随意互换。判断层结看水团被推开后能否回来：\(N^{2}=-(g/\rho _{0})\partial \rho /\partial z\)。</p>
       <ul class="key-points">
         <li>Cabbeling：两个同密度但温盐不同的水团混合后密度更大。</li>
         <li>双扩散/盐指：热量扩散比盐分快，形成细长盐指。</li>
@@ -199,7 +199,7 @@
       </div>
       <div class="question">
         <h4>❓ 当时的疑问 + ✅ 后来怎么想通</h4>
-        <p>❓ 我当时没懂：现场密度随深度增加，不就说明层结稳定吗？<br>✅ 后来想通：压力压缩也会让密度向下增加；判断稳定性要用位密度或 N²，看水团被推开后能不能回来。</p>
+        <p>❓ 我当时没懂：现场密度随深度增加，不就说明层结稳定吗？<br>✅ 后来想通：压力压缩也会让密度向下增加；判断稳定性要用位密度或 \(N^{2}\)，看水团被推开后能不能回来。</p>
       </div>
       <div class="ticket">
         <h4>🎫 第3周出门票</h4>
@@ -258,9 +258,9 @@
       </div>
       <p class="lesson-drive"><strong>驱动问题：</strong>一片海变暖或变咸，怎样判断是当地强迫还是海流输送造成的？</p>
       <h4>课堂内容</h4>
-      <p>收支先选控制体、边界和正方向：储存变化 = 净输入 + 内部源汇。体积输运是流速在断面上的积分，不能用表层速度代表全深度。</p>
-      <p>海表热交换四项：短波 Qs、长波 Qb、潜热 Qe、感热 Qh。规定进入海洋为正时，蒸发潜热通常是负项。</p>
-      <p>混合层温度还受平流、层底夹卷和混合影响；穿透层底的短波没有被本层全部吸收。忽略这些时，ρ₀cₚh dT/dt≈Q。淡水收支改变盐度和浮力；风应力输入动量，也能加深混合层。</p>
+      <p>收支先选控制体、边界和正方向：\(\text{储存变化}=\text{净输入}+\text{内部源汇}\)。体积输运是流速在断面上的积分，不能用表层速度代表全深度。</p>
+      <p>海表热交换四项：短波 \(Q_s\)、长波 \(Q_b\)、潜热 \(Q_e\)、感热 \(Q_h\)。规定进入海洋为正时，蒸发潜热通常是负项。</p>
+      <p>混合层温度还受平流、层底夹卷和混合影响；穿透层底的短波没有被本层全部吸收。忽略这些时，\(\rho _{0}c_{p}h dT/dt\approx Q\)。淡水收支改变盐度和浮力；风应力输入动量，也能加深混合层。</p>
       <ul class="key-points">
         <li>先定义控制体、边界、单位和符号。</li>
         <li>表面通量与边界输送都能改变储存量。</li>
@@ -294,9 +294,9 @@
       </div>
       <p class="lesson-drive"><strong>驱动问题：</strong>为什么海流常沿着海面等高线走，而不是直接流向低处？</p>
       <h4>课堂内容</h4>
-      <p>水平压强梯度先让海水加速，科氏力随速度增大并改变方向；在大尺度、低摩擦、缓变条件下两者近似平衡，形成地转流。取 x 向东、y 向北：u=−(g/f)η_y，v=(g/f)η_x。</p>
+      <p>水平压强梯度先让海水加速，科氏力随速度增大并改变方向；在大尺度、低摩擦、缓变条件下两者近似平衡，形成地转流。取 x 向东、y 向北：\(u=-(g/f)\eta _y\)，\(v=(g/f)\eta _x\)。</p>
       <p>密度水平差异通过静力关系改变不同深度的压强梯度，给出热成风切变；密度给相对速度，绝对速度还要参考层或观测约束。</p>
-      <p>风应力在表层驱动 Ekman 输运；风应力旋度通过 Ekman 层底的垂直运动让内区水柱伸缩，联系 Sverdrup 经向输运和西边界流。位涡 q=(ζ+f)/h 在理想单层、无摩擦、绝热条件下近似守恒。</p>
+      <p>风应力在表层驱动 Ekman 输运；风应力旋度通过 Ekman 层底的垂直运动让内区水柱伸缩，联系 Sverdrup 经向输运和西边界流。位涡 \(q=(\zeta +f)/h\) 在理想单层、无摩擦、绝热条件下近似守恒。</p>
       <ul class="key-points">
         <li>科氏力永远垂直于运动方向，不做功。</li>
         <li>表层 Ekman 流偏 45°，垂直积分后的净输送偏 90°。</li>
@@ -320,7 +320,7 @@
         <div class="ticket-gallery" aria-label="第6周配图">
           <figure><a href="./exit-tickets/week-06-01.jpeg" target="_blank" rel="noopener" aria-label="查看原图：不同波动的时间尺度图"><img src="./exit-tickets/week-06-01.jpeg" width="674" height="505" loading="lazy" decoding="async" alt="不同波动的时间尺度图"></a><figcaption>不同波动的时间尺度图</figcaption></figure>
           <figure><a href="./exit-tickets/week-06-02.jpeg" target="_blank" rel="noopener" aria-label="查看原图：波的特征课堂材料"><img src="./exit-tickets/week-06-02.jpeg" width="854" height="640" loading="lazy" decoding="async" alt="波的特征课堂材料"></a><figcaption>波的特征课堂材料</figcaption></figure>
-          <figure><a href="./exit-tickets/week-06-03.jpeg" target="_blank" rel="noopener" aria-label="查看原图：深水与浅水波的相速公式图"><img src="./exit-tickets/week-06-03.jpeg" width="568" height="426" loading="lazy" decoding="async" alt="深水与浅水波的相速公式图"></a><figcaption>深水与浅水波的相速公式图</figcaption></figure>
+          <figure class="ticket-wave-formulas"><figcaption>深水波与浅水波的相速</figcaption><p>一般色散关系</p><div class="math-display">\[\omega^2=gk\tanh(kh),\quad c=\frac{\omega}{k}=\sqrt{\frac gk\tanh(kh)}\]</div><p>深水</p><div class="math-display">\[h&gt;\frac{\lambda}{2},\quad c=\sqrt{\frac gk}=\sqrt{\frac{g\lambda}{2\pi}}\]</div><p>浅水</p><div class="math-display">\[h&lt;\frac{\lambda}{20},\quad c=\sqrt{gh}\]</div><p>深水波相速依赖波长；浅水波相速依赖水深。</p></figure>
         </div>
       </div>
       <p class="lesson-sources">本讲来源：<a href="https://talleylab.ucsd.edu/ltalley/DPO/supplementary/ch_s7.pdf" target="_blank" rel="noopener">Talley · 扩展动力章 S7</a> · <a href="https://uhslc.soest.hawaii.edu/ocn620/lectures/sverdrup-balance.html" target="_blank" rel="noopener">University of Hawai‘i · Sverdrup balance</a></p>
@@ -337,7 +337,7 @@
       <p class="lesson-drive"><strong>驱动问题：</strong>海浪、潮汐与河口环流，为什么需要不同的解释？</p>
       <h4>课堂内容</h4>
       <p>波动传播的是扰动和能量，水质点运动不等于波峰相速。表面重力波以重力为恢复力；深水/浅水由水深与波长之比决定。</p>
-      <p>线性、无旋转浅水长波：c≈√(gH)。这里的“浅水”是相对波长而言，不是海图上水深小。</p>
+      <p>线性、无旋转浅水长波：\(c\approx \sqrt{gH}\)。这里的“浅水”是相对波长而言，不是海图上水深小。</p>
       <p>稳定层结支持内波；潮汐主要受日月引潮力周期强迫，但实际潮差和潮流还受海盆形状、水深、旋转、摩擦与共振影响。河口常见淡水在上、咸水在下，但潮混合、径流和形状会改变层结。</p>
       <ul class="key-points">
         <li>区分相速、群速和水质点运动。</li>
@@ -350,7 +350,7 @@
       </div>
       <div class="question">
         <h4>❓ 当时的疑问 + ✅ 后来怎么想通</h4>
-        <p>❓ 我当时没懂：为什么 100 m 和 25 m 水深的同一长波，相速比是 2？<br>✅ 后来想通：浅水长波 c≈√(gH)，相速比 √(100/25)=2；“浅水”是相对波长，不是海图上水浅。</p>
+        <p>❓ 我当时没懂：为什么 100 m 和 25 m 水深的同一长波，相速比是 2？<br>✅ 后来想通：浅水长波 \(c\approx \sqrt{gH}\)，相速比 \(\sqrt{100/25}=2\)；“浅水”是相对波长，不是海图上水浅。</p>
       </div>
       <div class="ticket">
         <h4>🎫 第7周出门票</h4>
@@ -373,7 +373,7 @@
       <p class="lesson-drive"><strong>驱动问题：</strong>一项海洋分析怎样做到别人能够理解、检查和重算？</p>
       <h4>课堂内容</h4>
       <p>分析从采样和质控开始：精密度是重复测量的离散程度，准确度是离真值有多近；数值平滑不代表没有系统偏差。采样不足会漏掉变化或产生混叠。</p>
-      <p>先检查单位、质量标识、传感器深度、缺测编码和采样间隔，再决定平均、滤波和绘图。EOF 把时空数据分解为空间模态（EOF）和时间系数（PC）：X=UΣVᵀ，方差比例 λᵢ/Σλ。</p>
+      <p>先检查单位、质量标识、传感器深度、缺测编码和采样间隔，再决定平均、滤波和绘图。EOF 把时空数据分解为空间模态（EOF）和时间系数（PC）：\(X=U\Sigma V^{T}\)，方差比例 \(\frac{\lambda_i}{\sum_j\lambda_j}\)。</p>
       <p>去季节、去趋势、面积加权和标准化会改变分析对象；报告有效样本、代码、误差和敏感性，结果才可复现。EOF 优化样本方差的重建效率，不检验因果机制。</p>
       <ul class="key-points">
         <li>相关不等于因果。</li>
@@ -401,13 +401,13 @@
 
       <section id="textbook">
         <div class="textbook-download" id="textbook-download" role="region" aria-labelledby="textbook-download-title">
-          <h2 id="textbook-download-title"><svg viewBox="0 0 28 32" aria-hidden="true" fill="none"><path d="M6 3h18v23H6a3 3 0 0 0 0 6" transform="translate(0 -2)" fill="currentColor"/><path d="M6 1a3 3 0 0 0-3 3v23a3 3 0 0 0 3 3h18M7 3v20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Textbook ·《物理海洋学》教材</span></h2>
+          <h2 id="textbook-download-title"><svg viewbox="0 0 28 32" aria-hidden="true" fill="none"><path d="M6 3h18v23H6a3 3 0 0 0 0 6" transform="translate(0 -2)" fill="currentColor"></path><path d="M6 1a3 3 0 0 0-3 3v23a3 3 0 0 0 3 3h18M7 3v20" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg><span>Textbook ·《物理海洋学》教材</span></h2>
           <p class="textbook-download-intro">通过分享链接下载课程教材 · Download the course textbook</p>
           <div class="textbook-download-card">
-            <svg class="textbook-book-icon" viewBox="0 0 64 56" aria-hidden="true" fill="none"><path d="M32 12C24 6 13 6 4 9v37c10-3 20-2 28 3 8-5 18-6 28-3V9c-9-3-20-3-28 3Z" fill="#eef0ff" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/><path d="M32 12v37M10 16c6-1 12 0 16 2M10 24c6-1 12 0 16 2M38 18c4-2 10-3 16-2M38 26c4-2 10-3 16-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <svg class="textbook-book-icon" viewbox="0 0 64 56" aria-hidden="true" fill="none"><path d="M32 12C24 6 13 6 4 9v37c10-3 20-2 28 3 8-5 18-6 28-3V9c-9-3-20-3-28 3Z" fill="#eef0ff" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"></path><path d="M32 12v37M10 16c6-1 12 0 16 2M10 24c6-1 12 0 16 2M38 18c4-2 10-3 16-2M38 26c4-2 10-3 16-2" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
             <h3><span>《物理海洋学》</span> <span lang="en">Physical Oceanography</span></h3>
             <p class="textbook-download-meta">Course textbook · 课程指定教材</p>
-            <button class="textbook-download-button" type="button" data-textbook-open aria-haspopup="dialog" aria-controls="textbook-access-dialog" aria-describedby="textbook-download-help"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10 13 4-4M8 15l-2 2a4 4 0 0 1-6-6l4-4a4 4 0 0 1 6 0M14 9l2-2a4 4 0 0 1 6 6l-4 4a4 4 0 0 1-6 0" transform="translate(1 -1)"/></svg><span>下载教材 · Download</span></button>
+            <button class="textbook-download-button" type="button" data-textbook-open aria-haspopup="dialog" aria-controls="textbook-access-dialog" aria-describedby="textbook-download-help"><svg viewbox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m10 13 4-4M8 15l-2 2a4 4 0 0 1-6-6l4-4a4 4 0 0 1 6 0M14 9l2-2a4 4 0 0 1 6 6l-4 4a4 4 0 0 1-6 0" transform="translate(1 -1)"></path></svg><span>下载教材 · Download</span></button>
             <p class="textbook-download-help" id="textbook-download-help">点击输入访问密码，验证通过后前往浙大云盘。</p>
             <p class="textbook-download-source">教材文件由浙江大学云盘提供。</p><noscript><p>请启用 JavaScript 后输入访问密码。</p></noscript>
           </div>
@@ -429,7 +429,7 @@
       <h4>我的解释</h4>
       <p>教材先用一张尺度图把海洋现象排开：波浪在秒—米级，潮汐在小时—百公里级，环流在年到千年、千公里级。读这张图的意义不是背范围，而是判断哪些项可以忽略、观测要多密。</p>
       <h4>🔗 与课堂对照</h4>
-      <p>第1讲用 Ro=U/(fL) 把“尺度”变成可算的判据；教材给全景，课上给判据。差异：教材更强调描述传统，课上更强调“可检验的问题”。</p>
+      <p>第1讲用 \(\mathrm{Ro}=U/(fL)\) 把“尺度”变成可算的判据；教材给全景，课上给判据。差异：教材更强调描述传统，课上更强调“可检验的问题”。</p>
       <h4>📎 我的延伸</h4>
       <p>Talley 的 S7 补充材料；NOAA/NASA 的数据源目录。</p>
     </article>
@@ -460,15 +460,15 @@
           <p class="book-meta">教材第3章 §3.2–3.5 · Talley et al. (2011), 6th ed.</p>
         </div>
       </div>
-      <div class="formula">ρ = ρ(S, T, p)<br>∂p/∂z = −ρg<br>N² = −(g/ρ₀) ∂ρ/∂z</div>
+      <div class="formula"><div class="math-display">\[\rho=\rho(S,T,p)\]</div><div class="math-display">\[\frac{\partial p}{\partial z}=-\rho g\]</div><div class="math-display">\[N^2=-\frac{g}{\rho_0}\frac{\partial\rho}{\partial z}\]</div></div>
       <p class="source">教材第3章 §3.2–3.5</p>
       <h4>我的解释</h4>
-      <p>密度不是温度的单一函数；盐度和压力会改变结论。位温/位密度要注明参考压力，TEOS-10 的 SP 和 SA 也不能混用。N²>0 表示稳定回复，N²<0 提示对流不稳定。</p>
+      <p>密度不是温度的单一函数；盐度和压力会改变结论。位温/位密度要注明参考压力，TEOS-10 的 \(S_P\) 和 \(S_A\) 也不能混用。\(N^{2}&gt;0\) 表示稳定回复，\(N^{2}&lt;0\) 提示对流不稳定。</p>
       <h4>🔗 与课堂对照</h4>
-      <p>第3讲用 N² 判断层结；教材从状态方程和位温定义推起。差异：教材给定义链，课上给判据和算例。</p>
+      <p>第3讲用 \(N^{2}\) 判断层结；教材从状态方程和位温定义推起。差异：教材给定义链，课上给判据和算例。</p>
       <h4>📎 我的延伸</h4>
       <p>TEOS-10 的 gsw Python 库；Argo 的 TEMP/PSAL/PRES 与 QC flag。</p><details class="deep"><summary>深入：静水压的符号与适用条件</summary>
-<p>z 向上、g 为重力加速度的正值。向下走意味着 dz &lt; 0，因此 dp &gt; 0。这个符号判断比记忆“负号”更有用；海水越深的部分并不因压强更高就自动向上流，因为重力同时参与垂直平衡。</p>
+<p>z 向上、g 为重力加速度的正值。向下走意味着 \(dz &lt; 0\)，因此 \(dp &gt; 0\)。这个符号判断比记忆“负号”更有用；海水越深的部分并不因压强更高就自动向上流，因为重力同时参与垂直平衡。</p>
 <p>与本课对照：当垂直加速度较小时，静水近似适合许多大尺度海洋问题。它没有给出水平流速；还需要水平压强差与科里奥利项。</p>
 <p class="source"><a href="https://talleylab.ucsd.edu/ltalley/DPO/supplementary/ch_s7.pdf#page=31" target="_blank" rel="noopener">S7 §7.6.1 · p.31 · Eq.7.23d</a></p>
 </details>
@@ -489,7 +489,7 @@
       <h4>🔗 与课堂对照</h4>
       <p>第4讲用副热带盐度极大值解释 E-P；教材补充了氧、营养盐和水龄。差异：教材把水团当多维示踪问题，课上先用 T-S 入门。</p>
       <h4>📎 我的延伸</h4>
-      <p>Argo、WOA18、NOAA NCEI 水团数据；O₂/硝酸盐示踪。</p>
+      <p>Argo、WOA18、NOAA NCEI 水团数据；\(O_{2}\)/硝酸盐示踪。</p>
     </article>
 
     <article class="book-card" id="book-05">
@@ -500,10 +500,10 @@
           <p class="book-meta">教材第5章 §5.4–5.5 · Talley et al. (2011), 6th ed.</p>
         </div>
       </div>
-      <div class="formula">ρ₀ cₚ h ∂T/∂t = Qnet − advection − entrainment</div>
+      <div class="formula"><div class="math-display">\[\rho_0c_p h\frac{\partial T}{\partial t}=Q_{\mathrm{net}}-\text{advection}-\text{entrainment}\]</div></div>
       <p class="source">教材第5章 §5.4–5.5</p>
       <h4>我的解释</h4>
-      <p>Qnet 是短波、长波、潜热、感热之和；混合层温度还受平流、夹卷和层厚变化影响。20 m 层吸 100 W/m² 一天约升温 0.105 K，100 m 层只有约 0.021 K。</p>
+      <p>\(Q_{\mathrm{net}}\) 是短波、长波、潜热、感热之和；混合层温度还受平流、夹卷和层厚变化影响。20 m 层吸 \(100 W/m^{2}\) 一天约升温 0.105 K，100 m 层只有约 0.021 K。</p>
       <h4>🔗 与课堂对照</h4>
       <p>第5讲用控制体和符号约定算一遍；教材强调守恒和空间分布。差异：课上先算，教材后讲全球分布。</p>
       <h4>📎 我的延伸</h4>
@@ -518,7 +518,7 @@
           <p class="book-meta">教材第6章 §6.1–6.7 · Talley et al. (2011), 6th ed.</p>
         </div>
       </div>
-      <div class="formula">X = U Σ Vᵀ<br>方差比例 = λᵢ / Σλ</div>
+      <div class="formula"><div class="math-display">\[X=U\Sigma V^{\mathsf T}\]</div><div class="math-display">\[\text{方差比例}=\frac{\lambda_i}{\sum_j\lambda_j}\]</div></div>
       <p class="source">教材第6章 §6.1–6.7；EOF1 图见下方</p>
       <h4>我的解释</h4>
       <p>EOF 把时空数据分解成空间模态和时间系数；方差比例是在既定样本、权重和预处理下的统计量，不是因果贡献。本站示例用 ERSSTv5 1979–2025、564 个月、1,626 个格点，EOF1 解释 56.34% 的处理后加权方差。</p>
@@ -540,17 +540,17 @@
           <p class="book-meta">教材第7章 §7.2–7.8 · Talley et al. (2011), 6th ed.</p>
         </div>
       </div>
-      <div class="formula">f = 2Ω sinφ<br>u_g = −(g/f) η_y，v_g = (g/f) η_x<br>V_Ek = τ/(ρ₀ f)<br>q = (ζ + f)/H</div>
+      <div class="formula"><div class="math-display">\[f=2\Omega\sin\varphi\]</div><div class="math-display">\[u_g=-\frac{g}{f}\eta_y,\qquad v_g=\frac{g}{f}\eta_x\]</div><div class="math-display">\[V_{\mathrm{Ek}}=\frac{\tau}{\rho_0f}\]</div><div class="math-display">\[q=\frac{\zeta+f}{H}\]</div></div>
       <p class="source">教材第7章 §7.2–7.8；S7 补充材料</p>
       <h4>我的解释</h4>
       <p>地转是压强梯度与科氏力的主平衡；密度梯度给热成风切变；Ekman 输运是风应力的表层响应；位涡把厚度、相对涡度和行星涡度放进一个守恒关系。</p>
       <h4>🔗 与课堂对照</h4>
-      <p>第6讲用 30°N、0.2 m/100 km 算 v≈0.269 m/s；教材从动量方程推到 Sverdrup 和西边界流。差异：课上先判方向，教材再给完整推导。</p>
+      <p>第6讲用 30°N、\(0.2 m/100 \mathrm{km}\) 算 \(v\approx 0.269 m/s\)；教材从动量方程推到 Sverdrup 和西边界流。差异：课上先判方向，教材再给完整推导。</p>
       <h4>📎 我的延伸</h4>
       <p>CMEMS DUACS 地转流、湾流断面；S7 补充材料。</p><details class="deep"><summary>深入：地转与位涡的适用条件</summary>
-<p>海面坡度对应水平压强差。北半球 f &gt; 0，海面向东升高时 v_g &gt; 0，流向北；压力梯度力指向西，科里奥利加速度指向东。流速与加速度单位不同，不能把速度箭头当作力来相加。</p>
-<p>位涡 q=(ζ+f)/H 中，相对涡度、行星涡度与水层厚度共同决定层模型的位涡。在无摩擦、无外加位涡源且满足层模型假设时，水柱伸长会要求绝对涡度随之增大，才能保持比值；位涡守恒不是“每一点 ζ 不变”。</p>
-<p>湾流断面（教材 S7 图 S7.20，PDF p.37；表 S7.3，p.38）：站距 78.0 km、纬度 38.65°N、表层东向流速 94.83 cm/s；计算假设 3000 m 为无运动参考面，不能把曲线解释成直接流速仪测量。</p>
+<p>海面坡度对应水平压强差。北半球 \(f &gt; 0\)，海面向东升高时 \(v_g &gt; 0\)，流向北；压力梯度力指向西，科里奥利加速度指向东。流速与加速度单位不同，不能把速度箭头当作力来相加。</p>
+<p>位涡 \(q=(\zeta +f)/H\) 中，相对涡度、行星涡度与水层厚度共同决定层模型的位涡。在无摩擦、无外加位涡源且满足层模型假设时，水柱伸长会要求绝对涡度随之增大，才能保持比值；位涡守恒不是“每一点 \(\zeta \) 不变”。</p>
+<p>湾流断面（教材 S7 图 S7.20，PDF p.37；表 S7.3，p.38）：站距 78.0 km、纬度 38.65°N、表层东向流速 \(94.83 \mathrm{cm}/s\)；计算假设 3000 m 为无运动参考面，不能把曲线解释成直接流速仪测量。</p>
 <p class="source"><a href="https://talleylab.ucsd.edu/ltalley/DPO/supplementary/ch_s7.pdf#page=31" target="_blank" rel="noopener">S7 §7.6.1 · p.31 · Eq.7.24a–b</a> · <a href="https://talleylab.ucsd.edu/ltalley/DPO/supplementary/ch_s7.pdf#page=44" target="_blank" rel="noopener">S7 §7.7.2 · p.44 · Eq.7.35</a></p>
 </details>
       <figure>
@@ -567,14 +567,14 @@
           <p class="book-meta">教材第8章 §8.2–8.8 · Talley et al. (2011), 6th ed.</p>
         </div>
       </div>
-      <div class="formula">c = √(gH)（浅水长波）<br>c = √(g/k · tanh(kH))（一般）</div>
+      <div class="formula"><div class="math-display">\[c=\sqrt{gH}\quad\text{（浅水长波）}\]</div><div class="math-display">\[c=\sqrt{\frac gk\tanh(kH)}\quad\text{（一般）}\]</div></div>
       <p class="source">教材第8章 §8.2–8.8</p>
       <h4>我的解释</h4>
-      <p>相速不是水质点速度；浅水长波 c≈√(gH)，所以 100 m 与 25 m 的相速比是 2。潮汐由日月引潮力强迫，但地方潮差还受海盆形状、摩擦和共振影响。</p>
+      <p>相速不是水质点速度；浅水长波 \(c\approx \sqrt{gH}\)，所以 100 m 与 25 m 的相速比是 2。潮汐由日月引潮力强迫，但地方潮差还受海盆形状、摩擦和共振影响。</p>
       <h4>🔗 与课堂对照</h4>
-      <p>第7讲用 100 m/25 m 算相速比；教材补充内波、潮汐和河口。差异：课上先区分三种“速度”，教材再展开机制。</p>
+      <p>第7讲用 \(100 m/25 m\) 算相速比；教材补充内波、潮汐和河口。差异：课上先区分三种“速度”，教材再展开机制。</p>
       <h4>📎 我的延伸</h4>
-      <p>NOAA Tides & Currents、NDBC 浮标、Talley 波浪讲义。</p>
+      <p>NOAA Tides &amp; Currents、NDBC 浮标、Talley 波浪讲义。</p>
     </article>
         </div>
       </section>
@@ -586,7 +586,7 @@
 <div class="story-refresh-inner">
 <article aria-labelledby="story-title">
 <header class="article-header"><h2 id="story-title">故事会｜藻类水华</h2><p class="subtitle">生态作用、发生机制与防控措施</p>
-<figure class="video-feature" id="video-story"><figcaption><strong>视频故事会｜小藻的水下派对</strong><span>02:00 · 1080p · 中英双语字幕</span></figcaption><video id="story-video" controls playsinline preload="metadata" poster="./story/algal-bloom-story-cover.png" width="1920" height="1080" aria-label="小藻的水下派对，两分钟科普动画，中文配音、中英双语字幕"><source src="./story/algal-bloom-story-2min.mp4" type="video/mp4">此浏览器不支持内嵌视频，请使用下方下载入口。</video><div class="video-actions"><a id="video-download" href="./story/algal-bloom-story-2min.mp4" download="algal-bloom-story-2min.mp4">下载视频</a><a href="./story/algal-bloom-story-bilingual.srt" download="algal-bloom-story-bilingual.srt">下载双语字幕</a></div></figure>
+<figure class="video-feature" id="video-story"><figcaption><strong>视频故事会｜小藻的水下派对</strong><span>02:00 · 1080p · 中英双语字幕</span></figcaption><video id="story-video" controls playsinline preload="metadata" poster="./story/algal-bloom-story-cover.png" width="1920" height="1080" aria-label="小藻的水下派对，两分钟科普动画，中文配音、中英双语字幕"><source src="./story/algal-bloom-story-2min.mp4" type="video/mp4">此浏览器不支持内嵌视频，请使用下方下载入口。</source></video><div class="video-actions"><a id="video-download" href="./story/algal-bloom-story-2min.mp4" download="algal-bloom-story-2min.mp4">下载视频</a><a href="./story/algal-bloom-story-bilingual.srt" download="algal-bloom-story-bilingual.srt">下载双语字幕</a></div></figure>
 <p class="story-reading-link"><a href="./story.html">单独打开完整故事会</a> · <a href="#frontier">前沿研究：从太空观察水华</a></p><p class="abstract"><strong>摘要</strong>藻类是水生态系统的重要初级生产者，其大量增长和聚集可形成水华。水华的发生与营养供应、光照、温度及水体运动等因素有关，部分水华会引发缺氧、毒素暴露和水资源利用问题。本文从基本概念出发，介绍藻类的生态作用、水华的形成过程与主要影响，并概述综合防控思路与海洋遥感前沿研究。</p><p class="keywords"><strong>关键词</strong>藻类水华；富营养化；水动力；生态影响；综合防控</p></header>
 
 <section class="article-section" id="introduction"><h3>一、引言</h3>
@@ -677,7 +677,7 @@
 <div class="paper-figure-actions"><a href="./story/research/dai-2023-figure-2.png" target="_blank" rel="noopener">查看原图（可放大） ↗</a><a href="https://www.nature.com/articles/s41586-023-05760-y/figures/2" target="_blank" rel="noopener noreferrer">论文原图与图注 ↗</a></div>
 <p class="paper-figure-credit">Dai, Y. et al., <a href="https://doi.org/10.1038/s41586-023-05760-y" target="_blank" rel="noopener noreferrer"><em>Nature</em> 615, 280–284 (2023), Fig. 2</a> · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">CC BY 4.0</a>。原图未改动，仅等比例显示；中文读图说明为本页补充。</p></figcaption></figure>
 <p>作者将这些变化与<strong>海表温度、海流及营养盐输送</strong>联系起来：适宜的增温可能促进生长，海流和上升流变化则会改变营养盐供给。不同海域的主导因素不同，不能简单理解为“海水越暖，水华一定越多”。</p>
-<p class="table-note">指标说明：文中的“频率”综合了 1° × 1° 网格内的水华检出次数与受影响面积。59.2% 是该指标的相对变化，不代表藻类浓度、毒性或有毒水华比例增加了 59.2%。</p>
+<p class="table-note">指标说明：文中的“频率”综合了 \(1^{\circ} \times  1^{\circ}\) 网格内的水华检出次数与受影响面积。59.2% 是该指标的相对变化，不代表藻类浓度、毒性或有毒水华比例增加了 59.2%。</p>
 <figure class="paper-figure" id="paper-figure-3">
 <a class="paper-figure-image" href="./story/research/dai-2023-figure-3.png" target="_blank" rel="noopener" aria-label="查看原图（可放大） · 论文图 3"><img src="./story/research/dai-2023-figure-3.png" alt="论文图3：海表温度梯度和海表温度的变化地图，以及八个海区水华频率与两项温度指标的时间序列。" width="1399" height="881" loading="lazy" decoding="async"></a>
 <figcaption><strong class="paper-figure-title">论文图 3 · 海温与海洋动力过程有什么联系？</strong><p class="paper-figure-reading">a、b 面板分别展示海表温度梯度和海表温度的变化趋势。c 面板比较八个海区：黑线是水华频率，红线是海温梯度，紫线是海温。海温梯度表示温度在空间上变化的快慢，并非升温速度。不同海区的关系不同；相关性本身不能单独证明因果关系。</p>
